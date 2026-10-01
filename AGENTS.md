@@ -30,7 +30,7 @@ Read `README.md` (overview), `docs/DOCKER.md` (containers and commands), `docs/D
    runs on the same laptop and server with 8080/8025/1313. Do not take those ports.
 9. **Don't touch the server yourself.** Deployment is done by the owner following `docs/DEPLOY.md`.
 10. **Git: never commit and never push on your own.** Only when the owner explicitly says so; commit and push
-    are separate permissions. No remote is configured yet (separate repository from any other project).
+    are separate permissions. Remote `origin` = `git@github.com:asig2016/web_avatax.git`, branch `master`.
 11. **Privacy:** no third-party requests by default (no Google Fonts, no maps embed, no reCAPTCHA). GA4 only
     after consent and only if `ga4ID` is set.
 

@@ -11,7 +11,7 @@ The full command reference (containers, folders, troubleshooting) is in **[DOCKE
 | Server | `135.181.76.115` (Hetzner), which also hosts other sites (incl. another Docker stack of this kind on port 8080) behind an existing nginx reverse proxy |
 | Project directory (laptop **and** server) | `/home/asig/docker_data/avatax` |
 | Containers | `avatax-web` (nginx, static site), `avatax-formsvc` (forms → e-mail); on the server **no** `hugo`/`mailpit` |
-| Source code | your own git repository (set the remote: `git remote add origin <url>`), branch `master` |
+| Source code | GitHub `asig2016/web_avatax`, branch `master` |
 | DNS | papaki.gr (`dns1/dns2.papaki.gr`) |
 | Mail relay | `mail.sigalas.eu` (194.219.21.115, a different machine) – the **current MX of avatax.eu** (shared mail server). Use whatever mail server avatax.eu mail is handled by. |
 
@@ -300,7 +300,7 @@ Details for all content tasks are in **[MANUAL.md](MANUAL.md)**. The most common
 - **Containers start automatically** after a reboot (`restart: unless-stopped`), provided the Docker
   service is enabled (`systemctl is-enabled docker`).
 - **Backup:** everything except `.env` is in git on the laptop **and on GitHub**
-  (your own repository, branch `master`). Back up the server's `.env` separately; it
+  (GitHub `asig2016/web_avatax`, branch `master`). Back up the server's `.env` separately; it
   contains the SMTP password. The generated `public/` needs no backup; it can be rebuilt at any time.
 
 ### Mail deliverability

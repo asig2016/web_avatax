@@ -9,7 +9,7 @@ It replaces the old Drupal 7 site.
 - Everything runs with **Docker Compose**, identically on the laptop and on the Hetzner server.
   Hugo and Go are **not** installed on the host; they run in containers.
 
-Repository: not set yet. Add your remote with `git remote add origin <url>` (branch **`master`**).
+Repository: `git@github.com:asig2016/web_avatax.git` (private), branch **`master`**.
 
 ```
 docker-compose.yml         services: web, formsvc, build (+ hugo, mailpit with profile "dev")
