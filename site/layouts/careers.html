@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+{{- /* Job ads are written in Greek only (content/careers/*.el.md, job: true).
+       The English and German careers pages list them with an "in Greek" note. */}}
+{{- $jobs := slice }}
+{{- range $.Sites }}{{ if eq .Language.Lang "el" }}
+  {{- with .GetPage "/careers" }}{{ $jobs = where (where .Pages "Params.job" true) "Params.active" true }}{{ end }}
+{{- end }}{{ end }}
+{{- $apply := site.GetPage "/careers/apply" }}
+<div class="wrap page-body with-aside">
+  <div>
+    <div class="prose">{{ .Content }}</div>
+    <h2>{{ T "openPositions" }}</h2>
+    {{- if $jobs }}
+    <ul class="job-list">
+      {{- range $jobs }}
+      <li>
+        <a href="{{ .RelPermalink }}" hreflang="el">
+          <strong lang="el">{{ .Title }}</strong>
+          {{- if ne site.Language.Lang "el" }} <span class="badge">{{ T "inGreek" }}</span>{{ end }}
+        </a>
+        <p lang="el">{{ .Summary | plainify | truncate 200 }}</p>
+      </li>
+      {{- end }}
+    </ul>
+    {{- else }}
+    <p>{{ T "noOpenings" }}</p>
+    {{- end }}
+    <p><a class="btn" href="{{ $apply.RelPermalink }}">{{ T "applyNow" }}</a></p>
+  </div>
+  <div class="aside">{{ partial "cta.html" . }}</div>
+</div>
+{{ end }}

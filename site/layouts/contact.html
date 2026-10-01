@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+{{- $thanks := site.GetPage "/thanks" }}
+{{- $error := site.GetPage "/form-error" }}
+<div class="wrap page-body contact-layout">
+  <section>
+    <h2>{{ .Params.formTitle }}</h2>
+    <form class="js-form" action="/api/contact" method="post" novalidate>
+      <p class="form-note">{{ T "formRequired" }}</p>
+      <div class="field-row">
+        <div class="field">
+          <label for="c-name">{{ T "formName" }} *</label>
+          <input id="c-name" name="name" type="text" autocomplete="name" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="c-email">{{ T "formEmail" }} *</label>
+          <input id="c-email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="c-phone">{{ T "formPhone" }} *</label>
+          <input id="c-phone" name="phone" type="tel" autocomplete="tel" required maxlength="50">
+        </div>
+        <div class="field">
+          <label for="c-subject">{{ T "formSubject" }} *</label>
+          <input id="c-subject" name="subject" type="text" required maxlength="200">
+        </div>
+      </div>
+      <div class="field">
+        <label for="c-message">{{ T "formMessage" }} *</label>
+        <textarea id="c-message" name="message" rows="7" required maxlength="10000"></textarea>
+      </div>
+      {{ partial "form-common.html" (dict "id" "c" "next" $thanks.RelPermalink "error" $error.RelPermalink) }}
+      <button class="btn" type="submit">{{ T "formSend" }}</button>
+    </form>
+    {{ partial "form-messages.html" . }}
+  </section>
+
+  <aside class="contact-info">
+    <div class="prose">{{ .Content }}</div>
+    <ul class="contact-list">
+      <li>{{ partial "icon.html" "pin" }}<span>{{ site.Params.company }}<br>{{ site.Params.street }}<br>{{ site.Params.city }}</span></li>
+      <li>{{ partial "icon.html" "phone" }}<a href="{{ site.Params.phoneHref }}">{{ site.Params.phone }}</a></li>
+      {{- with .Params.directions }}<li>{{ partial "icon.html" "metro" }}<span>{{ . }}</span></li>{{ end }}
+    </ul>
+    {{- $img := resources.Get "images/office.jpg" }}
+    <img class="rounded" src="{{ ($img.Fill "720x480 Center webp").RelPermalink }}" alt="{{ .Params.officeAlt }}" width="720" height="480" loading="lazy">
+    <p class="map-links">
+      <a href="https://www.openstreetmap.org/?mlat={{ site.Params.lat }}&amp;mlon={{ site.Params.lon }}#map=18/{{ site.Params.lat }}/{{ site.Params.lon }}" rel="noopener">{{ T "openMap" }}</a>
+      ·
+      <a href="https://www.google.com/maps/search/?api=1&amp;query={{ site.Params.lat }}%2C{{ site.Params.lon }}" rel="noopener">{{ T "openGoogleMaps" }}</a>
+    </p>
+  </aside>
+</div>
+{{ end }}

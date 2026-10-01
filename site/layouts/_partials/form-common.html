@@ -1,0 +1,15 @@
+{{- /* Hidden fields + status area shared by both forms. Context: dict "page" "next" "error" */ -}}
+<input type="hidden" name="lang" value="{{ site.Language.Lang }}">
+<input type="hidden" name="token" value="">
+<input type="hidden" name="next" value="{{ .next }}">
+<input type="hidden" name="error_page" value="{{ .error }}">
+{{- /* Honeypot: hidden from humans, bots fill it in */}}
+<div class="hp" aria-hidden="true">
+  <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+</div>
+<div class="field field-check">
+  <input type="checkbox" id="{{ .id }}-consent" name="consent" value="1" required>
+  <label for="{{ .id }}-consent">{{ with site.GetPage "/privacy" }}{{ printf (T "formConsent") .RelPermalink | safeHTML }}{{ end }} *</label>
+</div>
+<noscript><p class="form-note warn">{{ T "formNoscript" }} <a href="{{ site.Params.phoneHref }}">{{ site.Params.phone }}</a></p></noscript>
+<div class="form-status" role="status" aria-live="polite" hidden></div>

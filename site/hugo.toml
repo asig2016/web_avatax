@@ -1,0 +1,75 @@
+baseURL = "https://avatax.eu/"
+title = "AVATAX A.E."
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "rss"]
+timeZone = "Europe/Athens"
+
+[params]
+  # GA4 measurement id (e.g. "G-XXXXXXXXXX"). Empty = no analytics and no cookie banner.
+  ga4ID = ""
+  phone = "+30 211 1036100"
+  phoneHref = "tel:+302111036100"
+  lat = "37.96444"
+  lon = "23.72632"
+
+  [[params.members]]
+    name = "Επαγγελματικό Επιμελητήριο Αθηνών (Athens Chamber of Tradesmen)"
+    url = "https://www.eea.gr/"
+    logo = "images/members/eea.png"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    weight = 1
+    title = "AVATAX A.E."
+    [languages.en.params]
+      ogLocale = "en_GB"
+      tagline = "Accountants & Tax Consultants"
+      company = "AVATAX A.E."
+      legalForm = "Accountants & tax consultants, a Greek société anonyme"
+      street = "76 Syngrou Ave."
+      city = "GR-117 42 Athens"
+      description = "Accounting, payroll, tax consultancy and fiscal representation in Athens – in Greek, German and English."
+  [languages.de]
+    languageName = "Deutsch"
+    languageCode = "de"
+    weight = 2
+    title = "AVATAX A.E."
+    [languages.de.params]
+      ogLocale = "de_DE"
+      tagline = "Buchhaltung & Steuerberatung"
+      company = "AVATAX A.E."
+      legalForm = "Buchhaltungs- und Steuerberatungsgesellschaft, Aktiengesellschaft griechischen Rechts"
+      street = "Syngrou Ave. 76"
+      city = "GR-117 42 Athen"
+      description = "Buchhaltung, Lohnbuchhaltung, Steuerberatung und Fiskalvertretung in Athen – auf Deutsch, Griechisch und Englisch."
+  [languages.el]
+    languageName = "Ελληνικά"
+    languageCode = "el"
+    weight = 3
+    title = "AVATAX A.E."
+    [languages.el.params]
+      ogLocale = "el_GR"
+      tagline = "Λογιστές – Φοροτεχνικοί"
+      company = "AVATAX Α.Ε."
+      legalForm = "Ανώνυμη Εταιρία Λογιστών"
+      street = "Λ. Συγγρού 76"
+      city = "117 42 Αθήνα"
+      description = "Λογιστικές υπηρεσίες, μισθοδοσία, φοροτεχνικές υπηρεσίες και φορολογική εκπροσώπηση στην Αθήνα – στα ελληνικά, γερμανικά και αγγλικά."
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[imaging]
+  quality = 80
+  resampleFilter = "Lanczos"
+
+[sitemap]
+  changeFreq = "monthly"
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]

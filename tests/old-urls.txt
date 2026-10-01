@@ -1,0 +1,31 @@
+# URLs of the old Drupal site of avatax.eu (crawled 2026-10-01). `make test-redirects`
+# checks that each answers 301 and ends on an existing page.
+/about-us
+/services
+/content/contact
+/career
+/node/137
+/node/140
+/tags/job
+/de
+/de/leistungen
+/de/steuerberatung
+/de/buchhaltung-und-jahresabschluss
+/de/ihr-start-griechenland
+/de/uber-uns
+/de/branchen
+/de/content/kontakt
+/de/career
+/de/node/137
+/de/tags/job
+/el
+/el/ypiresies
+/el/liga-logia-gia-emas
+/el/kladoi
+/el/content/epikoinonia
+/el/career
+/el/content/senaccountant
+/el/content/voithos-logisti
+/el/content/ypovoli-viografikoy
+/el/tags/job
+/sites/default/files/g3052.png

@@ -1,0 +1,7 @@
+.env
+/public/
+/public.next/
+/public.prev/
+/logs/
+/site/resources/_gen/
+/site/.hugo_build.lock

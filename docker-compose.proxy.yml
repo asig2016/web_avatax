@@ -1,0 +1,22 @@
+# Optional override for Hetzner when the existing reverse proxy runs in Docker
+# (nginx-proxy + acme-companion, or Nginx Proxy Manager).
+# Enable it in .env:   COMPOSE_FILE=docker-compose.yml:docker-compose.proxy.yml
+#
+# Not needed when the proxy is nginx installed directly on the host; then the
+# host nginx simply proxies to WEB_BIND (127.0.0.1:8090). See docs/DEPLOY.md.
+
+networks:
+  proxynw:
+    external: true
+    name: ${PROXY_NETWORK:-proxy}
+
+services:
+  web:
+    networks:
+      - avataxnw
+      - proxynw
+    environment:
+      # read by nginx-proxy / acme-companion (ignored by Nginx Proxy Manager)
+      VIRTUAL_HOST: ${SITE_HOSTS:-avatax.eu,www.avatax.eu}
+      VIRTUAL_PORT: "80"
+      LETSENCRYPT_HOST: ${SITE_HOSTS:-avatax.eu,www.avatax.eu}

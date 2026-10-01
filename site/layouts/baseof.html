@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ site.Language.LanguageCode }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="kind-{{ .Kind }}{{ with .Params.bodyClass }} {{ . }}{{ end }}">
+  <a class="skip" href="#main">{{ T "skipToContent" }}</a>
+  {{ partial "header.html" . }}
+  <main id="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  {{ partial "cookie-banner.html" . }}
+  {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" hugo.IsProduction) | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+</body>
+</html>

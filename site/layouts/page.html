@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+<div class="wrap page-body{{ if not .Params.noAside }} with-aside{{ end }}">
+  <article class="prose">
+    {{ .Content }}
+    {{- with .Params.faq }}
+    <section class="faq">
+      <h2>{{ T "faq" }}</h2>
+      {{- range . }}
+      <details>
+        <summary>{{ .q }}</summary>
+        <p>{{ .a }}</p>
+      </details>
+      {{- end }}
+    </section>
+    {{- end }}
+  </article>
+  {{- if not .Params.noAside }}
+  <div class="aside">
+    {{- with .Parent }}{{ if and (not .IsHome) (gt (len .Pages) 1) }}
+    <nav class="side-nav" aria-label="{{ .Title }}">
+      <p class="side-nav-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+      <ul>
+        {{- range .Pages }}
+        <li><a href="{{ .RelPermalink }}"{{ if eq . $ }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
+    {{- end }}{{ end }}
+    {{ partial "cta.html" . }}
+  </div>
+  {{- end }}
+</div>
+{{ end }}

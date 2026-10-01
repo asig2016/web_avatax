@@ -1,0 +1,75 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+{{- /* Positions come from the active Greek job ads. */}}
+{{- $jobs := slice }}
+{{- range $.Sites }}{{ if eq .Language.Lang "el" }}
+  {{- with .GetPage "/careers" }}{{ $jobs = where (where .Pages "Params.job" true) "Params.active" true }}{{ end }}
+{{- end }}{{ end }}
+{{- $thanks := site.GetPage "/thanks" }}
+{{- $error := site.GetPage "/form-error" }}
+<div class="wrap page-body narrow">
+  {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+  <form class="js-form" action="/api/cv" method="post" enctype="multipart/form-data" novalidate>
+    <p class="form-note">{{ T "formRequired" }}</p>
+    <div class="field">
+      <label for="a-position">{{ T "cvPosition" }} *</label>
+      <select id="a-position" name="position" required>
+        <option value="">{{ T "cvChoose" }}</option>
+        {{- range $jobs }}
+        <option value="{{ .Params.positionName | default .Title }}">{{ .Params.positionName | default .Title }}</option>
+        {{- end }}
+        <option value="{{ T "cvUnsolicited" }}">{{ T "cvUnsolicited" }}</option>
+      </select>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="a-name">{{ T "formName" }} *</label>
+        <input id="a-name" name="name" type="text" autocomplete="name" required maxlength="200">
+      </div>
+      <div class="field">
+        <label for="a-email">{{ T "formEmail" }} *</label>
+        <input id="a-email" name="email" type="email" autocomplete="email" required maxlength="200">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="a-phone">{{ T "formPhone" }}</label>
+        <input id="a-phone" name="phone" type="tel" autocomplete="tel" maxlength="50">
+      </div>
+      <div class="field">
+        <label for="a-start">{{ T "cvStart" }}</label>
+        <input id="a-start" name="start_date" type="date">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="a-commute">{{ T "cvCommute" }}</label>
+        <select id="a-commute" name="commute">
+          <option value="">{{ T "cvNone" }}</option>
+          {{- range seq 10 5 120 }}<option>{{ . }}</option>{{ end }}
+        </select>
+      </div>
+      <div class="field">
+        <label for="a-salary">{{ T "cvSalary" }}</label>
+        <select id="a-salary" name="salary">
+          <option value="">{{ T "cvNone" }}</option>
+          {{- range seq 900 50 5000 }}<option>{{ . }}</option>{{ end }}
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label for="a-cv">{{ T "cvFile" }} *</label>
+      <input id="a-cv" name="cv" type="file" required accept=".pdf,.doc,.docx,.odt,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.oasis.opendocument.text" data-max-bytes="5242880">
+      <p class="hint">{{ T "cvFileHelp" }}</p>
+    </div>
+    <div class="field">
+      <label for="a-message">{{ T "formMessage" }}</label>
+      <textarea id="a-message" name="message" rows="5" maxlength="10000"></textarea>
+    </div>
+    {{ partial "form-common.html" (dict "id" "a" "next" $thanks.RelPermalink "error" $error.RelPermalink) }}
+    <p class="form-note">{{ T "cvConfidential" }}</p>
+    <button class="btn" type="submit">{{ T "cvSend" }}</button>
+  </form>
+  {{ partial "form-messages.html" . }}
+</div>
+{{ end }}

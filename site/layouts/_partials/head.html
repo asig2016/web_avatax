@@ -1,0 +1,57 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- /* CSP: the dev server additionally needs its live-reload script on :1314 */}}
+{{- $dev := cond hugo.IsServer " http://localhost:1314 ws://localhost:1314" "" }}
+{{- $ga := cond (ne site.Params.ga4ID "") " https://www.googletagmanager.com" "" }}
+{{- $gaConnect := cond (ne site.Params.ga4ID "") " https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com" "" }}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'{{ $ga }}{{ $dev }}; connect-src 'self'{{ $gaConnect }}{{ $dev }}; img-src 'self' data:{{ $gaConnect }}; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+{{- /* seoTitle (front matter) wins; otherwise "Title · Site". Keep it under ~60 characters. */}}
+{{- $title := .Params.seoTitle | default (cond .IsHome (printf "%s · %s" site.Title site.Params.tagline) (printf "%s · %s" .Title site.Title)) }}
+{{- $desc := .Description | default (.Summary | plainify | truncate 155) | default site.Params.description }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+{{- if or .Params.noindex (not hugo.IsProduction) }}
+<meta name="robots" content="noindex">
+{{- end }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+{{- end }}
+{{- range where .AllTranslations "Language.Lang" "en" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:locale" content="{{ replace site.Params.ogLocale "-" "_" }}">
+<meta name="twitter:card" content="summary_large_image">
+{{- with resources.Get "images/acropolis.jpg" }}{{ with .Fill "1200x630 Center jpg" }}
+<meta property="og:image" content="{{ .Permalink }}">
+{{- end }}{{ end }}
+<link rel="icon" href="/images/logo.png" type="image/png">
+{{- $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- with site.Params.ga4ID }}
+<meta name="ga4-id" content="{{ . }}">
+{{- end }}
+{{ partial "schema.html" . }}
+{{- if .IsHome }}
+<script type="application/ld+json">
+{{ dict
+  "@context" "https://schema.org"
+  "@type" "AccountingService"
+  "name" site.Title
+  "legalName" site.Params.company
+  "url" site.Home.Permalink
+  "telephone" site.Params.phone
+  "logo" ("images/logo.png" | absURL)
+  "address" (dict "@type" "PostalAddress" "streetAddress" site.Params.street "postalCode" "117 42" "addressLocality" "Athens" "addressCountry" "GR")
+  "geo" (dict "@type" "GeoCoordinates" "latitude" site.Params.lat "longitude" site.Params.lon)
+  "knowsLanguage" (slice "el" "de" "en")
+  "areaServed" "GR"
+  "description" $desc
+  | jsonify | safeJS }}
+</script>
+{{- end }}

@@ -1,0 +1,118 @@
+{{ define "main" }}
+{{- $hero := resources.Get "images/acropolis.jpg" }}
+<section class="hero">
+  <picture>
+    <source type="image/webp"
+      srcset="{{ ($hero.Fill "800x600 Center webp").RelPermalink }} 800w, {{ ($hero.Fill "1600x800 Center webp").RelPermalink }} 1600w, {{ ($hero.Fill "2400x1000 Center webp").RelPermalink }} 2400w"
+      sizes="100vw">
+    <img src="{{ ($hero.Fill "1600x800 Center jpg").RelPermalink }}" alt="{{ .Params.heroAlt }}" class="hero-img" fetchpriority="high">
+  </picture>
+  <div class="wrap hero-content">
+    <p class="eyebrow">{{ .Params.heroEyebrow | default site.Params.tagline }}</p>
+    <h1>{{ .Params.heroTitle }}</h1>
+    <p class="hero-text">{{ .Params.heroText }}</p>
+    <div class="hero-actions">
+      {{- with site.GetPage "/services" }}<a class="btn btn-light" href="{{ .RelPermalink }}">{{ T "ourServices" }}</a>{{ end }}
+      {{- with site.GetPage "/contact" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "contactUs" }}</a>{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap intro-grid">
+    <div class="prose">{{ .Content }}</div>
+    <ul class="facts">
+      {{- range .Params.facts }}
+      <li><span class="fact-num">{{ .num }}</span><span class="fact-label">{{ .label }}</span></li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+
+{{- with .Params.pillars }}
+<section class="section section-tint">
+  <div class="wrap">
+    <h2 class="section-title">{{ $.Params.pillarsTitle }}</h2>
+    <ul class="pillars">
+      {{- range . }}
+      <li>
+        <span class="card-icon">{{ partial "icon.html" .icon }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .text | markdownify }}</p>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+{{- end }}
+
+{{- with .Params.audiences }}
+<section class="section">
+  <div class="wrap">
+    <h2 class="section-title">{{ $.Params.audiencesTitle }}</h2>
+    <div class="audiences">
+      {{- range . }}
+      <div class="audience">
+        <span class="card-icon">{{ partial "icon.html" .icon }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+        <ul>
+          {{- range .links }}
+          <li><a href="{{ .url }}">{{ .label }} →</a></li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{- with site.GetPage "/services" }}
+<section class="section section-tint">
+  <div class="wrap">
+    <h2 class="section-title">{{ .Title }}</h2>
+    <div class="cards cards-4">
+      {{- range .Pages }}
+      <a class="card" href="{{ .RelPermalink }}">
+        {{- with .Params.icon }}<span class="card-icon">{{ partial "icon.html" . }}</span>{{ end }}
+        <h3>{{ .LinkTitle }}</h3>
+        <p>{{ .Params.teaser | default (.Summary | plainify | truncate 160) }}</p>
+        <span class="more">{{ T "readMore" }} →</span>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{- with site.GetPage "/about" }}
+{{- $img := resources.Get "images/syngrou.jpg" }}
+<section class="section">
+  <div class="wrap split">
+    <picture>
+      <source type="image/webp" srcset="{{ ($img.Fill "720x480 Center webp").RelPermalink }} 720w, {{ ($img.Fill "1200x800 Center webp").RelPermalink }} 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+      <img src="{{ ($img.Fill "1200x800 Center jpg").RelPermalink }}" alt="{{ $.Params.officeAlt }}" loading="lazy" width="1200" height="800" class="rounded">
+    </picture>
+    <div>
+      <h2>{{ .Title }}</h2>
+      <p>{{ .Summary | plainify | truncate 420 }}</p>
+      <a class="more-link" href="{{ .RelPermalink }}">{{ T "readMore" }} →</a>
+    </div>
+  </div>
+</section>
+{{- end }}
+
+<section class="section contact-band">
+  <div class="wrap contact-band-inner">
+    <div>
+      <h2>{{ T "getInTouch" }}</h2>
+      <p>{{ site.Params.street }}, {{ site.Params.city }}</p>
+    </div>
+    <div class="contact-band-actions">
+      <a class="btn btn-light" href="{{ site.Params.phoneHref }}">{{ partial "icon.html" "phone" }} {{ site.Params.phone }}</a>
+      {{- with site.GetPage "/contact" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "contactUs" }}</a>{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

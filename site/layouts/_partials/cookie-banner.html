@@ -1,0 +1,11 @@
+{{- /* Only rendered when a GA4 id is configured. GA is loaded by main.js
+       only after the visitor clicked "Accept" (stored in localStorage). */}}
+{{- with site.Params.ga4ID }}
+<div class="cookie-banner" role="dialog" aria-live="polite" aria-label="{{ T "cookieSettings" }}" hidden>
+  <p>{{ T "cookieText" }}{{ with site.GetPage "/privacy" }} <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</p>
+  <div class="cookie-actions">
+    <button type="button" class="btn btn-ghost" data-consent="denied">{{ T "cookieDecline" }}</button>
+    <button type="button" class="btn" data-consent="granted">{{ T "cookieAccept" }}</button>
+  </div>
+</div>
+{{- end }}

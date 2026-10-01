@@ -1,0 +1,16 @@
+<div class="page-hero">
+  <div class="wrap">
+    {{- if not .IsHome }}
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        {{- range .Ancestors.Reverse }}
+        <li><a href="{{ .RelPermalink }}">{{ if .IsHome }}{{ T "home" }}{{ else }}{{ .LinkTitle }}{{ end }}</a></li>
+        {{- end }}
+        <li aria-current="page">{{ .LinkTitle }}</li>
+      </ol>
+    </nav>
+    {{- end }}
+    <h1>{{ .Title }}</h1>
+    {{- with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+  </div>
+</div>

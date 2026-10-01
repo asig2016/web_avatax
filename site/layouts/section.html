@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+<div class="wrap page-body">
+  {{- with .Content }}<div class="prose intro">{{ . }}</div>{{ end }}
+  <div class="cards">
+    {{- range .Pages }}
+    <a class="card" href="{{ .RelPermalink }}">
+      {{- with .Params.icon }}<span class="card-icon" aria-hidden="true">{{ partial "icon.html" . }}</span>{{ end }}
+      <h2>{{ .LinkTitle }}</h2>
+      <p>{{ .Summary | plainify | truncate 260 }}</p>
+      <span class="more">{{ T "readMore" }} →</span>
+    </a>
+    {{- end }}
+  </div>
+</div>
+{{ end }}

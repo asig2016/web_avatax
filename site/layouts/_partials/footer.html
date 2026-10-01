@@ -1,0 +1,30 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-title">{{ site.Params.company }}</p>
+      <p>{{ site.Params.legalForm }}</p>
+    </div>
+    <div>
+      <p class="footer-title">{{ T "address" }}</p>
+      <p>{{ site.Params.street }}<br>{{ site.Params.city }}<br>
+        <a href="{{ site.Params.phoneHref }}">{{ T "phone" }}: {{ site.Params.phone }}</a></p>
+    </div>
+    <div>
+      <p class="footer-title">{{ T "memberOf" }}</p>
+      <ul class="members">
+        {{- range site.Params.members }}
+        <li><a href="{{ .url }}" rel="noopener" title="{{ .name }}"><img src="/{{ .logo }}" alt="{{ .name }}" height="40" loading="lazy"></a></li>
+        {{- end }}
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span>© {{ now.Year }} {{ site.Params.company }}</span>
+      <span class="footer-links">
+        {{- with site.GetPage "/privacy" }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+        {{- with site.Params.ga4ID }}<button type="button" class="linklike" data-cookie-settings>{{ T "cookieSettings" }}</button>{{ end }}
+      </span>
+    </div>
+  </div>
+</footer>

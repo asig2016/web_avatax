@@ -1,0 +1,8 @@
+{{- /* Localized messages for main.js (not executed; CSP-safe). */ -}}
+<script type="application/json" id="form-i18n">
+{{- dict
+  "ok" (T "formOk") "sending" (T "formSending") "invalid" (T "err_invalid") "spam" (T "err_spam")
+  "rate_limited" (T "err_rate_limited") "too_large" (T "err_too_large") "bad_file" (T "err_bad_file")
+  "server" (T "err_server") "network" (T "err_network")
+  | jsonify | safeJS -}}
+</script>

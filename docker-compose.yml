@@ -1,0 +1,113 @@
+# avatax.eu – static Hugo site + form service
+#
+# Everything the site consists of lives on the host, next to this file:
+#   site/        Hugo sources (content, layouts, PDFs, images)  -> edit here
+#   public/      generated website, served read-only by nginx
+#   nginx/       nginx configuration of the web container
+#   logs/nginx/  access / error logs
+#
+# Laptop (COMPOSE_PROFILES=dev in .env): hugo dev server with live reload + mailpit
+# Server (COMPOSE_PROFILES empty):       web + formsvc only
+# See Makefile and docs/DEPLOY.md.
+
+name: avatax
+
+networks:
+  avataxnw:
+    driver: bridge
+
+services:
+  # Production web server: serves ./public, proxies /api/ to formsvc.
+  web:
+    image: nginx:${NGINX_VERSION:-stable-alpine}
+    container_name: avatax-web
+    restart: unless-stopped
+    depends_on:
+      - formsvc
+    ports:
+      - "${WEB_BIND:-127.0.0.1:8090}:80"
+    volumes:
+      # ":z" relabels for SELinux (Fedora); it is a no-op on hosts without SELinux.
+      - ./public:/usr/share/nginx/html:ro,z
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro,z
+      - ./logs/nginx:/var/log/nginx:z
+    networks:
+      - avataxnw
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # Receives the contact and CV forms and sends them by e-mail.
+  formsvc:
+    build: ./formsvc
+    image: avatax-formsvc:latest
+    container_name: avatax-formsvc
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      TZ: Europe/Athens
+    expose:
+      - "8081"
+    networks:
+      - avataxnw
+
+  # One-off production build:  docker compose run --rm build
+  # Writes into ./public.next; the Makefile then syncs it into ./public
+  # (keeping the previous version in ./public.prev for rollback).
+  build:
+    image: hugomods/hugo:${HUGO_IMAGE_TAG:-exts-non-root-0.154.5}
+    profiles: ["build"]
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+    working_dir: /src
+    entrypoint: ["hugo"]
+    command: ["--minify", "--gc", "--cleanDestinationDir", "--destination", "/out", "--environment", "production"]
+    environment:
+      HUGO_CACHEDIR: /tmp/hugo_cache
+    volumes:
+      - ./site:/src:z
+      - ./public.next:/out:z
+
+  # Laptop only: hugo dev server. Renders into ./public (served by "web" on
+  # http://localhost:8090 so the forms work) and live-reloads via port 1314.
+  hugo:
+    image: hugomods/hugo:${HUGO_IMAGE_TAG:-exts-non-root-0.154.5}
+    profiles: ["dev"]
+    container_name: avatax-hugo
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+    working_dir: /src
+    entrypoint: ["hugo"]
+    command:
+      - server
+      - --bind=0.0.0.0
+      - --port=1314
+      - --baseURL=http://localhost:8090/
+      - --appendPort=false
+      - --liveReloadPort=1314
+      - --destination=/out
+      - --cleanDestinationDir
+      - --environment=development
+      - --poll=700ms
+      - --disableFastRender   # pages are served by nginx, so hugo must re-render all of them
+    environment:
+      HUGO_CACHEDIR: /tmp/hugo_cache
+    ports:
+      - "127.0.0.1:1314:1314"
+    volumes:
+      - ./site:/src:z
+      - ./public:/out:z
+    networks:
+      - avataxnw
+
+  # Laptop only: catches all outgoing mail. Web inbox: http://localhost:8026
+  mailpit:
+    image: axllent/mailpit:latest
+    profiles: ["dev"]
+    container_name: avatax-mailpit
+    ports:
+      - "127.0.0.1:8026:8025"
+    expose:
+      - "1025"
+    networks:
+      - avataxnw

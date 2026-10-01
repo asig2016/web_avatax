@@ -1,0 +1,28 @@
+{{- /* Structured data for search engines: breadcrumbs on all inner pages,
+       Service on service pages, FAQPage where front matter has "faq". */ -}}
+{{- if not .IsHome }}
+{{- $items := slice }}
+{{- range $i, $p := .Ancestors.Reverse }}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" (add $i 1) "name" (cond $p.IsHome (T "home") $p.LinkTitle) "item" $p.Permalink) }}
+{{- end }}
+{{- $items = $items | append (dict "@type" "ListItem" "position" (add (len $items) 1) "name" .LinkTitle "item" .Permalink) }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items | jsonify | safeJS }}</script>
+{{- end }}
+{{- if and (eq .Section "services") (eq .Kind "page") }}
+<script type="application/ld+json">{{ dict
+  "@context" "https://schema.org"
+  "@type" "Service"
+  "name" .Title
+  "description" (.Description | default .Params.teaser)
+  "url" .Permalink
+  "areaServed" (dict "@type" "Country" "name" "Greece")
+  "availableLanguage" (slice "el" "de" "en")
+  "provider" (dict "@type" "AccountingService" "name" site.Title "url" site.Home.Permalink "telephone" site.Params.phone
+    "address" (dict "@type" "PostalAddress" "streetAddress" site.Params.street "postalCode" "117 42" "addressLocality" "Athens" "addressCountry" "GR"))
+  | jsonify | safeJS }}</script>
+{{- end }}
+{{- with .Params.faq }}
+{{- $qa := slice }}
+{{- range . }}{{ $qa = $qa | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}{{ end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $qa | jsonify | safeJS }}</script>
+{{- end }}

@@ -1,0 +1,8 @@
+{{- with site.GetPage "/contact" }}
+<aside class="cta-card">
+  <p class="cta-title">{{ T "getInTouch" }}</p>
+  <p>{{ site.Params.street }}, {{ site.Params.city }}</p>
+  <p><a class="phone" href="{{ site.Params.phoneHref }}">{{ site.Params.phone }}</a></p>
+  <a class="btn" href="{{ .RelPermalink }}">{{ T "contactUs" }}</a>
+</aside>
+{{- end }}
