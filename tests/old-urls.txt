@@ -29,3 +29,7 @@
 /el/content/ypovoli-viografikoy
 /el/tags/job
 /sites/default/files/g3052.png
+/careers/
+/careers/apply/
+/de/karriere/
+/de/karriere/bewerbung/

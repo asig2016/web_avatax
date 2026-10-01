@@ -212,6 +212,12 @@ and can be selected in the application form.
 
 **Close a job ad:** set `active: false`. It then disappears from the careers page and from the form.
 
+**Careers on the German/English site (currently hidden, owner decision 2026-10-01):** the files
+`content/careers/_index.{de,en}.md` and `apply.{de,en}.md` contain `build: { render: never, list: never }`, so there is
+no "Karriere"/"Careers" menu entry and no page in DE/EN; `/careers/` and `/de/karriere/` redirect (301) to the Greek
+careers page (`nginx/conf.d/redirects.conf`). To show them again: remove the `build:` block, add back
+`menus: { main: { weight: 30 } }`, delete the six "careers hidden" lines in `redirects.conf`, then `make preview`.
+
 ---
 
 ## 8. Other changes

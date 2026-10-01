@@ -5,8 +5,8 @@ description: "Jobs at AVATAX A.E. in Athens: accountants and assistant accountan
 url: /careers/
 layout: careers
 review: "new English page"
-menus:
-  main:
-    weight: 30
+build:                   # careers hidden on DE/EN (owner 2026-10-01); old URLs redirect to the Greek page
+  render: never
+  list: never
 ---
 We are always looking for committed people who want to grow with us – in a friendly environment and in modern offices. Our team works in Greek, English and German.

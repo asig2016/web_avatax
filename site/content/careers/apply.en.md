@@ -6,5 +6,8 @@ description: "Send us your CV online for positions at AVATAX A.E. in Athens. All
 url: /careers/apply/
 layout: apply
 review: "new English page, translated from EL"
+build:                   # careers hidden on DE/EN (owner 2026-10-01); old URLs redirect to the Greek page
+  render: never
+  list: never
 ---
 Please fill in the form and attach your CV. We will contact you if your profile matches one of our open positions.
