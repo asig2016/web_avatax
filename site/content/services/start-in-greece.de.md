@@ -1,31 +1,35 @@
 ---
-title: "Ihr Start in Griechenland: Firmengründung und Niederlassung"
+title: "Ihr Start in Griechenland: Repräsentanz, Zweigniederlassung oder Tochtergesellschaft"
 linkTitle: "Ihr Start in Griechenland"
-seoTitle: "Firmengründung in Griechenland – Niederlassung & GmbH"
-description: "Firmengründung in Griechenland: Repräsentanz, Betriebsstätte oder Tochtergesellschaft? Wir begleiten deutsche Unternehmen bei Steuern, Buchhaltung und Organisation."
+seoTitle: "Firmengründung in Griechenland – Tochter oder Zweig | AVATAX"
+description: "Markteintritt in Griechenland: Repräsentanz, Zweigniederlassung oder Tochtergesellschaft? Steuerliche und buchhalterische Folgen und unsere Begleitung."
 url: /de/leistungen/ihr-start-in-griechenland/
 icon: start
 weight: 60
-teaser: "Begleitung für Unternehmen und Privatpersonen aus dem Ausland, die sich in Griechenland niederlassen möchten."
+teaser: "Repräsentanz, Zweigniederlassung oder Tochtergesellschaft – Begleitung ausländischer Unternehmen beim Markteintritt in Griechenland."
+review: "überarbeitet (Begriffe Repräsentanz / Zweigniederlassung / Tochtergesellschaft) – bitte prüfen"
 menus:
   main:
     parent: services
     weight: 60
+faq:
+  - q: "Welche Form ist für mein Unternehmen in Griechenland die richtige?"
+    a: "Das hängt von der geplanten Tätigkeit, den erwarteten Umsätzen, der Haftung und der Verflechtung mit der Muttergesellschaft ab. Repräsentanz, Zweigniederlassung und Tochtergesellschaft (etwa eine I.K.E. oder A.E.) haben jeweils unterschiedliche steuerliche und buchhalterische Folgen, die wir Ihnen vor der Entscheidung erläutern."
+  - q: "Was übernehmen Sie nach dem Start?"
+    a: "Wir führen Ihre Buchhaltung und Lohnbuchhaltung, erstellen Ihre Steuererklärungen und übernehmen – für Unternehmen ohne griechische Gesellschaft – die steuerliche Vertretung, auf Deutsch oder Englisch."
 ---
-Bei der Erschließung des griechischen Marktes stehen Unternehmen vor komplexen Entscheidungen. Es hilft, auf einen erfahrenen Partner zurückgreifen zu können, der die steuerrechtlichen, arbeitsrechtlichen und gesellschaftsrechtlichen Aspekte darlegt, in organisatorischen und finanziellen Fragen zur Seite steht – und vom ersten Tag an Ihre buchhalterischen und steuerlichen Pflichten übernimmt.
+Für den Eintritt in den griechischen Markt stehen ausländischen Unternehmen im Wesentlichen drei Formen zur Verfügung, die sich rechtlich, steuerlich und buchhalterisch unterscheiden. Wir erläutern die steuerrechtlichen, arbeitsrechtlichen und gesellschaftsrechtlichen Folgen im Vergleich zum deutschen Recht, begleiten die organisatorische Umsetzung und übernehmen ab dem ersten Geschäftstag die buchhalterischen und steuerlichen Pflichten.
 
-Im Wesentlichen stehen folgende Formen einer „Niederlassung“ in Griechenland zur Auswahl:
+## Repräsentanz (Informations- oder Verbindungsbüro)
 
-## Repräsentanz oder Informationsbüro
+Eine Repräsentanz hat keine eigene Rechtspersönlichkeit und vertritt lediglich die Interessen des ausländischen Unternehmens. Sie schließt keine eigenen Geschäfte ab, sondern beschränkt sich auf Kontakt- und Koordinationsaufgaben. Solange sie ausschließlich solche vorbereitenden oder unterstützenden Tätigkeiten ausübt, begründet sie in der Regel keine Betriebsstätte und ist damit nicht ertragsteuerpflichtig.
 
-Ein Informationsbüro besitzt keine eigene Rechtspersönlichkeit; es repräsentiert lediglich die Interessen der „Zentrale“. Es darf keine eigenen Geschäfte abschließen, funktioniert nur als Kontakt- und Koordinationsbüro und ist somit nicht ertragsteuerpflichtig.
+## Zweigniederlassung
 
-## Betriebsstätte
-
-Wie ein Informationsbüro ist eine Betriebsstätte rechtlich nicht selbständig, besitzt jedoch eine eigene Geschäftstätigkeit und ist damit in Griechenland ertragsteuerpflichtig. Hier ist die Gewinnabgrenzung zwischen Betriebsstätte und „Zentrale“ zu beachten.
+Auch eine Zweigniederlassung (υποκατάστημα) ist rechtlich nicht selbständig, übt jedoch eine eigene Geschäftstätigkeit aus. Sie wird im griechischen Handelsregister (GEMI) eingetragen, begründet eine Betriebsstätte und ist in Griechenland ertragsteuerpflichtig. Zu klären ist insbesondere die Gewinnabgrenzung zwischen Zweigniederlassung und Stammhaus.
 
 ## Tochtergesellschaft
 
-Bei der Gründung einer (rechtlich selbständigen) Tochtergesellschaft ist die Rechtsform im Hinblick auf Haftung, Geschäftsführung und Geschäftsführervergütung zu wählen. Wegen der engen wirtschaftlichen Verflechtung mit der Muttergesellschaft sind Gewinnabgrenzung und Verträge zwischen beiden Gesellschaften von Anfang an zu berücksichtigen.
+Eine Tochtergesellschaft ist eine rechtlich selbständige griechische Gesellschaft, in der Praxis meist eine I.K.E. oder eine A.E. Bei der Gründung sind die Rechtsform im Hinblick auf Haftung, Geschäftsführung und Geschäftsführervergütung sowie – wegen der engen Verflechtung mit der Muttergesellschaft – die Gewinnabgrenzung und die Verträge zwischen beiden Gesellschaften festzulegen.
 
-Nach dem Start übernehmen wir Ihre [Buchhaltung](/de/leistungen/buchhaltung-und-jahresabschluss/), [Lohnbuchhaltung](/de/leistungen/lohnbuchhaltung/) und [Steuerangelegenheiten](/de/leistungen/steuerberatung/) – oder werden Ihr [Fiskalvertreter](/de/leistungen/fiskalvertretung/).
+Nach dem Start übernehmen wir Ihre [Buchhaltung](/de/leistungen/buchhaltung-und-jahresabschluss/), [Lohnbuchhaltung](/de/leistungen/lohnbuchhaltung/) und [Steuerberatung](/de/leistungen/steuerberatung/) sowie die [steuerliche Vertretung](/de/leistungen/fiskalvertretung/).

@@ -151,7 +151,10 @@ visitors and Google.
 1. Open the file, e.g. `site/content/services/tax.de.md`.
 2. Change the text and save.
 3. Check it on http://localhost:8090/de/leistungen/steuerberatung/.
-4. **Make the same change in the other two languages** (`tax.en.md`, `tax.el.md`).
+4. Check whether the other two languages need the change too (`tax.en.md`, `tax.el.md`). The facts must stay the
+   same, but the pages need **not** be word-for-word translations: Greek pages address Greek clients
+   (professional terms, legal references), German and English pages address people and companies coming
+   to Greece for the first time (explain what is different, compare with Germany where useful).
 
 If a file contains a line `review: "…"`, the text is new or translated and has not yet been checked.
 After you have checked it, **delete this line**.

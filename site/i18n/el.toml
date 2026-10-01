@@ -10,10 +10,9 @@ phone = "Τηλέφωνο"
 address = "Διεύθυνση"
 openMap = "Άνοιγμα στο OpenStreetMap"
 openGoogleMaps = "Άνοιγμα στους Χάρτες Google"
-memberOf = "Μέλος των"
+memberOf = "Μέλος του"
 privacy = "Πολιτική απορρήτου"
 cookieSettings = "Ρυθμίσεις cookies"
-since = "από το"
 ourServices = "Οι υπηρεσίες μας"
 
 # forms

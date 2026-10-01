@@ -8,4 +8,4 @@ menus:
     identifier: services
     weight: 10
 ---
-From day-to-day bookkeeping to tax advice for companies and private persons: we take care of your accounting and tax matters in Greece – in Greek, German and English.
+From day-to-day bookkeeping to tax advice for companies and private individuals: we take care of your accounting and tax matters in Greece – in Greek, German and English.

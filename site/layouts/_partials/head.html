@@ -51,6 +51,8 @@
   "geo" (dict "@type" "GeoCoordinates" "latitude" site.Params.lat "longitude" site.Params.lon)
   "knowsLanguage" (slice "el" "de" "en")
   "areaServed" "GR"
+  "hasMap" (printf "https://www.openstreetmap.org/?mlat=%s&mlon=%s#map=18/%s/%s" site.Params.lat site.Params.lon site.Params.lat site.Params.lon)
+  "image" (((resources.Get "images/office.jpg").Fill "1200x800 Center jpg").Permalink)
   "description" $desc
   | jsonify | safeJS }}
 </script>

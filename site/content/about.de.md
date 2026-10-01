@@ -1,7 +1,7 @@
 ---
 title: "Über uns"
 seoTitle: "Über uns – Buchhaltung & Steuerberatung in Athen | AVATAX"
-description: "AVATAX A.E.: verlässliche Buchhaltung und Steuerberatung in Athen, ein qualifiziertes Team auf Deutsch, Griechisch und Englisch, Büros an der Syngrou Avenue."
+description: "AVATAX A.E.: verlässliche Buchhaltung und Steuerberatung in Athen – ein qualifiziertes Team mit Deutsch, Griechisch und Englisch an der Syngrou Avenue."
 url: /de/ueber-uns/
 summary: "Verlässlichkeit ist unser Grundsatz. Unser Team verbindet Hochschulabsolventen mit erfahrenen Fachleuten aus Buchhaltung und Steuerberatung; alle Mitarbeiter werden bei ihrer Einstellung geschult und besuchen regelmäßig Fortbildungen."
 menus:
@@ -9,7 +9,7 @@ menus:
     identifier: about
     weight: 20
 ---
-## Unsere Grundsätze
+## Unser Grundsatz
 
 Verlässlichkeit gegenüber unseren Mandanten ist unser Grundsatz. Aus Respekt vor unseren Mandanten informieren wir sie rechtzeitig über mögliche Schwierigkeiten, die während unserer Tätigkeit auftreten können, oder über zusätzliche Kosten. Wir bauen Vertrauensverhältnisse auf und sind für unsere Mandanten da, wenn sie uns brauchen.
 
@@ -17,7 +17,9 @@ Verlässlichkeit gegenüber unseren Mandanten ist unser Grundsatz. Aus Respekt v
 
 Unser Team verbindet Hochschulabsolventen mit erfahrenen Fachleuten aus Buchhaltung und Steuerberatung. Alle Mitarbeiter werden bei ihrer Einstellung geschult und besuchen regelmäßig Fortbildungen, um stets über die aktuellen Entwicklungen in Buchhaltung und Steuern informiert zu sein.
 
-Ein großer Vorteil sind die sehr guten Englisch- und Deutschkenntnisse unserer Mitarbeiter: Sie erleichtern die Kommunikation mit Behörden und Unternehmen im Ausland, vor allem im deutschsprachigen Raum.
+Ein großer Vorteil sind die sehr guten Englisch- und Deutschkenntnisse unserer Mitarbeiter: Sie erleichtern die Kommunikation mit Behörden und Unternehmen im Ausland, vor allem im deutschsprachigen Raum. Deshalb zählen viele [Unternehmen aus dem Ausland](/de/leistungen/fiskalvertretung/) und [Privatpersonen, die nach Griechenland ziehen](/de/leistungen/umzug-nach-griechenland/), zu unseren Mandanten.
+
+Einen Überblick über alle Leistungen finden Sie unter [Leistungen](/de/leistungen/).
 
 ## Unsere Büros
 

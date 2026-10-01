@@ -1,7 +1,7 @@
 ---
 title: "Leistungen"
 seoTitle: "Buchhaltung, Lohn & Steuern in Griechenland | AVATAX"
-description: "Buchführung, Jahresabschlüsse, Lohnbuchhaltung, Steuerberatung, Fiskalvertretung und Unterstützung von Buchhaltungsabteilungen in Griechenland – auf Deutsch."
+description: "Buchführung, Jahresabschlüsse, Lohnbuchhaltung, Steuerberatung, steuerliche Vertretung und Unterstützung Ihrer Buchhaltung in Griechenland – auf Deutsch."
 url: /de/leistungen/
 menus:
   main:

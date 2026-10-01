@@ -1,31 +1,35 @@
 ---
-title: "Your start in Greece: setting up a company or branch"
+title: "Your start in Greece: representative office, branch or subsidiary"
 linkTitle: "Your start in Greece"
-seoTitle: "Company Formation in Greece – Branch or Subsidiary"
-description: "Setting up a business in Greece: representative office, branch or subsidiary? We support foreign companies with tax, accounting and organisational matters."
+seoTitle: "Company Formation in Greece – Branch, Subsidiary | AVATAX"
+description: "Entering the Greek market: representative office, branch or subsidiary? Tax and accounting consequences and how we support foreign companies."
 url: /services/start-in-greece/
 icon: start
 weight: 60
-teaser: "Support for companies and private persons from abroad who want to establish themselves in Greece."
+teaser: "Representative office, branch or subsidiary – support for foreign companies setting up in Greece."
+review: "revised (terms representative office / branch / subsidiary, aligned with DE) – please check"
 menus:
   main:
     parent: services
     weight: 60
+faq:
+  - q: "Which form is right for my company in Greece?"
+    a: "That depends on your planned activities, the expected revenue, liability and how closely the Greek unit works with the parent company. A representative office, a branch and a subsidiary (usually an I.K.E. or A.E.) each have different tax and accounting consequences, which we explain before you decide."
+  - q: "What do you take care of after the start?"
+    a: "We keep your books, run payroll, prepare your tax returns and – for companies without a Greek entity – act as your tax representative and, where required, as VAT fiscal representative, in English or German."
 ---
-Entering the Greek market involves complex decisions. It helps to rely on an experienced partner who explains the tax, labour-law and company-law aspects and supports you in organisational and financial matters – and who then takes care of your accounting and tax obligations from day one.
+Foreign companies entering the Greek market essentially have three options, which differ in legal, tax and accounting terms. We explain the tax, labour-law and company-law consequences, support the organisational set-up and take over your accounting and tax obligations from the first business day.
 
-Essentially, the following forms of establishment in Greece are available:
+## Representative office (information or liaison office)
 
-## Representative or information office
+A representative office has no legal personality of its own and merely represents the interests of the foreign company. It does not conclude business of its own but is limited to contact and coordination tasks. As long as it carries out only such preparatory or auxiliary activities, it normally does not constitute a permanent establishment and is therefore not subject to Greek income tax.
 
-An information office has no legal personality of its own; it merely represents the interests of the head office. It may not conduct its own business or conclude contracts, acts only as a contact and coordination office and is therefore not subject to income tax.
+## Branch
 
-## Permanent establishment (branch)
-
-Like an information office, a permanent establishment is not legally independent, but it carries out its own business activities and is therefore subject to income tax in Greece. The allocation of profits between the branch and the head office must be considered.
+A branch (υποκατάστημα) is likewise not legally independent, but it carries on business activities of its own. It is registered in the Greek business register (GEMI), constitutes a permanent establishment and is subject to income tax in Greece. A key issue is the allocation of profits between the branch and the head office.
 
 ## Subsidiary
 
-When founding a (legally independent) subsidiary, the choice of legal form has to be decided with regard to liability, management and the remuneration of managing directors. Because of the close economic ties with the parent company, profit allocation and the contracts between both companies must be considered from the start.
+A subsidiary is a legally independent Greek company, in practice usually an I.K.E. (private company) or an A.E. (société anonyme). On formation, the legal form must be chosen with regard to liability, management and directors' remuneration. Because of the close ties with the parent company, profit allocation and the contracts between the two companies must also be settled from the start.
 
-After the start, we take care of your [accounting](/services/accounting/), [payroll](/services/payroll/) and [tax matters](/services/tax-consultancy/) – or act as your [fiscal representative](/services/fiscal-representation/).
+After the start, we take care of your [accounting](/services/accounting/), [payroll](/services/payroll/) and [tax matters](/services/tax-consultancy/) and act as your [tax or fiscal representative](/services/fiscal-representation/).

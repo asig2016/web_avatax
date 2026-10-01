@@ -1,7 +1,7 @@
 ---
 title: "Careers"
 seoTitle: "Careers – Jobs for Accountants in Athens | AVATAX"
-description: "Jobs at AVATAX A.E. in Athens: accountants and assistant accountants. Friendly team, modern offices and paid professional training."
+description: "Jobs at AVATAX A.E. in Athens: accountants and assistant accountants. Friendly team, modern offices and training costs covered."
 url: /careers/
 layout: careers
 review: "new English page"

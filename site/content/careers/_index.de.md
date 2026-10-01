@@ -1,7 +1,7 @@
 ---
 title: "Karriere"
 seoTitle: "Karriere – Jobs in der Buchhaltung in Athen | AVATAX"
-description: "Stellenangebote bei AVATAX A.E. in Athen: Buchhalter und Buchhaltungsassistenten. Freundliches Team, moderne Büros und bezahlte Fortbildung."
+description: "Stellenangebote bei AVATAX A.E. in Athen: Buchhalter und Buchhaltungsassistenten. Freundliches Team, moderne Büros und Übernahme der Fortbildungskosten."
 url: /de/karriere/
 layout: careers
 review: "neue deutsche Seite"

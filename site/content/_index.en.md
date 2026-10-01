@@ -1,7 +1,7 @@
 ---
 title: "AVATAX A.E."
-seoTitle: "Accountants & Tax Consultants in Athens | AVATAX"
-description: "Accounting, payroll, tax consultancy and fiscal representation in Athens for companies and private persons – in Greek, German and English."
+seoTitle: "Accountants & Tax Consultants in Athens, Greece | AVATAX"
+description: "Accounting, payroll, tax consultancy and fiscal representation in Athens for companies and private individuals – in Greek, German and English."
 review: "new home page texts"
 heroEyebrow: "Accounting · Payroll · Tax"
 heroTitle: "Accountants and tax consultants in Athens"
@@ -10,8 +10,8 @@ heroAlt: "The Acropolis, seen from our office"
 officeAlt: "View from our office onto Syngrou Avenue"
 facts:
   - { num: "EL · DE · EN", label: "working languages" }
-  - { num: "4 eyes", label: "every answer is checked by two senior staff members" }
-  - { num: "Online", label: "access to your accounting data at any time" }
+  - { num: "4 eyes", label: "every answer is checked by at least two senior staff members" }
+  - { num: "Class A", label: "licensed accountants sign your financial statements" }
 pillarsTitle: "What sets us apart"
 pillars:
   - icon: shield
@@ -22,7 +22,7 @@ pillars:
     text: "Every client has a dedicated contact person at AVATAX who knows the business and coordinates all matters with our senior staff."
   - icon: flags
     title: "German and English"
-    text: "We work in Greek, German and English, which makes cooperation with parent companies and authorities abroad – especially in German-speaking countries – straightforward."
+    text: "We work in Greek, German and English. With our close ties to Germany, we can also explain Greek rules in comparison with German practice – helpful for parent companies in German-speaking countries."
   - icon: globe
     title: "Online access"
     text: "We keep your books with modern accounting software and give you online access, so you can retrieve your figures at any time."
@@ -32,19 +32,20 @@ audiences:
     title: "Companies from abroad"
     text: "Fiscal representation, VAT registration and all accounting and tax matters for foreign companies active in Greece."
     links:
-      - { label: "Fiscal representation", url: "/services/fiscal-representation/" }
+      - { label: "Tax & fiscal representation", url: "/services/fiscal-representation/" }
       - { label: "Your start in Greece", url: "/services/start-in-greece/" }
   - icon: building
     title: "Greek companies"
     text: "Bookkeeping, financial statements, payroll and ongoing tax advice – fully outsourced or as support for your own accounting department."
     links:
       - { label: "Accounting & financial statements", url: "/services/accounting/" }
-      - { label: "Payroll", url: "/services/payroll/" }
-      - { label: "Support for accounting departments", url: "/services/accounting-department-support/" }
+      - { label: "Payroll & labour law", url: "/services/payroll/" }
+      - { label: "Accounting department support", url: "/services/accounting-department-support/" }
   - icon: person
-    title: "Private persons"
+    title: "Private individuals"
     text: "Income tax, pensions from abroad, real estate, inheritance and transfers of assets in Greece."
     links:
+      - { label: "Tax incentives for moving to Greece: 7% for pensioners", url: "/services/relocating-to-greece/" }
       - { label: "Tax consultancy", url: "/services/tax-consultancy/" }
 ---
 ## Accounting and tax advice built on trust
