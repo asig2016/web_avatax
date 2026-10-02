@@ -250,7 +250,7 @@ To continue editing afterwards, run `make dev` again.
 
 If something goes wrong after publishing:
 ```bash
-ssh sysop@sigalas.eu 'cd docker_data/avatax && make rollback'
+ssh sysop@sigalas.eu 'cd /docker_data/go_avatax && make rollback'
 ```
 This restores the previous version immediately.
 
@@ -265,4 +265,4 @@ This restores the previous version immediately.
 | `make dev` doesn't start | Run `make down`, then `make dev` again. Is Docker running? (`systemctl status docker`) |
 | "permission denied" for `public` or `logs` | `sudo chown -R "$(id -u):$(id -g)" public* logs`, then `make dev` again |
 | Which containers are running? | `docker compose --profile dev ps` |
-| Form messages don't arrive (server) | `ssh sysop@sigalas.eu 'cd docker_data/avatax && docker compose logs formsvc'` |
+| Form messages don't arrive (server) | `ssh sysop@sigalas.eu 'cd /docker_data/go_avatax && docker compose logs formsvc'` |

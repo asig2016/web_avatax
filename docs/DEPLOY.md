@@ -10,7 +10,7 @@ The full command reference (containers, folders, troubleshooting) is in **[DOCKE
 |---|---|
 | Server | `135.181.76.115` (Hetzner), which also hosts other sites (incl. another Docker stack of this kind on port 8080) behind an existing nginx reverse proxy |
 | SSH login | `ssh sysop@sigalas.eu` (same server as sigalas.eu; used by `make deploy`, see `DEPLOY_HOST` in the Makefile) |
-| Project directory | laptop `/home/asig/docker_data/avatax`, server `~/docker_data/avatax` (= `/home/sysop/docker_data/avatax`) |
+| Project directory | laptop `/home/asig/docker_data/avatax`, server `/docker_data/go_avatax` |
 | Containers | `avatax-web` (nginx, static site), `avatax-formsvc` (forms → e-mail); on the server **no** `hugo`/`mailpit` |
 | Source code | GitHub `asig2016/web_avatax`, branch `master` |
 | DNS | papaki.gr (`dns1/dns2.papaki.gr`) |
@@ -94,17 +94,17 @@ rsync -av avatax:backup-drupal-*/ ~/backup/avatax-drupal/    # copy to the lapto
 ```bash
 # on the laptop – copies everything except .env, public/, logs/, .git
 cd /home/asig/docker_data/avatax
-ssh sysop@sigalas.eu 'mkdir -p docker_data/avatax'
+ssh sysop@sigalas.eu 'sudo mkdir -p /docker_data/go_avatax && sudo chown sysop: /docker_data/go_avatax'   # once: /docker_data must be writable for sysop
 rsync -az --exclude .git --exclude .env --exclude /public/ --exclude /public.next/ \
       --exclude /public.prev/ --exclude /logs/ --exclude /site/resources/ \
-      ./ sysop@sigalas.eu:docker_data/avatax/
+      ./ sysop@sigalas.eu:/docker_data/go_avatax/
 ```
 
 Create the server's `.env`:
 
 ```bash
 ssh sysop@sigalas.eu
-cd ~/docker_data/avatax
+cd /docker_data/go_avatax
 cp .env.example .env && chmod 600 .env
 nano .env
 ```
@@ -240,7 +240,7 @@ make deploy                   # rsync to the server + `make update` there
 `public.prev/`, new build → `public/`, `docker compose up -d --build` (rebuilds formsvc only if its
 code changed) and a health check.
 
-**Rollback** (if a deploy went wrong): `ssh sysop@sigalas.eu 'cd docker_data/avatax && make rollback'`
+**Rollback** (if a deploy went wrong): `ssh sysop@sigalas.eu 'cd /docker_data/go_avatax && make rollback'`
 (plain: `rsync -a --delete public.prev/ public/`). This restores the previous build immediately; nginx
 does not need a restart.
 
@@ -252,14 +252,14 @@ All content is on the server's file system, so you can edit it there directly:
 
 ```bash
 ssh sysop@sigalas.eu
-cd ~/docker_data/avatax
+cd /docker_data/go_avatax
 nano site/content/contact.el.md
 make build publish            # live within seconds (plain: see DOCKER.md §3)
 ```
 
 **Important:** the next `make deploy` from the laptop overwrites server-side edits. Make the
 same change on the laptop too, or copy it back first:
-`rsync -av sysop@sigalas.eu:docker_data/avatax/site/ ./site/`.
+`rsync -av sysop@sigalas.eu:/docker_data/go_avatax/site/ ./site/`.
 
 ## 7. Common content tasks
 
@@ -276,13 +276,13 @@ Details for all content tasks are in **[MANUAL.md](MANUAL.md)**. The most common
 
 ## 8. Operations
 
-- **Logs (server):** `/home/sysop/docker_data/avatax/logs/nginx/{access,error}.log`, plus
+- **Logs (server):** `/docker_data/go_avatax/logs/nginx/{access,error}.log`, plus
   `docker compose logs formsvc` (records every sent mail and every rejected spam attempt).
 - **Status:** `docker compose ps` (`web` must be `healthy`), `curl -s http://127.0.0.1:8090/healthz`.
 - **Log rotation:** the privacy policy promises to keep logs for at most 30 days. Create
   `/etc/logrotate.d/avatax`:
   ```
-  /home/sysop/docker_data/avatax/logs/nginx/*.log {
+  /docker_data/go_avatax/logs/nginx/*.log {
       daily
       rotate 30
       compress

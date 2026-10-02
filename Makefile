@@ -4,8 +4,7 @@
 # Server:  make update / make rollback  (called by `make deploy` over ssh)
 
 DEPLOY_HOST ?= sysop@sigalas.eu
-# DEPLOY_PATH on the server is relative to the home directory of the ssh user (/home/sysop)
-DEPLOY_PATH ?= docker_data/avatax
+DEPLOY_PATH ?= /docker_data/go_avatax
 BASE        ?= http://localhost:8090
 
 COMPOSE := docker compose
