@@ -31,7 +31,7 @@ Read `README.md` (overview), `docs/DOCKER.md` (containers and commands), `docs/D
 7. **Old URLs must keep working:** when a URL changes, add a 301 to `nginx/conf.d/redirects.conf` and a line to
    `tests/old-urls.txt`.
 8. **Content is bind-mounted, never baked into images.** Project path `/home/asig/docker_data/avatax` on the laptop,
-   `/docker_data/go_avatax` on the server (`ssh sysop@sigalas.eu`). Bind mounts use `:z` (Fedora SELinux). Create `public`, `public.next`, `logs/nginx` before the first
+   `/home/sysop/docker_data/go_avatax` on the server (`ssh sysop@sigalas.eu`). Bind mounts use `:z` (Fedora SELinux). Create `public`, `public.next`, `logs/nginx` before the first
    `docker compose up/run`, otherwise Docker creates them as root and Hugo (non-root) cannot write.
 9. **Ports:** web `127.0.0.1:8090`, mailpit `:8026`, hugo live reload `:1314`. Another stack of the same kind
    runs on the same laptop and server with 8080/8025/1313. Do not take those ports.
