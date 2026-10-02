@@ -48,7 +48,7 @@ status:
 
 # Production build into public.next (hugo container).
 build:
-	@mkdir -p public.next
+	@mkdir -p public public.next public.prev logs/nginx   # create as our user, before docker creates them as root
 	$(COMPOSE) run --rm build
 
 # Swap the new build into public/ in place (the web container bind-mounts the
@@ -56,8 +56,8 @@ build:
 publish:
 	@test -f public.next/index.html || (echo "public.next is empty – run 'make build' first" && exit 1)
 	@mkdir -p public public.prev
-	rsync -a --delete public/ public.prev/
-	rsync -a --delete public.next/ public/
+	rsync -rlt --delete public/ public.prev/
+	rsync -rlt --delete public.next/ public/
 	@echo "Published. Previous version kept in public.prev/"
 
 preview:
@@ -100,7 +100,7 @@ deploy:
 
 update:
 	@test -f .env || (echo ".env missing – copy .env.example and fill in the server values" && exit 1)
-	@mkdir -p logs/nginx
+	@mkdir -p public public.next public.prev logs/nginx
 	$(MAKE) build publish
 	$(COMPOSE) up -d --build --remove-orphans
 	@sleep 3
@@ -108,5 +108,5 @@ update:
 
 rollback:
 	@test -f public.prev/index.html || (echo "no previous version in public.prev" && exit 1)
-	rsync -a --delete public.prev/ public/
+	rsync -rlt --delete public.prev/ public/
 	@echo "Rolled back to the previous build."

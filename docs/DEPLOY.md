@@ -274,6 +274,14 @@ Details for all content tasks are in **[MANUAL.md](MANUAL.md)**. The most common
 | Form and button labels | `site/i18n/{en,de,el}.toml` |
 | Enable Google Analytics | Set `ga4ID = "G-…"` in `site/hugo.toml`. The consent banner then appears automatically |
 
+**"Permission denied" in `make publish` on the server** (`public/` owned by root, because Docker
+created the bind-mount folder before the Makefile did – fixed in the Makefile, but an existing root-owned
+folder must be fixed once):
+
+```bash
+ssh sysop@sigalas.eu 'cd /home/sysop/docker_data/go_avatax && sudo chown -R sysop:sysop public public.next public.prev logs'
+```
+
 ## 8. Operations
 
 - **Logs (server):** `/home/sysop/docker_data/go_avatax/logs/nginx/{access,error}.log`, plus
