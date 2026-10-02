@@ -94,7 +94,7 @@ rsync -av avatax:backup-drupal-*/ ~/backup/avatax-drupal/    # copy to the lapto
 ```bash
 # on the laptop – copies everything except .env, public/, logs/, .git
 cd /home/asig/docker_data/avatax
-ssh sysop@sigalas.eu 'sudo mkdir -p /docker_data/go_avatax && sudo chown sysop: /docker_data/go_avatax'   # once: /docker_data must be writable for sysop
+ssh sysop@sigalas.eu 'mkdir -p /docker_data/go_avatax'   # /docker_data belongs to sysop – no sudo needed
 rsync -az --exclude .git --exclude .env --exclude /public/ --exclude /public.next/ \
       --exclude /public.prev/ --exclude /logs/ --exclude /site/resources/ \
       ./ sysop@sigalas.eu:/docker_data/go_avatax/
