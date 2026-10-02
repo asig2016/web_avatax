@@ -118,8 +118,8 @@ HOST_UID=1000            # output of `id -u` on the server
 HOST_GID=1000            # output of `id -g`
 
 SMTP_HOST=mail.sigalas.eu
-SMTP_PORT=587
-SMTP_TLS=starttls
+SMTP_PORT=465
+SMTP_TLS=tls
 SMTP_USER=website@avatax.eu      # a mailbox that may send via mail.sigalas.eu
 SMTP_PASS=********
 MAIL_FROM=Website avatax.eu <website@avatax.eu>
@@ -134,7 +134,7 @@ TOKEN_SECRET=<output of: openssl rand -hex 32>
 ```
 
 Check that the server can reach the mail relay:
-`nc -vz mail.sigalas.eu 587`. If it fails, the mail server's firewall must allow `135.181.76.115`.
+`nc -vz -w 5 mail.sigalas.eu 465` (must answer "succeeded" within seconds; if it hangs, the connection is blocked). Port 587 is not offered by mail.sigalas.eu. If 465 fails, the mail server's firewall must allow `135.181.76.115`.
 
 Create the mount folders as your user (otherwise Docker creates them owned by root), then build and start:
 

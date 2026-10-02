@@ -119,7 +119,7 @@ Copy `.env.example` to `.env` (`chmod 600 .env`) and adjust:
 | `COMPOSE_PROFILES` | `dev` | *(empty)* |
 | `WEB_BIND` | `127.0.0.1:8090` | `127.0.0.1:8090` (host nginx proxies to it) |
 | `HOST_UID` / `HOST_GID` | output of `id -u` / `id -g` | same on the server |
-| `SMTP_*` | `mailpit`, port `1025`, `SMTP_TLS=none` | `mail.sigalas.eu`, `587`, `starttls`, user/password |
+| `SMTP_*` | `mailpit`, port `1025`, `SMTP_TLS=none` | `mail.sigalas.eu`, `465`, `tls`, user/password |
 | `MAIL_FROM`, `MAIL_TO_CONTACT`, `MAIL_TO_CV` | anything (mailpit) | real addresses |
 | `TOKEN_SECRET` | `openssl rand -hex 32` | `openssl rand -hex 32` (a different value) |
 | `COMPOSE_FILE`, `PROXY_NETWORK`, `SITE_HOSTS` | – | only if the server proxy runs in Docker (see `docs/DEPLOY.md`) |
