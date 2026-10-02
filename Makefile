@@ -3,8 +3,9 @@
 # Laptop:  make dev  ->  edit site/  ->  make preview  ->  make deploy
 # Server:  make update / make rollback  (called by `make deploy` over ssh)
 
-DEPLOY_HOST ?= avatax
-DEPLOY_PATH ?= /home/asig/docker_data/avatax
+DEPLOY_HOST ?= sysop@sigalas.eu
+# DEPLOY_PATH on the server is relative to the home directory of the ssh user (/home/sysop)
+DEPLOY_PATH ?= docker_data/avatax
 BASE        ?= http://localhost:8090
 
 COMPOSE := docker compose
@@ -89,6 +90,7 @@ test-redirects:
 
 deploy:
 	@test -z "$$(git status --porcelain)" || (echo "Uncommitted changes – commit first (git add -A && git commit)"; exit 1)
+	ssh $(DEPLOY_HOST) 'mkdir -p $(DEPLOY_PATH)'
 	rsync -az --delete \
 		--exclude .git --exclude .env --exclude /public/ --exclude /public.next/ --exclude /public.prev/ \
 		--exclude /logs/ --exclude /site/resources/ \

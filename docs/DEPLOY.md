@@ -9,7 +9,8 @@ The full command reference (containers, folders, troubleshooting) is in **[DOCKE
 | | |
 |---|---|
 | Server | `135.181.76.115` (Hetzner), which also hosts other sites (incl. another Docker stack of this kind on port 8080) behind an existing nginx reverse proxy |
-| Project directory (laptop **and** server) | `/home/asig/docker_data/avatax` |
+| SSH login | `ssh sysop@sigalas.eu` (same server as sigalas.eu; used by `make deploy`, see `DEPLOY_HOST` in the Makefile) |
+| Project directory | laptop `/home/asig/docker_data/avatax`, server `~/docker_data/avatax` (= `/home/sysop/docker_data/avatax`) |
 | Containers | `avatax-web` (nginx, static site), `avatax-formsvc` (forms → e-mail); on the server **no** `hugo`/`mailpit` |
 | Source code | GitHub `asig2016/web_avatax`, branch `master` |
 | DNS | papaki.gr (`dns1/dns2.papaki.gr`) |
@@ -33,28 +34,26 @@ git status                    # everything committed? (make deploy refuses uncom
 git push                      # GitHub copy up to date
 ```
 
-Add an SSH alias so `make deploy` can reach the server. In `~/.ssh/config`:
+`make deploy` connects as `sysop@sigalas.eu` (set in the Makefile as `DEPLOY_HOST`; override with
+`make deploy DEPLOY_HOST=…` if needed). Make sure key login works without a password prompt:
 
 ```
-Host avatax
-    HostName 135.181.76.115
-    User asig                 # your user on the server
-    IdentityFile ~/.ssh/id_ed25519
+ssh-copy-id sysop@sigalas.eu      # once, if not done yet
 ```
 
-Then test it with `ssh avatax 'docker --version && docker compose version && make --version | head -1 && rsync --version | head -1'`.
+Then test it with `ssh sysop@sigalas.eu 'docker --version && docker compose version && make --version | head -1 && rsync --version | head -1'`.
 The server needs **Docker Engine with the Compose plugin** (`docker compose`, not the old `docker-compose`),
 **make, rsync and curl**. For example, on Debian/Ubuntu: `sudo apt install make rsync curl`.
 Hugo and Go are **not** needed on the server; they run in containers.
 
-The server user must be able to run `docker` without sudo (`sudo usermod -aG docker asig`, then log in again).
+The server user must be able to run `docker` without sudo (`sudo usermod -aG docker sysop`, then log in again).
 
 ---
 
 ## 1. Inspect the server (determine variant A or B)
 
 ```bash
-ssh avatax
+ssh sysop@sigalas.eu
 docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Ports}}'
 docker network ls
 sudo ss -tlnp | grep -E ':80 |:443 '
@@ -81,7 +80,7 @@ docker ps | grep -i -E 'drupal|php|avatax'
 Adapt the paths to what you found in step 1:
 
 ```bash
-ssh avatax
+ssh sysop@sigalas.eu
 mkdir -p ~/backup-drupal-$(date +%F) && cd ~/backup-drupal-$(date +%F)
 sudo tar czf drupal-files.tgz -C /var/www avatax.eu          # docroot (adjust)
 mysqldump -u root -p <drupal_db> | gzip > drupal-db.sql.gz     # or: docker exec <db> mysqldump ...
@@ -95,17 +94,17 @@ rsync -av avatax:backup-drupal-*/ ~/backup/avatax-drupal/    # copy to the lapto
 ```bash
 # on the laptop – copies everything except .env, public/, logs/, .git
 cd /home/asig/docker_data/avatax
-ssh avatax 'mkdir -p /home/asig/docker_data/avatax'
+ssh sysop@sigalas.eu 'mkdir -p docker_data/avatax'
 rsync -az --exclude .git --exclude .env --exclude /public/ --exclude /public.next/ \
       --exclude /public.prev/ --exclude /logs/ --exclude /site/resources/ \
-      ./ avatax:/home/asig/docker_data/avatax/
+      ./ sysop@sigalas.eu:docker_data/avatax/
 ```
 
 Create the server's `.env`:
 
 ```bash
-ssh avatax
-cd /home/asig/docker_data/avatax
+ssh sysop@sigalas.eu
+cd ~/docker_data/avatax
 cp .env.example .env && chmod 600 .env
 nano .env
 ```
@@ -241,7 +240,7 @@ make deploy                   # rsync to the server + `make update` there
 `public.prev/`, new build → `public/`, `docker compose up -d --build` (rebuilds formsvc only if its
 code changed) and a health check.
 
-**Rollback** (if a deploy went wrong): `ssh avatax 'cd /home/asig/docker_data/avatax && make rollback'`
+**Rollback** (if a deploy went wrong): `ssh sysop@sigalas.eu 'cd docker_data/avatax && make rollback'`
 (plain: `rsync -a --delete public.prev/ public/`). This restores the previous build immediately; nginx
 does not need a restart.
 
@@ -252,15 +251,15 @@ does not need a restart.
 All content is on the server's file system, so you can edit it there directly:
 
 ```bash
-ssh avatax
-cd /home/asig/docker_data/avatax
+ssh sysop@sigalas.eu
+cd ~/docker_data/avatax
 nano site/content/contact.el.md
 make build publish            # live within seconds (plain: see DOCKER.md §3)
 ```
 
 **Important:** the next `make deploy` from the laptop overwrites server-side edits. Make the
 same change on the laptop too, or copy it back first:
-`rsync -av avatax:/home/asig/docker_data/avatax/site/ ./site/`.
+`rsync -av sysop@sigalas.eu:docker_data/avatax/site/ ./site/`.
 
 ## 7. Common content tasks
 
@@ -277,13 +276,13 @@ Details for all content tasks are in **[MANUAL.md](MANUAL.md)**. The most common
 
 ## 8. Operations
 
-- **Logs:** `/home/asig/docker_data/avatax/logs/nginx/{access,error}.log`, plus
+- **Logs (server):** `/home/sysop/docker_data/avatax/logs/nginx/{access,error}.log`, plus
   `docker compose logs formsvc` (records every sent mail and every rejected spam attempt).
 - **Status:** `docker compose ps` (`web` must be `healthy`), `curl -s http://127.0.0.1:8090/healthz`.
 - **Log rotation:** the privacy policy promises to keep logs for at most 30 days. Create
   `/etc/logrotate.d/avatax`:
   ```
-  /home/asig/docker_data/avatax/logs/nginx/*.log {
+  /home/sysop/docker_data/avatax/logs/nginx/*.log {
       daily
       rotate 30
       compress
