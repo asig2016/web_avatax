@@ -92,7 +92,7 @@ deploy:
 	ssh $(DEPLOY_HOST) 'mkdir -p $(DEPLOY_PATH)'
 	rsync -az --delete \
 		--exclude .git --exclude .env --exclude /public/ --exclude /public.next/ --exclude /public.prev/ \
-		--exclude /logs/ --exclude /site/resources/ \
+		--exclude /logs/ --exclude /site/resources/ --exclude /.idea/ \
 		./ $(DEPLOY_HOST):$(DEPLOY_PATH)/
 	ssh $(DEPLOY_HOST) 'cd $(DEPLOY_PATH) && make update'
 
