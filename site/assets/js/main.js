@@ -224,6 +224,8 @@ function loadChat(base, lang, title, department, guest) {
     api.onQueuePositionChange(send);
     // chat closed (by the visitor or the agent): the next visit starts with our panel again
     api.onChatEnded(() => { chatStore('started', null); chatStore('topic', null); });
+    // no agent available any more (Rocket.Chat would show its offline form instead of the chat): hide the widget
+    api.onServiceOffline(() => api.hideWidget());
   });
   // Commands that reach the widget before its app is ready are lost (custom fields, guest data, maximize),
   // so these are sent shortly after its "ready" message: fields for a chat that is already running (page
@@ -285,10 +287,10 @@ if (chat) {
     const status = await chatStatus();
     department = status.department || '';
     showInline(status.online);
-    // chat already started (in this or another tab): restore the widget (minimised), even if no agent is
-    // shown as available at the moment
-    if (chatStore('started')) { begin(null); return; }
     if (!status.online) { chat.hidden = true; closePanel(); return; }
+    // chat already started (in this or another tab): restore the widget. Only while an agent is available:
+    // otherwise Rocket.Chat replaces the conversation with its offline form.
+    if (chatStore('started')) { begin(null); return; }
     // pages with chatButton: false (e.g. the contact page) show no chat button; a running chat is still restored
     chat.hidden = chat.dataset.chatButton === 'off';
   };

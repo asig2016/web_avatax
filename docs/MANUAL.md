@@ -336,7 +336,8 @@ The website hands name and e-mail to Rocket.Chat (`registerGuest`), so Rocket.Ch
 skipped. The browser keeps a random visitor id (`chat-token` in local storage) so that a returning visitor stays
 the same contact in Rocket.Chat. A started chat is remembered in the browser for 12 hours
 (`chat-started` in local storage), so it continues in new tabs (links sent in the chat open in a new tab) and on
-later page views, even if no agent is shown as available at that moment; when the chat is closed, the note is
+later page views while an agent is available (if no agent is available, Rocket.Chat would show its offline form
+instead of the conversation, so the website hides the widget); when the chat is closed, the note is
 removed and the next visit starts with the panel again. On phones the restored chat is minimised (a bubble at the bottom
 right), because the open chat window would cover the whole page.
 
