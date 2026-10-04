@@ -169,10 +169,16 @@ if (gaMeta && banner) {
 // contain inline buttons ([data-chat-open], shortcode {{< chat >}}) that carry a topic.
 const chat = document.querySelector('.chat[data-chat-url]');
 
+// Chat state in local storage, shared by all tabs (links in the chat open in a new tab) and valid for
+// CHAT_TTL: chat-started holds the time the chat was started, chat-topic its topic.
+const CHAT_TTL = 12 * 3600 * 1000;
 function chatStore(key, value) {
   try {
-    if (value === undefined) return sessionStorage.getItem('chat-' + key) || '';
-    sessionStorage.setItem('chat-' + key, value);
+    if (value === null) { localStorage.removeItem('chat-' + key); return ''; }
+    if (value !== undefined) { localStorage.setItem('chat-' + key, value); return ''; }
+    const v = localStorage.getItem('chat-' + key) || '';
+    if (key === 'started' && v && Date.now() - Number(v) > CHAT_TTL) { localStorage.removeItem('chat-started'); return ''; }
+    return v;
   } catch (_) { /* storage blocked: the visitor clicks again on the next page */ }
   return '';
 }
@@ -216,6 +222,8 @@ function loadChat(base, lang, title, department, guest) {
     api.onChatStarted(send);
     api.onAssignAgent(send);
     api.onQueuePositionChange(send);
+    // chat closed (by the visitor or the agent): the next visit starts with our panel again
+    api.onChatEnded(() => { chatStore('started', null); chatStore('topic', null); });
   });
   // Commands that reach the widget before its app is ready are lost (custom fields, guest data, maximize),
   // so these are sent shortly after its "ready" message: fields for a chat that is already running (page
@@ -266,7 +274,7 @@ if (chat) {
   const begin = (guest) => {
     clearInterval(poll);
     if (!chatStore('started')) chatStore('topic', topic);
-    chatStore('started', '1');
+    chatStore('started', String(Date.now()));
     chat.hidden = true;
     loadChat(base, lang, title, department, guest);
   };
@@ -274,11 +282,12 @@ if (chat) {
     const status = await chatStatus();
     department = status.department || '';
     showInline(status.online);
+    // chat already started (in this or another tab): restore the widget (minimised), even if no agent is
+    // shown as available at the moment
+    if (chatStore('started')) { begin(null); return; }
     if (!status.online) { chat.hidden = true; closePanel(); return; }
-    // chat already started in this browser session: restore the widget (minimised) on every page
-    if (chatStore('started')) begin(null);
     // pages with chatButton: false (e.g. the contact page) show no chat button; a running chat is still restored
-    else chat.hidden = chat.dataset.chatButton === 'off';
+    chat.hidden = chat.dataset.chatButton === 'off';
   };
 
   refresh();
