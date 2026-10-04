@@ -311,8 +311,15 @@ form.sent .field, form.sent .field-row, form.sent button, form.sent .form-note {
 .chat-inline { margin: 1.4em 0; }
 .chat-panel {
   width: min(340px, calc(100vw - 32px)); background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-  box-shadow: 0 10px 40px rgba(42,32,14,.25); padding: 18px 20px; font-size: .92rem;
+  box-shadow: 0 10px 40px rgba(42,32,14,.25); padding: 18px 20px; font-size: .92rem; position: relative;
+  max-height: calc(100vh - 100px); overflow-y: auto;
 }
+.chat-close {
+  position: absolute; top: 6px; right: 8px; width: 36px; height: 36px; border: 0; border-radius: 50%;
+  background: transparent; color: var(--muted); font-size: 1.6rem; line-height: 1; cursor: pointer;
+}
+.chat-close:hover, .chat-close:focus-visible { background: var(--brand-soft); color: var(--brand-dark); }
+.chat-greeting { padding-right: 28px; }
 .chat-panel p { margin: 0 0 12px; }
 .chat-greeting { color: var(--brand-dark); font-weight: 600; }
 .chat-notice { color: var(--muted); font-size: .86rem; }

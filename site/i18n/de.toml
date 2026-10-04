@@ -66,6 +66,7 @@ faq = "Häufige Fragen"
 # live chat
 chatOpen = "Chat"
 chatAsk = "Fragen? Chatten Sie mit uns"
+chatClose = "Schließen"
 chatStart = "Chat starten"
 chatGreeting = "Guten Tag, wie können wir Ihnen helfen? Unsere Antworten im Chat sind eine erste, unverbindliche Einschätzung. Eine vollständige und verbindliche Beratung setzt einen schriftlichen Auftrag voraus."
 chatNotice = "Bitte senden Sie über den Chat keine vertraulichen Unterlagen oder Steuernummern. Der Chat läuft über unseren eigenen Chat-Server und wird erst geladen, wenn Sie ihn starten. Einzelheiten:"

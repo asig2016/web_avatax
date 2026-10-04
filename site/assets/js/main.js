@@ -283,6 +283,7 @@ if (chat) {
   refresh();
   // agents come and go: re-check every minute until the visitor starts a chat
   poll = setInterval(refresh, 60000);
+  panel.querySelector('.chat-close').addEventListener('click', () => { closePanel(); launch.focus(); });
   launch.addEventListener('click', () => {
     if (panel.hidden) { topic = chat.dataset.chatTopic || ''; openPanel(); } else closePanel();
   });

@@ -66,6 +66,7 @@ faq = "Frequently asked questions"
 # live chat
 chatOpen = "Chat"
 chatAsk = "Questions? Chat with us"
+chatClose = "Close"
 chatStart = "Start chat"
 chatGreeting = "Good day, how can we help you? Our answers in the chat are a first, non-binding assessment. Full and binding advice requires a written engagement."
 chatNotice = "Please do not send confidential documents or tax identification numbers via chat. The chat runs on our own chat server and is only loaded when you start it. Details:"

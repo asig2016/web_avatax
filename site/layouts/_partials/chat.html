@@ -8,6 +8,7 @@
 {{- $legal := site.GetPage "/legal" }}
 <div class="chat" data-chat-url="{{ strings.TrimSuffix "/" . }}" data-chat-lang="{{ site.Language.Lang }}" data-chat-title="{{ site.Params.company }}" data-chat-topic="{{ $page.Params.chatTopic }}" hidden>
   <form class="chat-panel" id="chat-panel" novalidate hidden>
+    <button type="button" class="chat-close" aria-label="{{ T "chatClose" }}" title="{{ T "chatClose" }}">×</button>
     <p class="chat-greeting">{{ T "chatGreeting" }}</p>
     <div class="field">
       <label for="chat-name">{{ T "formName" }} *</label>
