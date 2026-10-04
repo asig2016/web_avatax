@@ -330,11 +330,15 @@ contacted). It says that answers in the chat are a first, non-binding assessment
 written engagement, consistent with the legal notice page. The texts are in `site/i18n/*.toml`: `chatGreeting`
 (greeting) and `chatNotice` (privacy note).
 
-Flow for the visitor: **Chat → Start chat → name and e-mail (Rocket.Chat form) → message.**
+Flow for the visitor: **Chat → name and e-mail (in our panel, in the page language) → Start chat → message.**
+The website hands name and e-mail to Rocket.Chat (`registerGuest`), so Rocket.Chat's own (untranslated) form is
+skipped. The browser keeps a random visitor id (`chat-token` in local storage) so that a returning visitor stays
+the same contact in Rocket.Chat.
 
 The chat window's title bar shows the company name of the page language (`company` in `site/hugo.toml`). The
-Rocket.Chat widget itself has no Greek translation, so on Greek pages its buttons and fields are in English; the
-field `language` in the chat still says `el`, so the agent knows to answer in Greek.
+Rocket.Chat widget itself has no Greek translation, so on Greek pages the few remaining widget texts (message
+field placeholder, "Options", system lines) are in English; the field `language` in the chat still says `el`, so the
+agent knows to answer in Greek.
 
 Rocket.Chat's own greeting messages (*Omnichannel → Livechat Triggers*, "AVATAX greeting DE/EL/EN") are
 **disabled**: they added an extra card and two more clicks, and Rocket.Chat does not keep trigger messages in the

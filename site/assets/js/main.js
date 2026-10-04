@@ -197,7 +197,7 @@ function sendChatFields(api, lang) {
   chatFields(lang).forEach(([key, value]) => api.setCustomField(key, value, true));
 }
 
-function loadChat(base, lang, title, department, open) {
+function loadChat(base, lang, title, department, guest) {
   if (window.RocketChat) return;
   window.RocketChat = function (c) { window.RocketChat._.push(c); };
   window.RocketChat._ = [];
@@ -217,15 +217,17 @@ function loadChat(base, lang, title, department, open) {
     api.onAssignAgent(send);
     api.onQueuePositionChange(send);
   });
-  // Commands that reach the widget before its app is ready are lost (custom fields, maximize), so
-  // these are sent shortly after its "ready" message: fields for a chat that is already running
-  // (page change), maximize when the visitor has just clicked "Start chat".
+  // Commands that reach the widget before its app is ready are lost (custom fields, guest data, maximize),
+  // so these are sent shortly after its "ready" message: fields for a chat that is already running (page
+  // change); for a new chat the visitor's name and e-mail from our form (the widget then skips its own form)
+  // and maximize.
   const onReady = (e) => {
     if (e.origin !== base || !e.data || e.data.src !== 'rocketchat' || e.data.fn !== 'ready') return;
     window.removeEventListener('message', onReady);
     setTimeout(() => window.RocketChat(function () {
+      if (guest) this.registerGuest({ token: guest.token, name: guest.name, email: guest.email, department: department || undefined });
       sendChatFields(this, lang);
-      if (open) this.maximizeWidget();
+      if (guest) this.maximizeWidget();
     }), 1000);
   };
   window.addEventListener('message', onReady);
@@ -235,27 +237,38 @@ function loadChat(base, lang, title, department, open) {
   document.body.appendChild(s);
 }
 
+// Visitor id for Rocket.Chat, kept in this browser so that a returning visitor stays the same contact.
+function chatToken() {
+  let token = '';
+  try { token = localStorage.getItem('chat-token') || ''; } catch (_) { /* storage blocked */ }
+  if (!token) {
+    token = Array.from(crypto.getRandomValues(new Uint8Array(16)), (b) => b.toString(16).padStart(2, '0')).join('');
+    try { localStorage.setItem('chat-token', token); } catch (_) { /* a new id next time */ }
+  }
+  return token;
+}
+
 if (chat) {
   const base = chat.dataset.chatUrl;
   const lang = chat.dataset.chatLang;
   const title = chat.dataset.chatTitle;
   const launch = chat.querySelector('.chat-launch');
   const panel = chat.querySelector('.chat-panel');
-  const start = chat.querySelector('.chat-start');
+  const error = panel.querySelector('.chat-error');
   const inline = document.querySelectorAll('.chat-inline');
   let department = '';
   let topic = chat.dataset.chatTopic || '';
   let poll = null;
 
   const closePanel = () => { panel.hidden = true; launch.setAttribute('aria-expanded', 'false'); };
-  const openPanel = () => { panel.hidden = false; launch.setAttribute('aria-expanded', 'true'); start.focus(); };
+  const openPanel = () => { panel.hidden = false; launch.setAttribute('aria-expanded', 'true'); panel.elements.name.focus(); };
   const showInline = (show) => inline.forEach((el) => { el.hidden = !show; });
-  const begin = (open) => {
+  const begin = (guest) => {
     clearInterval(poll);
     if (!chatStore('started')) chatStore('topic', topic);
     chatStore('started', '1');
     chat.hidden = true;
-    loadChat(base, lang, title, department, open);
+    loadChat(base, lang, title, department, guest);
   };
   const refresh = async () => {
     const status = await chatStatus();
@@ -263,7 +276,7 @@ if (chat) {
     showInline(status.online);
     if (!status.online) { chat.hidden = true; closePanel(); return; }
     // chat already started in this browser session: restore the widget (minimised) on every page
-    if (chatStore('started')) begin(false);
+    if (chatStore('started')) begin(null);
     else chat.hidden = false;
   };
 
@@ -273,7 +286,21 @@ if (chat) {
   launch.addEventListener('click', () => {
     if (panel.hidden) { topic = chat.dataset.chatTopic || ''; openPanel(); } else closePanel();
   });
-  start.addEventListener('click', () => begin(true));
+  panel.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = panel.elements.name.value.trim();
+    const email = panel.elements.email.value.trim();
+    const bad = [];
+    if (!name) bad.push('name');
+    if (!EMAIL_RE.test(email)) bad.push('email');
+    ['name', 'email'].forEach((n) => {
+      panel.elements[n].closest('.field').classList.toggle('field-invalid', bad.includes(n));
+      panel.elements[n].toggleAttribute('aria-invalid', bad.includes(n));
+    });
+    error.hidden = !bad.length;
+    if (bad.length) { panel.elements[bad[0]].focus(); return; }
+    begin({ token: chatToken(), name, email });
+  });
   chat.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !panel.hidden) { closePanel(); launch.focus(); }
   });

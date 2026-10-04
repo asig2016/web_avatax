@@ -1,16 +1,26 @@
 {{- /* Live chat (Rocket.Chat Livechat). Only rendered when params.rocketchatURL is set.
        main.js asks our own /api/chat-status and shows the button only while an agent is available.
-       The chat server itself is contacted only after the visitor clicks "Start chat". */ -}}
+       Name and e-mail are asked here (in the page language) and handed to the widget, so the visitor
+       skips Rocket.Chat's own form. The chat server is contacted only after "Start chat". */ -}}
 {{- $page := . }}
 {{- with site.Params.rocketchatURL }}
 {{- $privacy := site.GetPage "/privacy" }}
 {{- $legal := site.GetPage "/legal" }}
 <div class="chat" data-chat-url="{{ strings.TrimSuffix "/" . }}" data-chat-lang="{{ site.Language.Lang }}" data-chat-title="{{ site.Params.company }}" data-chat-topic="{{ $page.Params.chatTopic }}" hidden>
-  <div class="chat-panel" id="chat-panel" hidden>
+  <form class="chat-panel" id="chat-panel" novalidate hidden>
     <p class="chat-greeting">{{ T "chatGreeting" }}</p>
+    <div class="field">
+      <label for="chat-name">{{ T "formName" }} *</label>
+      <input id="chat-name" name="name" type="text" autocomplete="name" required maxlength="100">
+    </div>
+    <div class="field">
+      <label for="chat-email">{{ T "formEmail" }} *</label>
+      <input id="chat-email" name="email" type="email" autocomplete="email" required maxlength="200">
+    </div>
+    <p class="chat-error" role="alert" hidden>{{ T "err_invalid" }}</p>
     <p class="chat-notice">{{ T "chatNotice" }}{{ with $privacy }} <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ with $legal }} · <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</p>
-    <button type="button" class="btn chat-start">{{ T "chatStart" }}</button>
-  </div>
+    <button type="submit" class="btn chat-start">{{ T "chatStart" }}</button>
+  </form>
   <button type="button" class="btn chat-launch" aria-expanded="false" aria-controls="chat-panel">{{ partial "icon.html" "chat" }}{{ T "chatOpen" }}</button>
 </div>
 {{- end }}
