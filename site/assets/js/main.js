@@ -236,6 +236,9 @@ function loadChat(base, lang, title, department, guest) {
       if (guest) this.registerGuest({ token: guest.token, name: guest.name, email: guest.email, department: department || undefined });
       sendChatFields(this, lang);
       if (guest) this.maximizeWidget();
+      // Restored chat (new page or new tab, e.g. a link sent in the chat): Rocket.Chat reopens the widget in
+      // its last state, which on phones covers the whole page. Minimise it there so the visitor sees the page.
+      else if (window.matchMedia('(max-width: 480px)').matches) this.minimizeWidget();
     }), 1000);
   };
   window.addEventListener('message', onReady);

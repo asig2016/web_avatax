@@ -337,7 +337,8 @@ skipped. The browser keeps a random visitor id (`chat-token` in local storage) s
 the same contact in Rocket.Chat. A started chat is remembered in the browser for 12 hours
 (`chat-started` in local storage), so it continues in new tabs (links sent in the chat open in a new tab) and on
 later page views, even if no agent is shown as available at that moment; when the chat is closed, the note is
-removed and the next visit starts with the panel again.
+removed and the next visit starts with the panel again. On phones the restored chat is minimised (a bubble at the bottom
+right), because the open chat window would cover the whole page.
 
 The chat window's title bar shows the company name of the page language (`company` in `site/hugo.toml`). The
 Rocket.Chat widget itself has no Greek translation, so on Greek pages the few remaining widget texts (message
