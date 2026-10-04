@@ -359,8 +359,9 @@ Notes:
   that leads to the chat form.
 - The greeting is shown to **new** visitors only (once per visitor and language). A browser that has already chatted
   does not see it again; to test, use a private window.
-- The website gives the greeting view a minimum height (`.rocketchat-widget[data-state="triggered"]` in
-  `site/assets/css/main.css`), because Rocket.Chat sizes it too small and cuts the text off.
+- Rocket.Chat lays out the greeting view too early and cuts the text off. The website corrects this: a minimum height
+  and full width on phones (`.rocketchat-widget[data-state="triggered"]` in `site/assets/css/main.css`), and a 1px
+  change of the frame width when the view appears, which makes the widget re-measure (`site/assets/js/main.js`).
 
 #### Chat button inside a page (e.g. on a service page)
 
