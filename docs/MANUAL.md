@@ -348,6 +348,12 @@ condition for AVATAX pages only, e.g. `^https?://((www\.|admin\.|new\.)?avatax\.
 shared with the other website). The CSS rule for `.rocketchat-widget[data-state="triggered"]` in
 `site/assets/css/main.css` stays as a safeguard for that case.
 
+#### Pages without the chat button
+
+Pages with `chatButton: false` in the front matter show no chat button (currently the contact pages
+`contact.en/de/el.md`, which have their own contact form). A chat the visitor has already started on another page
+stays available there.
+
 #### Chat button inside a page (e.g. on a service page)
 
 Besides the corner button, a page can contain its own chat button, for example below the service description.

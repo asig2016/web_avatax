@@ -277,7 +277,8 @@ if (chat) {
     if (!status.online) { chat.hidden = true; closePanel(); return; }
     // chat already started in this browser session: restore the widget (minimised) on every page
     if (chatStore('started')) begin(null);
-    else chat.hidden = false;
+    // pages with chatButton: false (e.g. the contact page) show no chat button; a running chat is still restored
+    else chat.hidden = chat.dataset.chatButton === 'off';
   };
 
   refresh();

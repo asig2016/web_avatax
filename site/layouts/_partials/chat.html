@@ -6,7 +6,7 @@
 {{- with site.Params.rocketchatURL }}
 {{- $privacy := site.GetPage "/privacy" }}
 {{- $legal := site.GetPage "/legal" }}
-<div class="chat" data-chat-url="{{ strings.TrimSuffix "/" . }}" data-chat-lang="{{ site.Language.Lang }}" data-chat-title="{{ site.Params.company }}" data-chat-topic="{{ $page.Params.chatTopic }}" hidden>
+<div class="chat" data-chat-url="{{ strings.TrimSuffix "/" . }}" data-chat-lang="{{ site.Language.Lang }}" data-chat-title="{{ site.Params.company }}" data-chat-topic="{{ $page.Params.chatTopic }}"{{ if eq $page.Params.chatButton false }} data-chat-button="off"{{ end }} hidden>
   <form class="chat-panel" id="chat-panel" novalidate hidden>
     <button type="button" class="chat-close" aria-label="{{ T "chatClose" }}" title="{{ T "chatClose" }}">×</button>
     <p class="chat-greeting">{{ T "chatGreeting" }}</p>
