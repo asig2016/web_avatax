@@ -243,18 +243,33 @@ Livechat widget itself is loaded from `rocketchatURL` (same server as `CHAT_URL`
 
 1. **Iframe permission (required):** the chat window is the page `/livechat` of the chat server, shown in an iframe
    on avatax.eu. Rocket.Chat sends `X-Frame-Options: sameorigin` on all its pages (anti-clickjacking), so browsers
-   leave that iframe empty on other sites. Remove the header **only for `/livechat`** in the nginx in front of
-   Rocket.Chat and allow just our own sites with `frame-ancestors`:
+   leave that iframe empty on other sites. Remove the header **only for `/livechat`** in the proxy nginx in front of
+   EGroupware/Rocket.Chat (server `ubuntu5`, `~/docker_data/proxy/conf.d/egroupware.conf`, inside the `server` block
+   for `egroupware.sigalas.eu`, above `location /`). The block copies the proxy settings of `location /` and only
+   changes the frame headers; replace `SIGALAS-SITE` with the other website's address(es):
 
    ```nginx
+   # Rocket.Chat Livechat widget: may be embedded in our own websites only
    location /livechat {
-       proxy_pass http://<rocketchat-upstream>;   # same upstream and proxy_set_header lines as the existing Rocket.Chat location
+       access_log off;
+
+       proxy_pass http://egw_server1_backend;
+       proxy_set_header X-Real-IP $remote_addr;
+       proxy_set_header Host $host;
+       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+       proxy_set_header X-Forwarded-Proto "https";
+       proxy_http_version 1.1;
+       proxy_set_header Upgrade $http_upgrade;
+       proxy_set_header Connection "Upgrade";
+
        proxy_hide_header X-Frame-Options;
-       add_header Content-Security-Policy "frame-ancestors https://avatax.eu https://www.avatax.eu http://localhost:8090 https://<sigalas-site>" always;
+       add_header Content-Security-Policy "frame-ancestors https://avatax.eu https://www.avatax.eu https://new.avatax.eu http://localhost:8090 https://SIGALAS-SITE" always;
    }
    ```
 
-   Then `nginx -t` and reload nginx. Check: `curl -sI https://egroupware.sigalas.eu/livechat` shows the
+   The widget's websocket does not start with `/livechat` and keeps going through `location /`. The client-certificate
+   rules of the other locations are not affected; `/livechat` stays public as before.
+   Then `nginx -t && nginx -s reload` (in the proxy container or on the host). Check: `curl -sI https://egroupware.sigalas.eu/livechat` shows the
    `frame-ancestors` line and no `X-Frame-Options`; `curl -sI https://egroupware.sigalas.eu/home` still shows
    `X-Frame-Options: sameorigin`. Do **not** switch off *Restrict access inside any Iframe* in Rocket.Chat
    (Settings → General): that removes the protection from the whole Rocket.Chat interface, including the admin pages.
