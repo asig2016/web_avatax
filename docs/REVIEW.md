@@ -74,6 +74,19 @@ checked against sources. Please verify especially:
   because they changed recently.
 - **Tax (EL):** 30% electronic expenses rule with 22% tax on the shortfall; minimum imputed income for self-employed.
 
+## Home page text rework (2026-10-02)
+
+- The intro now says what the firm does instead of general statements ("built on trust", "clients are partners").
+- The facts strip ("4 eyes", "Class A", languages) was removed because it repeated the pillars. "Class A" is now a
+  pillar ("Licensed accountants"). Please confirm the claim, see point 3.
+- "What sets us apart" became "How we work", and "Who we work for" became "Our clients".
+- Tax representative (Art. 8 Law 5104/2024) and VAT fiscal representative (Law 2859/2000) are now named separately.
+- Link labels on the home page are now the same as the menu labels (`linkTitle`).
+- DE: "Stammhaus" in place of "Zentrale". Owner decision 2026-10-02: the firm is described as **"Buchhaltungs- und
+  Steuerberatungsgesellschaft griechischen Rechts"** (home intro and footer `legalForm`). "griechischen Rechts"
+  makes clear that it is not a German Steuerberatungsgesellschaft under § 53 StBerG.
+- EL: more technical terms (ΕΛΠ/ν. 4308/2014, myDATA, ΑΠΔ, ΕΡΓΑΝΗ ΙΙ, Ε1/Ε2/Ε9, άρθρα 5Β/5Γ ΚΦΕ).
+
 ## Pages to proofread
 
 - `careers/apply.de.md` — "neue deutsche Seite, aus dem Griechischen übersetzt"
@@ -83,9 +96,9 @@ checked against sources. Please verify especially:
 - `careers/_index.en.md` — "new English page"
 - `careers/logistis-a-taxeos.el.md` — "ad from 2020 – still open?"
 - `careers/voithos-logisti.el.md` — "ad from 2020 – still open? Added «(για τους άνδρες υποψηφίους)» to the military-service requirement"
-- `_index.de.md` — "neue Texte der Startseite"
-- `_index.el.md` — "νέα κείμενα αρχικής σελίδας"
-- `_index.en.md` — "new home page texts"
+- `_index.de.md` — "Startseite am 2026-10-02 sachlicher formuliert (ohne Kennzahlen-Leiste)"
+- `_index.el.md` — "αναδιατύπωση αρχικής σελίδας 2026-10-02 (πιο τεκμηριωμένο ύφος, χωρίς λωρίδα στοιχείων)"
+- `_index.en.md` — "home page texts rewritten 2026-10-02 (more factual register, no facts strip)"
 - `privacy.de.md` — "ENTWURF – vor Livegang von der Gesellschaft / einem Rechtsberater prüfen lassen (Datenschutz-E-Mail-Adresse ergänzen)"
 - `privacy.el.md` — "ΠΡΟΣΧΕΔΙΟ – πρέπει να ελεγχθεί από την εταιρεία / νομικό σύμβουλο πριν από τη δημοσίευση (προσθήκη e-mail για θέματα προσωπικών δεδομένων)"
 - `privacy.en.md` — "DRAFT – must be checked by the company / a legal advisor before going live (add a data-protection e-mail address)"

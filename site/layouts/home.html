@@ -21,11 +21,13 @@
 <section class="section">
   <div class="wrap intro-grid">
     <div class="prose">{{ .Content }}</div>
+    {{- with .Params.facts }}
     <ul class="facts">
-      {{- range .Params.facts }}
+      {{- range . }}
       <li><span class="fact-num">{{ .num }}</span><span class="fact-label">{{ .label }}</span></li>
       {{- end }}
     </ul>
+    {{- end }}
   </div>
 </section>
 
