@@ -227,23 +227,6 @@ function loadChat(base, lang, department, open) {
     }), 1000);
   };
   window.addEventListener('message', onReady);
-  // The widget lays out its greeting view (trigger message, data-state="triggered") once, while the frame
-  // is still small, and cuts the text off; it only re-measures when the frame size changes (as when opening
-  // the browser's developer tools). Nudge the frame width by 1px when that view appears.
-  const watchGreeting = new MutationObserver(() => {
-    const frame = document.querySelector('.rocketchat-widget');
-    if (!frame) return;
-    watchGreeting.disconnect();
-    new MutationObserver(() => {
-      if (frame.dataset.state !== 'triggered') return;
-      setTimeout(() => {
-        const width = frame.style.width;
-        frame.style.width = (parseFloat(width) || frame.offsetWidth) + 1 + 'px';
-        setTimeout(() => { frame.style.width = width; }, 100);
-      }, 300);
-    }).observe(frame, { attributes: true, attributeFilter: ['data-state'] });
-  });
-  watchGreeting.observe(document.body, { childList: true });
   const s = document.createElement('script');
   s.async = true;
   s.src = base + '/livechat/rocketchat-livechat.min.js';

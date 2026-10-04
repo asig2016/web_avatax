@@ -315,8 +315,10 @@ form.sent .field, form.sent .field-row, form.sent button, form.sent .form-note {
 }
 .chat-panel p { margin: 0 0 12px; }
 .cookie-banner:not([hidden]) ~ .chat { bottom: 200px; }
-/* Rocket.Chat sizes the greeting view (trigger message + "Chat now") too tightly and cuts the text off */
-.rocketchat-widget[data-state="triggered"] { min-height: 320px !important; }
+/* Greeting (Livechat trigger) while the widget is closed: Rocket.Chat keeps the frame at the small size of the
+   greeting card (data-state="triggered") even after "Start chat" switches to the chat view, which then gets cut
+   off. Give that state the normal chat-window height (16 + 525 + 16 + 54 px, as set by the loader). */
+.rocketchat-widget[data-state="triggered"] { min-height: min(611px, 100vh) !important; }
 /* On phones the loader keeps the greeting view at a fixed 397px width (wider than many screens): use the full width */
 @media (max-width: 480px) {
   .rocketchat-widget[data-state="triggered"] { width: 100% !important; left: 0 !important; right: 0 !important; min-height: 50vh !important; }
