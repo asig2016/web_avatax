@@ -5,7 +5,7 @@
 {{- with site.Params.rocketchatURL }}
 {{- $privacy := site.GetPage "/privacy" }}
 {{- $legal := site.GetPage "/legal" }}
-<div class="chat" data-chat-url="{{ strings.TrimSuffix "/" . }}" data-chat-lang="{{ site.Language.Lang }}" data-chat-topic="{{ $page.Params.chatTopic }}" hidden>
+<div class="chat" data-chat-url="{{ strings.TrimSuffix "/" . }}" data-chat-lang="{{ site.Language.Lang }}" data-chat-title="{{ site.Params.company }}" data-chat-topic="{{ $page.Params.chatTopic }}" hidden>
   <div class="chat-panel" id="chat-panel" hidden>
     <p class="chat-greeting">{{ T "chatGreeting" }}</p>
     <p class="chat-notice">{{ T "chatNotice" }}{{ with $privacy }} <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ with $legal }} · <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</p>

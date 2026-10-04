@@ -197,7 +197,7 @@ function sendChatFields(api, lang) {
   chatFields(lang).forEach(([key, value]) => api.setCustomField(key, value, true));
 }
 
-function loadChat(base, lang, department, open) {
+function loadChat(base, lang, title, department, open) {
   if (window.RocketChat) return;
   window.RocketChat = function (c) { window.RocketChat._.push(c); };
   window.RocketChat._ = [];
@@ -208,9 +208,11 @@ function loadChat(base, lang, department, open) {
     // message and then reports chat-started, assign-agent or queue-position-change (depending on
     // the flow); the fields are sent on each of these.
     const send = () => sendChatFields(api, lang);
-    api.setLanguage(lang);
+    // The Rocket.Chat widget has no Greek translation; without a supported language it keeps whatever
+    // language it used last, so Greek pages get the English widget texts.
+    api.setLanguage(lang === 'el' ? 'en' : lang);
     if (department) api.setDepartment(department);
-    api.setTheme({ title: 'AVATAX A.E.', color: '#6c5020', position: 'right' });
+    api.setTheme({ title, color: '#6c5020', position: 'right' });
     api.onChatStarted(send);
     api.onAssignAgent(send);
     api.onQueuePositionChange(send);
@@ -236,6 +238,7 @@ function loadChat(base, lang, department, open) {
 if (chat) {
   const base = chat.dataset.chatUrl;
   const lang = chat.dataset.chatLang;
+  const title = chat.dataset.chatTitle;
   const launch = chat.querySelector('.chat-launch');
   const panel = chat.querySelector('.chat-panel');
   const start = chat.querySelector('.chat-start');
@@ -252,7 +255,7 @@ if (chat) {
     if (!chatStore('started')) chatStore('topic', topic);
     chatStore('started', '1');
     chat.hidden = true;
-    loadChat(base, lang, department, open);
+    loadChat(base, lang, title, department, open);
   };
   const refresh = async () => {
     const status = await chatStatus();

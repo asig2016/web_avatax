@@ -332,6 +332,10 @@ written engagement, consistent with the legal notice page. The texts are in `sit
 
 Flow for the visitor: **Chat → Start chat → name and e-mail (Rocket.Chat form) → message.**
 
+The chat window's title bar shows the company name of the page language (`company` in `site/hugo.toml`). The
+Rocket.Chat widget itself has no Greek translation, so on Greek pages its buttons and fields are in English; the
+field `language` in the chat still says `el`, so the agent knows to answer in Greek.
+
 Rocket.Chat's own greeting messages (*Omnichannel → Livechat Triggers*, "AVATAX greeting DE/EL/EN") are
 **disabled**: they added an extra card and two more clicks, and Rocket.Chat does not keep trigger messages in the
 chat after the visitor has filled in the form. If triggers are ever used again, give each one a *Visitor page URL*
