@@ -62,3 +62,8 @@ notFoundTitle = "Page not found"
 notFoundText = "The page you are looking for does not exist or has moved."
 backHome = "Back to the home page"
 faq = "Frequently asked questions"
+
+# live chat
+chatOpen = "Chat"
+chatStart = "Start chat"
+chatNotice = "The chat is provided via our own chat server and is only loaded when you start it. Please do not send confidential documents or tax identification numbers via chat. Details:"

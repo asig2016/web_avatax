@@ -4,7 +4,7 @@ seoTitle: "Datenschutzerklärung | AVATAX A.E."
 description: "Wie AVATAX A.E. personenbezogene Daten auf dieser Website, im Kontaktformular und bei Bewerbungen verarbeitet und welche Rechte Sie haben."
 url: /de/datenschutz/
 noAside: true
-review: "ENTWURF – vor Livegang von der Gesellschaft / einem Rechtsberater prüfen lassen (Datenschutz-E-Mail-Adresse ergänzen)"
+review: "ENTWURF – vor Livegang von der Gesellschaft / einem Rechtsberater prüfen lassen (Datenschutz-E-Mail-Adresse ergänzen; neuer Abschnitt Live-Chat: Serverstandort und Löschfristen bestätigen)"
 ---
 ## Verantwortlicher
 
@@ -19,6 +19,10 @@ Beim Besuch dieser Website speichert der Webserver technische Daten (IP-Adresse,
 Wenn Sie uns über das Kontaktformular kontaktieren oder eine Bewerbung senden, verarbeiten wir die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Telefonnummer, Nachricht sowie bei Bewerbungen Ihren Lebenslauf und Ihre Angaben) ausschließlich zur Bearbeitung Ihrer Anfrage bzw. Bewerbung (Art. 6 Abs. 1 lit. b DSGVO). Die Daten werden per E-Mail an uns übermittelt und nicht auf dem Webserver gespeichert.
 
 Anfragen löschen wir nach abschließender Bearbeitung, sofern keine gesetzlichen Aufbewahrungspflichten bestehen. Bewerbungen werden spätestens sechs Monate nach Abschluss des Bewerbungsverfahrens gelöscht, sofern Sie nicht in eine längere Speicherung einwilligen.
+
+## Live-Chat
+
+Der Chat-Button am Seitenende wird über unseren eigenen Chat-Server (Rocket.Chat) bereitgestellt. Der Button wird nur angezeigt, solange ein Mitarbeiter erreichbar ist; dies prüft unser eigener Webserver, ohne Daten über Sie an den Chat-Server zu übermitteln. Vom Chat-Server wird nichts geladen, bevor Sie auf „Chat starten“ klicken. Wenn Sie einen Chat beginnen, verarbeiten wir Ihre Nachrichten, den von Ihnen angegebenen Namen und die E-Mail-Adresse, Ihre IP-Adresse, die während des Chats aufgerufenen Seiten dieser Website sowie die Website und Sprache, über die Sie uns kontaktieren, um Ihre Anfrage zu beantworten (Art. 6 Abs. 1 lit. b DSGVO). Der Chat speichert eine Kennung im lokalen Speicher Ihres Browsers, damit das Gespräch auf anderen Seiten fortgesetzt werden kann. Chatverläufe werden gelöscht, sobald Ihre Anfrage erledigt ist, sofern keine gesetzlichen Aufbewahrungspflichten bestehen. Bitte senden Sie über den Chat keine vertraulichen Unterlagen oder Steuernummern.
 
 ## Cookies und Webanalyse
 

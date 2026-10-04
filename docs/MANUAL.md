@@ -231,6 +231,43 @@ careers page (`nginx/conf.d/redirects.conf`). To show them again: remove the `bu
 | Home page photos | `site/assets/images/` (acropolis.jpg = top image, syngrou.jpg, office.jpg) |
 | Google Analytics | `site/hugo.toml` → `ga4ID = "G-XXXXXXX"` (the cookie banner then appears automatically) |
 | Address of a page changed | add a line to `nginx/conf.d/redirects.conf`: `/old/address   /new/address/;` |
+| Live chat on/off | `site/hugo.toml` → `rocketchatURL` and `.env` → `CHAT_URL`, `CHAT_DEPARTMENT` (empty = no chat button) |
+
+### Live chat (Rocket.Chat)
+
+The chat button at the bottom right appears **only while an agent of the department is *Available***. formsvc
+asks Rocket.Chat (`CHAT_URL`, `CHAT_DEPARTMENT` in `.env`) at most every 30 seconds and the page asks formsvc
+(`/api/chat-status`) on load and every minute, so a status change shows up within about 1.5 minutes. The
+Livechat widget itself is loaded from `rocketchatURL` (same server as `CHAT_URL`) only after the visitor clicks
+"Start chat". One-time settings in Rocket.Chat (as administrator):
+
+1. **Iframe permission (required):** the chat window is the page `/livechat` of the chat server, shown in an iframe
+   on avatax.eu. Rocket.Chat sends `X-Frame-Options: sameorigin` on all its pages (anti-clickjacking), so browsers
+   leave that iframe empty on other sites. Remove the header **only for `/livechat`** in the nginx in front of
+   Rocket.Chat and allow just our own sites with `frame-ancestors`:
+
+   ```nginx
+   location /livechat {
+       proxy_pass http://<rocketchat-upstream>;   # same upstream and proxy_set_header lines as the existing Rocket.Chat location
+       proxy_hide_header X-Frame-Options;
+       add_header Content-Security-Policy "frame-ancestors https://avatax.eu https://www.avatax.eu http://localhost:8090 https://<sigalas-site>" always;
+   }
+   ```
+
+   Then `nginx -t` and reload nginx. Check: `curl -sI https://egroupware.sigalas.eu/livechat` shows the
+   `frame-ancestors` line and no `X-Frame-Options`; `curl -sI https://egroupware.sigalas.eu/home` still shows
+   `X-Frame-Options: sameorigin`. Do **not** switch off *Restrict access inside any Iframe* in Rocket.Chat
+   (Settings → General): that removes the protection from the whole Rocket.Chat interface, including the admin pages.
+2. **Omnichannel → Livechat:** *Display offline form* = off. *Livechat allowed domains*:
+   `avatax.eu, www.avatax.eu, localhost:8090` (plus the domain of the other site using this server).
+3. **Omnichannel → Departments:** create **AVATAX** (name must match `CHAT_DEPARTMENT`), add the agents,
+   and switch **off** *Show on registration page* – otherwise visitors could see other departments in a dropdown.
+4. **Omnichannel → Custom Fields:** create `website` and `language` (scope *Visitor*, visibility *Visible*). The
+   agent then sees from which website (e.g. `avatax.eu` or `localhost:8090`) and in which language the visitor writes;
+   the visited pages appear under *Navigation history*.
+5. Keep welcome, offline and trigger messages neutral (no company name), because they are shared by all sites on the
+   server. Title and colour are set per site by the website code.
+6. To answer chats: set your status to *Available* (Omnichannel toggle) in Rocket.Chat.
 
 ---
 

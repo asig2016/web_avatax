@@ -26,6 +26,12 @@ List the remaining pages with: `grep -rn '^review:' site/content`
    redirect to About us.
 10. **No team page** for now. It can be added later in the same way as in the sister project (data file + photos).
 11. **Certificate:** on 2026-10-01, https://avatax.eu delivered a certificate for **avatax.gr**. Check this at deployment.
+12. **Live chat (Rocket.Chat, 2026-10-04):** chat button on all pages, shown only while an agent is available, server
+    `https://egroupware.sigalas.eu`, department `AVATAX`. On the server add `CHAT_URL` and `CHAT_DEPARTMENT` to `.env`
+    (see `.env.example`). Before going live: allow framing of `/livechat` on that
+    server, set up the department and custom fields (`docs/MANUAL.md` § 8), approve the new chat section of the privacy
+    policy and the chat texts in `site/i18n/*.toml`. Note: the chat server's host name is visible in the page source
+    (CSP); check that this is acceptable under the "no other company" rule.
 
 ## SEO extension (2026-10-01) – please check the facts
 

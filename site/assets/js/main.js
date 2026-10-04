@@ -161,3 +161,83 @@ if (gaMeta && banner) {
   document.querySelectorAll('[data-cookie-settings]').forEach((b) =>
     b.addEventListener('click', () => { banner.hidden = false; banner.querySelector('button').focus(); }));
 }
+
+// ---------- live chat (Rocket.Chat Livechat, only if configured) ----------
+// The button is shown only while an agent is available. Availability comes from our own
+// /api/chat-status (formsvc asks the chat server, cached), so the visitor's browser contacts the
+// chat server only after the visitor clicks "Start chat".
+const chat = document.querySelector('.chat[data-chat-url]');
+const CHAT_KEY = 'chat-started';
+
+function chatSession(action) {
+  try {
+    if (action === 'get') return sessionStorage.getItem(CHAT_KEY) === '1';
+    sessionStorage.setItem(CHAT_KEY, '1');
+  } catch (_) { /* storage blocked: the visitor clicks again on the next page */ }
+  return false;
+}
+
+async function chatStatus() {
+  try {
+    const res = await fetch('/api/chat-status', { headers: { Accept: 'application/json' }, cache: 'no-store' });
+    return res.ok ? await res.json() : { online: false };
+  } catch (_) { return { online: false }; }
+}
+
+function loadChat(base, lang, department, open) {
+  if (window.RocketChat) return;
+  window.RocketChat = function (c) { window.RocketChat._.push(c); };
+  window.RocketChat._ = [];
+  window.RocketChat.url = base + '/livechat';
+  window.RocketChat(function () {
+    this.setLanguage(lang);
+    if (department) this.setDepartment(department);
+    this.setTheme({ title: 'AVATAX A.E.', color: '#6c5020', position: 'right' });
+    this.setCustomFields([['website', location.host, true], ['language', lang, true]]);
+    if (open) this.maximizeWidget();
+  });
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = base + '/livechat/rocketchat-livechat.min.js';
+  document.body.appendChild(s);
+}
+
+if (chat) {
+  const base = chat.dataset.chatUrl;
+  const lang = chat.dataset.chatLang;
+  const launch = chat.querySelector('.chat-launch');
+  const panel = chat.querySelector('.chat-panel');
+  const start = chat.querySelector('.chat-start');
+  let department = '';
+  let poll = null;
+
+  const closePanel = () => { panel.hidden = true; launch.setAttribute('aria-expanded', 'false'); };
+  const begin = (open) => {
+    clearInterval(poll);
+    chatSession('set');
+    chat.hidden = true;
+    loadChat(base, lang, department, open);
+  };
+  const refresh = async () => {
+    const status = await chatStatus();
+    department = status.department || '';
+    if (!status.online) { chat.hidden = true; closePanel(); return; }
+    // chat already started in this browser session: restore the widget (minimised) on every page
+    if (chatSession('get')) begin(false);
+    else chat.hidden = false;
+  };
+
+  refresh();
+  // agents come and go: re-check every minute until the visitor starts a chat
+  poll = setInterval(refresh, 60000);
+  launch.addEventListener('click', () => {
+    const show = panel.hidden;
+    panel.hidden = !show;
+    launch.setAttribute('aria-expanded', String(show));
+    if (show) start.focus();
+  });
+  start.addEventListener('click', () => begin(true));
+  chat.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !panel.hidden) { closePanel(); launch.focus(); }
+  });
+}

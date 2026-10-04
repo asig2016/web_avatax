@@ -303,11 +303,23 @@ form.sent .field, form.sent .field-row, form.sent button, form.sent .form-note {
 .cookie-banner p { margin: 0 0 14px; }
 .cookie-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
 
+/* ---------- live chat (click-to-load launcher; the Rocket.Chat widget itself lives in an iframe) ---------- */
+.chat { position: fixed; z-index: 80; right: 16px; bottom: 16px; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.chat[hidden], .chat [hidden] { display: none; }
+.chat-launch { box-shadow: 0 6px 20px rgba(42,32,14,.25); }
+.chat-panel {
+  width: min(340px, calc(100vw - 32px)); background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: 0 10px 40px rgba(42,32,14,.25); padding: 18px 20px; font-size: .92rem;
+}
+.chat-panel p { margin: 0 0 12px; }
+.cookie-banner:not([hidden]) ~ .chat { bottom: 200px; }
+body.rc-livechat-mobile-full-screen { overflow: hidden; position: fixed; width: 100%; height: 100%; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
 }
 @media print {
-  .site-header, .site-footer, .cookie-banner, .aside, .hero-actions { display: none; }
+  .site-header, .site-footer, .cookie-banner, .chat, .aside, .hero-actions { display: none; }
   .page-hero { background: none; color: #000; padding: 0; }
   .page-hero h1 { color: #000; }
 }

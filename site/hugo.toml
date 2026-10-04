@@ -9,6 +9,9 @@ timeZone = "Europe/Athens"
 [params]
   # GA4 measurement id (e.g. "G-XXXXXXXXXX"). Empty = no analytics and no cookie banner.
   ga4ID = ""
+  # Rocket.Chat Livechat (click-to-load). Server base URL, e.g. "https://egroupware.sigalas.eu".
+  # Empty = no chat button and no chat server in the CSP. Must match CHAT_URL in .env (formsvc checks availability).
+  rocketchatURL = "https://egroupware.sigalas.eu"
   phone = "+30 211 1036100"
   phoneHref = "tel:+302111036100"
   lat = "37.96444"

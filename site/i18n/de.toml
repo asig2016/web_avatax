@@ -62,3 +62,8 @@ notFoundTitle = "Seite nicht gefunden"
 notFoundText = "Die gesuchte Seite existiert nicht oder wurde verschoben."
 backHome = "Zur Startseite"
 faq = "Häufige Fragen"
+
+# live chat
+chatOpen = "Chat"
+chatStart = "Chat starten"
+chatNotice = "Der Chat läuft über unseren eigenen Chat-Server und wird erst geladen, wenn Sie ihn starten. Bitte senden Sie über den Chat keine vertraulichen Unterlagen oder Steuernummern. Einzelheiten:"

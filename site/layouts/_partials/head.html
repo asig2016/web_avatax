@@ -4,7 +4,11 @@
 {{- $dev := cond hugo.IsServer " http://localhost:1314 ws://localhost:1314" "" }}
 {{- $ga := cond (ne site.Params.ga4ID "") " https://www.googletagmanager.com" "" }}
 {{- $gaConnect := cond (ne site.Params.ga4ID "") " https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com" "" }}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'{{ $ga }}{{ $dev }}; connect-src 'self'{{ $gaConnect }}{{ $dev }}; img-src 'self' data:{{ $gaConnect }}; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+{{- /* Live chat: loader script, status request and widget iframe come from the Rocket.Chat server (only after a click) */}}
+{{- $chat := "" }}
+{{- with site.Params.rocketchatURL }}{{ with urls.Parse . }}{{ $chat = printf " %s://%s" .Scheme .Host }}{{ end }}{{ end }}
+{{- $frame := cond (ne $chat "") (printf "; frame-src%s" $chat) "" }}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'{{ $ga }}{{ $chat }}{{ $dev }}; connect-src 'self'{{ $gaConnect }}{{ $chat }}{{ $dev }}; img-src 'self' data:{{ $gaConnect }}; style-src 'self'; font-src 'self'{{ $frame }}; base-uri 'self'; form-action 'self'; object-src 'none'">
 {{- /* seoTitle (front matter) wins; otherwise "Title · Site". Keep it under ~60 characters. */}}
 {{- $title := .Params.seoTitle | default (cond .IsHome (printf "%s · %s" site.Title site.Params.tagline) (printf "%s · %s" .Title site.Title)) }}
 {{- $desc := .Description | default (.Summary | plainify | truncate 155) | default site.Params.description }}

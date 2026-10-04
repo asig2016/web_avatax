@@ -6,6 +6,7 @@
 //	GET  /api/token    signed timestamp for the anti-spam check (fetched by the form JS)
 //	POST /api/contact  contact form
 //	POST /api/cv       job application incl. CV upload
+//	GET  /api/chat-status  whether a live-chat agent is available (cached, see chat.go)
 //	GET  /healthz      liveness probe
 package main
 
@@ -49,6 +50,8 @@ type config struct {
 	RateLimit      int
 	RateWindow     time.Duration
 	MaxUploadBytes int64
+	ChatURL        string // Rocket.Chat base URL; empty = no live chat
+	ChatDepartment string // Omnichannel department of this site
 }
 
 func env(key, def string) string {
@@ -81,6 +84,8 @@ func loadConfig() (config, error) {
 		RateLimit:      envInt("RATE_LIMIT", 5),
 		RateWindow:     time.Duration(envInt("RATE_WINDOW_MINUTES", 10)) * time.Minute,
 		MaxUploadBytes: int64(envInt("MAX_UPLOAD_MB", 5)) << 20,
+		ChatURL:        env("CHAT_URL", ""),
+		ChatDepartment: env("CHAT_DEPARTMENT", ""),
 	}
 	c.MailToCV = env("MAIL_TO_CV", c.MailToContact)
 	if s := os.Getenv("TOKEN_SECRET"); s != "" {
@@ -132,11 +137,13 @@ type server struct {
 	cfg     config
 	mailer  mailer
 	limiter *rateLimiter
+	chat    *chatStatus
 	now     func() time.Time
 }
 
 func newServer(cfg config, m mailer) *server {
-	return &server{cfg: cfg, mailer: m, limiter: newRateLimiter(cfg.RateLimit, cfg.RateWindow), now: time.Now}
+	return &server{cfg: cfg, mailer: m, limiter: newRateLimiter(cfg.RateLimit, cfg.RateWindow),
+		chat: newChatStatus(cfg.ChatURL, cfg.ChatDepartment), now: time.Now}
 }
 
 func (s *server) routes() http.Handler {
@@ -145,6 +152,7 @@ func (s *server) routes() http.Handler {
 	mux.HandleFunc("GET /api/token", s.handleToken)
 	mux.HandleFunc("POST /api/contact", s.handleContact)
 	mux.HandleFunc("POST /api/cv", s.handleCV)
+	mux.HandleFunc("GET /api/chat-status", s.handleChatStatus)
 	return mux
 }
 
