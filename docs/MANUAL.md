@@ -323,46 +323,21 @@ One-time settings in Rocket.Chat (as administrator):
    **Send Visitor Navigation History as a Message**. The page the visitor is on (title and address, e.g.
    "Steuervorteile beim Zuzug … | AVATAX") then appears as a system message in the conversation itself.
 
-#### Greeting message (Livechat Triggers)
+#### Greeting and pre-sales note
 
-When a new visitor starts the chat, a short greeting appears in their language. It says that answers in the chat
-are a first, non-binding assessment and that full advice requires a written engagement (consistent with the legal
-notice page). It is set up in Rocket.Chat, not in the website code: **Omnichannel → Livechat Triggers**, one
-trigger per language:
+The greeting is part of the website's own chat panel (shown after a click on "Chat", before the chat server is
+contacted). It says that answers in the chat are a first, non-binding assessment and that full advice requires a
+written engagement, consistent with the legal notice page. The texts are in `site/i18n/*.toml`: `chatGreeting`
+(greeting) and `chatNotice` (privacy note).
 
-| Name | Condition *Visitor page URL* (regex) |
-|---|---|
-| AVATAX greeting DE | `^https?://((www\.\|admin\.\|new\.)?avatax\.eu\|localhost:8090)/de/` |
-| AVATAX greeting EL | `^https?://((www\.\|admin\.\|new\.)?avatax\.eu\|localhost:8090)/el/` |
-| AVATAX greeting EN | `^https?://((www\.\|admin\.\|new\.)?avatax\.eu\|localhost:8090)/(?!de/\|el/)` |
+Flow for the visitor: **Chat → Start chat → name and e-mail (Rocket.Chat form) → message.**
 
-(In Rocket.Chat type the regex without the backslashes before `|`; they are only needed in this table.)
-
-All three: *Enabled* on, *Run only once for each visitor* on, action *Send a message*, sender *Impersonate next
-agent from queue*. Messages:
-
-- DE: „Guten Tag, wie können wir Ihnen helfen? Bitte beschreiben Sie kurz Ihr Anliegen. Unsere Antworten im Chat sind
-  eine erste, unverbindliche Einschätzung. Eine vollständige und verbindliche Beratung setzt einen schriftlichen
-  Auftrag voraus."
-- EN: "Good day, how can we help you? Please briefly describe your question. Our answers in the chat are a first,
-  non-binding assessment. Full and binding advice requires a written engagement."
-- EL: «Καλημέρα σας, πώς μπορούμε να σας βοηθήσουμε; Περιγράψτε σύντομα το θέμα σας. Οι απαντήσεις μας στο chat
-  αποτελούν πρώτη, μη δεσμευτική εκτίμηση. Πλήρης και δεσμευτική συμβουλή παρέχεται μόνο στο πλαίσιο έγγραφης
-  ανάθεσης.»
-
-Notes:
-
-- Triggers apply to the whole Rocket.Chat server. The page-address condition makes sure these greetings appear only
-  on AVATAX pages and not on the other website using the same server; never create a trigger without it.
-- Rocket.Chat allows only one condition per trigger, so the trigger reacts to the page address. Because the widget
-  is loaded only after the visitor clicks "Start chat", the greeting appears right then, with a "Chat now" button
-  that leads to the chat form.
-- The greeting is shown to **new** visitors only (once per visitor and language). A browser that has already chatted
-  does not see it again; to test, use a private window.
-- When a greeting arrives while the widget is closed, Rocket.Chat shows it as a small card and keeps the frame at that
-  small size even after the visitor clicks "Start chat", so the chat view gets cut off (a widget bug). The website
-  gives that state (`.rocketchat-widget[data-state="triggered"]` in `site/assets/css/main.css`) the normal
-  chat-window height, and the full width on phones.
+Rocket.Chat's own greeting messages (*Omnichannel → Livechat Triggers*, "AVATAX greeting DE/EL/EN") are
+**disabled**: they added an extra card and two more clicks, and Rocket.Chat does not keep trigger messages in the
+chat after the visitor has filled in the form. If triggers are ever used again, give each one a *Visitor page URL*
+condition for AVATAX pages only, e.g. `^https?://((www\.|admin\.|new\.)?avatax\.eu|localhost:8090)/de/` (the server is
+shared with the other website). The CSS rule for `.rocketchat-widget[data-state="triggered"]` in
+`site/assets/css/main.css` stays as a safeguard for that case.
 
 #### Chat button inside a page (e.g. on a service page)
 

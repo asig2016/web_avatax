@@ -314,6 +314,8 @@ form.sent .field, form.sent .field-row, form.sent button, form.sent .form-note {
   box-shadow: 0 10px 40px rgba(42,32,14,.25); padding: 18px 20px; font-size: .92rem;
 }
 .chat-panel p { margin: 0 0 12px; }
+.chat-greeting { color: var(--brand-dark); font-weight: 600; }
+.chat-notice { color: var(--muted); font-size: .86rem; }
 .cookie-banner:not([hidden]) ~ .chat { bottom: 200px; }
 /* Greeting (Livechat trigger) while the widget is closed: Rocket.Chat keeps the frame at the small size of the
    greeting card (data-state="triggered") even after "Start chat" switches to the chat view, which then gets cut

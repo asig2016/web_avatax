@@ -7,6 +7,7 @@
 {{- $legal := site.GetPage "/legal" }}
 <div class="chat" data-chat-url="{{ strings.TrimSuffix "/" . }}" data-chat-lang="{{ site.Language.Lang }}" data-chat-topic="{{ $page.Params.chatTopic }}" hidden>
   <div class="chat-panel" id="chat-panel" hidden>
+    <p class="chat-greeting">{{ T "chatGreeting" }}</p>
     <p class="chat-notice">{{ T "chatNotice" }}{{ with $privacy }} <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ with $legal }} · <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</p>
     <button type="button" class="btn chat-start">{{ T "chatStart" }}</button>
   </div>
