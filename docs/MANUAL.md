@@ -239,7 +239,34 @@ The chat button at the bottom right appears **only while an agent of the departm
 asks Rocket.Chat (`CHAT_URL`, `CHAT_DEPARTMENT` in `.env`) at most every 30 seconds and the page asks formsvc
 (`/api/chat-status`) on load and every minute, so a status change shows up within about 1.5 minutes. The
 Livechat widget itself is loaded from `rocketchatURL` (same server as `CHAT_URL`) only after the visitor clicks
-"Start chat". One-time settings in Rocket.Chat (as administrator):
+"Start chat".
+
+**Settings in `.env`** (on the laptop and on the server, `/home/sysop/docker_data/go_avatax/.env`):
+
+```bash
+# ---- live chat (Rocket.Chat) ----
+# Base URL of the Rocket.Chat server, without a trailing slash and without /home or /livechat.
+# Must be the same server as rocketchatURL in site/hugo.toml.
+CHAT_URL=https://egroupware.sigalas.eu
+# Omnichannel department of this website: its name (as in Omnichannel → Departments)
+# or its ID (last part of the address when editing the department).
+CHAT_DEPARTMENT=AVATAX
+```
+
+To switch the chat off, leave `CHAT_URL` empty (`CHAT_URL=`). The button then never appears.
+After changing `.env`, recreate the container. A plain restart does **not** read `.env` again:
+
+```bash
+docker compose up -d --force-recreate formsvc
+```
+
+Check after about 30 seconds: `curl -s http://localhost:8090/api/chat-status` on the laptop, or
+`curl -s -u developer https://admin.avatax.eu/api/chat-status` for staging. While you are *Available* in Rocket.Chat
+the answer is `{"online":true,"department":"…"}`. If it stays `{"online":false}`:
+`docker compose logs formsvc | grep -i chat`. No `chat status:` lines means `CHAT_URL` is not set in the
+container; a line such as `chat status: department "AVATAX" not found` or a timeout says what is wrong.
+
+One-time settings in Rocket.Chat (as administrator):
 
 1. **Iframe permission (required):** the chat window is the page `/livechat` of the chat server, shown in an iframe
    on avatax.eu. Rocket.Chat sends `X-Frame-Options: sameorigin` on all its pages (anti-clickjacking), so browsers
@@ -277,11 +304,17 @@ Livechat widget itself is loaded from `rocketchatURL` (same server as `CHAT_URL`
    `avatax.eu, www.avatax.eu, localhost:8090` (plus the domain of the other site using this server).
 3. **Omnichannel → Departments:** create **AVATAX** (name must match `CHAT_DEPARTMENT`), add the agents,
    and switch **off** *Show on registration page* – otherwise visitors could see other departments in a dropdown.
-4. **Omnichannel → Custom Fields:** create `website` and `language` (scope *Visitor*, visibility *Visible*). The
-   agent then sees from which website (e.g. `avatax.eu` or `localhost:8090`) and in which language the visitor writes;
-   the visited pages appear under *Navigation history*.
+4. **Omnichannel → Custom Fields:** create `website` and `language` with scope **Room** (not *Visitor*: since
+   Rocket.Chat 7 visitor fields are not shown in the contact profile), visibility *Visible*, *Public* off (otherwise the
+   visitor is asked for them in the chat form). The website fills them in automatically; the agent sees them in the
+   chat's **Room Information** (ⓘ icon), e.g. `website: avatax.eu`, `language: de`. Chats from staging or the laptop
+   show `admin.avatax.eu` or `localhost:8090`. The *Channel* column in the Contact Center always shows the chat server,
+   not the website.
 5. Keep welcome, offline and trigger messages neutral (no company name), because they are shared by all sites on the
-   server. Title and colour are set per site by the website code.
+   server. Set the server-wide widget title (*Livechat Appearance* → title) to something neutral such as "Chat": it is
+   shown on the chat form before the website's own title "AVATAX A.E." takes over. Switch off showing the **agent's
+   e-mail address** to visitors (Settings → Omnichannel → Livechat, e.g. *Show agent email*); otherwise the visitor sees
+   the agent's mailbox address in the chat header.
 6. To answer chats: set your status to *Available* (Omnichannel toggle) in Rocket.Chat.
 
 ---

@@ -189,13 +189,33 @@ function loadChat(base, lang, department, open) {
   window.RocketChat = function (c) { window.RocketChat._.push(c); };
   window.RocketChat._ = [];
   window.RocketChat.url = base + '/livechat';
+  const fields = [['website', location.host, true], ['language', lang, true]];
   window.RocketChat(function () {
-    this.setLanguage(lang);
-    if (department) this.setDepartment(department);
-    this.setTheme({ title: 'AVATAX A.E.', color: '#6c5020', position: 'right' });
-    this.setCustomFields([['website', location.host, true], ['language', lang, true]]);
-    if (open) this.maximizeWidget();
+    const api = this;
+    // Custom fields have scope "Room" in Rocket.Chat: they can only be stored once the chat exists.
+    // The widget creates it with the first message and then reports chat-started, assign-agent or
+    // queue-position-change (depending on the flow); the fields are sent on each of these.
+    // the loader API only has setCustomField (singular); setCustomFields exists only as an initialize() option
+    const sendFields = () => fields.forEach(([key, value, overwrite]) => api.setCustomField(key, value, overwrite));
+    api.setLanguage(lang);
+    if (department) api.setDepartment(department);
+    api.setTheme({ title: 'AVATAX A.E.', color: '#6c5020', position: 'right' });
+    api.onChatStarted(sendFields);
+    api.onAssignAgent(sendFields);
+    api.onQueuePositionChange(sendFields);
   });
+  // Commands that reach the widget before its app is ready are lost (custom fields, maximize), so
+  // these are sent shortly after its "ready" message: fields for a chat that is already running
+  // (page change), maximize when the visitor has just clicked "Start chat".
+  const onReady = (e) => {
+    if (e.origin !== base || !e.data || e.data.src !== 'rocketchat' || e.data.fn !== 'ready') return;
+    window.removeEventListener('message', onReady);
+    setTimeout(() => window.RocketChat(function () {
+      fields.forEach(([key, value, overwrite]) => this.setCustomField(key, value, overwrite));
+      if (open) this.maximizeWidget();
+    }), 1000);
+  };
+  window.addEventListener('message', onReady);
   const s = document.createElement('script');
   s.async = true;
   s.src = base + '/livechat/rocketchat-livechat.min.js';
