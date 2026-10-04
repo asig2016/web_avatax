@@ -1,0 +1,9 @@
+{{- /* Inline chat button, e.g. {{< chat >}} or {{< chat "Fragen zum Zuzug? Chatten Sie mit uns" >}}.
+       Shown only while an agent is available (main.js). The agent sees the page's topic
+       (front matter chatTopic, default linkTitle) in the field "topic" of the chat.
+       Renders nothing when the live chat is switched off (params.rocketchatURL empty). */ -}}
+{{- if site.Params.rocketchatURL }}
+{{- $label := .Get 0 | default (T "chatAsk") }}
+{{- $topic := .Page.Params.chatTopic | default .Page.LinkTitle }}
+<p class="chat-inline" hidden><button type="button" class="btn" data-chat-open data-chat-topic="{{ $topic }}">{{ partial "icon.html" "chat" }}{{ $label }}</button></p>
+{{- end }}

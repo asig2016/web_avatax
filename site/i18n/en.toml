@@ -65,5 +65,6 @@ faq = "Frequently asked questions"
 
 # live chat
 chatOpen = "Chat"
+chatAsk = "Questions? Chat with us"
 chatStart = "Start chat"
 chatNotice = "The chat is provided via our own chat server and is only loaded when you start it. Please do not send confidential documents or tax identification numbers via chat. Details:"

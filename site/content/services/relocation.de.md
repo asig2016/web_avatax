@@ -78,4 +78,6 @@ Ausländische Unterlagen müssen in der Regel notariell beglaubigt und mit Apost
 3. **Antrag** bei der griechischen Finanzverwaltung (AADE), einschließlich griechischer Steuernummer
 4. **Laufende Betreuung:** jährliche Steuererklärungen, Berechnung und fristgerechte Zahlung der Pauschalsteuer
 
+{{< chat "Fragen zum Zuzug? Chatten Sie mit uns" >}}
+
 Weitere Themen rund um Ihre Steuern in Griechenland finden Sie unter [Steuerberatung](/de/leistungen/steuerberatung/).

@@ -163,18 +163,18 @@ if (gaMeta && banner) {
 }
 
 // ---------- live chat (Rocket.Chat Livechat, only if configured) ----------
-// The button is shown only while an agent is available. Availability comes from our own
+// The buttons are shown only while an agent is available. Availability comes from our own
 // /api/chat-status (formsvc asks the chat server, cached), so the visitor's browser contacts the
-// chat server only after the visitor clicks "Start chat".
+// chat server only after the visitor clicks "Start chat". Besides the corner button, pages can
+// contain inline buttons ([data-chat-open], shortcode {{< chat >}}) that carry a topic.
 const chat = document.querySelector('.chat[data-chat-url]');
-const CHAT_KEY = 'chat-started';
 
-function chatSession(action) {
+function chatStore(key, value) {
   try {
-    if (action === 'get') return sessionStorage.getItem(CHAT_KEY) === '1';
-    sessionStorage.setItem(CHAT_KEY, '1');
+    if (value === undefined) return sessionStorage.getItem('chat-' + key) || '';
+    sessionStorage.setItem('chat-' + key, value);
   } catch (_) { /* storage blocked: the visitor clicks again on the next page */ }
-  return false;
+  return '';
 }
 
 async function chatStatus() {
@@ -184,25 +184,36 @@ async function chatStatus() {
   } catch (_) { return { online: false }; }
 }
 
+// Custom fields of the chat (scope "Room" in Rocket.Chat): website, language and, if known, topic.
+function chatFields(lang) {
+  const fields = [['website', location.host], ['language', lang]];
+  const topic = chatStore('topic');
+  if (topic) fields.push(['topic', topic]);
+  return fields;
+}
+
+// the loader API only has setCustomField (singular); setCustomFields exists only as an initialize() option
+function sendChatFields(api, lang) {
+  chatFields(lang).forEach(([key, value]) => api.setCustomField(key, value, true));
+}
+
 function loadChat(base, lang, department, open) {
   if (window.RocketChat) return;
   window.RocketChat = function (c) { window.RocketChat._.push(c); };
   window.RocketChat._ = [];
   window.RocketChat.url = base + '/livechat';
-  const fields = [['website', location.host, true], ['language', lang, true]];
   window.RocketChat(function () {
     const api = this;
-    // Custom fields have scope "Room" in Rocket.Chat: they can only be stored once the chat exists.
-    // The widget creates it with the first message and then reports chat-started, assign-agent or
-    // queue-position-change (depending on the flow); the fields are sent on each of these.
-    // the loader API only has setCustomField (singular); setCustomFields exists only as an initialize() option
-    const sendFields = () => fields.forEach(([key, value, overwrite]) => api.setCustomField(key, value, overwrite));
+    // Room fields can only be stored once the chat exists. The widget creates it with the first
+    // message and then reports chat-started, assign-agent or queue-position-change (depending on
+    // the flow); the fields are sent on each of these.
+    const send = () => sendChatFields(api, lang);
     api.setLanguage(lang);
     if (department) api.setDepartment(department);
     api.setTheme({ title: 'AVATAX A.E.', color: '#6c5020', position: 'right' });
-    api.onChatStarted(sendFields);
-    api.onAssignAgent(sendFields);
-    api.onQueuePositionChange(sendFields);
+    api.onChatStarted(send);
+    api.onAssignAgent(send);
+    api.onQueuePositionChange(send);
   });
   // Commands that reach the widget before its app is ready are lost (custom fields, maximize), so
   // these are sent shortly after its "ready" message: fields for a chat that is already running
@@ -211,7 +222,7 @@ function loadChat(base, lang, department, open) {
     if (e.origin !== base || !e.data || e.data.src !== 'rocketchat' || e.data.fn !== 'ready') return;
     window.removeEventListener('message', onReady);
     setTimeout(() => window.RocketChat(function () {
-      fields.forEach(([key, value, overwrite]) => this.setCustomField(key, value, overwrite));
+      sendChatFields(this, lang);
       if (open) this.maximizeWidget();
     }), 1000);
   };
@@ -228,22 +239,28 @@ if (chat) {
   const launch = chat.querySelector('.chat-launch');
   const panel = chat.querySelector('.chat-panel');
   const start = chat.querySelector('.chat-start');
+  const inline = document.querySelectorAll('.chat-inline');
   let department = '';
+  let topic = chat.dataset.chatTopic || '';
   let poll = null;
 
   const closePanel = () => { panel.hidden = true; launch.setAttribute('aria-expanded', 'false'); };
+  const openPanel = () => { panel.hidden = false; launch.setAttribute('aria-expanded', 'true'); start.focus(); };
+  const showInline = (show) => inline.forEach((el) => { el.hidden = !show; });
   const begin = (open) => {
     clearInterval(poll);
-    chatSession('set');
+    if (!chatStore('started')) chatStore('topic', topic);
+    chatStore('started', '1');
     chat.hidden = true;
     loadChat(base, lang, department, open);
   };
   const refresh = async () => {
     const status = await chatStatus();
     department = status.department || '';
+    showInline(status.online);
     if (!status.online) { chat.hidden = true; closePanel(); return; }
     // chat already started in this browser session: restore the widget (minimised) on every page
-    if (chatSession('get')) begin(false);
+    if (chatStore('started')) begin(false);
     else chat.hidden = false;
   };
 
@@ -251,13 +268,20 @@ if (chat) {
   // agents come and go: re-check every minute until the visitor starts a chat
   poll = setInterval(refresh, 60000);
   launch.addEventListener('click', () => {
-    const show = panel.hidden;
-    panel.hidden = !show;
-    launch.setAttribute('aria-expanded', String(show));
-    if (show) start.focus();
+    if (panel.hidden) { topic = chat.dataset.chatTopic || ''; openPanel(); } else closePanel();
   });
   start.addEventListener('click', () => begin(true));
   chat.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !panel.hidden) { closePanel(); launch.focus(); }
   });
+  document.querySelectorAll('[data-chat-open]').forEach((btn) => btn.addEventListener('click', () => {
+    topic = btn.dataset.chatTopic || chat.dataset.chatTopic || '';
+    if (window.RocketChat) {
+      // chat already running: switch its topic and open the widget
+      chatStore('topic', topic);
+      window.RocketChat(function () { sendChatFields(this, lang); this.maximizeWidget(); });
+      return;
+    }
+    openPanel();
+  }));
 }

@@ -316,6 +316,38 @@ One-time settings in Rocket.Chat (as administrator):
    e-mail address** to visitors (Settings → Omnichannel → Livechat, e.g. *Show agent email*); otherwise the visitor sees
    the agent's mailbox address in the chat header.
 6. To answer chats: set your status to *Available* (Omnichannel toggle) in Rocket.Chat.
+7. **Omnichannel → Custom Fields:** also create `topic` (scope **Room**, visibility *Visible*, *Public* off) for the
+   chat buttons on service pages (next section).
+8. **See the page directly in the chat:** Administration → Settings → Omnichannel → *Livechat* → switch on
+   **Send Visitor Navigation History as a Message**. The page the visitor is on (title and address, e.g.
+   "Steuervorteile beim Zuzug … | AVATAX") then appears as a system message in the conversation itself.
+
+#### Chat button inside a page (e.g. on a service page)
+
+Besides the corner button, a page can contain its own chat button, for example below the service description.
+Write this on its own line in the page text (`site/content/…/name.xx.md`), with an empty line before and after:
+
+```markdown
+{{< chat >}}
+```
+
+This shows the standard label ("Questions? Chat with us" / "Fragen? Chatten Sie mit uns" / "Ερωτήσεις;
+Συνομιλήστε μαζί μας", in `site/i18n/*.toml` as `chatAsk`). For a label of your own, put it in quotes:
+
+```markdown
+{{< chat "Fragen zum Zuzug? Chatten Sie mit uns" >}}
+```
+
+Example: `site/content/services/relocation.de.md`, below the list "So unterstützen wir Sie".
+
+- The button behaves like the corner button: it appears only while an agent is *Available*, and a click opens the
+  short privacy notice with "Start chat" (or the running chat). Nothing is loaded from the chat server before that.
+- **Topic:** the chat records which page the visitor started it from in the field `topic` (Room Information, ⓘ).
+  By default this is the page's `linkTitle` (e.g. "Steuervorteile beim Zuzug"). To use another text, add
+  `chatTopic: "…"` to the page's front matter; it then also applies to the corner button on that page.
+- Each language is a separate file: to have the button on the English and Greek page as well, add the line there too
+  (with a label in that language).
+- When the live chat is switched off (`rocketchatURL` empty), the line produces nothing.
 
 ---
 

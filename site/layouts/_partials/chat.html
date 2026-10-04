@@ -1,9 +1,10 @@
 {{- /* Live chat (Rocket.Chat Livechat). Only rendered when params.rocketchatURL is set.
        main.js asks our own /api/chat-status and shows the button only while an agent is available.
        The chat server itself is contacted only after the visitor clicks "Start chat". */ -}}
+{{- $page := . }}
 {{- with site.Params.rocketchatURL }}
 {{- $privacy := site.GetPage "/privacy" }}
-<div class="chat" data-chat-url="{{ strings.TrimSuffix "/" . }}" data-chat-lang="{{ site.Language.Lang }}" hidden>
+<div class="chat" data-chat-url="{{ strings.TrimSuffix "/" . }}" data-chat-lang="{{ site.Language.Lang }}" data-chat-topic="{{ $page.Params.chatTopic }}" hidden>
   <div class="chat-panel" id="chat-panel" hidden>
     <p class="chat-notice">{{ T "chatNotice" }}{{ with $privacy }} <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</p>
     <button type="button" class="btn chat-start">{{ T "chatStart" }}</button>
