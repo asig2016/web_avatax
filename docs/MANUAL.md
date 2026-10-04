@@ -323,6 +323,45 @@ One-time settings in Rocket.Chat (as administrator):
    **Send Visitor Navigation History as a Message**. The page the visitor is on (title and address, e.g.
    "Steuervorteile beim Zuzug … | AVATAX") then appears as a system message in the conversation itself.
 
+#### Greeting message (Livechat Triggers)
+
+When a new visitor starts the chat, a short greeting appears in their language. It says that answers in the chat
+are a first, non-binding assessment and that full advice requires a written engagement (consistent with the legal
+notice page). It is set up in Rocket.Chat, not in the website code: **Omnichannel → Livechat Triggers**, one
+trigger per language:
+
+| Name | Condition *Visitor page URL* (regex) |
+|---|---|
+| AVATAX greeting DE | `^https?://((www\.\|admin\.\|new\.)?avatax\.eu\|localhost:8090)/de/` |
+| AVATAX greeting EL | `^https?://((www\.\|admin\.\|new\.)?avatax\.eu\|localhost:8090)/el/` |
+| AVATAX greeting EN | `^https?://((www\.\|admin\.\|new\.)?avatax\.eu\|localhost:8090)/(?!de/\|el/)` |
+
+(In Rocket.Chat type the regex without the backslashes before `|`; they are only needed in this table.)
+
+All three: *Enabled* on, *Run only once for each visitor* on, action *Send a message*, sender *Impersonate next
+agent from queue*. Messages:
+
+- DE: „Guten Tag, wie können wir Ihnen helfen? Bitte beschreiben Sie kurz Ihr Anliegen. Unsere Antworten im Chat sind
+  eine erste, unverbindliche Einschätzung. Eine vollständige und verbindliche Beratung setzt einen schriftlichen
+  Auftrag voraus."
+- EN: "Good day, how can we help you? Please briefly describe your question. Our answers in the chat are a first,
+  non-binding assessment. Full and binding advice requires a written engagement."
+- EL: «Καλημέρα σας, πώς μπορούμε να σας βοηθήσουμε; Περιγράψτε σύντομα το θέμα σας. Οι απαντήσεις μας στο chat
+  αποτελούν πρώτη, μη δεσμευτική εκτίμηση. Πλήρης και δεσμευτική συμβουλή παρέχεται μόνο στο πλαίσιο έγγραφης
+  ανάθεσης.»
+
+Notes:
+
+- Triggers apply to the whole Rocket.Chat server. The page-address condition makes sure these greetings appear only
+  on AVATAX pages and not on the other website using the same server; never create a trigger without it.
+- Rocket.Chat allows only one condition per trigger, so the trigger reacts to the page address. Because the widget
+  is loaded only after the visitor clicks "Start chat", the greeting appears right then, with a "Chat now" button
+  that leads to the chat form.
+- The greeting is shown to **new** visitors only (once per visitor and language). A browser that has already chatted
+  does not see it again; to test, use a private window.
+- The website gives the greeting view a minimum height (`.rocketchat-widget[data-state="triggered"]` in
+  `site/assets/css/main.css`), because Rocket.Chat sizes it too small and cuts the text off.
+
 #### Chat button inside a page (e.g. on a service page)
 
 Besides the corner button, a page can contain its own chat button, for example below the service description.
