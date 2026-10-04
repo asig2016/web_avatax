@@ -328,7 +328,8 @@ One-time settings in Rocket.Chat (as administrator):
 The greeting is part of the website's own chat panel (shown after a click on "Chat", before the chat server is
 contacted). It says that answers in the chat are a first, non-binding assessment and that full advice requires a
 written engagement, consistent with the legal notice page. The texts are in `site/i18n/*.toml`: `chatGreeting`
-(greeting) and `chatNotice` (privacy note).
+(bold invitation), `chatIntro` (why we ask for name and e-mail) and `chatNotice` (small print: non-binding
+assessment, no confidential documents).
 
 Flow for the visitor: **Chat → name and e-mail (in our panel, in the page language) → Start chat → message.**
 The website hands name and e-mail to Rocket.Chat (`registerGuest`), so Rocket.Chat's own (untranslated) form is

@@ -10,6 +10,7 @@
   <form class="chat-panel" id="chat-panel" novalidate hidden>
     <button type="button" class="chat-close" aria-label="{{ T "chatClose" }}" title="{{ T "chatClose" }}">×</button>
     <p class="chat-greeting">{{ T "chatGreeting" }}</p>
+    <p class="chat-intro">{{ T "chatIntro" }}</p>
     <div class="field">
       <label for="chat-name">{{ T "formName" }} *</label>
       <input id="chat-name" name="name" type="text" autocomplete="name" required maxlength="100">
@@ -19,7 +20,7 @@
       <input id="chat-email" name="email" type="email" autocomplete="email" required maxlength="200">
     </div>
     <p class="chat-error" role="alert" hidden>{{ T "err_invalid" }}</p>
-    <p class="chat-notice">{{ T "chatNotice" }}{{ with $privacy }} <a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ with $legal }} · <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</p>
+    <p class="chat-notice">{{ T "chatNotice" }}<br>{{ with $privacy }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ with $legal }} · <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</p>
     <button type="submit" class="btn chat-start">{{ T "chatStart" }}</button>
   </form>
   <button type="button" class="btn chat-launch" aria-expanded="false" aria-controls="chat-panel">{{ partial "icon.html" "chat" }}{{ T "chatOpen" }}</button>
