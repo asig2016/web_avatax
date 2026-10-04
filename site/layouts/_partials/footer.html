@@ -22,6 +22,7 @@
     <div class="wrap">
       <span>© {{ now.Year }} {{ site.Params.company }}</span>
       <span class="footer-links">
+        {{- with site.GetPage "/legal" }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
         {{- with site.GetPage "/privacy" }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
         {{- with site.Params.ga4ID }}<button type="button" class="linklike" data-cookie-settings>{{ T "cookieSettings" }}</button>{{ end }}
       </span>

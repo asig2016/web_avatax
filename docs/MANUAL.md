@@ -231,6 +231,7 @@ careers page (`nginx/conf.d/redirects.conf`). To show them again: remove the `bu
 | Home page photos | `site/assets/images/` (acropolis.jpg = top image, syngrou.jpg, office.jpg) |
 | Google Analytics | `site/hugo.toml` → `ga4ID = "G-XXXXXXX"` (the cookie banner then appears automatically) |
 | Address of a page changed | add a line to `nginx/conf.d/redirects.conf`: `/old/address   /new/address/;` |
+| Legal notice (company data, liability note, copyright) | `site/content/legal.en.md`, `legal.de.md`, `legal.el.md` |
 | Live chat on/off | `site/hugo.toml` → `rocketchatURL` and `.env` → `CHAT_URL`, `CHAT_DEPARTMENT` (empty = no chat button) |
 
 ### Live chat (Rocket.Chat)

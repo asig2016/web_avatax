@@ -32,6 +32,15 @@ List the remaining pages with: `grep -rn '^review:' site/content`
     server, set up the department and custom fields (`docs/MANUAL.md` § 8), approve the new chat section of the privacy
     policy and the chat texts in `site/i18n/*.toml`. Note: the chat server's host name is visible in the page source
     (CSP); check that this is acceptable under the "no other company" rule.
+13. **Legal notice (new, 2026-10-04):** `legal.{en,de,el}.md` (`/legal-notice/`, `/de/impressum/`,
+    `/el/nomika-stoixeia/`), linked in the footer and in the chat notice. Greek law (π.δ. 131/2003 Art. 4) and EU
+    company law require these details on the website; please fill in the data in [brackets]: e-mail address,
+    Γ.Ε.ΜΗ. number, VAT number, Δ.Ο.Υ., legal representative and role, registration number of the firm with the ΟΕΕ.
+    The liability note deliberately does **not** exclude liability: under Art. 332 AK (licensed profession) and
+    § 309 No. 7 BGB such an exclusion would be void. It only states that the information is general, that answers
+    before an engagement (website, chat, e-mail, phone) are non-binding, and that binding advice requires a written
+    engagement. Also confirm that AVATAX holds the rights to the photos (copyright section). The texts should be
+    checked by a lawyer.
 
 ## SEO extension (2026-10-01) – please check the facts
 
