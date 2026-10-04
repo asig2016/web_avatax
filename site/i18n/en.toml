@@ -64,7 +64,7 @@ backHome = "Back to the home page"
 faq = "Frequently asked questions"
 
 # live chat
-chatOpen = "Chat"
+chatOpen = "Ask us now"
 chatAsk = "Questions? Chat with us"
 chatClose = "Close"
 chatStart = "Start chat"

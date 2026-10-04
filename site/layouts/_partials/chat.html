@@ -23,6 +23,6 @@
     <p class="chat-notice">{{ T "chatNotice" }}<br>{{ with $privacy }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ with $legal }} · <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</p>
     <button type="submit" class="btn chat-start">{{ T "chatStart" }}</button>
   </form>
-  <button type="button" class="btn chat-launch" aria-expanded="false" aria-controls="chat-panel">{{ partial "icon.html" "chat" }}{{ T "chatOpen" }}</button>
+  <button type="button" class="btn chat-launch" aria-expanded="false" aria-controls="chat-panel"><span class="chat-icon">{{ partial "icon.html" "chat" }}</span>{{ T "chatOpen" }}</button>
 </div>
 {{- end }}

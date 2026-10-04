@@ -307,6 +307,13 @@ form.sent .field, form.sent .field-row, form.sent button, form.sent .form-note {
 .chat { position: fixed; z-index: 80; right: 16px; bottom: 16px; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
 .chat[hidden], .chat [hidden] { display: none; }
 .chat-launch { box-shadow: 0 6px 20px rgba(42,32,14,.25); }
+/* green "online" dot on the chat icon (the button is only shown while an agent is available) */
+.chat-icon { position: relative; display: inline-flex; }
+.chat-icon::after {
+  content: ""; position: absolute; top: -3px; right: -4px; width: 9px; height: 9px; border-radius: 50%;
+  background: #3cc46b; box-shadow: 0 0 0 2px var(--brand);
+}
+.chat-launch:hover .chat-icon::after { box-shadow: 0 0 0 2px var(--brand-dark); }
 .chat-inline[hidden] { display: none; }
 .chat-inline { margin: 1.4em 0; }
 .chat-panel {
