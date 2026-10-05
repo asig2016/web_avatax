@@ -38,4 +38,4 @@ Wer in Griechenland Einkünfte erzielt, eine Immobilie besitzt oder seinen Wohns
 
 ## Umzug nach Griechenland
 
-Für Rentner (Art. 5B) sowie für Arbeitnehmer und Freiberufler (Art. 5C) gibt es besondere Besteuerungsregelungen. Voraussetzungen und Unterlagen: [Steuervorteile beim Zuzug](/de/leistungen/umzug-nach-griechenland/).
+Für Rentner ([7 % Pauschalsteuer, Art. 5B](/de/leistungen/umzug-nach-griechenland/rentner/)) sowie für Arbeitnehmer und Freiberufler ([50 % Steuerbefreiung, Art. 5C](/de/leistungen/umzug-nach-griechenland/arbeitnehmer-und-freiberufler/)) gibt es besondere Besteuerungsregelungen. Für Investoren gibt es die [Pauschalsteuer von 100.000 € auf Auslandseinkünfte (Art. 5A)](/de/leistungen/umzug-nach-griechenland/pauschalsteuer-fuer-investoren/). Überblick: [Steuervorteile beim Zuzug](/de/leistungen/umzug-nach-griechenland/).

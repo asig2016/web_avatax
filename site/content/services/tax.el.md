@@ -39,4 +39,4 @@ faq:
 
 ## Μεταφορά φορολογικής κατοικίας
 
-Για συνταξιούχους εξωτερικού (άρθρο 5Β ΚΦΕ) και για μισθωτούς και ελεύθερους επαγγελματίες (άρθρο 5Γ ΚΦΕ) ισχύουν ειδικά καθεστώτα φορολόγησης. Προϋποθέσεις και δικαιολογητικά: [Φορολογικά κίνητρα μεταφοράς κατοικίας](/el/ypiresies/metafora-forologikis-katoikias/).
+Για συνταξιούχους εξωτερικού ([φόρος 7%, άρθρο 5Β ΚΦΕ](/el/ypiresies/metafora-forologikis-katoikias/syntaxiouchoi/)) και για μισθωτούς και ελεύθερους επαγγελματίες ([απαλλαγή 50%, άρθρο 5Γ ΚΦΕ](/el/ypiresies/metafora-forologikis-katoikias/misthotoi-kai-eleftheroi-epaggelmaties/)) ισχύουν ειδικά καθεστώτα φορολόγησης. Για επενδυτές προβλέπεται [εναλλακτική φορολόγηση με 100.000 ευρώ (άρθρο 5Α ΚΦΕ)](/el/ypiresies/metafora-forologikis-katoikias/enallaktiki-forologisi-ependyton/). Επισκόπηση: [Φορολογικά κίνητρα μεταφοράς κατοικίας](/el/ypiresies/metafora-forologikis-katoikias/).

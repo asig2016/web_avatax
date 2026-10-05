@@ -41,6 +41,14 @@ List the remaining pages with: `grep -rn '^review:' site/content`
     before an engagement (website, chat, e-mail, phone) are non-binding, and that binding advice requires a written
     engagement. Also confirm that AVATAX holds the rights to the photos (copyright section). The texts should be
     checked by a lawyer.
+14. **Relocation page split (2026-10-05):** "Tax incentives for moving to Greece" is now an overview
+    (`services/relocation/_index.*.md`, same URLs as before) with two sub pages: 7% flat tax for pensioners
+    (Art. 5B, `pensioners.*.md`) and 50% exemption for employees and freelancers (Art. 5C, `employees.*.md`). The
+    text was moved, not rewritten; new are the overview intro, the page intros and SEO fields. "Formalities" and
+    "How we support you" appear on all sub pages. Please check the new pages (`review:` lines).
+    New third sub page **€100,000 flat tax for investors (Art. 5A, `investors.*.md`)**, researched from Art. 5A as
+    amended by Law 5313/2026 and AADE decision A.1147/2026. The same law moved the 5B payment date from July to
+    **December** and abolished the 31 March application deadline; the pensioners page was corrected accordingly.
 
 ## SEO extension (2026-10-01) – please check the facts
 

@@ -38,4 +38,4 @@ Anyone who earns income in Greece, owns property there or moves their residence 
 
 ## Moving to Greece
 
-Special tax regimes apply to pensioners (Art. 5B) and to employees and freelancers (Art. 5C). Conditions and documents: [tax incentives for moving to Greece](/services/relocating-to-greece/).
+Special tax regimes apply to pensioners ([7% flat tax, Art. 5B](/services/relocating-to-greece/pensioners/)) and to employees and freelancers ([50% exemption, Art. 5C](/services/relocating-to-greece/employees-and-freelancers/)). Investors can opt for a [€100,000 flat tax on foreign income (Art. 5A)](/services/relocating-to-greece/flat-tax-for-investors/). Overview: [tax incentives for moving to Greece](/services/relocating-to-greece/).
