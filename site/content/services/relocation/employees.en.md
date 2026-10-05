@@ -6,10 +6,16 @@ description: "Moving to Greece to work: 50% of employment or freelance income ex
 url: /services/relocating-to-greece/employees-and-freelancers/
 icon: building
 weight: 20
-review: "split from the relocation page 2026-10-05 – please check"
+review: "split from the relocation page 2026-10-05 – please check – new FAQ 2026-10-05: please check \"remote work\" and \"social security\""
 faq:
   - q: "What is the application deadline?"
     a: "The application is filed in the year in which the tax residence is transferred to Greece. The deadlines have changed several times in recent years, so we check the deadline that currently applies for you."
+  - q: "Does the exemption also cover income from abroad?"
+    a: "No. Only income from employment or self-employment in Greece is 50% exempt."
+  - q: "Can I keep working remotely for my foreign employer?"
+    a: "Only if you are employed by a Greek company or the Greek permanent establishment of a foreign company, or carry on a self-employed activity in Greece. Employment with a foreign employer that has no establishment in Greece does not meet the conditions."
+  - q: "Are social security contributions also reduced?"
+    a: "No. The exemption applies to income tax only."
 ---
 Employees and freelancers who move their tax residence to Greece can have **50% of their income from work in Greece exempted from income tax for seven years** (Art. 5C of the Greek Income Tax Code). We check whether you qualify, put together the documents, file the application and then take care of your annual tax returns – in English or German.
 

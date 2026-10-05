@@ -6,7 +6,7 @@ description: "Moving to Greece as an investor: all foreign income taxed at a fla
 url: /services/relocating-to-greece/flat-tax-for-investors/
 icon: finance
 weight: 30
-review: "new page 2026-10-05 based on Art. 5A Income Tax Code as amended by Law 5313/2026 and AADE decision A.1147/2026 – please check"
+review: "new page 2026-10-05 based on Art. 5A Income Tax Code as amended by Law 5313/2026 and AADE decision A.1147/2026 – please check – new FAQ 2026-10-05"
 faq:
   - q: "Who can apply for the €100,000 flat tax?"
     a: "Individuals who transfer their tax residence to Greece, were not Greek tax residents in seven of the last eight years and invest at least €500,000 in Greece within three years of the application."
@@ -14,6 +14,10 @@ faq:
     a: "Yes. The spouse or partner and relatives such as children and parents can be included, at the start or later. The flat tax is €20,000 per year for each family member."
   - q: "What is the application deadline?"
     a: "The fixed deadline of 31 March has been abolished. The filing deadlines now depend on the year of the move, so we check the deadline that currently applies for you."
+  - q: "Is the €100,000 also due in years with little foreign income?"
+    a: "Yes. The flat amount is due every year, regardless of the actual foreign income."
+  - q: "What happens if the investment is not completed in time?"
+    a: "If the investment of at least €500,000 is not completed within three years of the application, the regime is withdrawn."
 ---
 Individuals who transfer their tax residence to Greece and invest there can pay a **flat tax of €100,000 a year on all their foreign-source income**, regardless of its amount, for up to 15 years (Art. 5A of the Greek Income Tax Code, the Greek "non-dom" regime). We check whether you qualify, coordinate the application with the investment and then take care of your annual tax returns – in English or German.
 

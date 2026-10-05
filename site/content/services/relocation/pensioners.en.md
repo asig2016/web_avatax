@@ -6,7 +6,7 @@ description: "Moving to Greece as a pensioner: all foreign income taxed at a fla
 url: /services/relocating-to-greece/pensioners/
 icon: person
 weight: 10
-review: "split from the relocation page 2026-10-05 – please check"
+review: "split from the relocation page 2026-10-05 – please check – new FAQ 2026-10-05: please check \"tax return\" and \"leaving before 15 years\""
 faq:
   - q: "Who can apply for the 7% flat tax for pensioners?"
     a: "Individuals who transfer their tax residence to Greece as pensioners, were not Greek tax residents in five of the last six years and move from an EU member state or a country with which Greece has an agreement on administrative cooperation in tax matters. Whether a particular pension qualifies should be checked in advance."
@@ -14,6 +14,14 @@ faq:
     a: "No. Spouses and other family members are not included in the application; each person applies separately where required."
   - q: "What is the application deadline?"
     a: "The application is filed in the year in which the tax residence is transferred to Greece. The deadlines have changed several times in recent years, so we check the deadline that currently applies for you."
+  - q: "Is my Greek income also taxed at 7%?"
+    a: "No. The 7% flat tax only covers foreign-source income. Income from Greece, such as rent from a Greek apartment, is taxed under the general rules."
+  - q: "Is the 7% tax paid in addition to tax in my home country?"
+    a: "Double tax treaties remain unaffected, and under certain conditions tax withheld abroad can be credited. Whether a pension is taxed in Greece or in the paying country depends on the treaty; we check this for your pension."
+  - q: "Do I still have to file a Greek tax return?"
+    a: "Yes, a Greek tax return is filed every year. We prepare it and calculate the flat tax, which is due by the last working day of December."
+  - q: "What happens if I leave Greece before the 15 years are over?"
+    a: "The regime ends when you are no longer tax resident in Greece."
 ---
 Pensioners who transfer their tax residence to Greece can have all their foreign-source income taxed at a **flat rate of 7% for 15 years** (Art. 5B of the Greek Income Tax Code). We check whether you qualify, put together the documents, file the application and then take care of your annual tax returns – in English or German.
 

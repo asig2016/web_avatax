@@ -6,10 +6,16 @@ description: "Zum Arbeiten nach Griechenland: 50 % der Einkünfte aus Anstellung
 url: /de/leistungen/umzug-nach-griechenland/arbeitnehmer-und-freiberufler/
 icon: building
 weight: 20
-review: "aus der Seite „Steuervorteile beim Zuzug“ ausgegliedert am 2026-10-05 – bitte prüfen"
+review: "aus der Seite „Steuervorteile beim Zuzug“ ausgegliedert am 2026-10-05 – bitte prüfen – neue FAQ 2026-10-05: bitte „Homeoffice“ und „Sozialversicherung“ prüfen"
 faq:
   - q: "Bis wann muss der Antrag gestellt werden?"
     a: "Der Antrag wird in dem Jahr gestellt, in dem der steuerliche Wohnsitz nach Griechenland verlegt wird. Die Fristen wurden in den letzten Jahren mehrfach geändert; wir prüfen für Sie die jeweils aktuelle Frist."
+  - q: "Gilt die Befreiung auch für Einkünfte aus dem Ausland?"
+    a: "Nein. Befreit sind nur 50 % der Einkünfte aus nichtselbständiger Arbeit bzw. selbständiger Tätigkeit in Griechenland."
+  - q: "Kann ich weiter im Homeoffice für meinen deutschen Arbeitgeber arbeiten?"
+    a: "Nur wenn Sie bei einem griechischen Unternehmen oder der griechischen Betriebsstätte eines ausländischen Unternehmens angestellt sind oder in Griechenland selbständig tätig werden. Eine Anstellung bei einem Arbeitgeber ohne Niederlassung in Griechenland erfüllt die Voraussetzungen nicht."
+  - q: "Werden auch die Sozialversicherungsbeiträge reduziert?"
+    a: "Nein. Die Befreiung gilt nur für die Einkommensteuer."
 ---
 Arbeitnehmer und Freiberufler, die ihren steuerlichen Wohnsitz nach Griechenland verlegen, können **50 % ihrer Einkünfte aus der Tätigkeit in Griechenland sieben Jahre lang von der Einkommensteuer befreien** lassen (Art. 5C des griechischen Einkommensteuergesetzes). Wir prüfen, ob Sie die Voraussetzungen erfüllen, stellen die Unterlagen zusammen, reichen den Antrag ein und übernehmen anschließend Ihre jährlichen Steuererklärungen – auf Deutsch.
 

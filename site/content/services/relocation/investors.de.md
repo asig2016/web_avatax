@@ -6,7 +6,7 @@ description: "Als Investor nach Griechenland: alle ausländischen Einkünfte bis
 url: /de/leistungen/umzug-nach-griechenland/pauschalsteuer-fuer-investoren/
 icon: finance
 weight: 30
-review: "neue Seite 2026-10-05 auf Grundlage von Art. 5A griech. Einkommensteuergesetz i. d. F. des Gesetzes 5313/2026 und der AADE-Entscheidung A.1147/2026 – bitte fachlich prüfen"
+review: "neue Seite 2026-10-05 auf Grundlage von Art. 5A griech. Einkommensteuergesetz i. d. F. des Gesetzes 5313/2026 und der AADE-Entscheidung A.1147/2026 – bitte fachlich prüfen – neue FAQ 2026-10-05"
 faq:
   - q: "Wer kann die Pauschalsteuer von 100.000 € beantragen?"
     a: "Natürliche Personen, die ihren steuerlichen Wohnsitz nach Griechenland verlegen, in sieben der letzten acht Jahre nicht in Griechenland steuerlich ansässig waren und innerhalb von drei Jahren nach dem Antrag mindestens 500.000 € in Griechenland investieren."
@@ -14,6 +14,10 @@ faq:
     a: "Ja. Ehe- oder Lebenspartner und Verwandte wie Kinder und Eltern können einbezogen werden, von Anfang an oder später. Die Pauschalsteuer beträgt 20.000 € pro Jahr und Person."
   - q: "Bis wann muss der Antrag gestellt werden?"
     a: "Die feste Frist zum 31. März ist entfallen. Die Antragsfristen hängen jetzt vom Jahr des Zuzugs ab; wir prüfen für Sie die jeweils aktuelle Frist."
+  - q: "Fallen die 100.000 € auch in Jahren mit geringen Auslandseinkünften an?"
+    a: "Ja. Der Pauschalbetrag ist jedes Jahr fällig, unabhängig von der tatsächlichen Höhe der ausländischen Einkünfte."
+  - q: "Was passiert, wenn die Investition nicht rechtzeitig abgeschlossen wird?"
+    a: "Wird die Investition von mindestens 500.000 € nicht innerhalb von drei Jahren nach dem Antrag abgeschlossen, entfällt die Regelung."
 ---
 Wer seinen steuerlichen Wohnsitz nach Griechenland verlegt und dort investiert, kann alle Einkünfte aus ausländischen Quellen – unabhängig von ihrer Höhe – bis zu 15 Jahre lang mit einer **Pauschalsteuer von 100.000 € pro Jahr** abgelten (Art. 5A des griechischen Einkommensteuergesetzes, die griechische „Non-Dom“-Regelung). Wir prüfen, ob Sie die Voraussetzungen erfüllen, stimmen den Antrag auf die Investition ab und übernehmen anschließend Ihre jährlichen Steuererklärungen – auf Deutsch. Beim Wegzug aus Deutschland sollten die deutschen Folgen vorab geprüft werden, etwa die Wegzugsbesteuerung nach § 6 AStG bei Beteiligungen an Kapitalgesellschaften.
 
