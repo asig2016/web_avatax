@@ -7,7 +7,7 @@ layout: contact
 chatButton: false
 formTitle: "Kontaktieren Sie uns"
 directions: "50 Meter von der Metrostation „Syngrou-Fix“ (Linie 2, Ausgang Drakou)."
-officeAlt: "Empfang unseres Büros"
+officeAlt: "Unser Büro in Athen: Empfangstresen mit Arbeitsplätzen"
 menus:
   main:
     weight: 40

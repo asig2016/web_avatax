@@ -7,7 +7,7 @@ layout: contact
 chatButton: false
 formTitle: "Send us a message"
 directions: "50 metres from the metro station “Syngrou-Fix” (line 2, exit Drakou)."
-officeAlt: "Reception of our office"
+officeAlt: "Our office in Athens: reception desk with workstations"
 menus:
   main:
     weight: 40

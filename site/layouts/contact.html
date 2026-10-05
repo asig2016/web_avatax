@@ -44,7 +44,7 @@
       <li>{{ partial "icon.html" "phone" }}<a href="{{ site.Params.phoneHref }}">{{ site.Params.phone }}</a></li>
       {{- with .Params.directions }}<li>{{ partial "icon.html" "metro" }}<span>{{ . }}</span></li>{{ end }}
     </ul>
-    {{- $img := resources.Get "images/office.jpg" }}
+    {{- $img := resources.Get "images/contact-office.jpg" }}
     <img class="rounded" src="{{ ($img.Fill "720x480 Center webp").RelPermalink }}" alt="{{ .Params.officeAlt }}" width="720" height="480" loading="lazy">
     <p class="map-links">
       <a href="https://www.openstreetmap.org/?mlat={{ site.Params.lat }}&amp;mlon={{ site.Params.lon }}#map=18/{{ site.Params.lat }}/{{ site.Params.lon }}" rel="noopener">{{ T "openMap" }}</a>

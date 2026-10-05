@@ -7,7 +7,7 @@ layout: contact
 chatButton: false
 formTitle: "Επικοινωνήστε μαζί μας"
 directions: "50 μέτρα από τον σταθμό του μετρό «Συγγρού-Φιξ» (γραμμή 2, έξοδος Δράκου)."
-officeAlt: "Η υποδοχή του γραφείου μας"
+officeAlt: "Το γραφείο μας στην Αθήνα: υποδοχή και θέσεις εργασίας"
 menus:
   main:
     weight: 40
