@@ -8,6 +8,6 @@ icon: "person"
 weight: 20
 review: "neue Seite 2026-10-05 – bitte prüfen"
 ---
-Viele Privatpersonen beginnen in Griechenland mit einer Immobilie: einem Ferienhaus zur eigenen Nutzung, einer Wohnung für die Familie oder einer Kapitalanlage zur Vermietung. Von der griechischen Steuernummer über die jährliche Immobiliensteuer bis zur Steuererklärung für Mieteinkünfte übernehmen wir die steuerliche Seite.
+Privatpersonen starten in Griechenland auf unterschiedliche Weise: Sie kaufen ein Ferienhaus oder eine Wohnung zur Vermietung, verbringen mehrere Monate im Jahr in einer Mietwohnung oder ziehen nach Griechenland, um selbständig zu arbeiten. Von der griechischen Steuernummer über Immobiliensteuer und Sozialversicherung bis zur Steuererklärung übernehmen wir die steuerliche Seite.
 
 Sie verlegen Ihren steuerlichen Wohnsitz nach Griechenland? Für Rentner, Arbeitnehmer, Freiberufler und Investoren gelten besondere Regelungen: [Steuervorteile beim Zuzug](/de/leistungen/umzug-nach-griechenland/).

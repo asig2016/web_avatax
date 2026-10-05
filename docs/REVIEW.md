@@ -61,8 +61,13 @@ List the remaining pages with: `grep -rn '^review:' site/content`
     15% of objective value per year, exemptions on disclosure of shareholders down to natural persons, annual
     declaration and exemption application, A.1014/2026) and **buying property as a private individual** (AFM, bank
     account, justification of funds, notary/lawyer/engineer, cadastre, transfer tax 3.09%, VAT on new buildings,
-    ENFIA, rental taxation from 15%, short-term rental register ΑΜΑ, Golden Visa without amounts). Please check
-    both pages.
+    ENFIA, private use as a holiday home, rental taxation from 15%, short-term rental register ΑΜΑ, Golden Visa
+    without amounts). Please check both pages.
+    Added 2026-10-06 for private individuals: **staying longer in Greece on a rental** (registration certificate,
+    lease declaration and tenant's tax number, tax residence after 183 days with the exception for tourist and
+    similar stays up to 365 days under Art. 4 Income Tax Code, EHIC/S1) and **self-employed in Greece** (start of
+    activity, e-EFKA, myDATA, VAT small-business scheme without amounts, minimum presumed income with exceptions,
+    link to the 50% exemption). Please check.
 
 ## SEO extension (2026-10-01) – please check the facts
 
