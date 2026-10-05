@@ -49,6 +49,20 @@ List the remaining pages with: `grep -rn '^review:' site/content`
     New third sub page **€100,000 flat tax for investors (Art. 5A, `investors.*.md`)**, researched from Art. 5A as
     amended by Law 5313/2026 and AADE decision A.1147/2026. The same law moved the 5B payment date from July to
     **December** and abolished the 31 March application deadline; the pensioners page was corrected accordingly.
+15. **"Your start in Greece" split (2026-10-05):** overview (`services/start-in-greece/_index.*.md`, same URLs) with
+    four sub pages: **without an establishment** (new, researched: VAT registration/OSS/reverse charge, permanent
+    establishment risk, posting notification and A1, employing staff without a company, commercial agents),
+    representative office, branch, subsidiary (existing text plus typical tasks, accounting, I.K.E./A.E.
+    overview with A.E. minimum capital €25,000). Please check especially the new page and the DE comparisons
+    (§ 12 AO, OSS via BZSt, agent's compensation like in German law) and the EL references (π.δ. 219/1991,
+    ν. 4072/2012, ν. 4548/2018).
+    Then split further into **companies** (`companies/`, five sub pages) and **private individuals**
+    (`private-individuals/`). New, researched: **foreign company holding property** (special real estate tax ΕΦΑ
+    15% of objective value per year, exemptions on disclosure of shareholders down to natural persons, annual
+    declaration and exemption application, A.1014/2026) and **buying property as a private individual** (AFM, bank
+    account, justification of funds, notary/lawyer/engineer, cadastre, transfer tax 3.09%, VAT on new buildings,
+    ENFIA, rental taxation from 15%, short-term rental register ΑΜΑ, Golden Visa without amounts). Please check
+    both pages.
 
 ## SEO extension (2026-10-01) – please check the facts
 
