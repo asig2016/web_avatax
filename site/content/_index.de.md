@@ -7,7 +7,7 @@ heroEyebrow: "Buchhaltung · Lohn · Steuern"
 heroTitle: "Buchhaltung und Steuerberatung in Griechenland"
 heroText: "Buchführung, Jahresabschlüsse, Lohnbuchhaltung, Steuerberatung und steuerliche Vertretung für Unternehmen und Privatpersonen in Griechenland – auf Deutsch, Griechisch und Englisch."
 heroAlt: "Die Akropolis, von unserem Büro aus gesehen"
-officeAlt: "Blick von unserem Büro auf die Syngrou Avenue"
+officeAlt: "Empfang und Flur unseres Büros in Athen"
 pillarsTitle: "Unsere Arbeitsweise"
 pillars:
   - icon: shield

@@ -7,7 +7,7 @@ heroEyebrow: "Accounting · Payroll · Tax"
 heroTitle: "Accountants and tax consultants in Athens"
 heroText: "Bookkeeping, financial statements, payroll, tax advice and tax representation for companies and private individuals in Greece – in Greek, German and English."
 heroAlt: "The Acropolis, seen from our office"
-officeAlt: "View from our office onto Syngrou Avenue"
+officeAlt: "Reception and hallway of our office in Athens"
 pillarsTitle: "How we work"
 pillars:
   - icon: shield
