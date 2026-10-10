@@ -12,6 +12,9 @@ Read `README.md` (overview), `docs/DOCKER.md` (containers and commands), `docs/D
 1. **No mention of or link to any other company** (in particular no sister/partner audit firm). Owner decision
    2026-10-01: the companies stay separate on the web, so that they are not read as an audit "network".
    This includes footers, structured data, texts, images and alt texts.
+   **Exception (owner decision 2026-10-10):** the membership in the network **ETL GLOBAL** is stated in the footer
+   ("Member of") and on the About page, as a network of independent advisory firms and without naming other member
+   firms. Rule 2 still applies: the membership must not make AVATAX read as an audit firm.
 2. **AVATAX is an accounting and tax firm, not an audit firm.** Bookkeeping, payroll, financial statements and
    tax returns are its core services. Never describe services as statutory audits ("Wirtschaftsprüfung",
    "έλεγχος οικονομικών καταστάσεων"); use "tax audit support" / "Betriebsprüfung" / "φορολογικός έλεγχος".

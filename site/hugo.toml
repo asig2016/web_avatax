@@ -21,6 +21,11 @@ timeZone = "Europe/Athens"
     name = "Επαγγελματικό Επιμελητήριο Αθηνών (Athens Chamber of Tradesmen)"
     url = "https://www.eea.gr/"
     logo = "images/members/eea.png"
+  # a member without "logo" is shown in the footer as text
+  [[params.members]]
+    name = "ETL GLOBAL"
+    url = "https://www.etl-global.com/"
+    logo = "images/members/etl-global.png"
 
 [languages]
   [languages.en]

@@ -21,6 +21,10 @@ Ein großer Vorteil sind die sehr guten Englisch- und Deutschkenntnisse unserer 
 
 Einen Überblick über alle Leistungen finden Sie unter [Leistungen](/de/leistungen/).
 
+## Internationales Netzwerk
+
+AVATAX A.E. ist Mitglied von [ETL GLOBAL](https://www.etl-global.com/), einem internationalen Netzwerk unabhängiger Beratungskanzleien. Für Fragen, die ein anderes Land betreffen, vermitteln wir Ihnen Ansprechpartner im Netzwerk. Jede Mitgliedskanzlei ist rechtlich selbständig und erbringt ihre Leistungen in eigener Verantwortung.
+
 ## Unsere Büros
 
 Unsere Büros befinden sich an der Syngrou Avenue 76, nahe der Metrostation Syngrou-Fix: vollständig renovierte Räume mit eigenen Besprechungsräumen, gut erreichbar mit allen öffentlichen Verkehrsmitteln.

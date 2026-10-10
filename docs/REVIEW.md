@@ -78,6 +78,10 @@ List the remaining pages with: `grep -rn '^review:' site/content`
     § 32b(1) sentence 2 no. 3 EStG. The EL page addresses Greeks living abroad. Photos of a client's villa (`start-home.jpg`, `start-stay.jpg`) are used on the owner's
     statement that the client agreed; written consent should be on file.
 
+17. **ETL GLOBAL membership (2026-10-10):** stated in the footer ("Member of", with the network's red logo taken from etl-global.com) and in a new
+    section on the About page (en/de/el). Exception to hard rule 1, recorded in `AGENTS.md`. Please check: the exact
+    name and link the network wants members to use, whether the logo file and its use match the network's rules for members, and the description "network of independent advisory firms".
+
 ## SEO extension (2026-10-01) – please check the facts
 
 The service pages were extended with "who it is for", "how we work" and FAQ sections. Please confirm especially:

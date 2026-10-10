@@ -21,6 +21,10 @@ Our staff's very good knowledge of English and German is a great advantage: it m
 
 An overview of everything we do: [our services](/services/).
 
+## International network
+
+AVATAX A.E. is a member of [ETL GLOBAL](https://www.etl-global.com/), an international network of independent advisory firms. For questions that concern another country, we put you in touch with contacts in the network. Each member firm is legally independent and provides its services on its own responsibility.
+
 ## Our offices
 
 Our offices are on Syngrou Avenue, close to the metro station Syngrou-Fix: fully renovated premises with dedicated meeting rooms, easily accessible by public transport.
