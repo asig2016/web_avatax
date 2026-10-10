@@ -225,6 +225,10 @@ h3 { font-size: 1.15rem; margin: 1.4em 0 .4em; }
 .prose ul li { position: relative; padding-left: 1.6em; margin: .45em 0; }
 .prose ul li::before { content: ""; position: absolute; left: .2em; top: .62em; width: .5em; height: .5em; border-radius: 2px; background: var(--accent); transform: rotate(45deg); }
 .intro { margin-bottom: 36px; }
+/* cards with the photo of the linked page on top (section pages) */
+.cards-photo { grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
+.cards-photo .card { padding-top: 0; overflow: hidden; }
+.card-photo { display: block; width: calc(100% + 2 * var(--card-pad, 26px)); max-width: none; margin: 0 calc(-1 * var(--card-pad, 26px)) 14px; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
 
 .side-nav { border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
 .side-nav-title { margin: 0 0 .5em; font-weight: 700; }

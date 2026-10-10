@@ -8,6 +8,8 @@ icon: building
 weight: 10
 teaser: "Without an establishment, representative office, branch, subsidiary or property company – support for foreign companies in Greece."
 review: "2026-10-05 split into an overview and four sub pages; new page \"without an establishment\" – please check"
+heroImage: "images/start-companies.jpg"
+heroAlt: "Lit offices behind the glass facade of a modern office building"
 ---
 Foreign companies have four basic ways to do business in Greece; a fifth case is a company that only holds property in Greece. They differ in legal, tax and accounting terms – and in cost, liability and how you appear in the market. Together with you, we work out the appropriate way, explain the tax, labour-law and company-law consequences, support the set-up and take over your accounting and tax obligations from the first business day. On legal matters we work together with your legal advisers.
 

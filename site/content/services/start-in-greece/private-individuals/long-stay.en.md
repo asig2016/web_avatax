@@ -14,6 +14,8 @@ faq:
     a: "In practice yes: the landlord declares the lease electronically to the tax administration, and the tenant needs a Greek tax number to confirm it."
   - q: "Can I work remotely while I stay in Greece?"
     a: "Working from Greece – even for an employer or clients abroad – can change your tax residence and create obligations in Greece. We check this before you start."
+heroImage: "images/start-stay.jpg"
+heroAlt: "Terrace with pool and a view over a Greek bay"
 ---
 Greece is an attractive place to spend several months of the year: mild winters, long summers and, with Athens, a capital that is easy to reach by plane and well connected to the coast and the islands. Many people rent a home for some months or a whole season instead of buying. This is simple – but a long stay can have tax consequences that should be checked in advance.
 

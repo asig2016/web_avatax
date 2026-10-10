@@ -16,6 +16,8 @@ faq:
     a: "Mainly the transfer tax of 3.09% (3% plus a municipal surcharge on it), based on the higher of the price and the objective value, plus notary, lawyer and cadastre costs. For new buildings, VAT may apply instead of the transfer tax."
   - q: "Do I have to file a Greek tax return?"
     a: "If you have income from Greece, for example from renting out the property, a Greek tax return is filed every year. We prepare it for you."
+heroImage: "images/start-home.jpg"
+heroAlt: "Modern villa with pool in Greece at dusk"
 ---
 Citizens of the EU and of other countries can buy property in Greece. The procedure differs from what many buyers know from home: the notary drafts and records the contract, but checking the title and the building is done by your own lawyer and an engineer. We take care of the tax side – before, during and after the purchase.
 

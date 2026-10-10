@@ -14,6 +14,8 @@ faq:
     a: "In der Praxis ja: Der Vermieter meldet den Mietvertrag elektronisch bei der Finanzverwaltung an, und der Mieter braucht eine griechische Steuernummer, um ihn zu bestätigen."
   - q: "Darf ich während des Aufenthalts im Homeoffice arbeiten?"
     a: "Arbeiten von Griechenland aus – auch für einen deutschen Arbeitgeber oder Kunden – kann die steuerliche Ansässigkeit verändern und Pflichten in Griechenland auslösen. Wir prüfen das, bevor Sie beginnen."
+heroImage: "images/start-stay.jpg"
+heroAlt: "Terrasse mit Pool und Blick über eine griechische Bucht"
 ---
 Griechenland ist ein attraktiver Ort, um mehrere Monate im Jahr zu verbringen: milde Winter, lange Sommer und mit Athen eine Hauptstadt, die von Deutschland aus mit vielen Direktflügen schnell erreichbar ist und gute Verbindungen zur Küste und zu den Inseln bietet. Viele mieten für einige Monate oder eine ganze Saison eine Wohnung, statt zu kaufen. Das ist einfach – ein langer Aufenthalt kann aber steuerliche Folgen haben, die vorab geprüft werden sollten.
 

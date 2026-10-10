@@ -14,6 +14,8 @@ faq:
     a: "When your company owes Greek VAT that is not accounted for by the customer (reverse charge) or settled through the One-Stop-Shop – for example for certain supplies of goods within Greece. We check this for your business model."
   - q: "When does my activity become a permanent establishment?"
     a: "In particular when you have a fixed place of business in Greece or a person in Greece habitually concludes contracts on your behalf. Profits attributable to it are then taxable in Greece."
+heroImage: "images/start-logistics.jpg"
+heroAlt: "Cranes of a Greek cargo port at dusk"
 ---
 Many foreign companies start in Greece without any establishment: they sell goods or provide services from abroad, send their own staff on assignments or employ individual staff locally. This is possible – but some tax and labour-law obligations still apply, and a permanent establishment can arise without being noticed.
 

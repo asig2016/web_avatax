@@ -14,6 +14,8 @@ faq:
     a: "Wenn Sie Ihren Wohnsitz nach Griechenland verlegen, werden Sie in der Regel in Griechenland unbeschränkt steuerpflichtig; das Doppelbesteuerungsabkommen Deutschland–Griechenland bleibt anwendbar. Unter bestimmten Voraussetzungen sind 50 % der Einkünfte aus der Tätigkeit in Griechenland sieben Jahre lang steuerfrei."
   - q: "Kann ich weiter für Kunden in Deutschland arbeiten?"
     a: "Ja. Selbständige in Griechenland können für Kunden überall arbeiten. Rechnungsstellung, Umsatzsteuer und Besteuerungsort hängen davon ab, wo die Kunden sitzen; wir prüfen das für Ihr Geschäft."
+heroImage: "images/start-remote.jpg"
+heroAlt: "Heller Schreibtisch mit Laptop und Kaffeetasse"
 ---
 Viele ziehen nach Griechenland und arbeiten dort selbständig – als Berater, Übersetzer, Designer, Entwickler oder Handwerker, oft weiterhin für Kunden in Deutschland. Die Selbständigkeit ist in Griechenland schnell angemeldet, Sozialversicherung, Rechnungsstellung und Steuern folgen aber griechischen Regeln, die sich von den deutschen deutlich unterscheiden. Wir übernehmen Anmeldung, Buchhaltung und Steuererklärungen – auf Deutsch.
 

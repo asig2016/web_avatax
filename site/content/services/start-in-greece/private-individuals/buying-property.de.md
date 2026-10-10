@@ -16,6 +16,8 @@ faq:
     a: "Vor allem die Grunderwerbsteuer von 3,09 % (3 % zuzüglich eines Gemeindezuschlags darauf) auf den höheren Wert aus Kaufpreis und objektivem Wert, dazu Notar-, Anwalts- und Katasterkosten. Bei Neubauten kann statt der Grunderwerbsteuer Umsatzsteuer anfallen."
   - q: "Muss ich in Griechenland eine Steuererklärung abgeben?"
     a: "Wenn Sie Einkünfte aus Griechenland haben, etwa aus der Vermietung, wird jedes Jahr eine griechische Steuererklärung abgegeben. Wir erstellen sie für Sie."
+heroImage: "images/start-home.jpg"
+heroAlt: "Moderne Villa mit Pool in Griechenland in der Abenddämmerung"
 ---
 EU-Bürger können Immobilien in Griechenland ohne Einschränkungen erwerben. Der Ablauf unterscheidet sich aber vom deutschen: Der griechische Notar beurkundet den Vertrag, prüft das Objekt jedoch nicht umfassend – die Prüfung von Eigentum und Gebäude übernehmen Ihr eigener Rechtsanwalt und ein Ingenieur. Wir übernehmen die steuerliche Seite – vor, während und nach dem Kauf.
 

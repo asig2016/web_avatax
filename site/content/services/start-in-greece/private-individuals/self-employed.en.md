@@ -14,6 +14,8 @@ faq:
     a: "If you move your residence to Greece, you normally become a Greek tax resident and are taxed in Greece on your worldwide income; double tax treaties remain applicable. Under certain conditions, 50% of the income from work in Greece is exempt for seven years."
   - q: "Can I keep working for clients in my home country?"
     a: "Yes. Self-employed people in Greece can work for clients anywhere. Invoicing, VAT and the place of taxation depend on where the clients are; we check this for your business."
+heroImage: "images/start-remote.jpg"
+heroAlt: "Bright desk with a laptop and a cup of coffee"
 ---
 Many people move to Greece and work there self-employed – as consultants, translators, designers, developers or craftsmen, often for clients in their home country. Self-employment in Greece is registered quickly, but social insurance, invoicing and taxes follow Greek rules that differ from what most people know from home. We take care of registration, bookkeeping and tax returns – in English or German.
 

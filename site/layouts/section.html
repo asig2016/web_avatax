@@ -2,10 +2,16 @@
 {{ partial "page-hero.html" . }}
 <div class="wrap page-body">
   {{- with .Content }}<div class="prose intro">{{ . }}</div>{{ end }}
-  <div class="cards">
+  {{- /* cards show the photo of the linked page (cardImage, else heroImage) when every sub page has one */}}
+  {{- $photos := gt (len .Pages) 0 }}
+  {{- range .Pages }}{{ if not (or .Params.cardImage .Params.heroImage) }}{{ $photos = false }}{{ end }}{{ end }}
+  <div class="cards{{ if $photos }} cards-photo{{ end }}">
     {{- range .Pages }}
     <a class="card" href="{{ .RelPermalink }}">
-      {{- with .Params.icon }}<span class="card-icon" aria-hidden="true">{{ partial "icon.html" . }}</span>{{ end }}
+      {{- if $photos }}{{ with resources.Get (.Params.cardImage | default .Params.heroImage) }}
+      <img class="card-photo" src="{{ (.Fill "640x360 Center webp").RelPermalink }}" alt="" width="640" height="360" loading="lazy">
+      {{- end }}{{ end }}
+      {{- if not $photos }}{{ with .Params.icon }}<span class="card-icon" aria-hidden="true">{{ partial "icon.html" . }}</span>{{ end }}{{ end }}
       <h2>{{ .LinkTitle }}</h2>
       <p>{{ .Summary | plainify | truncate 260 }}</p>
       <span class="more">{{ T "readMore" }} →</span>

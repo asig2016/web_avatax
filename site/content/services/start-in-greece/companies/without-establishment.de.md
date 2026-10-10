@@ -14,6 +14,8 @@ faq:
     a: "Wenn Ihr Unternehmen griechische Umsatzsteuer schuldet, die weder der Kunde im Reverse-Charge-Verfahren übernimmt noch über den One-Stop-Shop abgerechnet wird – etwa bei bestimmten Lieferungen innerhalb Griechenlands. Wir prüfen das für Ihr Geschäftsmodell."
   - q: "Ab wann wird meine Tätigkeit zur Betriebsstätte?"
     a: "Insbesondere bei einer festen Geschäftseinrichtung in Griechenland oder wenn eine Person in Griechenland gewöhnlich Verträge in Ihrem Namen abschließt – ähnlich wie nach deutschem Recht (§ 12 AO) und dem Doppelbesteuerungsabkommen. Die zuzuordnenden Gewinne sind dann in Griechenland steuerpflichtig."
+heroImage: "images/start-logistics.jpg"
+heroAlt: "Kräne eines griechischen Frachthafens in der Abenddämmerung"
 ---
 Viele ausländische Unternehmen starten in Griechenland ohne eigene Niederlassung: Sie liefern Waren oder erbringen Leistungen aus dem Ausland, entsenden eigene Mitarbeiter für Einsätze oder beschäftigen einzelne Mitarbeiter vor Ort. Das ist möglich – einige steuerliche und arbeitsrechtliche Pflichten bestehen aber auch dann, und eine Betriebsstätte kann unbemerkt entstehen.
 
