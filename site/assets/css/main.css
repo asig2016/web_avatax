@@ -124,7 +124,8 @@ h3 { font-size: 1.15rem; margin: 1.4em 0 .4em; }
   .main-nav a { padding: .7em .8em; }
   .main-nav .has-sub > a::after { display: none; }
   .main-nav .sub { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: 0; padding: 0 0 0 14px; min-width: 0; }
-  .lang-switch { align-self: flex-start; }
+  /* language choice first in the open menu, so it is reachable without scrolling */
+  .lang-switch { align-self: flex-start; order: -1; margin: 0 0 6px 6px; }
 }
 @media (max-width: 480px) {
   .brand-tag { display: none; }
