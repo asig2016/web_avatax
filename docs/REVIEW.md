@@ -82,6 +82,11 @@ List the remaining pages with: `grep -rn '^review:' site/content`
     section on the About page (en/de/el). Exception to hard rule 1, recorded in `AGENTS.md`. Please check: the exact
     name and link the network wants members to use, whether the logo file and its use match the network's rules for members, and the description "network of independent advisory firms".
 
+18. **Λογιστικός Σύλλογος Αθηνών (2026-10-10):** added to the footer under "Member of" on the owner's instruction.
+    The seal was taken from lsa.gr, where only a white and a pale grey version are published; the footer uses the
+    grey one recoloured dark for the white badge. Please confirm the membership wording and replace the file with
+    an official dark version if the association provides one.
+
 ## SEO extension (2026-10-01) – please check the facts
 
 The service pages were extended with "who it is for", "how we work" and FAQ sections. Please confirm especially:

@@ -17,11 +17,16 @@ timeZone = "Europe/Athens"
   lat = "37.96444"
   lon = "23.72632"
 
+  # Footer "Member of". "name" is the tooltip and alt text: one text for all languages, or one per language
+  # (name = { en = "…", de = "…", el = "…" }). A member without "logo" is shown as text.
   [[params.members]]
-    name = "Επαγγελματικό Επιμελητήριο Αθηνών (Athens Chamber of Tradesmen)"
+    name = { en = "Athens Chamber of Tradesmen", de = "Gewerbekammer Athen", el = "Επαγγελματικό Επιμελητήριο Αθηνών" }
     url = "https://www.eea.gr/"
     logo = "images/members/eea.png"
-  # a member without "logo" is shown in the footer as text
+  [[params.members]]
+    name = { en = "Athens Accountants' Association", de = "Verband der Buchhalter Athen", el = "Λογιστικός Σύλλογος Αθηνών" }
+    url = "https://www.lsa.gr/"
+    logo = "images/members/lsa.png"
   [[params.members]]
     name = "ETL GLOBAL"
     url = "https://www.etl-global.com/"
@@ -50,7 +55,7 @@ timeZone = "Europe/Athens"
       ogLocale = "de_DE"
       tagline = "Buchhaltung & Steuerberatung"
       company = "AVATAX A.E."
-      legalForm = "Buchhaltungs- und Steuerberatungsgesellschaft griechischen Rechts"
+      legalForm = "Buchhaltung und Steuerberatung – Aktiengesellschaft griechischen Rechts"
       street = "Syngrou Ave. 76"
       city = "GR-117 42 Athen"
       description = "Buchhaltung, Lohnbuchhaltung, Steuerberatung und steuerliche Vertretung in Athen – auf Deutsch, Griechisch und Englisch."
