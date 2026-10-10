@@ -25,6 +25,17 @@ pillars:
   - icon: globe
     title: "Online access to your books"
     text: "We keep your books in accounting software with online access, so your current figures are available at any time."
+principlesTitle: "Our principles"
+principles:
+  - icon: check
+    title: "Quality"
+    text: "Accurate books and returns, delivered within the statutory deadlines."
+  - icon: shield
+    title: "Trust"
+    text: "Confidentiality and clear communication: we tell you early about difficulties and additional fees."
+  - icon: book
+    title: "Legal conformity"
+    text: "Our advice follows the current law and the guidance of the tax administration. Where the law is unclear, we say so."
 audiencesTitle: "Our clients"
 audiences:
   - icon: globe

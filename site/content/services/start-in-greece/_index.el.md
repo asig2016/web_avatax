@@ -7,6 +7,8 @@ url: /el/ypiresies/enarxi-drastiriotitas-stin-ellada/
 icon: "start"
 weight: 60
 teaser: "Αλλοδαπές επιχειρήσεις και ιδιώτες: δραστηριοποίηση, ακίνητα, μακροχρόνια διαμονή και ελεύθερο επάγγελμα."
+heroImage: "images/athens-sea.jpg"
+heroAlt: "Άποψη της Αθήνας με την Ακρόπολη και τον Σαρωνικό"
 review: "2026-10-05 χωρίστηκε σε επιχειρήσεις και ιδιώτες – ελέγξτε"
 menus:
   main:

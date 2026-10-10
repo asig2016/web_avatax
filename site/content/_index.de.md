@@ -25,6 +25,17 @@ pillars:
   - icon: globe
     title: "Online-Zugriff auf Ihre Buchhaltung"
     text: "Wir führen Ihre Bücher in einer Buchhaltungssoftware mit Online-Zugriff, sodass Ihnen aktuelle Zahlen jederzeit zur Verfügung stehen."
+principlesTitle: "Unsere Grundsätze"
+principles:
+  - icon: check
+    title: "Qualität"
+    text: "Richtige Zahlen und Erklärungen, fristgerecht abgegeben."
+  - icon: shield
+    title: "Vertrauen"
+    text: "Vertraulichkeit und klare Kommunikation: Über Schwierigkeiten und zusätzliche Kosten informieren wir Sie frühzeitig."
+  - icon: book
+    title: "Rechtskonformität"
+    text: "Unsere Beratung folgt dem geltenden Recht und den Vorgaben der Finanzverwaltung. Wo die Rechtslage unklar ist, sagen wir das."
 audiencesTitle: "Unsere Mandanten"
 audiences:
   - icon: globe

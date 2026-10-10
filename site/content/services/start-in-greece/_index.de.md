@@ -7,6 +7,8 @@ url: /de/leistungen/ihr-start-in-griechenland/
 icon: "start"
 weight: 60
 teaser: "Markteintritt für ausländische Unternehmen; Immobilienkauf, längerer Aufenthalt und Selbständigkeit für Privatpersonen."
+heroImage: "images/athens-sea.jpg"
+heroAlt: "Blick über Athen mit der Akropolis und dem Saronischen Golf"
 review: "2026-10-05 in Unternehmen und Privatpersonen aufgeteilt – bitte prüfen"
 menus:
   main:

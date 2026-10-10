@@ -1,4 +1,12 @@
-<div class="page-hero">
+{{- /* optional photo behind the title: front matter heroImage (file in assets/) + heroAlt */}}
+{{- $img := "" }}{{ with .Params.heroImage }}{{ $img = resources.Get . }}{{ end }}
+<div class="page-hero{{ if $img }} page-hero-photo{{ end }}">
+  {{- with $img }}
+  <picture>
+    <source type="image/webp" srcset="{{ (.Fill "900x400 Center webp").RelPermalink }} 900w, {{ (.Fill "1800x600 Center webp").RelPermalink }} 1800w" sizes="100vw">
+    <img class="page-hero-img" src="{{ (.Fill "1800x600 Center jpg").RelPermalink }}" alt="{{ $.Params.heroAlt }}" width="1800" height="600">
+  </picture>
+  {{- end }}
   <div class="wrap">
     {{- if not .IsHome }}
     <nav class="breadcrumb" aria-label="Breadcrumb">

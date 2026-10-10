@@ -167,6 +167,15 @@ h3 { font-size: 1.15rem; margin: 1.4em 0 .4em; }
 @media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; gap: 56px; } }
 .split h2 { margin-top: 0; }
 .rounded { border-radius: var(--radius); }
+/* principles panel on the home page (in place of a photo in the "About us" section) */
+.principles { background: linear-gradient(160deg, var(--brand-dark), var(--brand)); color: #fff; border-radius: var(--radius); padding: 34px 36px; box-shadow: var(--shadow); }
+.principles .principles-title { margin: 0 0 22px; font-size: .82rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.principles ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+.principles li { display: grid; grid-template-columns: 46px 1fr; gap: 16px; align-items: start; }
+.principle-icon { display: inline-flex; width: 46px; height: 46px; align-items: center; justify-content: center; border-radius: 12px; background: rgba(255,255,255,.1); color: var(--accent); }
+.principles h3 { margin: 0 0 .2em; font-size: 1.12rem; color: #fff; }
+.principles li p { margin: 0; color: rgba(255,255,255,.86); font-size: .97rem; }
+@media (max-width: 480px) { .principles { padding: 26px 22px; } }
 .more-link { font-weight: 600; text-decoration: none; }
 
 .contact-band { background: var(--brand); color: #fff; padding: 48px 0; }
@@ -191,6 +200,11 @@ h3 { font-size: 1.15rem; margin: 1.4em 0 .4em; }
 /* ---------- Inner pages ---------- */
 .page-hero { background: linear-gradient(120deg, var(--brand-dark), var(--brand) 60%, #8a6d3b); color: #fff; padding: 40px 0 44px; }
 .page-hero h1 { color: #fff; margin: 0; }
+.page-hero-photo { position: relative; overflow: hidden; padding: 110px 0 56px; background: var(--brand-dark); }
+.page-hero-photo .page-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.page-hero-photo::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(42,32,14,.88) 0%, rgba(42,32,14,.62) 50%, rgba(42,32,14,.15) 100%); }
+.page-hero-photo .wrap { position: relative; z-index: 2; }
+@media (max-width: 700px) { .page-hero-photo { padding: 64px 0 40px; } .page-hero-photo::before { background: rgba(42,32,14,.78); } }
 .page-hero .lead { margin: .6em 0 0; max-width: 42em; opacity: .9; font-size: 1.1rem; }
 .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: .4em; margin: 0 0 .9em; padding: 0; font-size: .88rem; }
 .breadcrumb li { opacity: .85; }

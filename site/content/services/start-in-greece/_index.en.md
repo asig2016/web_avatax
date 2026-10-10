@@ -7,6 +7,8 @@ url: /services/start-in-greece/
 icon: "start"
 weight: 60
 teaser: "Market entry for foreign companies; property purchase, longer stays and self-employment for private individuals."
+heroImage: "images/athens-sea.jpg"
+heroAlt: "View over Athens with the Acropolis and the Saronic Gulf"
 review: "2026-10-05 split into companies and private individuals – please check"
 menus:
   main:

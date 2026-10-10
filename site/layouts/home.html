@@ -92,10 +92,25 @@
 {{- $img := resources.Get "images/office.jpg" }}
 <section class="section">
   <div class="wrap split">
+    {{- /* principles panel (front matter "principles"); falls back to the office photo */}}
+    {{- with $.Params.principles }}
+    <div class="principles">
+      <p class="principles-title">{{ $.Params.principlesTitle }}</p>
+      <ul>
+        {{- range . }}
+        <li>
+          <span class="principle-icon" aria-hidden="true">{{ partial "icon.html" .icon }}</span>
+          <div><h3>{{ .title }}</h3><p>{{ .text }}</p></div>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- else }}
     <picture>
       <source type="image/webp" srcset="{{ ($img.Fill "720x480 Center webp").RelPermalink }} 720w, {{ ($img.Fill "1200x800 Center webp").RelPermalink }} 1200w" sizes="(min-width: 900px) 50vw, 100vw">
       <img src="{{ ($img.Fill "1200x800 Center jpg").RelPermalink }}" alt="{{ $.Params.officeAlt }}" loading="lazy" width="1200" height="800" class="rounded">
     </picture>
+    {{- end }}
     <div>
       <h2>{{ .Title }}</h2>
       <p>{{ .Summary | plainify | truncate 420 }}</p>
