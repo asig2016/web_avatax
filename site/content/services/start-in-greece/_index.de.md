@@ -15,6 +15,6 @@ menus:
     parent: services
     weight: 60
 ---
-Sie möchten in Griechenland geschäftlich tätig werden oder einfach einen Teil des Jahres hier verbringen? Oder Sie möchten eine Immobilie kaufen, als Ferienhaus oder zur Vermietung, auch ohne selbst hier zu leben? Jedes dieser Vorhaben hat Folgen für Besteuerung, Buchführung und Sozialversicherung. Wir erläutern sie vor Ihrer Entscheidung im Vergleich zum deutschen Recht und übernehmen anschließend Buchhaltung, Lohnabrechnung und Steuererklärungen in Griechenland. Sie sprechen mit uns Deutsch.
+Sie möchten in Griechenland geschäftlich tätig werden oder einfach einen Teil des Jahres hier verbringen? Oder Sie möchten eine Immobilie kaufen, als Ferienhaus oder zur [Vermietung](/de/leistungen/ihr-start-in-griechenland/privatpersonen/vermietung/), auch ohne selbst hier zu leben? Jedes dieser Vorhaben hat Folgen für Besteuerung, Buchführung und Sozialversicherung. Wir erläutern sie vor Ihrer Entscheidung im Vergleich zum deutschen Recht und übernehmen anschließend Buchhaltung, Lohnabrechnung und Steuererklärungen in Griechenland. Sie sprechen mit uns Deutsch.
 
 Sie ziehen ganz nach Griechenland? Dann lohnt ein Blick auf die Sonderregelungen: 7 % Pauschalsteuer für Rentner, 50 % Steuerbefreiung für Arbeitnehmer und Freiberufler. Mehr unter [Steuervorteile beim Zuzug](/de/leistungen/umzug-nach-griechenland/).

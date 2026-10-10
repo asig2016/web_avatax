@@ -56,6 +56,8 @@ If you use the property only yourself, as a holiday home or for your family, the
 - With rental income, a **Greek tax return** is filed every year.
 - You can also combine both: use the property yourself for part of the year and rent it out for the rest.
 
+Tax rates, duties and the comparison with a company: [Renting out property in Greece](/services/start-in-greece/private-individuals/renting-out-property/).
+
 ## Residence permit through property
 
 A residence permit can be obtained by buying property above a minimum value (Golden Visa). The minimum investment depends on the region and has been changed several times; we check the current thresholds for you.

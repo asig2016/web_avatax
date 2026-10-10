@@ -69,6 +69,16 @@ List the remaining pages with: `grep -rn '^review:' site/content`
     activity, e-EFKA, myDATA, VAT small-business scheme without amounts, minimum presumed income with exceptions,
     link to the 50% exemption). Please check.
 
+16. **Renting out property (new page, 2026-10-10):** `services/start-in-greece/private-individuals/renting-out.*.md`,
+    written from research, not from the law text itself. Please check: the rental income scale for income from 2026
+    (15/25/35/45%, Art. 40(4) KFE as amended by Art. 8 Law 5246/2025); the 5% flat deduction and its link to bank
+    payment (Art. 210 Law 5222/2025); short-term rental (under 60 days, up to two properties = property income,
+    three or more = business activity with VAT, levy per night); the company section (22% corporate tax, 5% on
+    dividends, transfer tax on contribution of a property); DE page: treaty exemption in Germany and
+    § 32b(1) sentence 2 no. 3 EStG. The EL page addresses Greeks living abroad. The page uses the firm's own street
+    photo (`syngrou.jpg`). Photos of a client's villa (`start-home.jpg`, `start-stay.jpg`) are used on the owner's
+    statement that the client agreed; written consent should be on file.
+
 ## SEO extension (2026-10-01) – please check the facts
 
 The service pages were extended with "who it is for", "how we work" and FAQ sections. Please confirm especially:

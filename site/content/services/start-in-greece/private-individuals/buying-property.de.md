@@ -56,6 +56,8 @@ Nutzen Sie die Immobilie nur selbst – als Ferienwohnung oder für die Familie 
 - Bei Mieteinkünften wird jedes Jahr eine **griechische Steuererklärung** abgegeben. Ob und wie die Einkünfte zusätzlich in Deutschland zu erklären sind, richtet sich nach dem Doppelbesteuerungsabkommen.
 - Beides lässt sich verbinden: einen Teil des Jahres selbst nutzen, den Rest vermieten.
 
+Steuertarif, Pflichten und der Vergleich mit einer Gesellschaft: [Vermietung in Griechenland](/de/leistungen/ihr-start-in-griechenland/privatpersonen/vermietung/).
+
 ## Aufenthaltserlaubnis über eine Immobilie
 
 Für Bürger von Staaten außerhalb der EU kann eine Aufenthaltserlaubnis durch den Kauf einer Immobilie ab einem Mindestwert erworben werden (Golden Visa). Der Mindestbetrag hängt von der Region ab und wurde mehrfach geändert; wir prüfen die aktuellen Schwellen.

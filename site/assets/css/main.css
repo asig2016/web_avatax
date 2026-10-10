@@ -221,6 +221,10 @@ h3 { font-size: 1.15rem; margin: 1.4em 0 .4em; }
 @media (min-width: 960px) { .aside { position: sticky; top: 100px; align-self: start; } }
 
 .prose { max-width: 46em; }
+.prose table { border-collapse: collapse; margin: 1em 0 1.4em; font-size: .98rem; }
+.prose th, .prose td { padding: .5em 1.4em .5em 0; text-align: left; border-bottom: 1px solid var(--line); }
+.prose th { font-weight: 600; color: var(--brand-dark); border-bottom-width: 2px; }
+.prose td:last-child, .prose th:last-child { padding-right: 0; }
 .prose > :first-child { margin-top: 0; }
 .prose ul { padding-left: 0; list-style: none; }
 .prose ul li { position: relative; padding-left: 1.6em; margin: .45em 0; }
