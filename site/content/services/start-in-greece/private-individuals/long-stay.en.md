@@ -1,12 +1,12 @@
 ---
-title: "Staying longer in Greece: renting a home"
+title: "Staying longer in Greece: in your own home or a rental"
 linkTitle: "Staying longer in Greece"
-seoTitle: "Staying Longer in Greece – Rental and Tax Residence | AVATAX"
-description: "Spending months in Greece on a long-term rental: registration, lease, tax residence after 183 days and the exception for holiday stays, health insurance."
+seoTitle: "Staying Longer in Greece – Tax Residence | AVATAX"
+description: "Spending months in Greece in your own home or a rental: registration, lease, tax residence after 183 days and the exception for holiday stays."
 url: /services/start-in-greece/private-individuals/long-stay/
 icon: "globe"
 weight: 20
-review: "new page 2026-10-06 based on research (Art. 4 Income Tax Code) – please check"
+review: "new page 2026-10-06 based on research (Art. 4 Income Tax Code); 2026-10-10 extended to stays in an owned home – please check"
 faq:
   - q: "Do I become a Greek tax resident if I spend the winter in Greece?"
     a: "Presence in Greece for more than 183 days within twelve months normally makes you a Greek tax resident. This does not apply if you stay exclusively for tourist, medical or similar private reasons and the stay does not exceed 365 days. We check your situation in advance."
@@ -17,18 +17,19 @@ faq:
 heroImage: "images/start-stay.jpg"
 heroAlt: "Terrace with pool and a view over a Greek bay"
 ---
-Greece is an attractive place to spend several months of the year: mild winters, long summers and, with Athens, a capital that is easy to reach by plane and well connected to the coast and the islands. Many people rent a home for some months or a whole season instead of buying. This is simple – but a long stay can have tax consequences that should be checked in advance.
+Greece is an attractive place to spend several months of the year: mild winters, long summers and, with Athens, a capital that is easy to reach by plane and well connected to the coast and the islands. Some stay in a home they own, others rent for some months or a whole season. Both are simple – but a long stay can have tax consequences that should be checked in advance.
 
 ## Residence
 
 - **EU citizens** can stay in Greece freely; if they stay longer than three months, they apply for a registration certificate.
 - **Citizens of other countries** can stay up to 90 days within 180 days without a visa (Schengen rules, where applicable); longer stays require a visa or residence permit.
 
-## Renting a home
+## In your own home or a rental
 
-- Long-term leases are agreed in writing; the landlord declares the lease electronically to the tax administration.
-- The tenant needs a **Greek tax number (AFM)** to confirm the lease; we apply for it for you.
-- A Greek bank account is useful for rent and utilities.
+- **Your own property:** Nothing has to be registered for the stay itself; as owner you pay the annual property tax ENFIA. For the purchase see [Buying property in Greece](/services/start-in-greece/private-individuals/buying-property/).
+- **Rental:** Long-term leases are agreed in writing; the landlord declares the lease electronically to the tax administration.
+- **Tax number:** The tenant needs a Greek tax number (AFM) to confirm the lease; we apply for it for you.
+- **Bank account:** A Greek account is useful for rent and utilities.
 
 ## Tax residence
 
@@ -45,5 +46,5 @@ For temporary stays, the European Health Insurance Card (EHIC) covers necessary 
 ## How we support you
 
 1. **Before the stay:** Greek tax number, assessment of tax residence and of remote work
-2. **Rental:** confirmation of the lease with the tax administration
+2. **If you rent:** confirmation of the lease with the tax administration
 3. **If needed:** Greek tax returns and coordination with your tax adviser at home – in English or German

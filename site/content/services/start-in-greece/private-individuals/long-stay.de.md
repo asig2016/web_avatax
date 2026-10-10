@@ -1,12 +1,12 @@
 ---
-title: "Länger in Griechenland leben: mit einer Mietwohnung"
+title: "Länger in Griechenland leben: im Eigenheim oder zur Miete"
 linkTitle: "Länger in Griechenland leben"
-seoTitle: "Länger in Griechenland – Miete und Steuerwohnsitz | AVATAX"
-description: "Monate in Griechenland mit einer Mietwohnung verbringen: Anmeldung, Mietvertrag, Steuerwohnsitz nach 183 Tagen und die Ausnahme für Urlaubsaufenthalte."
+seoTitle: "Länger in Griechenland leben – Steuerwohnsitz | AVATAX"
+description: "Monate in Griechenland im Eigenheim oder zur Miete verbringen: Anmeldung, Mietvertrag, Steuerwohnsitz nach 183 Tagen, Ausnahme für Urlaubsaufenthalte."
 url: /de/leistungen/ihr-start-in-griechenland/privatpersonen/laengerer-aufenthalt/
 icon: "globe"
 weight: 20
-review: "neue Seite 2026-10-06 auf Grundlage von Recherche (Art. 4 griech. Einkommensteuergesetz) – bitte prüfen"
+review: "neue Seite 2026-10-06 auf Grundlage von Recherche (Art. 4 griech. Einkommensteuergesetz); 2026-10-10 um Aufenthalt im Eigenheim erweitert – bitte prüfen"
 faq:
   - q: "Werde ich steuerpflichtig, wenn ich den Winter in Griechenland verbringe?"
     a: "Ein Aufenthalt von mehr als 183 Tagen innerhalb von zwölf Monaten begründet in der Regel die griechische Steueransässigkeit. Das gilt nicht, wenn Sie sich ausschließlich zu touristischen, medizinischen oder ähnlichen privaten Zwecken aufhalten und der Aufenthalt 365 Tage nicht übersteigt. Wir prüfen Ihre Situation vorab."
@@ -17,18 +17,19 @@ faq:
 heroImage: "images/start-stay.jpg"
 heroAlt: "Terrasse mit Pool und Blick über eine griechische Bucht"
 ---
-Griechenland ist ein attraktiver Ort, um mehrere Monate im Jahr zu verbringen: milde Winter, lange Sommer und mit Athen eine Hauptstadt, die von Deutschland aus mit vielen Direktflügen schnell erreichbar ist und gute Verbindungen zur Küste und zu den Inseln bietet. Viele mieten für einige Monate oder eine ganze Saison eine Wohnung, statt zu kaufen. Das ist einfach – ein langer Aufenthalt kann aber steuerliche Folgen haben, die vorab geprüft werden sollten.
+Griechenland ist ein attraktiver Ort, um mehrere Monate im Jahr zu verbringen: milde Winter, lange Sommer und mit Athen eine Hauptstadt, die von Deutschland aus mit vielen Direktflügen schnell erreichbar ist und gute Verbindungen zur Küste und zu den Inseln bietet. Manche wohnen dabei in der eigenen Immobilie, andere mieten für einige Monate oder eine ganze Saison. Beides ist einfach – ein langer Aufenthalt kann aber steuerliche Folgen haben, die vorab geprüft werden sollten.
 
 ## Aufenthalt
 
 - **EU-Bürger** können sich frei in Griechenland aufhalten; bei einem Aufenthalt von mehr als drei Monaten beantragen sie eine Anmeldebescheinigung.
 - **Bürger anderer Staaten** dürfen sich – soweit die Schengen-Regeln gelten – bis zu 90 Tage innerhalb von 180 Tagen ohne Visum aufhalten; längere Aufenthalte erfordern ein Visum oder eine Aufenthaltserlaubnis.
 
-## Wohnung mieten
+## Im Eigenheim oder zur Miete
 
-- Längerfristige Mietverträge werden schriftlich geschlossen; der Vermieter meldet den Vertrag elektronisch bei der Finanzverwaltung an.
-- Der Mieter braucht eine **griechische Steuernummer (AFM)**, um den Vertrag zu bestätigen; wir beantragen sie für Sie.
-- Ein griechisches Bankkonto ist für Miete und Nebenkosten nützlich.
+- **Eigene Immobilie:** Für den Aufenthalt selbst ist nichts anzumelden; als Eigentümer zahlen Sie die jährliche Immobiliensteuer ENFIA. Zum Erwerb siehe [Immobilienkauf in Griechenland](/de/leistungen/ihr-start-in-griechenland/privatpersonen/immobilienkauf/).
+- **Miete:** Längerfristige Mietverträge werden schriftlich geschlossen; der Vermieter meldet den Vertrag elektronisch bei der Finanzverwaltung an.
+- **Steuernummer:** Der Mieter braucht eine griechische Steuernummer (AFM), um den Vertrag zu bestätigen; wir beantragen sie für Sie.
+- **Bankkonto:** Ein griechisches Konto ist für Miete und Nebenkosten nützlich.
 
 ## Steuerlicher Wohnsitz
 
@@ -45,5 +46,5 @@ Bei vorübergehenden Aufenthalten deckt die Europäische Krankenversicherungskar
 ## So unterstützen wir Sie
 
 1. **Vor dem Aufenthalt:** griechische Steuernummer, Prüfung der Steueransässigkeit und der Arbeit im Homeoffice
-2. **Mietvertrag:** Bestätigung des Vertrags bei der Finanzverwaltung
+2. **Bei Miete:** Bestätigung des Mietvertrags bei der Finanzverwaltung
 3. **Bei Bedarf:** griechische Steuererklärungen und Abstimmung mit Ihrem Steuerberater in Deutschland – auf Deutsch

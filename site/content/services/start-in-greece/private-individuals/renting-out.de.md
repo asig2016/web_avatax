@@ -14,8 +14,9 @@ faq:
     a: "Nach dem Doppelbesteuerungsabkommen steht das Besteuerungsrecht Griechenland zu; Deutschland stellt die Einkünfte in der Regel frei. Die Angaben in der deutschen Erklärung stimmen wir mit Ihrem steuerlichen Berater in Deutschland ab."
   - q: "Ab wann lohnt sich eine Gesellschaft für die Vermietung?"
     a: "Das hängt von der Höhe der Einkünfte, der Zahl der Objekte, den Kosten und Ihren Plänen ab. Einem einheitlichen Steuersatz stehen Buchführungspflicht, laufende Kosten und die Besteuerung der Ausschüttung gegenüber. Wir rechnen beide Varianten vor der Entscheidung durch."
-heroImage: "images/syngrou.jpg"
-heroAlt: "Wohnhäuser an einer Allee in Athen"
+heroImage: "images/start-rent-wide.jpg"
+cardImage: "images/start-rent.jpg"
+heroAlt: "Helles Zimmer mit offener Balkontür und Blick aufs Meer"
 ---
 Wer eine Immobilie in Griechenland vermietet, versteuert die Mieteinkünfte in Griechenland – auch mit Wohnsitz in Deutschland. Anders als in Deutschland werden sie nicht mit dem übrigen Einkommen zusammengerechnet, sondern nach einem eigenen Tarif besteuert. Wir melden die Vermietung an, erstellen die jährliche Steuererklärung und stimmen uns mit Ihrem steuerlichen Berater in Deutschland ab.
 

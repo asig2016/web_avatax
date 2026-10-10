@@ -75,8 +75,7 @@ List the remaining pages with: `grep -rn '^review:' site/content`
     payment (Art. 210 Law 5222/2025); short-term rental (under 60 days, up to two properties = property income,
     three or more = business activity with VAT, levy per night); the company section (22% corporate tax, 5% on
     dividends, transfer tax on contribution of a property); DE page: treaty exemption in Germany and
-    § 32b(1) sentence 2 no. 3 EStG. The EL page addresses Greeks living abroad. The page uses the firm's own street
-    photo (`syngrou.jpg`). Photos of a client's villa (`start-home.jpg`, `start-stay.jpg`) are used on the owner's
+    § 32b(1) sentence 2 no. 3 EStG. The EL page addresses Greeks living abroad. Photos of a client's villa (`start-home.jpg`, `start-stay.jpg`) are used on the owner's
     statement that the client agreed; written consent should be on file.
 
 ## SEO extension (2026-10-01) – please check the facts
