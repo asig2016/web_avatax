@@ -1,0 +1,73 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+{{- /* Appointment booking. The steps are filled by booking.js from our own /api/booking/*
+       (formsvc proxies EGroupware); without JavaScript the page offers the phone number. */}}
+{{- $confirm := site.GetPage "/book-confirm" }}
+{{- $error := site.GetPage "/form-error" }}
+<div class="wrap page-body booking" id="booking" data-lang="{{ site.Language.Lang }}" hidden>
+  <div class="prose booking-intro">{{ .Content }}</div>
+
+  <section class="booking-step" data-step="service">
+    <h2><span class="step-no">1</span> {{ T "bookService" }}</h2>
+    <div class="booking-options" role="radiogroup" aria-label="{{ T "bookService" }}"></div>
+  </section>
+
+  <section class="booking-step" data-step="person" hidden>
+    <h2><span class="step-no">2</span> {{ T "bookPerson" }}</h2>
+    <div class="booking-options" role="radiogroup" aria-label="{{ T "bookPerson" }}"></div>
+  </section>
+
+  <section class="booking-step" data-step="slot" hidden>
+    <h2><span class="step-no">3</span> {{ T "bookSlot" }}</h2>
+    <div class="booking-week-nav">
+      <button type="button" class="btn btn-ghost" data-week="-1" aria-label="{{ T "bookPrevWeek" }}">‹ {{ T "bookPrevWeek" }}</button>
+      <span class="booking-week-label" aria-live="polite"></span>
+      <button type="button" class="btn btn-ghost" data-week="1" aria-label="{{ T "bookNextWeek" }}">{{ T "bookNextWeek" }} ›</button>
+    </div>
+    <div class="booking-week"></div>
+    <p class="form-note booking-none" hidden>{{ T "bookNoSlots" }}</p>
+  </section>
+
+  <section class="booking-step" data-step="details" hidden>
+    <h2><span class="step-no">4</span> {{ T "bookDetails" }}</h2>
+    <p class="booking-summary"></p>
+    <form class="booking-form" action="/api/booking/hold" method="post" novalidate>
+      <input type="hidden" name="service" value="">
+      <input type="hidden" name="person" value="">
+      <input type="hidden" name="start" value="">
+      <input type="hidden" name="confirm_page" value="{{ $confirm.RelPermalink }}">
+      <p class="form-note">{{ T "formRequired" }}</p>
+      <div class="field-row">
+        <div class="field">
+          <label for="b-name">{{ T "formName" }} *</label>
+          <input id="b-name" name="name" type="text" autocomplete="name" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="b-email">{{ T "formEmail" }} *</label>
+          <input id="b-email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="b-phone">{{ T "formPhone" }}</label>
+          <input id="b-phone" name="phone" type="tel" autocomplete="tel" maxlength="50">
+        </div>
+        <div class="field">
+          <label for="b-company">{{ T "bookCompany" }}</label>
+          <input id="b-company" name="company" type="text" autocomplete="organization" maxlength="200">
+        </div>
+      </div>
+      <div class="field">
+        <label for="b-message">{{ T "bookMessage" }}</label>
+        <textarea id="b-message" name="message" rows="4" maxlength="4000"></textarea>
+      </div>
+      {{ partial "form-common.html" (dict "id" "b" "next" $confirm.RelPermalink "error" $error.RelPermalink) }}
+      <button class="btn" type="submit">{{ T "bookSend" }}</button>
+    </form>
+  </section>
+</div>
+<noscript><div class="wrap page-body"><p class="form-note warn">{{ T "bookNoscript" }} <a href="{{ site.Params.phoneHref }}">{{ site.Params.phone }}</a></p></div></noscript>
+{{ partial "booking-i18n.html" . }}
+{{ $js := resources.Get "js/booking.js" | js.Build (dict "minify" hugo.IsProduction) | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}

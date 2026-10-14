@@ -11,5 +11,8 @@ officeAlt: "Unser Büro in Athen: Empfangstresen mit Arbeitsplätzen"
 menus:
   main:
     weight: 40
+review: "2026-10-14: Link zur Online-Terminbuchung ergänzt"
 ---
 Benötigen Sie mehr Informationen über unsere Leistungen? Wir freuen uns über Ihre Anfrage und vereinbaren gerne einen Termin mit Ihnen.
+
+Sie können auch [online einen Termin vereinbaren](/de/termin/): Thema, Ansprechpartner und freie Zeit wählen.

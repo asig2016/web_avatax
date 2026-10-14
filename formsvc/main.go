@@ -7,6 +7,7 @@
 //	POST /api/contact  contact form
 //	POST /api/cv       job application incl. CV upload
 //	GET  /api/chat-status  whether a live-chat agent is available (cached, see chat.go)
+//	/api/booking/...   appointment booking, proxied to EGroupware (see booking.go)
 //	GET  /healthz      liveness probe
 package main
 
@@ -52,6 +53,11 @@ type config struct {
 	MaxUploadBytes int64
 	ChatURL        string // Rocket.Chat base URL; empty = no live chat
 	ChatDepartment string // Omnichannel department of this site
+	SiteURL        string // https://avatax.eu - the links in the booking mails
+	EGWBookingURL  string // .../egroupware/groupdav.php/acbooking; empty = no booking
+	EGWUser        string // EGroupware's technical user of the website
+	EGWToken       string // its app password
+	MailToBookings string // optional copy of every confirmed booking
 }
 
 func env(key, def string) string {
@@ -86,6 +92,11 @@ func loadConfig() (config, error) {
 		MaxUploadBytes: int64(envInt("MAX_UPLOAD_MB", 5)) << 20,
 		ChatURL:        env("CHAT_URL", ""),
 		ChatDepartment: env("CHAT_DEPARTMENT", ""),
+		SiteURL:        strings.TrimSuffix(env("SITE_URL", ""), "/"),
+		EGWBookingURL:  env("EGW_BOOKING_URL", ""),
+		EGWUser:        env("EGW_USER", ""),
+		EGWToken:       os.Getenv("EGW_TOKEN"),
+		MailToBookings: env("MAIL_TO_BOOKINGS", ""),
 	}
 	c.MailToCV = env("MAIL_TO_CV", c.MailToContact)
 	if s := os.Getenv("TOKEN_SECRET"); s != "" {
@@ -105,6 +116,9 @@ func loadConfig() (config, error) {
 	}
 	if len(missing) > 0 {
 		return c, fmt.Errorf("missing required settings: %s", strings.Join(missing, ", "))
+	}
+	if c.EGWBookingURL != "" && (c.EGWUser == "" || c.EGWToken == "" || c.SiteURL == "") {
+		return c, fmt.Errorf("EGW_BOOKING_URL needs EGW_USER, EGW_TOKEN and SITE_URL")
 	}
 	switch c.SMTPTLS {
 	case "starttls", "tls", "none":
@@ -138,12 +152,17 @@ type server struct {
 	mailer  mailer
 	limiter *rateLimiter
 	chat    *chatStatus
-	now     func() time.Time
+	booking *booking
+	// the confirm / cancel / lookup calls carry a secret token, not a form: one visitor makes several
+	// of them in a row, so they get their own, wider limit instead of eating the form's
+	tokenLimiter *rateLimiter
+	now          func() time.Time
 }
 
 func newServer(cfg config, m mailer) *server {
 	return &server{cfg: cfg, mailer: m, limiter: newRateLimiter(cfg.RateLimit, cfg.RateWindow),
-		chat: newChatStatus(cfg.ChatURL, cfg.ChatDepartment), now: time.Now}
+		chat: newChatStatus(cfg.ChatURL, cfg.ChatDepartment), booking: newBooking(cfg.EGWBookingURL, cfg.EGWUser, cfg.EGWToken),
+		tokenLimiter: newRateLimiter(max(30, 6*cfg.RateLimit), cfg.RateWindow), now: time.Now}
 }
 
 func (s *server) routes() http.Handler {
@@ -153,6 +172,12 @@ func (s *server) routes() http.Handler {
 	mux.HandleFunc("POST /api/contact", s.handleContact)
 	mux.HandleFunc("POST /api/cv", s.handleCV)
 	mux.HandleFunc("GET /api/chat-status", s.handleChatStatus)
+	mux.HandleFunc("GET /api/booking/catalog", s.handleBookingCatalog)
+	mux.HandleFunc("GET /api/booking/slots", s.handleBookingSlots)
+	mux.HandleFunc("POST /api/booking/booking", s.handleBookingLookup)
+	mux.HandleFunc("POST /api/booking/hold", s.handleBookingHold)
+	mux.HandleFunc("POST /api/booking/confirm", s.handleBookingConfirm)
+	mux.HandleFunc("POST /api/booking/cancel", s.handleBookingCancel)
 	return mux
 }
 

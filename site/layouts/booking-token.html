@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ partial "page-hero.html" . }}
+{{- /* Confirm or cancel page of a booking (front matter mode: confirm | cancel). The token is in
+       the fragment of the mailed link (#t=...) and only used by an explicit button press, so a
+       mail scanner opening the link changes nothing. */}}
+{{- $cancel := site.GetPage "/book-cancel" }}
+{{- $book := site.GetPage "/book" }}
+<div class="wrap page-body narrow booking-token" id="booking-token" data-mode="{{ .Params.mode }}" data-lang="{{ site.Language.Lang }}"
+     data-cancel-page="{{ $cancel.RelPermalink }}" data-book-page="{{ $book.RelPermalink }}" hidden>
+  <div class="booking-card" hidden>
+    <dl class="booking-details"></dl>
+    {{- if eq .Params.mode "cancel" }}
+    <div class="field">
+      <label for="t-reason">{{ T "bookCancelReason" }}</label>
+      <input id="t-reason" name="reason" type="text" maxlength="200">
+    </div>
+    <button class="btn" type="button" data-action="cancel">{{ T "bookCancelButton" }}</button>
+    {{- else }}
+    <button class="btn" type="button" data-action="confirm">{{ T "bookConfirmButton" }}</button>
+    {{- end }}
+  </div>
+  <div class="form-status" role="status" aria-live="polite" hidden></div>
+  <p class="booking-again" hidden><a href="{{ $book.RelPermalink }}">{{ T "bookAgain" }}</a></p>
+</div>
+<noscript><div class="wrap page-body"><p class="form-note warn">{{ T "bookNoscript" }} <a href="{{ site.Params.phoneHref }}">{{ site.Params.phone }}</a></p></div></noscript>
+{{ partial "booking-i18n.html" . }}
+{{ $js := resources.Get "js/booking.js" | js.Build (dict "minify" hugo.IsProduction) | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ end }}

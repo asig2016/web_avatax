@@ -156,6 +156,11 @@ curl -s http://127.0.0.1:8090/api/token                         # -> {"token":".
 
 The old site is still online at this point, because nothing points to the new containers yet.
 
+**Appointment booking (optional):** fill in the block `SITE_URL`, `EGW_BOOKING_URL`, `EGW_USER`,
+`EGW_TOKEN` (and optionally `MAIL_TO_BOOKINGS`) in `.env`; the EGroupware side is described in
+`docs/ai/appointments.md`. Without `EGW_BOOKING_URL` the booking pages say "please call us". On staging,
+set `SITE_URL=https://new.avatax.eu`, otherwise the links in the booking mails point to the old site.
+
 ## 4. Staging: test under `new.avatax.eu` first
 
 1. **DNS at papaki.gr:** add an `A` record `new` → `135.181.76.115`. Wait until

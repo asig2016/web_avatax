@@ -4,7 +4,7 @@ seoTitle: "Privacy Policy | AVATAX A.E."
 description: "How AVATAX A.E. processes personal data on this website, in the contact form and in job applications, and what your rights are."
 url: /privacy/
 noAside: true
-review: "DRAFT – must be checked by the company / a legal advisor before going live (add a data-protection e-mail address; new section Live chat: confirm server location and retention)"
+review: "DRAFT – must be checked by the company / a legal advisor before going live (add a data-protection e-mail address; new section Live chat: confirm server location and retention; new section Online appointment booking: confirm retention)"
 ---
 ## Controller
 
@@ -19,6 +19,10 @@ When you visit this website, the web server records technical data (IP address, 
 If you contact us via the contact form or send us an application, we process the data you enter (name, e-mail address, phone number, message and, for applications, your CV and the details you provide) solely to handle your request or application (Art. 6(1)(b) GDPR). The data is transmitted to us by e-mail and is not stored on the web server.
 
 We delete enquiries once they have been dealt with, unless statutory retention obligations apply. Applications are deleted no later than six months after the end of the application process, unless you consent to longer storage.
+
+## Online appointment booking
+
+If you book an appointment, we process the details you enter (name, e-mail address and, if given, phone number, company and message), the chosen topic, person and time, your language and your IP address, in order to arrange and hold the appointment (Art. 6(1)(b) GDPR). The free times are fetched by our web server from our appointment calendar; your browser does not contact the calendar server. The booking is stored in our own groupware system (calendar and address book); we send you an e-mail to confirm the appointment and, after confirmation, a confirmation with a cancellation link and a calendar invitation. Requests that are not confirmed are released after a short time. We delete booking data once it is no longer needed for the appointment and any resulting engagement, unless statutory retention obligations apply.
 
 ## Live chat
 

@@ -388,6 +388,14 @@ Example: `site/content/services/relocation.de.md`, below the list "So unterstüt
 
 ---
 
+### Appointment booking
+
+The booking pages (`/book/`, `/de/termin/`, `/el/rantevou/`) show what is set up in EGroupware under
+**Appointment booking**: services (title, duration, price, translations), bookable persons (public name,
+services, weekly hours) and the site configuration. Changes there are visible on the website within
+5 minutes, no `make` needed. The page texts themselves are `site/content/book.*.md`. How it works
+and how to set it up: `docs/ai/appointments.md`.
+
 ## 9. Check and publish
 
 ```bash

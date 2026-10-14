@@ -11,5 +11,8 @@ officeAlt: "Our office in Athens: reception desk with workstations"
 menus:
   main:
     weight: 40
+review: "2026-10-14: link to the online appointment booking added"
 ---
 Do you need more information about our services? We look forward to hearing from you and to arranging a meeting.
+
+You can also [book an appointment online](/book/): choose the topic, the person and a free time.

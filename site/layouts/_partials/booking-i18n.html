@@ -1,0 +1,15 @@
+{{- /* Localized texts for booking.js (not executed; CSP-safe). */ -}}
+<script type="application/json" id="booking-i18n">
+{{- dict
+  "anyPerson" (T "bookAnyPerson") "noSlots" (T "bookNoSlots") "minutes" (T "bookMinutes") "free" (T "bookFree")
+  "week" (T "bookWeek") "loading" (T "bookLoading") "change" (T "bookChange")
+  "held" (T "bookHeld") "sending" (T "formSending") "with" (T "bookWith")
+  "service" (T "bookServiceLabel") "person" (T "bookPersonLabel") "when" (T "bookWhen") "status" (T "bookStatus")
+  "confirmed" (T "bookConfirmed") "cancelled" (T "bookCancelled") "cancelUntil" (T "bookCancelUntil")
+  "st_held" (T "bookStHeld") "st_confirmed" (T "bookStConfirmed") "st_cancelled" (T "bookStCancelled") "st_expired" (T "bookStExpired")
+  "noToken" (T "bookNoToken") "video" (T "bookVideo") "location" (T "bookLocation")
+  "invalid" (T "err_invalid") "spam" (T "err_spam") "rate_limited" (T "err_rate_limited") "server" (T "err_server") "network" (T "err_network")
+  "slot_taken" (T "err_slot_taken") "too_many_holds" (T "err_too_many_holds") "expired" (T "err_book_expired")
+  "bad_token" (T "err_bad_token") "too_late" (T "err_too_late") "unavailable" (T "err_book_unavailable") "busy" (T "err_rate_limited")
+  | jsonify | safeJS -}}
+</script>
