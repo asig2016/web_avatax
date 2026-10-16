@@ -16,7 +16,7 @@ faq:
     a: "That depends on the amount of income, the number of properties, the costs and your plans. A single tax rate stands against bookkeeping duties, running costs and tax on distributions. We calculate both options before you decide."
 heroImage: "images/start-rent-wide.jpg"
 cardImage: "images/start-rent.jpg"
-heroAlt: "Bright room with an open balcony door and a view of the sea"
+heroAlt: "Colourful houses on the waterfront of a Greek island"
 ---
 If you rent out a property in Greece, the rental income is taxed in Greece, wherever you live. It is not added to your other income but taxed on a scale of its own. We register the rental, prepare the annual tax return and coordinate with your tax adviser at home.
 
