@@ -5,17 +5,17 @@ seoTitle: "Impressum | AVATAX A.E."
 description: "Anbieterangaben der AVATAX A.E., berufsrechtliche Angaben, Hinweise zu den Inhalten dieser Website, Links und Urheberrecht."
 url: /de/impressum/
 noAside: true
-review: "ENTWURF 2026-10-04 – anwaltlich prüfen lassen; Angaben in [Klammern] ergänzen (E-Mail, Γ.Ε.ΜΗ., USt-IdNr., Finanzamt, Vertreter, Registrierung bei der Wirtschaftskammer)"
+review: "ENTWURF 2026-10-04 – anwaltlich prüfen lassen; Γ.Ε.ΜΗ., USt-IdNr., Finanzamt, gesetzliche Vertreterin und E-Mail am 2026-10-16 ergänzt"
 ---
 ## Anbieter
 
-AVATAX A.E. (Aktiengesellschaft griechischen Rechts)\
+AVATAX Accountants and Tax Consultants A.E. (Aktiengesellschaft griechischen Rechts)\
 Syngrou Ave. 76, GR-117 42 Athen, Griechenland\
-Telefon +30 211 1036100 · E-Mail [info@avatax.eu]\
-Griechisches Handelsregister (Γ.Ε.ΜΗ.) Nr. [ ] · USt-IdNr. EL[ ] · Finanzamt (Δ.Ο.Υ.) [ ]\
-Vertreten durch [Name], [Funktion]
+Telefon +30 211 1036100 · E-Mail [info@avatax.eu](mailto:info@avatax.eu) · [Kontaktformular](/de/kontakt/)\
+Griechisches Handelsregister (Γ.Ε.ΜΗ.) Nr. 117394203000 · USt-IdNr. EL800344984 · Finanzamt (Δ.Ο.Υ.): ΦΑΕ Αθηνών (Finanzamt für Aktiengesellschaften Athen)\
+Gesetzliche Vertreterin: Maria Tzioti
 
-**Berufsrechtliche Angaben:** Die Buchhaltungs- und Steuerdienstleistungen werden von Buchhaltern und Steuerpraktikern erbracht, die von der Wirtschaftskammer Griechenlands (Οικονομικό Επιμελητήριο της Ελλάδος, [www.oe-e.gr](https://www.oe-e.gr/)) zugelassen sind. Berufsbezeichnung: Λογιστής-Φοροτεχνικός (Buchhalter und Steuerpraktiker), verliehen in Griechenland. Diese griechische Berufsbezeichnung entspricht nicht der deutschen Berufsbezeichnung „Steuerberater“. Berufsrechtliche Regelungen: Gesetz 2515/1997 und Präsidialdekret 340/1998, erhältlich bei der Wirtschaftskammer Griechenlands. [Registernummer der Gesellschaft bei der Wirtschaftskammer: ]
+**Berufsrechtliche Angaben:** Die Buchhaltungs- und Steuerdienstleistungen werden von Buchhaltern und Steuerpraktikern erbracht, die von der Wirtschaftskammer Griechenlands (Οικονομικό Επιμελητήριο της Ελλάδος, [www.oe-e.gr](https://www.oe-e.gr/)) zugelassen sind. Berufsbezeichnung: Λογιστής-Φοροτεχνικός (Buchhalter und Steuerpraktiker), verliehen in Griechenland. Diese griechische Berufsbezeichnung entspricht nicht der deutschen Berufsbezeichnung „Steuerberater“. Berufsrechtliche Regelungen: Gesetz 2515/1997 und Präsidialdekret 340/1998, erhältlich bei der Wirtschaftskammer Griechenlands.
 
 ## Hinweise zu den Inhalten
 

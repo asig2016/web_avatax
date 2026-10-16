@@ -4,17 +4,17 @@ seoTitle: "Legal Notice | AVATAX A.E."
 description: "Company details of AVATAX A.E., professional regulation, notes on the information on this website, links and copyright."
 url: /legal-notice/
 noAside: true
-review: "DRAFT 2026-10-04 – to be checked by a lawyer; fill in the data in [brackets] (e-mail, G.E.MI., VAT no., tax office, representative, ΟΕΕ registration)"
+review: "DRAFT 2026-10-04 – to be checked by a lawyer; G.E.MI., VAT no., tax office, legal representative and e-mail filled in 2026-10-16"
 ---
 ## Provider
 
-AVATAX A.E. (société anonyme under Greek law)\
+AVATAX Accountants and Tax Consultants A.E. (société anonyme under Greek law)\
 76 Syngrou Ave., GR-117 42 Athens, Greece\
-Phone +30 211 1036100 · E-mail [info@avatax.eu]\
-General Commercial Registry (G.E.MI.) no. [ ] · VAT no. EL[ ] · Tax office [ ]\
-Represented by [name], [role]
+Phone +30 211 1036100 · E-mail [info@avatax.eu](mailto:info@avatax.eu) · [Contact form](/contact/)\
+General Commercial Registry (G.E.MI.) no. 117394203000 · VAT no. EL800344984 · Tax office: ΦΑΕ Αθηνών (Athens tax office for sociétés anonymes)\
+Legal representative: Maria Tzioti
 
-**Professional regulation:** accounting and tax services are provided by accountant–tax practitioners licensed by the Economic Chamber of Greece (Οικονομικό Επιμελητήριο της Ελλάδος, [www.oe-e.gr](https://www.oe-e.gr/)). Professional title: Λογιστής-Φοροτεχνικός (accountant–tax practitioner), granted in Greece. Applicable professional rules: Law 2515/1997 and Presidential Decree 340/1998, available from the Economic Chamber of Greece. [Registration no. of the firm with the Economic Chamber: ]
+**Professional regulation:** accounting and tax services are provided by accountant–tax practitioners licensed by the Economic Chamber of Greece (Οικονομικό Επιμελητήριο της Ελλάδος, [www.oe-e.gr](https://www.oe-e.gr/)). Professional title: Λογιστής-Φοροτεχνικός (accountant–tax practitioner), granted in Greece. Applicable professional rules: Law 2515/1997 and Presidential Decree 340/1998, available from the Economic Chamber of Greece.
 
 ## Information on this website
 
