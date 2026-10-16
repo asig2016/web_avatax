@@ -108,3 +108,5 @@ make deploy     # rsync to server + `make update` there (owner runs this)
 - **Temporarily deactivated (2026-10-16):** DE page "Organisation der Buchhaltung"
   (`services/accounting-department-support.de.md`, `build: render: never`). Its links in `services/accounting.de.md`
   and the home card in `_index.de.md` were removed; restore them from git when re-enabling.
+- **Temporarily deactivated (2026-10-16): online appointment booking** (not ready). `book*.md` (en/de/el,
+  `build: render: never`); the booking sentence in `contact.*.md` was removed; restore it from git when re-enabling.

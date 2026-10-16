@@ -7,5 +7,8 @@ url: /el/rantevou/
 layout: booking
 chatButton: false
 review: "νέα σελίδα 2026-10-14, προς έγκριση κείμενο και υπηρεσίες"
+build:                   # TEMPORARY (2026-10-16): online booking not ready; link removed from contact.*.md
+  render: never
+  list: never
 ---
 Επιλέξτε θέμα, συνεργάτη και ελεύθερη ώρα. Μετά την αποστολή θα λάβετε e-mail με σύνδεσμο επιβεβαίωσης· το ραντεβού κλείνει μόνο με την επιβεβαίωση.
