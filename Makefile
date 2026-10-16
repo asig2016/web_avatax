@@ -11,7 +11,7 @@ COMPOSE := docker compose
 UIDGID  := $(shell id -u):$(shell id -g)
 
 .DEFAULT_GOAL := help
-.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects deploy update rollback status
+.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects deploy stats update rollback status
 
 help:
 	@echo "Laptop"
@@ -20,6 +20,7 @@ help:
 	@echo "  make preview        stop the dev server, build the production site and serve it on $(BASE)"
 	@echo "  make test           Go tests + link check + old-URL redirect check"
 	@echo "  make deploy         copy the project to $(DEPLOY_HOST):$(DEPLOY_PATH) and run 'make update' there"
+	@echo "  make stats          visitor report from the server's access log -> stats/report.html"
 	@echo "  make down / logs / status"
 	@echo "Server"
 	@echo "  make update         build site, publish it (previous version -> public.prev), restart containers"
@@ -92,9 +93,18 @@ deploy:
 	ssh $(DEPLOY_HOST) 'mkdir -p $(DEPLOY_PATH)'
 	rsync -az --delete \
 		--exclude .git --exclude .env --exclude /public/ --exclude /public.next/ --exclude /public.prev/ \
-		--exclude /logs/ --exclude /site/resources/ --exclude /.idea/ \
+		--exclude /logs/ --exclude /stats/ --exclude /site/resources/ --exclude /.idea/ \
 		./ $(DEPLOY_HOST):$(DEPLOY_PATH)/
 	ssh $(DEPLOY_HOST) 'cd $(DEPLOY_PATH) && make update'
+
+# Visitor report (GoAccess) from the server's nginx access log, built on the laptop.
+# Includes rotated logs. Contains IP addresses: stats/ is neither committed nor deployed.
+stats:
+	@mkdir -p stats
+	ssh $(DEPLOY_HOST) 'cd $(DEPLOY_PATH)/logs/nginx && zcat -f access.log*' \
+		| docker run --rm -i -u $(UIDGID) -v "$(CURDIR)/stats":/out:z allinurl/goaccess - \
+			--log-format=COMBINED --ignore-crawlers -o /out/report.html
+	@echo "Report: $(CURDIR)/stats/report.html"
 
 # ---------------------------------------------------------------- server ----
 

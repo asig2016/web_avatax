@@ -3,6 +3,7 @@
 /public.next/
 /public.prev/
 /logs/
+/stats/
 /site/resources/_gen/
 /site/.hugo_build.lock
 /.idea/
