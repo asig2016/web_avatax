@@ -7,7 +7,6 @@ heroEyebrow: "Buchhaltung · Lohn · Steuern"
 heroTitle: "Buchhaltung und Steuerberatung in Griechenland"
 heroText: "Buchführung, Jahresabschlüsse, Lohnbuchhaltung, Steuerberatung und steuerliche Vertretung für Unternehmen und Privatpersonen in Griechenland – auf Deutsch, Griechisch und Englisch."
 heroAlt: "Die Akropolis, von unserem Büro aus gesehen"
-officeAlt: "Empfang und Flur unseres Büros in Athen"
 pillarsTitle: "Unsere Arbeitsweise"
 pillars:
   - icon: shield
@@ -25,8 +24,8 @@ pillars:
   - icon: globe
     title: "Online-Zugriff auf Ihre Buchhaltung"
     text: "Wir führen Ihre Bücher in einer Buchhaltungssoftware mit Online-Zugriff, sodass Ihnen aktuelle Zahlen jederzeit zur Verfügung stehen."
-# TEMPORARY (2026-10-16): principles panel hidden on the owner's request; the office photo is shown
-# instead. Remove the "# " in front of the following lines to show it again.
+# TEMPORARY (2026-10-16): principles panel hidden on the owner's request; the "About us" text is shown
+# alone. Remove the "# " in front of the following lines to show it again.
 # principlesTitle: "Unsere Grundsätze"
 # principles:
 #   - icon: check

@@ -7,7 +7,6 @@ heroEyebrow: "Accounting · Payroll · Tax"
 heroTitle: "Accountants and tax consultants in Athens"
 heroText: "Bookkeeping, financial statements, payroll, tax advice and tax representation for companies and private individuals in Greece – in Greek, German and English."
 heroAlt: "The Acropolis, seen from our office"
-officeAlt: "Reception and hallway of our office in Athens"
 pillarsTitle: "How we work"
 pillars:
   - icon: shield
@@ -25,8 +24,8 @@ pillars:
   - icon: globe
     title: "Online access to your books"
     text: "We keep your books in accounting software with online access, so your current figures are available at any time."
-# TEMPORARY (2026-10-16): principles panel hidden on the owner's request; the office photo is shown
-# instead. Remove the "# " in front of the following lines to show it again.
+# TEMPORARY (2026-10-16): principles panel hidden on the owner's request; the "About us" text is shown
+# alone. Remove the "# " in front of the following lines to show it again.
 # principlesTitle: "Our principles"
 # principles:
 #   - icon: check

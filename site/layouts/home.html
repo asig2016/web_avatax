@@ -89,10 +89,9 @@
 {{- end }}
 
 {{- with site.GetPage "/about" }}
-{{- $img := resources.Get "images/office.jpg" }}
 <section class="section">
-  <div class="wrap split">
-    {{- /* principles panel (front matter "principles"); falls back to the office photo */}}
+  {{- /* principles panel (front matter "principles") next to the text; without it the text stands alone */}}
+  <div class="wrap {{ if $.Params.principles }}split{{ else }}about-solo{{ end }}">
     {{- with $.Params.principles }}
     <div class="principles">
       <p class="principles-title">{{ $.Params.principlesTitle }}</p>
@@ -105,11 +104,6 @@
         {{- end }}
       </ul>
     </div>
-    {{- else }}
-    <picture>
-      <source type="image/webp" srcset="{{ ($img.Fill "720x480 Center webp").RelPermalink }} 720w, {{ ($img.Fill "1200x800 Center webp").RelPermalink }} 1200w" sizes="(min-width: 900px) 50vw, 100vw">
-      <img src="{{ ($img.Fill "1200x800 Center jpg").RelPermalink }}" alt="{{ $.Params.officeAlt }}" loading="lazy" width="1200" height="800" class="rounded">
-    </picture>
     {{- end }}
     <div>
       <h2>{{ .Title }}</h2>

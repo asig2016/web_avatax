@@ -228,7 +228,7 @@ careers page (`nginx/conf.d/redirects.conf`). To show them again: remove the `bu
 | Company name / tagline per language | `site/hugo.toml` → `[languages.xx]` |
 | Member logos in the footer | `site/hugo.toml` → `[[params.members]]`, logos in `site/static/images/members/` |
 | Labels of buttons, forms, cookie banner | `site/i18n/en.toml`, `de.toml`, `el.toml` |
-| Home page photos | `site/assets/images/` (acropolis.jpg = top image, syngrou.jpg, office.jpg) |
+| Home page photos | `site/assets/images/` (acropolis.jpg = top image, syngrou.jpg) |
 | Google Analytics | `site/hugo.toml` → `ga4ID = "G-XXXXXXX"` (the cookie banner then appears automatically) |
 | Address of a page changed | add a line to `nginx/conf.d/redirects.conf`: `/old/address   /new/address/;` |
 | Legal notice (company data, liability note, copyright) | `site/content/legal.en.md`, `legal.de.md`, `legal.el.md` |

@@ -7,7 +7,6 @@ heroEyebrow: "Λογιστική · Μισθοδοσία · Φορολογία"
 heroTitle: "Λογιστές και φοροτεχνικοί στην Αθήνα"
 heroText: "Τήρηση βιβλίων, οικονομικές καταστάσεις, μισθοδοσία, φοροτεχνικές υπηρεσίες και φορολογική εκπροσώπηση για επιχειρήσεις και ιδιώτες – στα ελληνικά, γερμανικά και αγγλικά."
 heroAlt: "Η Ακρόπολη, όπως φαίνεται από το γραφείο μας"
-officeAlt: "Υποδοχή και διάδρομος του γραφείου μας στην Αθήνα"
 pillarsTitle: "Ο τρόπος εργασίας μας"
 pillars:
   - icon: shield
@@ -25,8 +24,8 @@ pillars:
   - icon: globe
     title: "Online πρόσβαση στα βιβλία σας"
     text: "Τηρούμε τα βιβλία σας σε λογιστικό πρόγραμμα με online πρόσβαση, ώστε να έχετε ανά πάσα στιγμή τα τρέχοντα στοιχεία σας."
-# TEMPORARY (2026-10-16): principles panel hidden on the owner's request; the office photo is shown
-# instead. Remove the "# " in front of the following lines to show it again.
+# TEMPORARY (2026-10-16): principles panel hidden on the owner's request; the "About us" text is shown
+# alone. Remove the "# " in front of the following lines to show it again.
 # principlesTitle: "Οι αρχές μας"
 # principles:
 #   - icon: check
