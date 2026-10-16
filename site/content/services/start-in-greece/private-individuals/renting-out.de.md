@@ -63,7 +63,7 @@ Wird die Immobilie von einer Gesellschaft gehalten und vermietet, gelten andere 
 - **Buchführung:** Die Gesellschaft führt doppelte Buchführung und erstellt einen Jahresabschluss.
 - **Kurzzeitvermietung:** Sie gilt bei einer Gesellschaft stets als gewerbliche Tätigkeit mit Umsatzsteuer.
 - **Übertragung:** Wird eine bereits privat gehaltene Immobilie auf die Gesellschaft übertragen, fällt Grunderwerbsteuer an.
-- **Ausländische Gesellschaft:** Zusätzlich ist die jährliche Sondersteuer auf Immobilien zu beachten, siehe [Immobiliengesellschaft](/de/leistungen/ihr-start-in-griechenland/unternehmen/immobiliengesellschaft/).
+- **Ausländische Gesellschaft:** Zusätzlich ist die jährliche Sondersteuer auf Immobilien zu beachten, siehe [Immobilienerwerb durch eine ausländische Gesellschaft](/de/leistungen/ihr-start-in-griechenland/unternehmen/immobilienerwerb/).
 
 Welche Form günstiger ist, hängt vom Einzelfall ab. Wir rechnen beide Varianten vor Ihrer Entscheidung durch.
 

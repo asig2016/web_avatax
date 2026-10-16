@@ -1,39 +1,35 @@
 ---
-title: "Foreign company holding property in Greece: special real estate tax"
-linkTitle: "Property company"
-seoTitle: "Foreign Company Owning Property in Greece | AVATAX"
-description: "Foreign companies owning Greek property: special real estate tax of 15% of the objective value per year, exemptions, annual declaration – our support."
-url: /services/start-in-greece/companies/property-holding-company/
+title: "Buying property in Greece as a foreign company"
+linkTitle: "Property acquisition"
+seoTitle: "Buying Greek Property as a Foreign Company | AVATAX"
+description: "Foreign companies can buy property in Greece without a branch or subsidiary: tax registration, purchase, ENFIA, special real estate tax, rental income."
+url: /services/start-in-greece/companies/property-acquisition/
 icon: "building"
 weight: 50
-review: "new page 2026-10-05 based on Art. 15–17 Law 3091/2002 and AADE decision A.1014/2026 – please check"
+review: "refocused 2026-10-16 (acquisition without an establishment; formerly “property company”) based on Art. 8 Law 5104/2024, Art. 47 and 58 Law 4172/2013, Art. 15–17 Law 3091/2002 and AADE decision A.1014/2026 – please check"
 faq:
-  - q: "How high is the special real estate tax?"
-    a: "15% per year of the objective value of the property held by the company in Greece on 1 January."
-  - q: "Can my company be exempted?"
-    a: "Yes, in particular if it discloses its shareholders down to the natural persons, who must have a Greek tax number. Companies from countries outside the EU and EEA without tax information exchange cannot normally be exempted."
-  - q: "Do I have to apply for the exemption every year?"
-    a: "Yes. The special real estate tax declaration and the application for exemption are filed every year, with the supporting documents."
+  - q: "Does my company need a branch in Greece to buy property?"
+    a: "No. A foreign company can acquire property in Greece without setting up a branch or a subsidiary. All it needs is a registration with the Greek tax authority, which gives the company a Greek tax number."
+  - q: "Which documents does the company need?"
+    a: "As a rule, the articles of association, a recent extract from the commercial register and proof of who may represent the company – with apostille and an official Greek translation. We agree the exact list with you and the notary."
+  - q: "Which taxes apply to the property?"
+    a: "On purchase, the transfer tax, or VAT for some new buildings; every year, the property tax ENFIA. The company pays tax on rental income in Greece. Particularly important is the special real estate tax: every year 15% of the objective value as of 1 January – not of the purchase price. The exemption is not automatic – the company has to file the declaration with the application for exemption and all supporting documents correctly every year. We take care of this for you."
 ---
-Foreign companies often hold Greek property – a holiday villa, an office building or a portfolio of apartments. Besides the general property tax, Greece levies a **special real estate tax** on legal entities that own property in Greece. It is designed to discourage anonymous ownership and can be very expensive; with the right structure and the annual declaration, it can often be avoided.
+A foreign company can acquire property in Greece **without setting up a branch or a subsidiary**. All it needs is a registration with the Greek tax authority. Companies use this, for example, to buy office space, flats for staff or a holiday property directly in the company's name. We take care of the tax side – before, during and after the purchase.
 
-## The special real estate tax (ΕΦΑ)
+## Acquisition without an establishment
 
-- Legal entities and other legal arrangements that hold ownership, bare ownership or usufruct of property in Greece pay a **special real estate tax of 15% per year** of the objective value of the property.
-- The tax is based on the property held on 1 January of each year.
-- It applies in addition to the general property tax (ENFIA).
+- **Tax registration:** The company receives a Greek tax number (ΑΦΜ), which is required for the notarial deed of purchase.
+- **Tax representative:** The company may appoint a [tax representative](/services/fiscal-representation/) under Art. 8 of the Tax Procedure Code (Law 5104/2024). Otherwise, its legal representative registers in the Greek tax register.
+- **Documents:** The articles of association, a recent extract from the commercial register and proof of who may represent the company are submitted with apostille and an official Greek translation.
+- **Purchase contract:** The contract is signed before a Greek notary and registered in the cadastre (Κτηματολόγιο); a lawyer and an engineer check title and building, as when [buying property as a private individual](/services/start-in-greece/private-individuals/buying-property/).
 
-## Exemptions and annual declaration
+## Taxes on purchase and afterwards
 
-- Exemptions exist in particular for companies that disclose their shareholders down to the natural persons; these persons must have a Greek tax number.
-- Companies from countries outside the EU and EEA without tax information exchange with Greece cannot normally be exempted.
-- The exemption is not automatic: the special real estate tax declaration and the application for exemption are filed **every year**, together with the supporting documents – for example the articles of association, the share register and a certificate of the company's existence, with official translations.
-
-## Further obligations
-
-- The company needs a Greek tax number and pays ENFIA as owner.
-- Rental income is taxed in Greece as company income, with bookkeeping in Greece.
-- Depending on the structure, the beneficial owners may also have to be disclosed in Greece.
+- **Transfer tax:** 3% plus a municipal surcharge of 3% on the tax, i.e. 3.09%, on the higher of the purchase price and the objective value; for new buildings, VAT may be due instead.
+- **ENFIA:** The company pays the annual property tax as owner.
+- **Special real estate tax (ΕΦΑ):** Legal entities pay 15% per year of the objective value of their Greek property as of 1 January – not of the purchase price – unless an exemption applies. Exempt are in particular companies that disclose their shareholders down to the natural persons, who must have a Greek tax number. The exemption is not automatic: the declaration and the application for exemption have to be filed correctly, with all supporting documents, every year. Companies from countries outside the EU and EEA without tax information exchange with Greece cannot normally be exempted.
+- **Rental income:** In Greece, a company's rental income counts as business income (Art. 47(2) Law 4172/2013). The company pays tax on it in Greece at the corporate tax rate of 22% – even without an establishment –, keeps books under Greek law and files a Greek corporate income tax return every year.
 
 ## Company or personal ownership?
 
@@ -41,7 +37,8 @@ For a single property, holding it through a non-transparent foreign company can 
 
 ## How we support you
 
-1. **Assessment** of the structure before the purchase: personal ownership or company, exemption options
+1. **Before the purchase:** assessment of the structure – personal ownership or company – and of the exemption from the special real estate tax
 2. **Registration:** Greek tax number of the company, tax representative where required
-3. **Every year:** special real estate tax declaration and exemption application with all documents, ENFIA
-4. **Rental:** bookkeeping and tax returns for the rental income – in English or German
+3. **Purchase:** transfer tax, coordination with notary, lawyer and engineer
+4. **Every year:** ENFIA, special real estate tax declaration and exemption application
+5. **Rental:** bookkeeping and tax returns for the rental income – in English or German

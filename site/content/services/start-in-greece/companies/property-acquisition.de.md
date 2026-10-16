@@ -1,47 +1,44 @@
 ---
-title: "Ausländische Gesellschaft mit Immobilien in Griechenland: Sondersteuer auf Immobilien"
-linkTitle: "Immobiliengesellschaft"
-seoTitle: "Auslandsgesellschaft mit Immobilie in Griechenland | AVATAX"
-description: "Ausländische Gesellschaften mit griechischen Immobilien: Sondersteuer von 15 % des objektiven Werts pro Jahr, Befreiungen, jährliche Erklärung."
-url: /de/leistungen/ihr-start-in-griechenland/unternehmen/immobiliengesellschaft/
+title: "Immobilienerwerb in Griechenland durch eine ausländische Gesellschaft"
+linkTitle: "Immobilienerwerb"
+seoTitle: "Immobilienkauf durch ausländische Gesellschaft | AVATAX"
+description: "Ausländische Gesellschaften erwerben Immobilien in Griechenland ohne Niederlassung: steuerliche Registrierung, Kauf, ENFIA, Sondersteuer, Vermietung."
+url: /de/leistungen/ihr-start-in-griechenland/unternehmen/immobilienerwerb/
 icon: "building"
 weight: 50
-review: "neue Seite 2026-10-05 auf Grundlage von Art. 15–17 Gesetz 3091/2002 und AADE-Entscheidung A.1014/2026 – bitte fachlich prüfen"
+review: "2026-10-16 neu ausgerichtet (Erwerb ohne Niederlassung; vorher „Immobiliengesellschaft“) auf Grundlage von Art. 8 Ges. 5104/2024, Art. 47 und 58 Ges. 4172/2013, Art. 15–17 Ges. 3091/2002 und AADE-Entscheidung A.1014/2026 – bitte fachlich prüfen"
 faq:
-  - q: "Wie hoch ist die Sondersteuer auf Immobilien?"
-    a: "15 % pro Jahr des objektiven (amtlichen) Werts der Immobilien, die die Gesellschaft am 1. Januar in Griechenland hält."
-  - q: "Kann meine Gesellschaft befreit werden?"
-    a: "Ja, insbesondere wenn sie ihre Gesellschafter bis zu den natürlichen Personen offenlegt; diese brauchen eine griechische Steuernummer. Gesellschaften aus Staaten außerhalb der EU und des EWR ohne steuerlichen Informationsaustausch können in der Regel nicht befreit werden."
-  - q: "Muss die Befreiung jedes Jahr beantragt werden?"
-    a: "Ja. Die Erklärung zur Sondersteuer und der Antrag auf Befreiung werden jedes Jahr mit den Nachweisen eingereicht."
+  - q: "Braucht meine Gesellschaft eine Niederlassung in Griechenland, um eine Immobilie zu kaufen?"
+    a: "Nein. Eine ausländische Gesellschaft kann Immobilien in Griechenland erwerben, ohne eine Zweigniederlassung oder Tochtergesellschaft zu gründen. Erforderlich ist lediglich die Registrierung beim griechischen Finanzamt, mit der die Gesellschaft eine griechische Steuernummer erhält."
+  - q: "Welche Unterlagen braucht die Gesellschaft?"
+    a: "In der Regel den Gesellschaftsvertrag, einen aktuellen Handelsregisterauszug und Nachweise über die Vertretungsbefugnis – mit Apostille und amtlicher griechischer Übersetzung. Die genaue Liste stimmen wir mit Ihnen und dem Notar ab."
+  - q: "Welche Steuern fallen für die Immobilie an?"
+    a: "Beim Kauf die Grunderwerbsteuer, bei Neubauten gegebenenfalls Umsatzsteuer; jedes Jahr die Immobiliensteuer ENFIA. Mieteinkünfte versteuert die Gesellschaft in Griechenland. Besonders wichtig ist die Sondersteuer auf Immobilien: jedes Jahr 15 % des objektiven Werts zum 1. Januar – nicht des Kaufpreises. Die Befreiung gilt nicht automatisch, sondern setzt voraus, dass die Gesellschaft jedes Jahr die Erklärung mit dem Befreiungsantrag und allen Nachweisen korrekt einreicht. Das übernehmen wir für Sie."
 ---
-Ausländische Gesellschaften halten häufig griechische Immobilien – eine Ferienvilla, ein Bürogebäude oder einen Bestand an Wohnungen. Neben der allgemeinen Immobiliensteuer erhebt Griechenland eine **Sondersteuer auf Immobilien** von juristischen Personen, die Immobilien in Griechenland besitzen. Eine vergleichbare Steuer gibt es in Deutschland nicht. Sie soll anonymes Eigentum verhindern und kann sehr teuer werden; mit der richtigen Struktur und der jährlichen Erklärung lässt sie sich oft vermeiden.
+Eine ausländische Gesellschaft kann Immobilien in Griechenland erwerben, **ohne eine Zweigniederlassung oder Tochtergesellschaft zu gründen**. Erforderlich ist lediglich die Registrierung beim griechischen Finanzamt. So erwerben Unternehmen etwa Büroräume, Wohnungen für Mitarbeiter oder eine Ferienimmobilie unmittelbar auf die eigene Gesellschaft. Wir übernehmen die steuerliche Seite – vor, während und nach dem Erwerb.
 
-## Die Sondersteuer auf Immobilien (ΕΦΑ)
+## Erwerb ohne Niederlassung
 
-- Juristische Personen und andere Rechtsgebilde mit Eigentum, bloßem Eigentum oder Nießbrauch an Immobilien in Griechenland zahlen eine **Sondersteuer von 15 % pro Jahr** des objektiven Werts der Immobilien.
-- Maßgeblich ist der Bestand am 1. Januar jedes Jahres.
-- Sie wird zusätzlich zur allgemeinen Immobiliensteuer (ENFIA) erhoben.
+- **Registrierung beim Finanzamt:** Die Gesellschaft erhält eine griechische Steuernummer (ΑΦΜ); sie ist Voraussetzung für den notariellen Kaufvertrag.
+- **Steuerlicher Vertreter:** Die Gesellschaft kann einen [steuerlichen Vertreter](/de/leistungen/fiskalvertretung/) nach Art. 8 des Steuerverfahrensgesetzes (Gesetz 5104/2024) bestellen. Andernfalls registriert sich ihr gesetzlicher Vertreter im griechischen Steuerregister.
+- **Unterlagen:** Gesellschaftsvertrag, aktueller Handelsregisterauszug und Nachweise über die Vertretungsbefugnis werden mit Apostille und amtlicher griechischer Übersetzung vorgelegt.
+- **Kaufvertrag:** Der Vertrag wird vor einem griechischen Notar unterzeichnet und im Kataster (Κτηματολόγιο) eingetragen; Rechtsanwalt und Ingenieur prüfen Eigentum und Gebäude wie beim [Immobilienkauf als Privatperson](/de/leistungen/ihr-start-in-griechenland/privatpersonen/immobilienkauf/).
 
-## Befreiungen und jährliche Erklärung
+## Steuern beim Erwerb und danach
 
-- Befreit werden insbesondere Gesellschaften, die ihre Gesellschafter bis zu den natürlichen Personen offenlegen; diese Personen brauchen eine griechische Steuernummer.
-- Gesellschaften aus Staaten außerhalb der EU und des EWR ohne steuerlichen Informationsaustausch mit Griechenland können in der Regel nicht befreit werden.
-- Die Befreiung gilt nicht automatisch: Die Erklärung zur Sondersteuer und der Antrag auf Befreiung werden **jedes Jahr** eingereicht, zusammen mit den Nachweisen – etwa Gesellschaftsvertrag, Gesellschafterliste bzw. Aktienbuch und Bescheinigung über das Bestehen der Gesellschaft, mit amtlicher Übersetzung.
-
-## Weitere Pflichten
-
-- Die Gesellschaft braucht eine griechische Steuernummer und zahlt als Eigentümerin die ENFIA.
-- Mieteinkünfte werden in Griechenland als Einkünfte der Gesellschaft besteuert, mit Buchführung in Griechenland.
-- Je nach Struktur können auch die wirtschaftlich Berechtigten in Griechenland offenzulegen sein.
+- **Grunderwerbsteuer:** 3 % zuzüglich eines Gemeindezuschlags von 3 % auf die Steuer, also 3,09 %, auf den höheren Wert aus Kaufpreis und objektivem Wert; bei Neubauten kann stattdessen Umsatzsteuer anfallen.
+- **ENFIA:** Die jährliche Immobiliensteuer zahlt die Gesellschaft als Eigentümerin.
+- **Sondersteuer auf Immobilien (ΕΦΑ):** Juristische Personen zahlen jedes Jahr 15 % des objektiven Werts ihrer griechischen Immobilien zum 1. Januar – nicht des Kaufpreises –, sofern keine Befreiung greift. Befreit werden insbesondere Gesellschaften, die ihre Gesellschafter bis zu den natürlichen Personen offenlegen; diese brauchen eine griechische Steuernummer. Die Befreiung gilt nicht automatisch: Erklärung und Befreiungsantrag müssen jedes Jahr korrekt und mit allen Nachweisen eingereicht werden. Gesellschaften aus Staaten außerhalb der EU und des EWR ohne steuerlichen Informationsaustausch mit Griechenland können in der Regel nicht befreit werden.
+- **Vermietung:** Mieteinkünfte einer Gesellschaft gelten in Griechenland als Einkünfte aus Geschäftstätigkeit (Art. 47 Abs. 2 Gesetz 4172/2013). Die Gesellschaft versteuert sie in Griechenland mit dem Körperschaftsteuersatz von 22 % – auch ohne Niederlassung –, führt dafür Bücher nach griechischem Recht und gibt jedes Jahr eine griechische Körperschaftsteuererklärung ab.
 
 ## Gesellschaft oder Privateigentum?
 
-Bei einer einzelnen Immobilie kann das Halten über eine nicht transparente ausländische Gesellschaft jedes Jahr 15 % ihres objektiven Werts kosten. Ob Privateigentum, eine transparente Gesellschaft oder eine griechische Gesellschaft sinnvoller ist, hängt vom Zweck und den Plänen ab – auch unter Berücksichtigung der deutschen Besteuerung. Wir vergleichen die Möglichkeiten vor dem Kauf.
+Bei einer einzelnen Immobilie kann das Halten über eine nicht transparente ausländische Gesellschaft jedes Jahr 15 % ihres objektiven Werts kosten. Ob Privateigentum, eine transparente Gesellschaft oder eine griechische Gesellschaft sinnvoller ist, hängt vom Zweck und den Plänen ab – auch unter Berücksichtigung der deutschen Besteuerung. Wir vergleichen die Möglichkeiten vor dem Erwerb.
 
 ## So unterstützen wir Sie
 
-1. **Prüfung** der Struktur vor dem Kauf: Privateigentum oder Gesellschaft, Befreiungsmöglichkeiten
+1. **Vor dem Erwerb:** Prüfung der Struktur – Privateigentum oder Gesellschaft – und der Befreiung von der Sondersteuer
 2. **Registrierung:** griechische Steuernummer der Gesellschaft, bei Bedarf steuerliche Vertretung
-3. **Jedes Jahr:** Erklärung zur Sondersteuer und Befreiungsantrag mit allen Nachweisen, ENFIA
-4. **Vermietung:** Buchhaltung und Steuererklärungen für die Mieteinkünfte – auf Deutsch
+3. **Erwerb:** Grunderwerbsteuer, Abstimmung mit Notar, Rechtsanwalt und Ingenieur
+4. **Jedes Jahr:** ENFIA, Erklärung zur Sondersteuer und Befreiungsantrag
+5. **Vermietung:** Buchhaltung und Steuererklärungen für die Mieteinkünfte – auf Deutsch

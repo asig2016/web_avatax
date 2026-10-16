@@ -33,3 +33,6 @@
 /careers/apply/
 /de/karriere/
 /de/karriere/bewerbung/
+/de/leistungen/ihr-start-in-griechenland/unternehmen/immobiliengesellschaft/
+/services/start-in-greece/companies/property-holding-company/
+/el/ypiresies/enarxi-drastiriotitas-stin-ellada/epicheiriseis/allodapi-etaireia-akiniton/

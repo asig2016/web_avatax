@@ -63,7 +63,7 @@ If a company owns and rents out the property, different rules apply:
 - **Bookkeeping:** The company keeps double-entry books and prepares annual financial statements.
 - **Short-term rental:** For a company it always counts as a business activity with VAT.
 - **Transfer:** Moving a property you already own privately into the company triggers transfer tax.
-- **Foreign company:** The annual special real estate tax also has to be considered, see [property holding company](/services/start-in-greece/companies/property-holding-company/).
+- **Foreign company:** The annual special real estate tax also has to be considered, see [buying property as a foreign company](/services/start-in-greece/companies/property-acquisition/).
 
 Which form costs less depends on the individual case. We calculate both options before you decide.
 
