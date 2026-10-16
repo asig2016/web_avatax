@@ -7,14 +7,14 @@ url: /de/leistungen/fiskalvertretung/
 icon: globe
 weight: 40
 teaser: "Steuerliche Vertretung und Fiskalvertretung für die Umsatzsteuer – für Unternehmen und Privatpersonen aus dem Ausland."
-review: "Text für ausländische Mandanten auf Basis von Quellen (Art. 8 Ges. 5104/2024, griechisches UStG Ges. 2859/2000) – bitte prüfen"
+review: "Text für ausländische Mandanten auf Basis von Quellen (Art. 8 Ges. 5104/2024, griechisches UStG Ges. 5144/2024) – bitte prüfen; Fiskalvertreter-FAQ und -Absatz am 2026-10-16 an Art. 40/41 Ges. 5144/2024 angepasst"
 menus:
   main:
     parent: services
     weight: 40
 faq:
   - q: "Benötigt mein Unternehmen einen Fiskalvertreter für die Umsatzsteuer?"
-    a: "Unternehmen mit Sitz außerhalb der EU, die sich in Griechenland für die Umsatzsteuer registrieren müssen, müssen einen Fiskalvertreter bestellen. Unternehmen aus anderen EU-Mitgliedstaaten können sich direkt registrieren; die Bestellung eines Vertreters ist für sie freiwillig."
+    a: "Unternehmen, die weder in Griechenland noch in einem anderen EU-Mitgliedstaat ansässig sind, müssen vor ihrem ersten steuerpflichtigen Umsatz in Griechenland einen Fiskalvertreter bestellen, wenn sie die griechische Umsatzsteuer für diesen Umsatz selbst schulden (Art. 41 Abs. 3 lit. d des griechischen Umsatzsteuergesetzes, Gesetz 5144/2024). Schuldet der Kunde in Griechenland die Steuer im Reverse-Charge-Verfahren – etwa bei den meisten Dienstleistungen an Unternehmen –, ist dafür kein Fiskalvertreter erforderlich. Unternehmen aus anderen EU-Mitgliedstaaten ohne Niederlassung in Griechenland können sich direkt registrieren; wir unterstützen Sie gerne hierbei und übernehmen die Einreichung der erforderlichen Steuererklärungen."
   - q: "Haftet der Vertreter für meine Steuern?"
     a: "Das hängt von der Art der Vertretung ab. Der Fiskalvertreter für die Umsatzsteuer haftet gesamtschuldnerisch für die umsatzsteuerlichen Pflichten des vertretenen Unternehmens. Der steuerliche Vertreter nach Art. 8 des Steuerverfahrensgesetzes haftet dagegen nicht für die Erfüllung der Steuerpflichten."
   - q: "Welche Unterlagen werden benötigt?"
@@ -33,7 +33,7 @@ Im Ausland steuerlich ansässige Privatpersonen und Unternehmen mit steuerlichen
 
 ## Fiskalvertreter für die Umsatzsteuer
 
-Unternehmen mit Sitz **außerhalb der EU**, die in Griechenland umsatzsteuerpflichtige Umsätze tätigen, müssen sich für die Umsatzsteuer registrieren und einen **Fiskalvertreter** bestellen (griechisches Umsatzsteuergesetz, Gesetz 2859/2000). Unternehmen aus anderen **EU-Mitgliedstaaten** können sich direkt registrieren; ein Vertreter ist für sie freiwillig, aber häufig praktisch – wegen der griechischen Korrespondenz und der lokalen Fristen.
+Unternehmen, die **weder in Griechenland noch in einem anderen EU-Mitgliedstaat** ansässig sind und für ihre Umsätze in Griechenland die Umsatzsteuer selbst schulden, müssen vor dem ersten Umsatz einen **Fiskalvertreter** bestellen (Art. 41 Abs. 3 lit. d des griechischen Umsatzsteuergesetzes, Gesetz 5144/2024). Schuldet der Kunde die Steuer im Reverse-Charge-Verfahren, ist dafür kein Vertreter erforderlich. Unternehmen aus anderen **EU-Mitgliedstaaten** können sich direkt registrieren; wir unterstützen Sie gerne hierbei und übernehmen die Einreichung der erforderlichen Steuererklärungen.
 
 - Der Fiskalvertreter gibt die Umsatzsteuererklärungen ab und führt die Unterlagen.
 - Er **haftet gesamtschuldnerisch** für die umsatzsteuerlichen Pflichten des Unternehmens. Wir vereinbaren deshalb von Beginn an klare Abläufe für Belege, Zahlungen und Fristen.
