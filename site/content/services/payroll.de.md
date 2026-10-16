@@ -17,8 +17,6 @@ faq:
     a: "Ja, sofern die Tätigkeit der Mitarbeiter keine Betriebsstätte in Griechenland begründet. Tätigkeiten wie IT, Buchhaltung, Qualitätssicherung oder Beratung begründen in der Regel keine Betriebsstätte, Vertriebstätigkeiten und der Abschluss von Verträgen im Namen des Unternehmens dagegen möglicherweise schon. Wir prüfen das vor der Einstellung."
   - q: "Welche Anpassungen braucht ein deutscher Arbeitsvertrag in der Regel?"
     a: "Meist die ausdrückliche Nennung von 14 Gehaltszahlungen pro Jahr (einschließlich Weihnachts-, Oster- und Urlaubsgeld), Regelungen zum Urlaub und Kündigungsmodalitäten nach griechischem Arbeitsrecht. Der Vertrag wird in griechischer Sprache – häufig zweisprachig – erstellt und im Original unterschrieben."
-  - q: "Prüfen Sie, ob unsere Mitarbeiter die digitale Arbeitszeitkarte korrekt nutzen?"
-    a: "Ja, nach gesonderter Vereinbarung. Wir gleichen die erfassten Beginn- und Endzeiten der Arbeit mit den gemeldeten Arbeitszeiten und den Meldungen in ERGANI II ab, decken Abweichungen auf und schlagen Korrekturen vor – bevor die Arbeitsaufsicht prüft."
 ---
 Sie möchten in Griechenland Mitarbeiter beschäftigen – mit oder ohne eigene griechische Gesellschaft? Das griechische Arbeits- und Sozialversicherungsrecht unterscheidet sich in vielen Punkten vom deutschen: 14 Gehälter im Jahr, Anmeldungen vor Arbeitsbeginn, elektronische Erfassung der Arbeitszeit in Echtzeit. Wir übernehmen alle Formalitäten und die laufende Lohnabrechnung und kommunizieren mit Ihrer Personalabteilung auf Deutsch.
 
@@ -52,7 +50,3 @@ Wir vereinbaren einen klaren Monatsablauf:
 ## Beratung zu Arbeitsrecht und Sozialversicherung
 
 Wir beantworten Ihre konkreten Fragen – etwa zu zulässigen Regelungen im Arbeitsvertrag (Probezeit, Teilzeit, Telearbeit), zur flexiblen Gestaltung der Arbeitszeit, zur Sozialversicherungspflicht, zu Urlaub und zur Beendigung von Arbeitsverhältnissen. In komplexen Fällen arbeiten wir mit Rechtsanwälten zusammen.
-
-## Digitale Arbeitszeitkarte
-
-Arbeitgeber in Griechenland müssen Beginn und Ende der Arbeit vieler Mitarbeiter in Echtzeit elektronisch an das System ERGANI II übermitteln; Abweichungen von den gemeldeten Arbeitszeiten können zu hohen Bußgeldern führen. Nach gesonderter Vereinbarung prüfen wir regelmäßig, ob Ihre Mitarbeiter die digitale Arbeitszeitkarte korrekt nutzen, und schlagen Korrekturen vor.
