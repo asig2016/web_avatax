@@ -9,7 +9,7 @@ weight: 10
 review: "new page 2026-10-05 based on research – please check"
 faq:
   - q: "Can foreigners buy property in Greece?"
-    a: "Yes. Citizens of the EU and of other countries can buy property in Greece. In certain border areas, buyers from outside the EU and EEA need a permit."
+    a: "Yes. Citizens of the EU and of other countries can buy property in Greece. In certain border areas, buyers from outside the EU and EFTA need a permit."
   - q: "Can I use the property only as my holiday home?"
     a: "Yes. If you use it only yourself, there is no rental income and no tax on rental income; ENFIA is due in any case. Whether owning a residence leads to presumed living expenses in Greece and whether a tax return is needed, we check for you."
   - q: "What does buying a property cost on top of the price?"
@@ -32,7 +32,7 @@ Citizens of the EU and of other countries can buy property in Greece. The proced
 - The contract is signed before a Greek notary; your lawyer checks the title and the encumbrances.
 - An engineer certifies that the building has no unauthorised construction; an energy performance certificate is also required.
 - The purchase is registered in the Hellenic Cadastre (Κτηματολόγιο).
-- In certain border areas, buyers from outside the EU and EEA need a permit.
+- In certain border areas, buyers from outside the EU and EFTA need a permit.
 
 ## Taxes and costs of the purchase
 

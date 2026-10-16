@@ -9,7 +9,7 @@ weight: 10
 review: "neue Seite 2026-10-05 auf Grundlage von Recherche – bitte prüfen"
 faq:
   - q: "Können Deutsche in Griechenland Immobilien kaufen?"
-    a: "Ja. EU-Bürger können Immobilien in Griechenland wie Einheimische erwerben. In bestimmten Grenzgebieten brauchen nur Käufer von außerhalb der EU und des EWR eine Genehmigung."
+    a: "Ja. EU-Bürger können Immobilien in Griechenland wie Einheimische erwerben. In bestimmten Grenzgebieten brauchen nur Käufer von außerhalb der EU und der EFTA eine Genehmigung."
   - q: "Kann ich die Immobilie nur als Ferienwohnung nutzen?"
     a: "Ja. Bei reiner Eigennutzung entstehen keine Mieteinkünfte und keine Steuer darauf; die ENFIA ist in jedem Fall fällig. Ob der Besitz einer Wohnung in Griechenland zu unterstellten Lebenshaltungskosten führt und ob eine Steuererklärung nötig ist, prüfen wir für Sie."
   - q: "Welche Nebenkosten fallen beim Kauf an?"
@@ -32,7 +32,7 @@ EU-Bürger können Immobilien in Griechenland ohne Einschränkungen erwerben. De
 - Der Vertrag wird vor einem griechischen Notar unterzeichnet; Ihr Rechtsanwalt prüft Eigentum und Belastungen.
 - Ein Ingenieur bescheinigt, dass am Gebäude keine ungenehmigten Bauten bestehen; außerdem ist ein Energieausweis erforderlich.
 - Der Erwerb wird im griechischen Kataster (Κτηματολόγιο) eingetragen – dem Gegenstück zum deutschen Grundbuch.
-- In bestimmten Grenzgebieten brauchen Käufer von außerhalb der EU und des EWR eine Genehmigung.
+- In bestimmten Grenzgebieten brauchen Käufer von außerhalb der EU und der EFTA eine Genehmigung.
 
 ## Steuern und Kosten beim Kauf
 
