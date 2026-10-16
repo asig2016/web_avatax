@@ -105,3 +105,6 @@ make deploy     # rsync to server + `make update` there (owner runs this)
   "German only" block in `nginx/conf.d/default.conf` (all other URLs → 302 `/de/`). EN/EL content stays and is
   still maintained; `make test-redirects` reports 4 expected failures until the languages are back. To revert,
   follow the comments in both files.
+- **Temporarily deactivated (2026-10-16):** DE page "Organisation der Buchhaltung"
+  (`services/accounting-department-support.de.md`, `build: render: never`). Its links in `services/accounting.de.md`
+  and the home card in `_index.de.md` were removed; restore them from git when re-enabling.

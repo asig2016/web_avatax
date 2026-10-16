@@ -50,7 +50,6 @@ audiences:
     links:
       - { label: "Buchhaltung", url: "/de/leistungen/buchhaltung-und-jahresabschluss/" }
       - { label: "Lohn & Arbeitsrecht", url: "/de/leistungen/lohnbuchhaltung/" }
-      - { label: "Unterstützung der Buchhaltung", url: "/de/leistungen/organisation-der-buchhaltung/" }
   - icon: person
     title: "Privatpersonen"
     text: "Einkommensteuer, Renten aus dem Ausland, Immobilien, Erbschaften und Schenkungen in Griechenland, einschließlich der Pauschalsteuer von 7 % für Rentner, die ihren steuerlichen Wohnsitz nach Griechenland verlegen (Art. 5B griech. EStG)."

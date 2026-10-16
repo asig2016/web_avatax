@@ -8,6 +8,9 @@ icon: group
 weight: 50
 teaser: "Wir bauen Ihre Buchhaltung auf und unterstützen Ihre eigenen Mitarbeiter im Alltag."
 review: "SEO-Erweiterung (neue Abschnitte und FAQ) – bitte prüfen"
+build:                   # TEMPORARY (2026-10-16): page deactivated by the owner; links removed from
+  render: never          #   accounting.de.md and _index.de.md (restore them from git when re-enabling)
+  list: never
 menus:
   main:
     parent: services

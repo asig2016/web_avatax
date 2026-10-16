@@ -47,5 +47,3 @@ Griechische Tochtergesellschaften, Niederlassungen und Einzelunternehmen führen
 2. **Einrichtung oder Übernahme** der Buchhaltung, einschließlich myDATA und E-Rechnung
 3. **Laufende Betreuung** mit festem Ansprechpartner und abgestimmtem Berichtskalender
 4. **Jahresabschluss** und Steuererklärung
-
-Sie möchten Ihre eigene Buchhaltungsabteilung behalten? Wir [organisieren und unterstützen Buchhaltungsabteilungen](/de/leistungen/organisation-der-buchhaltung/).
