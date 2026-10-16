@@ -68,4 +68,4 @@ All commands, folders and troubleshooting: **[docs/DOCKER.md](docs/DOCKER.md)**.
 1. Edit the content: **[docs/MANUAL.md](docs/MANUAL.md)**
 2. Check: `make preview && make test`
 3. Commit: `git add -A && git commit -m "…"`, and push: `git push` (once a remote is set)
-4. Publish on the server: `make deploy`. See **[docs/DEPLOY.md](docs/DEPLOY.md)**.
+4. Publish: `make deploy-test` (branch `master` → admin.avatax.eu), then after checking `make deploy-live` (branch `live` → avatax.eu). See **[docs/DEPLOY.md](docs/DEPLOY.md)**.

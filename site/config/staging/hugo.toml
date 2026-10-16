@@ -1,0 +1,4 @@
+# Test environment admin.avatax.eu (build with --environment staging, see HUGO_ENV in .env).
+# Everything else comes from site/hugo.toml. Non-production builds get noindex and a robots.txt
+# that disallows everything (see layouts/robots.txt and _partials/head.html).
+baseURL = "https://admin.avatax.eu/"

@@ -34,7 +34,8 @@ Read `README.md` (overview), `docs/DOCKER.md` (containers and commands), `docs/D
 7. **Old URLs must keep working:** when a URL changes, add a 301 to `nginx/conf.d/redirects.conf` and a line to
    `tests/old-urls.txt`.
 8. **Content is bind-mounted, never baked into images.** Project path `/home/asig/docker_data/avatax` on the laptop,
-   `/home/sysop/docker_data/go_avatax` on the server (`ssh sysop@sigalas.eu`). Bind mounts use `:z` (Fedora SELinux). Create `public`, `public.next`, `logs/nginx` before the first
+   `/home/sysop/docker_data/go_avatax` on the server (`ssh sysop@sigalas.eu`); the test stack (admin.avatax.eu,
+   `STACK=avatax-test`, `HUGO_ENV=staging`) lives in `/home/sysop/docker_data/go_avatax_test`. Bind mounts use `:z` (Fedora SELinux). Create `public`, `public.next`, `logs/nginx` before the first
    `docker compose up/run`, otherwise Docker creates them as root and Hugo (non-root) cannot write.
 9. **Ports:** web `127.0.0.1:8090`, mailpit `:8026`, hugo live reload `:1314`. Another stack of the same kind
    runs on the same laptop and server with 8080/8025/1313. Do not take those ports.
@@ -103,7 +104,8 @@ The same stack as described in `docs/DOCKER.md`:
 make dev        # laptop: hugo live reload + web + formsvc + mailpit (http://localhost:8090, mails :8026)
 make preview    # production build → public/ (keeps public.prev/)
 make test       # go vet/test, lychee link check (offline), 301 check of tests/old-urls.txt
-make deploy     # rsync to server + `make update` there (owner runs this)
+make deploy-test  # branch master -> test site admin.avatax.eu (pushed state via git archive, + `make update` there)
+make deploy-live  # branch live -> avatax.eu; release = `git merge --ff-only master` on live + push
 ```
 
 ## Legal references (checked 2026-10-01)
@@ -124,5 +126,8 @@ make deploy     # rsync to server + `make update` there (owner runs this)
 - **Temporarily deactivated (2026-10-16):** DE page "Organisation der Buchhaltung"
   (`services/accounting-department-support.de.md`, `build: render: never`). Its links in `services/accounting.de.md`
   and the home card in `_index.de.md` were removed; restore them from git when re-enabling.
+- **Test and live (2026-10-16):** branch `master` → test site admin.avatax.eu (`make deploy-test`), branch `live`
+  → avatax.eu (`make deploy-live`). A release is `git merge --ff-only master` on `live` + push, on the owner's word
+  (rule 11 applies to both branches). Details: `docs/DEPLOY.md` §6.
 - **Temporarily deactivated (2026-10-16): online appointment booking** (not ready). `book*.md` (en/de/el,
   `build: render: never`); the booking sentence in `contact.*.md` was removed; restore it from git when re-enabling.

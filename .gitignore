@@ -7,3 +7,4 @@
 /site/resources/_gen/
 /site/.hugo_build.lock
 /.idea/
+/.deploy/

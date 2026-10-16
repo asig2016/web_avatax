@@ -9,7 +9,7 @@ The full command reference (containers, folders, troubleshooting) is in **[DOCKE
 | | |
 |---|---|
 | Server | `135.181.76.115` (Hetzner), which also hosts other sites (incl. another Docker stack of this kind on port 8080) behind an existing nginx reverse proxy |
-| SSH login | `ssh sysop@sigalas.eu` (same server as sigalas.eu; used by `make deploy`, see `DEPLOY_HOST` in the Makefile) |
+| SSH login | `ssh sysop@sigalas.eu` (same server as sigalas.eu; used by `make deploy-test` / `deploy-live`, see `DEPLOY_HOST` in the Makefile) |
 | Project directory | laptop `/home/asig/docker_data/avatax`, server `/home/sysop/docker_data/go_avatax` |
 | Containers | `avatax-web` (nginx, static site), `avatax-formsvc` (forms → e-mail); on the server **no** `hugo`/`mailpit` |
 | Source code | GitHub `asig2016/web_avatax`, branch `master` |
@@ -30,12 +30,12 @@ Docker network.
 ```bash
 cd /home/asig/docker_data/avatax
 make preview && make test     # production build + Go tests, link check, redirect check
-git status                    # everything committed? (make deploy refuses uncommitted changes)
+git status                    # everything committed and pushed? (the deploy targets copy the pushed branch)
 git push                      # GitHub copy up to date
 ```
 
-`make deploy` connects as `sysop@sigalas.eu` (set in the Makefile as `DEPLOY_HOST`; override with
-`make deploy DEPLOY_HOST=…` if needed). Make sure key login works without a password prompt:
+`make deploy-test` / `make deploy-live` connect as `sysop@sigalas.eu` (set in the Makefile as `DEPLOY_HOST`;
+override with `make deploy-live DEPLOY_HOST=…` if needed). Make sure key login works without a password prompt:
 
 ```
 ssh-copy-id sysop@sigalas.eu      # once, if not done yet
@@ -229,6 +229,16 @@ set `SITE_URL=https://new.avatax.eu`, otherwise the links in the booking mails p
 
 ## 6. Updating the site (normal workflow)
 
+Since 2026-10-16 there are two sites on the server, each built from its own git branch:
+
+| | Test | Live |
+|---|---|---|
+| Address | https://admin.avatax.eu (password-protected) | https://avatax.eu |
+| Branch | `master` | `live` |
+| Server folder | `/home/sysop/docker_data/go_avatax_test` | `/home/sysop/docker_data/go_avatax` |
+| Containers | `avatax-test-web`, `avatax-test-formsvc` | `avatax-web`, `avatax-formsvc` |
+| Command | `make deploy-test` | `make deploy-live` |
+
 ```bash
 # on the laptop
 cd /home/asig/docker_data/avatax
@@ -236,11 +246,31 @@ make dev                      # http://localhost:8090 with live reload, mails ->
 #   … edit files in site/content/, site/data/, site/static/files/ …
 make preview && make test     # production build + checks
 git add -A && git commit -m "Update …"
-git push                      # GitHub (backup)
-make deploy                   # rsync to the server + `make update` there
+git push                      # master -> GitHub
+make deploy-test              # master -> admin.avatax.eu; check it there
+git checkout live && git merge --ff-only master && git push && git checkout master
+make deploy-live              # live -> avatax.eu
 ```
 
-`make deploy` copies the project with `rsync` (without `.git`, `.env`, `public*/`, `logs/`) and then runs
+Both deploy commands copy the **pushed** state of their branch (`git archive`), never the working folder:
+they stop if the branch differs from GitHub. The old `make deploy` only prints these two commands.
+
+### One-time setup of the test site (owner, on the server)
+
+1. `mkdir -p /home/sysop/docker_data/go_avatax_test && cd /home/sysop/docker_data/go_avatax_test`
+2. Copy the live `.env` and change: `STACK=avatax-test`, `HUGO_ENV=staging`, a free `WEB_BIND` port
+   (e.g. `127.0.0.1:8082`; live uses 8081), `SITE_NAME=admin.avatax.eu`, `SITE_URL=https://admin.avatax.eu`,
+   `SITE_HOSTS=admin.avatax.eu`, and `MAIL_TO_CONTACT` / `MAIL_TO_CV` to your own address, so that test
+   enquiries do not reach the team.
+3. Create `public public.next public.prev logs/nginx` (as `sysop`, before the first start).
+4. On the laptop: `make deploy-test`.
+5. Proxy: in the `admin.avatax.eu` server block change `proxy_pass http://avatax-web:80;` to
+   `proxy_pass http://avatax-test-web:80;` (the password protection stays), `nginx -t`, reload.
+
+The test build uses `site/config/staging/hugo.toml` (address `https://admin.avatax.eu/`); as a
+non-production build it gets `noindex` and a robots.txt that disallows everything.
+
+The deploy copies the branch with `rsync` (without `.env`, `public*/`, `logs/`) and then runs
 `make update` on the server: `docker compose run --rm build` into `public.next/`, live version →
 `public.prev/`, new build → `public/`, `docker compose up -d --build` (rebuilds formsvc only if its
 code changed) and a health check.
@@ -262,7 +292,7 @@ nano site/content/contact.el.md
 make build publish            # live within seconds (plain: see DOCKER.md §3)
 ```
 
-**Important:** the next `make deploy` from the laptop overwrites server-side edits. Make the
+**Important:** the next `make deploy-test` / `make deploy-live` from the laptop overwrites server-side edits. Make the
 same change on the laptop too, or copy it back first:
 `rsync -av sysop@sigalas.eu:/home/sysop/docker_data/go_avatax/site/ ./site/`.
 

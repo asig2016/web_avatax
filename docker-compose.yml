@@ -10,7 +10,8 @@
 # Server (COMPOSE_PROFILES empty):       web + formsvc only
 # See Makefile and docs/DEPLOY.md.
 
-name: avatax
+# STACK in .env: "avatax" (live, default) or e.g. "avatax-test" (test stack on the same server).
+name: ${STACK:-avatax}
 
 networks:
   avataxnw:
@@ -20,7 +21,7 @@ services:
   # Production web server: serves ./public, proxies /api/ to formsvc.
   web:
     image: nginx:${NGINX_VERSION:-stable-alpine}
-    container_name: avatax-web
+    container_name: ${STACK:-avatax}-web
     restart: unless-stopped
     depends_on:
       - formsvc
@@ -43,7 +44,7 @@ services:
   formsvc:
     build: ./formsvc
     image: avatax-formsvc:latest
-    container_name: avatax-formsvc
+    container_name: ${STACK:-avatax}-formsvc
     restart: unless-stopped
     env_file: .env
     environment:
@@ -62,7 +63,7 @@ services:
     user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
     working_dir: /src
     entrypoint: ["hugo"]
-    command: ["--minify", "--gc", "--cleanDestinationDir", "--destination", "/out", "--environment", "production"]
+    command: ["--minify", "--gc", "--cleanDestinationDir", "--destination", "/out", "--environment", "${HUGO_ENV:-production}"]
     environment:
       HUGO_CACHEDIR: /tmp/hugo_cache
     volumes:
@@ -74,7 +75,7 @@ services:
   hugo:
     image: hugomods/hugo:${HUGO_IMAGE_TAG:-exts-non-root-0.154.5}
     profiles: ["dev"]
-    container_name: avatax-hugo
+    container_name: ${STACK:-avatax}-hugo
     user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
     working_dir: /src
     entrypoint: ["hugo"]
@@ -104,7 +105,7 @@ services:
   mailpit:
     image: axllent/mailpit:latest
     profiles: ["dev"]
-    container_name: avatax-mailpit
+    container_name: ${STACK:-avatax}-mailpit
     ports:
       - "127.0.0.1:8026:8025"
     expose:

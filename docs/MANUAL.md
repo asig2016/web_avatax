@@ -35,7 +35,8 @@ then starts the Docker containers. (The `@` only hides that line from the screen
 | `make preview` | builds the final website and shows it on http://localhost:8090 |
 | `make test` | automatic checks: broken links, old addresses, form service |
 | `make down` | stops all containers |
-| `make deploy` | publishes the site on the server |
+| `make deploy-test` | publishes branch `master` on the test site admin.avatax.eu |
+| `make deploy-live` | publishes branch `live` on avatax.eu |
 
 Good to know:
 
@@ -424,7 +425,13 @@ make test           # automatic checks: broken links, old addresses, forms
 git add -A
 git commit -m "Short description of the change"
 git push            # copy on GitHub (backup)
-make deploy         # publish on the server
+make deploy-test    # publish on the test site https://admin.avatax.eu (password-protected)
+```
+
+When the test site looks right, publish on https://avatax.eu:
+```bash
+git checkout live && git merge --ff-only master && git push && git checkout master
+make deploy-live
 ```
 
 `make preview` stops the live-reload server and shows the finished website as it will appear online.

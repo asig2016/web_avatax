@@ -68,7 +68,7 @@ The table shows what each target runs, so everything can also be done without `m
 | Reload nginx after config changes | – | `docker compose restart web` (check first: see §5) |
 | Update base images | – | `docker compose pull && docker compose up -d` (then build again) |
 | **Server: build + publish + restart + health check** | `make update` | build → publish → `docker compose up -d --build --remove-orphans` → `curl -fsS http://127.0.0.1:8090/healthz` |
-| **Deploy from the laptop** | `make deploy` | `rsync` the project to the server (see `docs/DEPLOY.md` §3), then run `make update` there |
+| **Deploy from the laptop** | `make deploy-test` / `make deploy-live` | `rsync` the pushed branch (master / live) to the server (see `docs/DEPLOY.md` §3), then run `make update` there |
 
 Why `rsync` instead of moving folders: `web` mounts the folder `public/` itself. Replacing the folder
 (`mv`) would leave nginx serving the old, moved folder. Only the **contents** may be replaced.
