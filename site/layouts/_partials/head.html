@@ -46,10 +46,14 @@
 {{ dict
   "@context" "https://schema.org"
   "@type" "AccountingService"
+  "@id" (printf "%s#organization" (absURL "/"))
   "name" site.Title
-  "legalName" site.Params.company
+  "legalName" (site.Params.legalName | default site.Params.company)
   "url" site.Home.Permalink
   "telephone" site.Params.phone
+  "email" site.Params.email
+  "vatID" site.Params.vatID
+  "memberOf" (dict "@type" "Organization" "name" "ETL GLOBAL" "url" "https://www.etl-global.com/")
   "logo" ("images/logo.png" | absURL)
   "address" (dict "@type" "PostalAddress" "streetAddress" site.Params.street "postalCode" "117 42" "addressLocality" "Athens" "addressCountry" "GR")
   "geo" (dict "@type" "GeoCoordinates" "latitude" site.Params.lat "longitude" site.Params.lon)

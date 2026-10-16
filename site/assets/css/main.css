@@ -70,6 +70,8 @@ h3 { font-size: 1.15rem; margin: 1.4em 0 .4em; }
   border-bottom: 1px solid var(--line);
 }
 .header-inner { display: flex; align-items: center; gap: 16px; min-height: 72px; }
+/* header contact button: phones and tablets only (wide screens have "Kontakt" in the menu); shown in the 1020px media query */
+.header-cta { display: none; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--brand-dark); margin-right: auto; }
 .brand img { width: auto; height: 46px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
@@ -110,6 +112,7 @@ h3 { font-size: 1.15rem; margin: 1.4em 0 .4em; }
 
 @media (max-width: 1020px) {
   .nav-toggle { display: inline-flex; }
+  .header-cta { display: inline-flex; padding: .45em 1em; font-size: .92rem; }
   .nav-panel {
     display: none; position: absolute; left: 0; right: 0; top: 100%;
     flex-direction: column; align-items: stretch; gap: 12px; padding: 12px 16px 20px;
@@ -251,6 +254,17 @@ h3 { font-size: 1.15rem; margin: 1.4em 0 .4em; }
 .cta-title { font-weight: 700; color: var(--brand-dark); font-size: 1.1rem; }
 .cta-card .phone { font-weight: 700; font-size: 1.1rem; text-decoration: none; }
 .cta-card .btn { margin-top: .6em; }
+.cta-hours { font-size: .88rem; color: var(--muted); }
+/* "Nächste Schritte" at the end of service pages (partial next-steps.html) */
+.next-steps { margin-top: 2.4em; padding: 22px 24px; border-radius: var(--radius); background: var(--accent-light); }
+.next-steps h2 { margin-top: 0; }
+.next-steps ol { margin: 0 0 1em; padding-left: 1.3em; }
+.next-steps li { margin: .25em 0; }
+.next-steps-note { font-size: .92rem; color: var(--muted); margin: -.3em 0 1em; }
+.next-steps-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.next-steps-contact { margin: 0; font-size: .92rem; }
+.next-steps-full { margin-top: 0; background: none; padding: 0; }
+.contact-band p a { color: #fff; }
 
 .tag-list { list-style: none; padding: 0; margin: 1.2em 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .tag-list li { padding: .45em 1em; border-radius: 999px; background: var(--brand-soft); color: var(--brand-dark); font-weight: 500; }

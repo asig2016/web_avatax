@@ -6,20 +6,15 @@ description: "Ausländische Gesellschaften erwerben Immobilien in Griechenland o
 url: /de/leistungen/ihr-start-in-griechenland/unternehmen/immobilienerwerb/
 icon: "building"
 weight: 50
-review: "2026-10-16 neu ausgerichtet (Erwerb ohne Niederlassung; vorher „Immobiliengesellschaft“) auf Grundlage von Art. 8 Ges. 5104/2024, Art. 47 und 58 Ges. 4172/2013, Art. 15–17 Ges. 3091/2002 und AADE-Entscheidung A.1014/2026 – bitte fachlich prüfen"
-faq:
-  - q: "Braucht meine Gesellschaft eine Niederlassung in Griechenland, um eine Immobilie zu kaufen?"
-    a: "Nein. Eine ausländische Gesellschaft kann Immobilien in Griechenland erwerben, ohne eine Zweigniederlassung oder Tochtergesellschaft zu gründen. Erforderlich ist lediglich die Registrierung beim griechischen Finanzamt, mit der die Gesellschaft eine griechische Steuernummer erhält."
-  - q: "Welche Unterlagen braucht die Gesellschaft?"
-    a: "In der Regel den Gesellschaftsvertrag, einen aktuellen Handelsregisterauszug und Nachweise über die Vertretungsbefugnis – mit Apostille und amtlicher griechischer Übersetzung. Die genaue Liste stimmen wir mit Ihnen und dem Notar ab."
-  - q: "Welche Steuern fallen für die Immobilie an?"
-    a: "Beim Kauf die Grunderwerbsteuer, bei Neubauten gegebenenfalls Umsatzsteuer; jedes Jahr die Immobiliensteuer ENFIA. Mieteinkünfte versteuert die Gesellschaft in Griechenland. Besonders wichtig ist die Sondersteuer auf Immobilien: jedes Jahr 15 % des objektiven Werts zum 1. Januar – nicht des Kaufpreises. Die Befreiung gilt nicht automatisch, sondern setzt voraus, dass die Gesellschaft jedes Jahr die Erklärung mit dem Befreiungsantrag und allen Nachweisen korrekt einreicht. Das übernehmen wir für Sie."
+review: "2026-10-16 neu ausgerichtet (Erwerb ohne Niederlassung; vorher „Immobiliengesellschaft“) auf Grundlage von Art. 8 Ges. 5104/2024, Art. 47 und 58 Ges. 4172/2013, Art. 15–17 Ges. 3091/2002 und AADE-Entscheidung A.1014/2026 – bitte fachlich prüfen; 2026-10-16: FAQ entfernt (Inhalt steht im Text)"
+ctaText: "Anfrage zum Immobilienerwerb senden"
+ctaTopic: "property"
 ---
 Eine ausländische Gesellschaft kann Immobilien in Griechenland erwerben, **ohne eine Zweigniederlassung oder Tochtergesellschaft zu gründen**. Erforderlich ist lediglich die Registrierung beim griechischen Finanzamt. So erwerben Unternehmen etwa Büroräume, Wohnungen für Mitarbeiter oder eine Ferienimmobilie unmittelbar auf die eigene Gesellschaft. Wir übernehmen die steuerliche Seite – vor, während und nach dem Erwerb.
 
 ## Erwerb ohne Niederlassung
 
-- **Registrierung beim Finanzamt:** Die Gesellschaft erhält eine griechische Steuernummer (ΑΦΜ); sie ist Voraussetzung für den notariellen Kaufvertrag.
+- **Registrierung beim Finanzamt:** Die Gesellschaft erhält eine griechische Steuernummer (AFM); sie ist Voraussetzung für den notariellen Kaufvertrag.
 - **Steuerlicher Vertreter:** Die Gesellschaft kann einen [steuerlichen Vertreter](/de/leistungen/fiskalvertretung/) nach Art. 8 des Steuerverfahrensgesetzes (Gesetz 5104/2024) bestellen. Andernfalls registriert sich ihr gesetzlicher Vertreter im griechischen Steuerregister.
 - **Unterlagen:** Gesellschaftsvertrag, aktueller Handelsregisterauszug und Nachweise über die Vertretungsbefugnis werden mit Apostille und amtlicher griechischer Übersetzung vorgelegt.
 - **Kaufvertrag:** Der Vertrag wird vor einem griechischen Notar unterzeichnet und im Kataster (Κτηματολόγιο) eingetragen; Rechtsanwalt und Ingenieur prüfen Eigentum und Gebäude wie beim [Immobilienkauf als Privatperson](/de/leistungen/ihr-start-in-griechenland/privatpersonen/immobilienkauf/).

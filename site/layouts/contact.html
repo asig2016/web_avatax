@@ -19,13 +19,23 @@
       </div>
       <div class="field-row">
         <div class="field">
-          <label for="c-phone">{{ T "formPhone" }} *</label>
-          <input id="c-phone" name="phone" type="tel" autocomplete="tel" required maxlength="50">
+          <label for="c-company">{{ T "formCompany" }}</label>
+          <input id="c-company" name="company" type="text" autocomplete="organization" maxlength="200">
         </div>
         <div class="field">
-          <label for="c-subject">{{ T "formSubject" }} *</label>
-          <input id="c-subject" name="subject" type="text" required maxlength="200">
+          <label for="c-phone">{{ T "formPhoneOptional" }}</label>
+          <input id="c-phone" name="phone" type="tel" autocomplete="tel" maxlength="50">
         </div>
+      </div>
+      <div class="field">
+        <label for="c-topic">{{ T "formTopic" }} *</label>
+        {{- /* choices in data/topics.toml; ?topic=<key> pre-selects one (main.js) */}}
+        <select id="c-topic" name="topic" required>
+          <option value="">{{ T "formTopicChoose" }}</option>
+          {{- range index site.Data.topics site.Language.Lang }}
+          <option value="{{ .label }}" data-topic="{{ .key }}">{{ .label }}</option>
+          {{- end }}
+        </select>
       </div>
       <div class="field">
         <label for="c-message">{{ T "formMessage" }} *</label>
@@ -38,10 +48,12 @@
   </section>
 
   <aside class="contact-info">
-    <div class="prose">{{ .Content }}</div>
+    {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    <div class="prose">{{ partial "next-steps.html" (dict "page" . "full" true) }}</div>
     <ul class="contact-list">
       <li>{{ partial "icon.html" "pin" }}<span>{{ site.Params.company }}<br>{{ site.Params.street }}<br>{{ site.Params.city }}</span></li>
-      <li>{{ partial "icon.html" "phone" }}<a href="{{ site.Params.phoneHref }}">{{ site.Params.phone }}</a></li>
+      <li>{{ partial "icon.html" "phone" }}<span><a href="{{ site.Params.phoneHref | safeURL }}">{{ site.Params.phone }}</a><br>{{ T "phoneHours" }}</span></li>
+      <li>{{ partial "icon.html" "mail" }}<a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
       {{- with .Params.directions }}<li>{{ partial "icon.html" "metro" }}<span>{{ . }}</span></li>{{ end }}
     </ul>
     {{- $img := resources.Get "images/contact-office.jpg" }}

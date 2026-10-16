@@ -14,6 +14,9 @@
       {{- end }}
     </section>
     {{- end }}
+    {{- if or (eq .Section "services") .Params.nextSteps }}
+    {{ partial "next-steps.html" (dict "page" . "full" false) }}
+    {{- end }}
   </article>
   {{- if not .Params.noAside }}
   <div class="aside">

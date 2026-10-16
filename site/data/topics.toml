@@ -1,0 +1,36 @@
+# Choices for "Ihr Anliegen" in the contact form (contact.html). The key is used in links
+# (/de/kontakt/?topic=relocation) and in the front matter field ctaTopic; the label is sent with the
+# form and becomes the subject of the notification mail. Keep the keys identical in all languages.
+
+de = [
+  { key = "company", label = "Tätigkeit oder Gründung in Griechenland (Gesellschaft, Zweigniederlassung, Repräsentanz)" },
+  { key = "accounting", label = "Buchhaltung und Jahresabschluss Ihrer griechischen Gesellschaft" },
+  { key = "staff", label = "Mitarbeiter in Griechenland, Lohnbuchhaltung" },
+  { key = "representation", label = "Steuerliche Vertretung oder Fiskalvertretung" },
+  { key = "tax", label = "Steuerberatung" },
+  { key = "relocation", label = "Zuzug, Wohnsitz und Pauschalbesteuerung" },
+  { key = "property", label = "Immobilie in Griechenland" },
+  { key = "other", label = "Sonstiges" },
+]
+
+en = [
+  { key = "company", label = "Doing business or setting up in Greece (company, branch, representative office)" },
+  { key = "accounting", label = "Accounting and financial statements of your Greek company" },
+  { key = "staff", label = "Staff in Greece, payroll" },
+  { key = "representation", label = "Tax or VAT fiscal representation" },
+  { key = "tax", label = "Tax advice" },
+  { key = "relocation", label = "Relocation, tax residence and flat-tax regimes" },
+  { key = "property", label = "Property in Greece" },
+  { key = "other", label = "Other" },
+]
+
+el = [
+  { key = "company", label = "Δραστηριοποίηση ή ίδρυση στην Ελλάδα (εταιρεία, υποκατάστημα, γραφείο αντιπροσωπείας)" },
+  { key = "accounting", label = "Λογιστική και οικονομικές καταστάσεις" },
+  { key = "staff", label = "Προσωπικό, μισθοδοσία" },
+  { key = "representation", label = "Φορολογική εκπροσώπηση ή αντιπροσώπευση ΦΠΑ" },
+  { key = "tax", label = "Φοροτεχνικές υπηρεσίες" },
+  { key = "relocation", label = "Μεταφορά φορολογικής κατοικίας, ειδικά καθεστώτα" },
+  { key = "property", label = "Ακίνητα" },
+  { key = "other", label = "Άλλο" },
+]

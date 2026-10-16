@@ -18,6 +18,10 @@
     </a>
     {{- end }}
   </div>
+  {{- if eq .Section "services" }}
+  <div class="prose">{{ partial "next-steps.html" (dict "page" . "full" false) }}</div>
+  {{- else }}
   {{ partial "cta.html" . }}
+  {{- end }}
 </div>
 {{ end }}

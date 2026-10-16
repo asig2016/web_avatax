@@ -5,10 +5,12 @@ seoTitle: "50 % Steuerbefreiung beim Zuzug (Art. 5C) | AVATAX"
 description: "Zum Arbeiten nach Griechenland: 50 % der Einkünfte aus Anstellung oder selbständiger Tätigkeit sieben Jahre steuerfrei (Art. 5C) – Voraussetzungen."
 url: /de/leistungen/umzug-nach-griechenland/arbeitnehmer-und-freiberufler/
 icon: building
-weight: 20
-review: "aus der Seite „Steuervorteile beim Zuzug“ ausgegliedert am 2026-10-05 – bitte prüfen – neue FAQ 2026-10-05: bitte „Homeoffice“ prüfen; FAQ „Sozialversicherung“ am 2026-10-16 entfernt"
+weight: 30
+review: "aus der Seite „Steuervorteile beim Zuzug“ ausgegliedert am 2026-10-05 – bitte prüfen – neue FAQ 2026-10-05: bitte „Homeoffice“ prüfen; FAQ „Sozialversicherung“ am 2026-10-16 entfernt; 2026-10-16: Frage zur Antragsfrist präzisiert"
+ctaText: "Anfrage zum Zuzug senden"
+ctaTopic: "relocation"
 faq:
-  - q: "Bis wann muss der Antrag gestellt werden?"
+  - q: "Bis wann muss der Antrag auf die 50-%-Steuerbefreiung gestellt werden?"
     a: "Der Antrag wird in dem Jahr gestellt, in dem der steuerliche Wohnsitz nach Griechenland verlegt wird. Die Fristen wurden in den letzten Jahren mehrfach geändert; wir prüfen für Sie die jeweils aktuelle Frist."
   - q: "Gilt die Befreiung auch für Einkünfte aus dem Ausland?"
     a: "Nein. Befreit sind nur 50 % der Einkünfte aus nichtselbständiger Arbeit bzw. selbständiger Tätigkeit in Griechenland."

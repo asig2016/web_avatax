@@ -2,17 +2,19 @@
 title: "7 % Pauschalsteuer für Rentner in Griechenland (Art. 5B)"
 linkTitle: "7 % Pauschalsteuer für Rentner"
 seoTitle: "7 % Pauschalsteuer für Rentner in Griechenland | AVATAX"
-description: "Als Rentner nach Griechenland: alle ausländischen Einkünfte 15 Jahre lang pauschal mit 7 % besteuert (Art. 5B) – Voraussetzungen, Unterlagen."
+description: "Als Rentner nach Griechenland: ausländische Einkünfte 15 Jahre lang pauschal mit 7 % versteuern (Art. 5B) – Voraussetzungen, Antrag, Unterlagen."
 url: /de/leistungen/umzug-nach-griechenland/rentner/
 icon: person
-weight: 10
-review: "aus der Seite „Steuervorteile beim Zuzug“ ausgegliedert am 2026-10-05 – bitte prüfen – neue FAQ 2026-10-05: bitte „Steuererklärung“ und „Wegzug vor Ablauf“ prüfen"
+weight: 20
+review: "aus der Seite „Steuervorteile beim Zuzug“ ausgegliedert am 2026-10-05 – bitte prüfen – neue FAQ 2026-10-05: bitte „Steuererklärung“ und „Wegzug vor Ablauf“ prüfen; 2026-10-16: Ton, Frage zur Antragsfrist präzisiert"
+ctaText: "Anfrage zum Zuzug senden"
+ctaTopic: "relocation"
 faq:
   - q: "Wer kann die 7-%-Pauschalsteuer für Rentner beantragen?"
     a: "Natürliche Personen, die als Rentner ihren steuerlichen Wohnsitz nach Griechenland verlegen, in fünf der letzten sechs Jahre nicht in Griechenland steuerlich ansässig waren und aus einem EU-Mitgliedstaat oder einem Staat zuziehen, mit dem Griechenland ein Abkommen über die Zusammenarbeit in Steuersachen hat. Ob die eigene Rente als Rente im Sinne der Regelung gilt, sollte vorab geprüft werden."
   - q: "Können Ehepartner gemeinsam einen Antrag stellen?"
     a: "Nein. Ehepartner und andere Familienmitglieder werden nicht in den Antrag aufgenommen; jede Person stellt bei Bedarf einen eigenen Antrag."
-  - q: "Bis wann muss der Antrag gestellt werden?"
+  - q: "Bis wann muss der Antrag auf die 7-%-Pauschalsteuer gestellt werden?"
     a: "Der Antrag wird in dem Jahr gestellt, in dem der steuerliche Wohnsitz nach Griechenland verlegt wird. Die Fristen wurden in den letzten Jahren mehrfach geändert; wir prüfen für Sie die jeweils aktuelle Frist."
   - q: "Werden auch meine griechischen Einkünfte mit 7 % besteuert?"
     a: "Nein. Die Pauschalsteuer von 7 % gilt nur für Einkünfte aus ausländischen Quellen. Einkünfte aus Griechenland, etwa Mieteinnahmen aus einer griechischen Wohnung, werden nach den allgemeinen Regeln besteuert."
@@ -23,7 +25,7 @@ faq:
   - q: "Was passiert, wenn ich Griechenland vor Ablauf der 15 Jahre verlasse?"
     a: "Die Regelung endet, wenn Sie in Griechenland nicht mehr steuerlich ansässig sind."
 ---
-Rentner, die ihren steuerlichen Wohnsitz nach Griechenland verlegen, können alle Einkünfte aus ausländischen Quellen **15 Jahre lang pauschal mit 7 %** versteuern (Art. 5B des griechischen Einkommensteuergesetzes). Wir prüfen, ob Sie die Voraussetzungen erfüllen, stellen die Unterlagen zusammen, reichen den Antrag ein und übernehmen anschließend Ihre jährlichen Steuererklärungen – auf Deutsch. Dank unserer engen Verbindung zu Deutschland kennen wir auch die deutsche Seite, etwa Rentenbescheide, Ansässigkeitsbescheinigungen und das Doppelbesteuerungsabkommen Deutschland–Griechenland.
+Rentner, die ihren steuerlichen Wohnsitz nach Griechenland verlegen, können alle Einkünfte aus ausländischen Quellen **15 Jahre lang pauschal mit 7 %** versteuern (Art. 5B des griechischen Einkommensteuergesetzes). Wir prüfen, ob Sie die Voraussetzungen erfüllen, stellen die Unterlagen zusammen, reichen den Antrag ein und übernehmen anschließend Ihre jährlichen Steuererklärungen – auf Deutsch. Dabei berücksichtigen wir auch die deutsche Seite – etwa Rentenbescheide, Ansässigkeitsbescheinigungen und das Doppelbesteuerungsabkommen Deutschland–Griechenland.
 
 ## Voraussetzungen
 

@@ -7,7 +7,8 @@
     <div>
       <p class="footer-title">{{ T "address" }}</p>
       <p>{{ site.Params.street }}<br>{{ site.Params.city }}<br>
-        <a href="{{ site.Params.phoneHref }}">{{ T "phone" }}: {{ site.Params.phone }}</a></p>
+        <a href="{{ site.Params.phoneHref | safeURL }}">{{ T "phone" }}: {{ site.Params.phone }}</a><br>
+        <a href="mailto:{{ site.Params.email }}">{{ T "emailLabel" }}: {{ site.Params.email }}</a></p>
     </div>
     <div>
       <p class="footer-title">{{ T "memberOf" }}</p>

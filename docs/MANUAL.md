@@ -182,7 +182,9 @@ After you have checked it, **delete this line**.
 
 ### Optional: frequently asked questions on a page
 
-Add to the settings block (Google can then show them in search results):
+Owner decision 2026-10-16: FAQs are used **only on the relocation pages** (7 % for pensioners, investors,
+50 % exemption). Google no longer shows FAQ results for normal websites, and on other pages the answers mostly
+repeated the text. Where a question adds something, write it into the page text instead. The format:
 
 ```yaml
 faq:
@@ -191,6 +193,24 @@ faq:
   - q: "Second question?"
     a: "Second answer."
 ```
+
+### Contact button and „Nächste Schritte" on a page
+
+Every service page ends with the block „Nächste Schritte" (enquiry → clarification → written offer) and a
+contact button. Two optional settings make the button fit the page:
+
+```yaml
+ctaText: "Anfrage zur Lohnbuchhaltung senden"   # button label (default: "Anfrage senden")
+ctaTopic: "staff"                               # pre-selects "Ihr Anliegen" in the contact form
+```
+
+- Topics and their keys (`company`, `accounting`, `staff`, `representation`, `tax`, `relocation`, `property`,
+  `other`): `site/data/topics.toml`. The label chosen in the form becomes the subject of the notification mail.
+- Texts of „Nächste Schritte" (short version on the pages, full version on the contact page):
+  `site/data/next_steps.toml`.
+- E-mail address, phone and VAT number: `[params]` in `site/hugo.toml`; phone hours: `phoneHours` /
+  `phoneHoursShort` in `site/i18n/*.toml`.
+- Other pages (e.g. About) get the block with `nextSteps: true`.
 
 ---
 

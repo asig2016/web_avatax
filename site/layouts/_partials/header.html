@@ -9,6 +9,9 @@
       </span>
     </a>
 
+    {{- /* contact button for phones and tablets; on wide screens "Kontakt" is in the menu */}}
+    {{- with site.GetPage "/contact" }}<a class="btn header-cta" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
+
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle-bars" aria-hidden="true"></span>
       <span class="nav-toggle-label">{{ T "menu" }}</span>

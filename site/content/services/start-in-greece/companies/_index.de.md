@@ -7,7 +7,9 @@ url: /de/leistungen/ihr-start-in-griechenland/unternehmen/
 icon: building
 weight: 10
 teaser: "Ohne Niederlassung, Repräsentanz, Zweigniederlassung, Tochtergesellschaft oder Immobilienerwerb – Begleitung ausländischer Unternehmen."
-review: "2026-10-05 in Überblick und vier Unterseiten aufgeteilt; neue Seite „ohne Niederlassung“ – bitte prüfen; 2026-10-16: Punkt „Immobilienerwerb“ (vorher „Immobiliengesellschaft“) neu: Kauf ohne Niederlassung, nur steuerliche Registrierung"
+review: "2026-10-05 in Überblick und vier Unterseiten aufgeteilt; neue Seite „ohne Niederlassung“ – bitte prüfen; 2026-10-16: Punkt „Immobilienerwerb“ (vorher „Immobiliengesellschaft“) neu: Kauf ohne Niederlassung, nur steuerliche Registrierung; 2026-10-16: Punkte der Liste verlinkt"
+ctaText: "Anfrage zu Ihrem Vorhaben senden"
+ctaTopic: "company"
 heroImage: "images/start-companies.jpg"
 heroAlt: "Beleuchtete Büros hinter der Glasfassade eines modernen Bürogebäudes"
 ---
@@ -15,10 +17,10 @@ Für die Tätigkeit in Griechenland stehen ausländischen Unternehmen im Wesentl
 
 ## Welcher Weg passt zu Ihnen?
 
-- **Ohne Niederlassung:** Sie liefern oder leisten aus dem Ausland, entsenden eigene Mitarbeiter oder beschäftigen einzelne Mitarbeiter in Griechenland – oft der erste Schritt.
-- **Repräsentanz:** ein Kontakt- und Koordinationsbüro ohne eigene Geschäfte, in der Regel nicht ertragsteuerpflichtig.
-- **Zweigniederlassung:** eine eingetragene Betriebsstätte Ihres Unternehmens mit eigener Geschäftstätigkeit, in Griechenland steuerpflichtig.
-- **Tochtergesellschaft:** eine eigenständige griechische Gesellschaft, meist eine I.K.E. oder A.E.
-- **Immobilienerwerb:** der Kauf von Immobilien in Griechenland durch Ihre Gesellschaft – ohne Zweigniederlassung oder Tochtergesellschaft, lediglich mit der Registrierung beim griechischen Finanzamt (griechische Steuernummer).
+- **[Ohne Niederlassung](/de/leistungen/ihr-start-in-griechenland/unternehmen/ohne-niederlassung/):** Sie liefern oder leisten aus dem Ausland, entsenden eigene Mitarbeiter oder beschäftigen einzelne Mitarbeiter in Griechenland – oft der erste Schritt.
+- **[Repräsentanz](/de/leistungen/ihr-start-in-griechenland/unternehmen/repraesentanz/):** ein Kontakt- und Koordinationsbüro ohne eigene Geschäfte, in der Regel nicht ertragsteuerpflichtig.
+- **[Zweigniederlassung](/de/leistungen/ihr-start-in-griechenland/unternehmen/zweigniederlassung/):** eine eingetragene Betriebsstätte Ihres Unternehmens mit eigener Geschäftstätigkeit, in Griechenland steuerpflichtig.
+- **[Tochtergesellschaft](/de/leistungen/ihr-start-in-griechenland/unternehmen/tochtergesellschaft/):** eine eigenständige griechische Gesellschaft, meist eine I.K.E. oder A.E.
+- **[Immobilienerwerb](/de/leistungen/ihr-start-in-griechenland/unternehmen/immobilienerwerb/):** der Kauf von Immobilien in Griechenland durch Ihre Gesellschaft – ohne Zweigniederlassung oder Tochtergesellschaft, lediglich mit der Registrierung beim griechischen Finanzamt (griechische Steuernummer).
 
 Nach dem Start übernehmen wir Ihre [Buchhaltung](/de/leistungen/buchhaltung-und-jahresabschluss/), [Lohnbuchhaltung](/de/leistungen/lohnbuchhaltung/) und [Steuerberatung](/de/leistungen/steuerberatung/) sowie die [steuerliche Vertretung](/de/leistungen/fiskalvertretung/).

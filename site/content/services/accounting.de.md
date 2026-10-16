@@ -6,25 +6,20 @@ description: "Buchhaltung für Tochtergesellschaften, Niederlassungen und Untern
 url: /de/leistungen/buchhaltung-und-jahresabschluss/
 icon: book
 weight: 10
-teaser: "Buchhaltung und Jahresabschluss für Ihre griechische Gesellschaft oder Niederlassung – nach griechischem Recht, berichtet auf Deutsch."
-review: "Text für deutschsprachige Unternehmen auf Basis von Quellen (Ges. 4308/2014, AADE, IFRS-Profil Griechenland) – bitte prüfen"
+teaser: "Buchhaltung und Jahresabschluss für Ihre griechische Gesellschaft oder Niederlassung – nach griechischem Recht, mit Berichten auf Deutsch."
+review: "Text für deutschsprachige Unternehmen auf Basis von Quellen (Ges. 4308/2014, AADE, IFRS-Profil Griechenland) – bitte prüfen; 2026-10-16: FAQ in den Text übernommen"
+ctaText: "Anfrage zur Buchhaltung senden"
+ctaTopic: "accounting"
 menus:
   main:
     parent: services
     weight: 10
-faq:
-  - q: "Muss eine griechische Tochtergesellschaft nach IFRS bilanzieren?"
-    a: "Nur in bestimmten Fällen. IFRS sind für börsennotierte Gesellschaften verpflichtend sowie für Gesellschaften, die in einen IFRS-Konzernabschluss einbezogen werden und dort bestimmte Schwellenwerte (5 % des Konzernumsatzes, der Konzernbilanzsumme oder des Konzernergebnisses) erreichen. In allen anderen Fällen gelten die griechischen Rechnungslegungsstandards (Gesetz 4308/2014); IFRS können freiwillig angewendet werden."
-  - q: "Was ist myDATA?"
-    a: "myDATA ist die Plattform der griechischen Finanzverwaltung (AADE) für die elektronischen Bücher. Rechnungen und ihre buchhalterische Einordnung werden dort laufend übermittelt; die Daten bilden die Grundlage für Umsatzsteuer und Ertragsteuern."
-  - q: "Erhalten wir die Zahlen im Format unserer Muttergesellschaft?"
-    a: "Ja. Neben dem griechischen Abschluss stellen wir die Zahlen auf Wunsch im Format und nach dem Kontenplan Ihrer Muttergesellschaft bereit, monatlich oder quartalsweise."
 ---
-Griechische Tochtergesellschaften, Niederlassungen und Einzelunternehmen führen ihre Bücher nach griechischem Recht und übermitteln ihre Daten laufend elektronisch an die Finanzverwaltung. Wir übernehmen die gesamte Buchhaltung – auf Wunsch einschließlich täglicher Bankabstimmung und Zahlungsverkehr – und berichten Ihnen sowie Ihrer Muttergesellschaft auf Deutsch.
+Griechische [Tochtergesellschaften](/de/leistungen/ihr-start-in-griechenland/unternehmen/tochtergesellschaft/), [Niederlassungen](/de/leistungen/ihr-start-in-griechenland/unternehmen/zweigniederlassung/) und Einzelunternehmen führen ihre Bücher nach griechischem Recht und übermitteln ihre Daten laufend elektronisch an die Finanzverwaltung. Wir übernehmen die gesamte Buchhaltung – auf Wunsch einschließlich täglicher Bankabstimmung und Zahlungsverkehr – und berichten Ihnen sowie Ihrer Muttergesellschaft auf Deutsch.
 
 ## Besonderheiten der griechischen Rechnungslegung
 
-- **Rechnungslegungsstandard:** Grundlage sind die griechischen Rechnungslegungsstandards (Gesetz 4308/2014). IFRS sind nur in bestimmten Fällen vorgeschrieben, etwa für Gesellschaften, die in einen IFRS-Konzernabschluss einbezogen werden und dort festgelegte Schwellenwerte erreichen.
+- **Rechnungslegungsstandard:** Grundlage sind die griechischen Rechnungslegungsstandards (Gesetz 4308/2014). IFRS sind nur in bestimmten Fällen vorgeschrieben, etwa für börsennotierte Gesellschaften und für Gesellschaften, die in einen IFRS-Konzernabschluss einbezogen werden und dort festgelegte Schwellenwerte erreichen (5 % des Konzernumsatzes, der Konzernbilanzsumme oder des Konzernergebnisses). IFRS können freiwillig angewendet werden.
 - **Elektronische Bücher (myDATA):** Rechnungen und ihre buchhalterische Einordnung werden laufend an die Plattform myDATA der Finanzverwaltung übermittelt.
 - **E-Rechnung:** Zwischen griechischen Unternehmen ist die elektronische Rechnung seit Februar 2026 für Unternehmen mit mehr als 1 Mio. Euro Umsatz verpflichtend; die übrigen Unternehmen folgen im Laufe des Jahres 2026.
 - **Offenlegung:** Gesellschaften veröffentlichen ihren Jahresabschluss im griechischen Handelsregister (GEMI).
@@ -35,7 +30,7 @@ Griechische Tochtergesellschaften, Niederlassungen und Einzelunternehmen führen
 - laufende Buchführung nach griechischem Recht einschließlich myDATA und Umsatzsteuererklärungen
 - Jahresabschluss, erstellt und unterzeichnet von zugelassenen Buchhaltern (Klasse A), und Offenlegung im GEMI
 - Körperschaftsteuererklärung
-- monatliche oder quartalsweise Berichte im Format Ihrer Muttergesellschaft
+- monatliche oder quartalsweise Berichte im Format und nach dem Kontenplan Ihrer Muttergesellschaft
 - tägliche Abstimmung der Bankkonten – nach Vereinbarung und sofern uns der erforderliche Zugang eingeräumt wird
 - Zahlungsverkehr: Vorbereitung der Zahlungen zur Freigabe durch Ihr Unternehmen oder vollständige Ausführung nach zuvor vereinbarten Regeln
 

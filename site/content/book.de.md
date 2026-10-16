@@ -2,7 +2,7 @@
 title: "Termin vereinbaren"
 linkTitle: "Termin"
 seoTitle: "Termin online vereinbaren | AVATAX Athen"
-description: "Vereinbaren Sie online einen Termin mit unseren Buchhaltern und Steuerberatern in Athen: Thema, Ansprechpartner und freie Zeit wählen, per E-Mail bestätigen."
+description: "Vereinbaren Sie online einen Termin mit unseren Buchhaltern in Athen: Thema, Ansprechpartner und freie Zeit wählen, per E-Mail bestätigen."
 url: /de/termin/
 layout: booking
 chatButton: false

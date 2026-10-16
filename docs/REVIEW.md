@@ -141,6 +141,35 @@ checked against sources. Please verify especially:
   makes clear that it is not a German Steuerberatungsgesellschaft under § 53 StBerG.
 - EL: more technical terms (ΕΛΠ/ν. 4308/2014, myDATA, ΑΠΔ, ΕΡΓΑΝΗ ΙΙ, Ε1/Ε2/Ε9, άρθρα 5Β/5Γ ΚΦΕ).
 
+## Review and conversion rework (2026-10-16) – please check
+
+Independent review of the German site (conversion, positioning, search); batches 1 + 2 implemented.
+
+- **„Steuerberater":** not used as our title any more (tax page seoTitle now „Steuerberatung in Griechenland");
+  the tax page explains descriptively that the Greek profession is Λογιστής-Φοροτεχνικός – **legal check of this
+  sentence** recommended.
+- **Contact flow:** „Nächste Schritte" on every service page and on About; contact page with the full version.
+  Wording made more personal on 2026-10-16 (owner: the first version read like a form); the paid first
+  consultation is now a small note below the steps. Please confirm the note („Einzelfragen beantworten wir im
+  Rahmen einer Erstberatung, deren Honorar bei Beauftragung angerechnet wird") and that the phone hours
+  „Mo–Fr 9–17 Uhr … auf Deutsch" are always covered.
+- **Contact form:** phone optional, new field „Unternehmen", subject replaced by the choice „Ihr Anliegen".
+- **FAQs** only on the three relocation pages; useful answers of the others moved into the text.
+- **Home, About, Ihr Start, Selbständig, Länger in Griechenland:** rewritten (German angle first, no self-praise,
+  business-first openings). Please proofread.
+- **German only:** English/Greek URLs now go to their German counterpart (`nginx/conf.d/redirects-de-only.conf`,
+  `make de-only-map`); unknown URLs get the German 404 page.
+- **EN/EL parity before switching the languages back on:** the EN/EL pages still have the old texts (FAQs on all
+  pages, old titles, old home/About texts, „Unterstützung Ihrer Buchhaltung", self-employed and long-stay
+  openings). They need the same changes, adapted to their audiences (rule 4), plus `nextSteps`/`ctaText`/
+  `ctaTopic` front matter.
+- **Server (owner):** https redirects of avatax.gr / avatax.net / www.avatax.eu to avatax.eu, `client_max_body_size
+  6m` and resolver in the reverse proxy; logrotate for `logs/nginx` (privacy policy: 30 days).
+- **Later (batch 3):** deeper B2B pages (subsidiary, branch, representative office, without establishment),
+  sections on reporting to the parent company, tax audits and transfer pricing, verified Greece/Germany comparison
+  tables, „Stand" dates, new pages (VAT registration, posting staff, German pension, selling property,
+  inheritance, Golden Visa taxes), Google Business Profile.
+
 ## Pages to proofread
 
 - `careers/apply.de.md` — "neue deutsche Seite, aus dem Griechischen übersetzt"

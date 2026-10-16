@@ -1,18 +1,20 @@
 ---
 title: "100.000 € Pauschalsteuer auf Auslandseinkünfte für Investoren (Art. 5A)"
 linkTitle: "100.000 € Pauschalsteuer für Investoren"
-seoTitle: "100.000 € Pauschalsteuer für Investoren (Art. 5A) | AVATAX"
+seoTitle: "Non-Dom in Griechenland: 100.000 € Pauschalsteuer | AVATAX"
 description: "Als Investor nach Griechenland: alle ausländischen Einkünfte bis zu 15 Jahre lang mit 100.000 € pro Jahr pauschal besteuert (Art. 5A) – Voraussetzungen."
 url: /de/leistungen/umzug-nach-griechenland/pauschalsteuer-fuer-investoren/
 icon: finance
-weight: 30
-review: "neue Seite 2026-10-05 auf Grundlage von Art. 5A griech. Einkommensteuergesetz i. d. F. des Gesetzes 5313/2026 und der AADE-Entscheidung A.1147/2026 – bitte fachlich prüfen – neue FAQ 2026-10-05"
+weight: 10
+review: "neue Seite 2026-10-05 auf Grundlage von Art. 5A griech. Einkommensteuergesetz i. d. F. des Gesetzes 5313/2026 und der AADE-Entscheidung A.1147/2026 – bitte fachlich prüfen – neue FAQ 2026-10-05; 2026-10-16: seoTitle „Non-Dom“, Frage zur Antragsfrist präzisiert"
+ctaText: "Anfrage zum Zuzug senden"
+ctaTopic: "relocation"
 faq:
   - q: "Wer kann die Pauschalsteuer von 100.000 € beantragen?"
     a: "Natürliche Personen, die ihren steuerlichen Wohnsitz nach Griechenland verlegen, in sieben der letzten acht Jahre nicht in Griechenland steuerlich ansässig waren und innerhalb von drei Jahren nach dem Antrag mindestens 500.000 € in Griechenland investieren."
   - q: "Können Familienangehörige einbezogen werden?"
     a: "Ja. Ehe- oder Lebenspartner und Verwandte wie Kinder und Eltern können einbezogen werden, von Anfang an oder später. Die Pauschalsteuer beträgt 20.000 € pro Jahr und Person."
-  - q: "Bis wann muss der Antrag gestellt werden?"
+  - q: "Bis wann muss der Antrag auf die Pauschalsteuer von 100.000 € gestellt werden?"
     a: "Die feste Frist zum 31. März ist entfallen. Die Antragsfristen hängen jetzt vom Jahr des Zuzugs ab; wir prüfen für Sie die jeweils aktuelle Frist."
   - q: "Fallen die 100.000 € auch in Jahren mit geringen Auslandseinkünften an?"
     a: "Ja. Der Pauschalbetrag ist jedes Jahr fällig, unabhängig von der tatsächlichen Höhe der ausländischen Einkünfte."

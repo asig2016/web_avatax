@@ -11,7 +11,7 @@ COMPOSE := docker compose
 UIDGID  := $(shell id -u):$(shell id -g)
 
 .DEFAULT_GOAL := help
-.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects deploy stats update rollback status
+.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects de-only-map deploy stats update rollback status
 
 help:
 	@echo "Laptop"
@@ -78,13 +78,18 @@ test-links:
 	docker run --rm -v "$(CURDIR)/public":/public:ro,z lycheeverse/lychee:latest \
 		--offline --no-progress --root-dir /public --exclude-path /public/en/index.html --exclude '/api/' '/public/**/*.html'
 
-# Every old Drupal URL must answer 301 and lead to a page that exists.
+# TEMPORARY (German only): English/Greek URL -> German page map for nginx; run after URLs change.
+de-only-map:
+	python3 -I tests/de-only-map.py > nginx/conf.d/redirects-de-only.conf
+
+# Every old Drupal URL must answer with a redirect (301; 302 while only German is online)
+# and lead to a page that exists.
 test-redirects:
 	@fail=0; while read -r path; do \
 		case "$$path" in ''|\#*) continue;; esac; \
 		code=$$(curl -s -o /dev/null -w '%{http_code}' "$(BASE)$$path"); \
 		final=$$(curl -s -L -o /dev/null -w '%{http_code} %{url_effective}' "$(BASE)$$path"); \
-		if [ "$$code" = 301 ] && [ "$${final%% *}" = 200 ]; then echo "ok   $$path -> $${final#* }"; \
+		if { [ "$$code" = 301 ] || [ "$$code" = 302 ]; } && [ "$${final%% *}" = 200 ]; then echo "ok   $$path -> $${final#* }"; \
 		else echo "FAIL $$path ($$code, final $$final)"; fail=1; fi; \
 	done < tests/old-urls.txt; exit $$fail
 
@@ -113,6 +118,7 @@ update:
 	@mkdir -p public public.next public.prev logs/nginx
 	$(MAKE) build publish
 	$(COMPOSE) up -d --build --remove-orphans
+	$(COMPOSE) exec -T web nginx -s reload   # nginx/conf.d is bind-mounted; a running container keeps the old config
 	@sleep 3
 	@curl -fsS -o /dev/null $$(grep -E '^WEB_BIND=' .env | cut -d= -f2 | sed 's|^|http://|')/healthz && echo "Health check OK" || (echo "HEALTH CHECK FAILED – see 'make logs'"; exit 1)
 

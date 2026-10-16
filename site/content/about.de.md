@@ -1,23 +1,27 @@
 ---
 title: "Über uns"
 seoTitle: "Über uns – Buchhaltung & Steuerberatung in Athen | AVATAX"
-description: "AVATAX A.E.: verlässliche Buchhaltung und Steuerberatung in Athen – ein qualifiziertes Team mit Deutsch, Griechisch und Englisch an der Syngrou Avenue."
+description: "AVATAX A.E.: Buchhaltung, Lohn und Steuerberatung in Athen – fester deutschsprachiger Ansprechpartner, Vier-Augen-Prinzip, Mehrkosten nur nach Absprache."
 url: /de/ueber-uns/
-summary: "Verlässlichkeit ist unser Grundsatz. Unser Team verbindet Hochschulabsolventen mit erfahrenen Fachleuten aus Buchhaltung und Steuerberatung; alle Mitarbeiter werden bei ihrer Einstellung geschult und besuchen regelmäßig Fortbildungen."
+summary: "Jedes Mandat betreut ein fester, deutschsprachiger Ansprechpartner. Abschlüsse und Erklärungen prüft vor der Abgabe eine zweite Fachkraft, und über absehbare Schwierigkeiten und Mehrkosten informieren wir Sie, bevor sie entstehen."
+review: "2026-10-16 neu formuliert: Arbeitsweise statt Eigenlob, keine Namen (Entscheidung der Geschäftsführung) – bitte prüfen"
+nextSteps: true
 menus:
   main:
     identifier: about
     weight: 20
 ---
-## Unser Grundsatz
+## So arbeiten wir
 
-Verlässlichkeit gegenüber unseren Mandanten ist unser Grundsatz. Aus Respekt vor unseren Mandanten informieren wir sie rechtzeitig über mögliche Schwierigkeiten, die während unserer Tätigkeit auftreten können, oder über zusätzliche Kosten. Wir bauen Vertrauensverhältnisse auf und sind für unsere Mandanten da, wenn sie uns brauchen.
+- **Fester Ansprechpartner:** Jedes Mandat betreut ein fester Ansprechpartner, der Ihr Unternehmen oder Ihre Situation kennt – auf Deutsch, Griechisch oder Englisch.
+- **Vier-Augen-Prinzip:** Jahresabschlüsse, Steuererklärungen und Auskünfte prüft vor der Abgabe eine zweite Fachkraft.
+- **Zugelassene Buchhalter:** Jahresabschlüsse und Steuererklärungen erstellen und unterzeichnen Buchhalter mit der Zulassung der Wirtschaftskammer Griechenlands (Λογιστής-Φοροτεχνικός, Klasse A).
+- **Mehrkosten nur nach Absprache:** Über absehbare Schwierigkeiten und zusätzliche Kosten informieren wir Sie, bevor sie entstehen.
+- **Fortbildung:** Unsere Mitarbeiter bilden sich regelmäßig fort, um die häufigen Änderungen im griechischen Steuer- und Arbeitsrecht zu verfolgen.
 
-## Unsere Mitarbeiter
+## Unsere Mandanten
 
-Unser Team verbindet Hochschulabsolventen mit erfahrenen Fachleuten aus Buchhaltung und Steuerberatung. Alle Mitarbeiter werden bei ihrer Einstellung geschult und besuchen regelmäßig Fortbildungen, um stets über die aktuellen Entwicklungen in Buchhaltung und Steuern informiert zu sein.
-
-Ein großer Vorteil sind die sehr guten Englisch- und Deutschkenntnisse unserer Mitarbeiter: Sie erleichtern die Kommunikation mit Behörden und Unternehmen im Ausland, vor allem im deutschsprachigen Raum. Deshalb zählen viele [Unternehmen aus dem Ausland](/de/leistungen/fiskalvertretung/) und [Privatpersonen, die nach Griechenland ziehen](/de/leistungen/umzug-nach-griechenland/), zu unseren Mandanten.
+Wir betreuen Unternehmen aus dem Ausland mit Tätigkeit in Griechenland – mit [Tochtergesellschaft](/de/leistungen/ihr-start-in-griechenland/unternehmen/tochtergesellschaft/), [Zweigniederlassung](/de/leistungen/ihr-start-in-griechenland/unternehmen/zweigniederlassung/) oder [ohne eigene Niederlassung](/de/leistungen/ihr-start-in-griechenland/unternehmen/ohne-niederlassung/) – sowie [Privatpersonen, die nach Griechenland ziehen](/de/leistungen/umzug-nach-griechenland/) oder dort Immobilien besitzen. Mit deutschsprachigen Mandanten und ihren Beratern in Deutschland arbeiten wir auf Deutsch und stellen die griechischen Regelungen den deutschen gegenüber.
 
 Einen Überblick über alle Leistungen finden Sie unter [Leistungen](/de/leistungen/).
 
@@ -25,9 +29,9 @@ Einen Überblick über alle Leistungen finden Sie unter [Leistungen](/de/leistun
 
 AVATAX A.E. ist Mitglied von [ETL GLOBAL](https://www.etl-global.com/), einem internationalen Netzwerk unabhängiger Beratungskanzleien. Für Fragen, die ein anderes Land betreffen, vermitteln wir Ihnen Ansprechpartner im Netzwerk. Jede Mitgliedskanzlei ist rechtlich selbständig und erbringt ihre Leistungen in eigener Verantwortung.
 
-## Unsere Büros
+## Unser Büro
 
-Unsere Büros befinden sich an der Syngrou Avenue 76, nahe der Metrostation Syngrou-Fix: vollständig renovierte Räume mit eigenen Besprechungsräumen, gut erreichbar mit allen öffentlichen Verkehrsmitteln.
+Unser Büro mit eigenen Besprechungsräumen liegt an der Syngrou Ave. 76 in Athen, nahe der Metrostation Syngrou-Fix. Besprechungen sind auch per Video möglich.
 
 ## Sprachen
 

@@ -1,0 +1,53 @@
+# "Nächste Schritte" block (partial next-steps.html).
+# short = end of every service page (and About); full = contact page. Markdown is allowed in the steps.
+# note_* = small note below the steps (first consultation).
+# Owner decisions 2026-10-16: no reply time stated; individual questions as a paid first consultation,
+# credited on engagement; written offer before mandates; friendly, personal wording (not form-like).
+
+[de]
+title = "Nächste Schritte"
+short = [
+  "Sie schildern uns Ihr Vorhaben – per Formular, E-Mail oder Telefon.",
+  "Wir besprechen mit Ihnen Ziele und Umfang.",
+  "Sie erhalten ein schriftliches Angebot.",
+]
+note_short = "Einzelfragen beantworten wir im Rahmen einer Erstberatung, deren Honorar bei Beauftragung angerechnet wird."
+full = [
+  "Sie schreiben uns kurz, worum es geht – per Formular, E-Mail oder Telefon.",
+  "Wir melden uns zeitnah persönlich bei Ihnen, auf Deutsch.",
+  "Wir besprechen Ihr Vorhaben per Video oder in unserem Büro in Athen.",
+  "Für eine laufende Zusammenarbeit erhalten Sie ein schriftliches Angebot.",
+]
+note_full = "Konkrete Einzelfragen beantworten wir im Rahmen einer Erstberatung; deren Honorar rechnen wir an, wenn Sie uns anschließend beauftragen."
+
+[en]
+title = "Next steps"
+short = [
+  "You describe your plans – by form, e-mail or phone.",
+  "We discuss your goals and the scope with you.",
+  "You receive a written offer.",
+]
+note_short = "Individual questions are answered in a first consultation; its fee is credited if you engage us."
+full = [
+  "You tell us briefly what it is about – by form, e-mail or phone.",
+  "We get back to you personally and shortly, in English or German.",
+  "We discuss your plans by video or in our office in Athens.",
+  "For ongoing work you receive a written offer.",
+]
+note_full = "Specific individual questions are answered in a first consultation; its fee is credited if you then engage us."
+
+[el]
+title = "Επόμενα βήματα"
+short = [
+  "Μας περιγράφετε το θέμα σας – με τη φόρμα, με e-mail ή τηλεφωνικά.",
+  "Συζητάμε μαζί σας τους στόχους και το εύρος.",
+  "Λαμβάνετε γραπτή προσφορά.",
+]
+note_short = "Μεμονωμένα ερωτήματα απαντώνται σε πρώτη συμβουλευτική συνάντηση, η αμοιβή της οποίας συμψηφίζεται σε περίπτωση ανάθεσης."
+full = [
+  "Μας γράφετε σύντομα το θέμα σας – με τη φόρμα, με e-mail ή τηλεφωνικά.",
+  "Επικοινωνούμε σύντομα προσωπικά μαζί σας.",
+  "Συζητάμε το θέμα σας μέσω βιντεοκλήσης ή στο γραφείο μας στην Αθήνα.",
+  "Για μια συνεχή συνεργασία λαμβάνετε γραπτή προσφορά.",
+]
+note_full = "Συγκεκριμένα μεμονωμένα ερωτήματα απαντώνται σε μια πρώτη συμβουλευτική συνάντηση· η αμοιβή της συμψηφίζεται, εάν στη συνέχεια μας αναθέσετε την υπόθεσή σας."

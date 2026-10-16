@@ -2,18 +2,15 @@
 title: "Zweigniederlassung eines ausländischen Unternehmens in Griechenland"
 linkTitle: "Zweigniederlassung"
 seoTitle: "Zweigniederlassung in Griechenland gründen | AVATAX"
-description: "Zweigniederlassung in Griechenland: Eintragung im GEMI, Betriebsstätte, Gewinnabgrenzung zum Stammhaus, Projektniederlassung – und unsere Begleitung."
+description: "Zweigniederlassung in Griechenland gründen: Eintragung im GEMI, Betriebsstätte, Gewinnabgrenzung zum Stammhaus, Buchhaltung und Steuern – auf Deutsch."
 url: /de/leistungen/ihr-start-in-griechenland/unternehmen/zweigniederlassung/
 icon: "building"
 weight: 30
-review: "aus der Startseite ausgegliedert am 2026-10-05 – bitte prüfen"
-faq:
-  - q: "Ist eine Zweigniederlassung eine eigene Gesellschaft?"
-    a: "Nein. Die Zweigniederlassung ist rechtlich nicht selbständig, sondern Teil des ausländischen Unternehmens; sie wird aber im GEMI eingetragen und ist als Betriebsstätte in Griechenland steuerpflichtig."
-  - q: "Was übernehmen Sie nach dem Start?"
-    a: "Wir führen die Buchhaltung, übernehmen die Lohnbuchhaltung, erstellen die Steuererklärungen und dokumentieren die Gewinnabgrenzung zum Stammhaus – auf Deutsch oder Englisch."
+review: "aus der Startseite ausgegliedert am 2026-10-05 – bitte prüfen; 2026-10-16: FAQ entfernt, Einleitung eigenständig"
+ctaText: "Anfrage zur Zweigniederlassung senden"
+ctaTopic: "company"
 ---
-Auch eine Zweigniederlassung (υποκατάστημα) ist rechtlich nicht selbständig, übt jedoch eine eigene Geschäftstätigkeit aus. Sie wird im griechischen Handelsregister (GEMI) eingetragen, begründet eine Betriebsstätte und ist in Griechenland ertragsteuerpflichtig. Zu klären ist insbesondere die Gewinnabgrenzung zwischen Zweigniederlassung und Stammhaus. Die Mitarbeiter sind rechtlich beim Stammhaus angestellt, wirtschaftlich aber der Zweigniederlassung zuzuordnen. Für ein bestimmtes Vorhaben kann eine Projektniederlassung in einem vereinfachten Verfahren angemeldet werden.
+Eine Zweigniederlassung (υποκατάστημα) ist rechtlich nicht selbständig, sondern Teil des ausländischen Unternehmens, übt jedoch eine eigene Geschäftstätigkeit aus. Sie wird im griechischen Handelsregister (GEMI) eingetragen, begründet eine Betriebsstätte und ist in Griechenland ertragsteuerpflichtig. Zu klären ist insbesondere die Gewinnabgrenzung zwischen Zweigniederlassung und Stammhaus. Die Mitarbeiter sind rechtlich beim Stammhaus angestellt, wirtschaftlich aber der Zweigniederlassung zuzuordnen. Für ein bestimmtes Vorhaben kann eine Projektniederlassung in einem vereinfachten Verfahren angemeldet werden.
 
 ## Buchhaltung und Steuern
 

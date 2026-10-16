@@ -1,0 +1,27 @@
+{{- /* "Nächste Schritte" (texts in data/next_steps.toml).
+       Call with (dict "page" . "full" false): short version + page-specific button (front matter ctaText,
+       ctaTopic → /kontakt/?topic=…), phone, hours and e-mail. "full" true = contact page, steps only. */}}
+{{- $p := .page }}
+{{- $full := .full }}
+{{- with index site.Data.next_steps site.Language.Lang }}
+<section class="next-steps{{ if $full }} next-steps-full{{ end }}" id="next-steps">
+  <h2>{{ .title }}</h2>
+  <ol>
+    {{- range (cond $full .full .short) }}
+    <li>{{ . | markdownify }}</li>
+    {{- end }}
+  </ol>
+  {{- with (cond $full .note_full .note_short) }}
+  <p class="next-steps-note">{{ . }}</p>
+  {{- end }}
+  {{- if not $full }}{{ with site.GetPage "/contact" }}
+  <div class="next-steps-actions">
+    <a class="btn" href="{{ .RelPermalink }}{{ with $p.Params.ctaTopic }}?topic={{ . }}{{ end }}">{{ $p.Params.ctaText | default (T "sendEnquiry") }}</a>
+    <p class="next-steps-contact">
+      <a href="{{ site.Params.phoneHref | safeURL }}">{{ site.Params.phone }}</a> · {{ T "phoneHoursShort" }}<br>
+      <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+    </p>
+  </div>
+  {{- end }}{{ end }}
+</section>
+{{- end }}

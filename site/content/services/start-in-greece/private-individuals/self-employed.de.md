@@ -6,18 +6,13 @@ description: "Als Freiberufler oder Selbständiger nach Griechenland: Anmeldung 
 url: /de/leistungen/ihr-start-in-griechenland/privatpersonen/selbstaendig/
 icon: "person"
 weight: 30
-review: "neue Seite 2026-10-06 auf Grundlage von Recherche – bitte prüfen"
-faq:
-  - q: "Wie melde ich mich in Griechenland als Selbständiger an?"
-    a: "Sie melden den Beginn Ihrer Tätigkeit bei der Finanzverwaltung mit dem Code Ihrer Tätigkeit an – vergleichbar mit Gewerbeanmeldung und Fragebogen zur steuerlichen Erfassung in Deutschland. Die Anmeldung bei der Sozialversicherung e-EFKA folgt ab dem ersten Tag des Monats, in dem Sie beginnen. Manche Berufe müssen außerdem einer Kammer oder dem Handelsregister beitreten."
-  - q: "Werden meine weltweiten Einkünfte in Griechenland besteuert?"
-    a: "Wenn Sie Ihren Wohnsitz nach Griechenland verlegen, werden Sie in der Regel in Griechenland unbeschränkt steuerpflichtig; das Doppelbesteuerungsabkommen Deutschland–Griechenland bleibt anwendbar. Unter bestimmten Voraussetzungen sind 50 % der Einkünfte aus der Tätigkeit in Griechenland sieben Jahre lang steuerfrei."
-  - q: "Kann ich weiter für Kunden in Deutschland arbeiten?"
-    a: "Ja. Selbständige in Griechenland können für Kunden überall arbeiten. Rechnungsstellung, Umsatzsteuer und Besteuerungsort hängen davon ab, wo die Kunden sitzen; wir prüfen das für Ihr Geschäft."
+review: "neue Seite 2026-10-06 auf Grundlage von Recherche – bitte prüfen; 2026-10-16: Einleitung für Freiberufler und Unternehmer mit Art. 5C und DBA neu, FAQ in den Text übernommen"
+ctaText: "Anfrage zur Selbständigkeit in Griechenland senden"
+ctaTopic: "relocation"
 cardImage: "images/start-remote.jpg"
 heroAlt: "Heller Schreibtisch mit Laptop und Kaffeetasse"
 ---
-Viele ziehen nach Griechenland und arbeiten dort selbständig – als Berater, Übersetzer, Designer, Entwickler oder Handwerker, oft weiterhin für Kunden in Deutschland. Die Selbständigkeit ist in Griechenland schnell angemeldet, Sozialversicherung, Rechnungsstellung und Steuern folgen aber griechischen Regeln, die sich von den deutschen deutlich unterscheiden. Wir übernehmen Anmeldung, Buchhaltung und Steuererklärungen – auf Deutsch.
+Freiberufler und Unternehmer, die ihren Wohnsitz nach Griechenland verlegen und ihre Tätigkeit dort fortführen – oft weiterhin für Kunden in Deutschland –, können unter bestimmten Voraussetzungen 50 % ihrer Einkünfte aus der Tätigkeit in Griechenland sieben Jahre lang von der Einkommensteuer befreien lassen ([Art. 5C](/de/leistungen/umzug-nach-griechenland/arbeitnehmer-und-freiberufler/)). Welcher Staat welche Einkünfte besteuert, regelt das Doppelbesteuerungsabkommen Deutschland–Griechenland. Sozialversicherung, Rechnungsstellung und Steuern folgen griechischen Regeln, die sich von den deutschen deutlich unterscheiden. Wir prüfen die Folgen vor dem Umzug und übernehmen Anmeldung, Buchhaltung und Steuererklärungen – auf Deutsch.
 
 ## Aufenthalt
 
@@ -27,13 +22,14 @@ Viele ziehen nach Griechenland und arbeiten dort selbständig – als Berater, �
 ## Anmeldung
 
 - **Griechische Steuernummer (AFM)** und Sozialversicherungsnummer (AMKA).
-- **Beginn der Tätigkeit** bei der Finanzverwaltung mit dem Code Ihrer Tätigkeit.
+- **Beginn der Tätigkeit** bei der Finanzverwaltung mit dem Code Ihrer Tätigkeit – vergleichbar mit Gewerbeanmeldung und Fragebogen zur steuerlichen Erfassung in Deutschland.
 - **Sozialversicherung:** Anmeldung bei e-EFKA ab dem ersten Tag des Monats, in dem Sie beginnen. Anders als in Deutschland ist die Sozialversicherung für Selbständige Pflicht; Sie zahlen monatliche Beiträge nach der gewählten Versicherungsklasse, unabhängig vom tatsächlichen Gewinn.
 - Manche Berufe müssen außerdem einer Kammer oder dem Handelsregister (GEMI) beitreten.
 
 ## Rechnungen und Buchhaltung
 
 - Rechnungen und Buchhaltungsdaten werden elektronisch an die Finanzverwaltung übermittelt (myDATA).
+- Sie können weiterhin für Kunden in Deutschland und anderen Staaten arbeiten; Rechnungsstellung, Umsatzsteuer und Besteuerungsort hängen davon ab, wo Ihre Kunden sitzen.
 - **Umsatzsteuer:** Der Regelsatz beträgt 24 %; für kleine Unternehmen unterhalb einer Umsatzgrenze gibt es eine Sonderregelung – ähnlich der deutschen Kleinunternehmerregelung. Leistungen an Unternehmen in anderen EU-Staaten werden in der Regel ohne griechische Umsatzsteuer abgerechnet (Reverse Charge).
 
 ## Einkommensteuer

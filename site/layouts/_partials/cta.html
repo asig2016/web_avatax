@@ -1,8 +1,10 @@
+{{- /* contact box in the sidebar; button label and form pre-selection from front matter ctaText / ctaTopic */}}
+{{- $p := . }}
 {{- with site.GetPage "/contact" }}
 <aside class="cta-card">
   <p class="cta-title">{{ T "getInTouch" }}</p>
-  <p>{{ site.Params.street }}, {{ site.Params.city }}</p>
-  <p><a class="phone" href="{{ site.Params.phoneHref }}">{{ site.Params.phone }}</a></p>
-  <a class="btn" href="{{ .RelPermalink }}">{{ T "contactUs" }}</a>
+  <p><a class="phone" href="{{ site.Params.phoneHref | safeURL }}">{{ site.Params.phone }}</a><br><span class="cta-hours">{{ T "phoneHoursShort" }}</span></p>
+  <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+  <a class="btn" href="{{ .RelPermalink }}{{ with $p.Params.ctaTopic }}?topic={{ . }}{{ end }}">{{ $p.Params.ctaText | default (T "sendEnquiry") }}</a>
 </aside>
 {{- end }}

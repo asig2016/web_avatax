@@ -7,26 +7,25 @@ url: /de/leistungen/lohnbuchhaltung/
 icon: person
 weight: 20
 teaser: "Mitarbeiter in Griechenland beschäftigen – auch ohne griechische Gesellschaft. Lohnabrechnung und Arbeitsrecht auf Deutsch."
-review: "Text für deutschsprachige Unternehmen, die erstmals in Griechenland Mitarbeiter beschäftigen – bitte Umfang und Formulierung prüfen"
+review: "Text für deutschsprachige Unternehmen, die erstmals in Griechenland Mitarbeiter beschäftigen – bitte Umfang und Formulierung prüfen; 2026-10-16: FAQ in den Text übernommen, Vergleich mit Deutschland neu formuliert"
+ctaText: "Anfrage zur Lohnbuchhaltung senden"
+ctaTopic: "staff"
 menus:
   main:
     parent: services
     weight: 20
-faq:
-  - q: "Kann ein deutsches Unternehmen ohne griechische Gesellschaft Mitarbeiter in Griechenland beschäftigen?"
-    a: "Ja, sofern die Tätigkeit der Mitarbeiter keine Betriebsstätte in Griechenland begründet. Tätigkeiten wie IT, Buchhaltung, Qualitätssicherung oder Beratung begründen in der Regel keine Betriebsstätte, Vertriebstätigkeiten und der Abschluss von Verträgen im Namen des Unternehmens dagegen möglicherweise schon. Wir prüfen das vor der Einstellung."
-  - q: "Welche Anpassungen braucht ein deutscher Arbeitsvertrag in der Regel?"
-    a: "Meist die ausdrückliche Nennung von 14 Gehaltszahlungen pro Jahr (einschließlich Weihnachts-, Oster- und Urlaubsgeld), Regelungen zum Urlaub und Kündigungsmodalitäten nach griechischem Arbeitsrecht. Der Vertrag wird in griechischer Sprache – häufig zweisprachig – erstellt und im Original unterschrieben."
 ---
 Sie möchten in Griechenland Mitarbeiter beschäftigen – mit oder ohne eigene griechische Gesellschaft? Das griechische Arbeits- und Sozialversicherungsrecht unterscheidet sich in vielen Punkten vom deutschen: 14 Gehälter im Jahr, Anmeldungen vor Arbeitsbeginn, elektronische Erfassung der Arbeitszeit in Echtzeit. Wir übernehmen alle Formalitäten und die laufende Lohnabrechnung und kommunizieren mit Ihrer Personalabteilung auf Deutsch.
 
-Dank unserer engen Verbindung zu Deutschland kennen wir beide Systeme: Wir erläutern Ihnen die griechischen Regelungen im Vergleich zu den Ihnen vertrauten deutschen – etwa bei Gehaltszahlungen, Urlaub, Kündigung und Sozialversicherung.
+Wir stellen Ihnen die griechischen Regelungen den deutschen gegenüber – etwa bei Gehaltszahlungen, Urlaub, Kündigung und Sozialversicherung.
 
 ## Beschäftigung in Griechenland ohne griechische Gesellschaft
 
-Ein ausländisches Unternehmen ohne Betriebsstätte in Griechenland darf Personen mit Wohnsitz in Griechenland beschäftigen – sofern deren Tätigkeit nach dem Doppelbesteuerungsabkommen bzw. dem griechischen Steuerrecht keine Betriebsstätte begründet. Wir übernehmen alle Schritte:
+Ein ausländisches Unternehmen ohne Betriebsstätte in Griechenland darf Personen mit Wohnsitz in Griechenland beschäftigen – sofern deren Tätigkeit nach dem Doppelbesteuerungsabkommen bzw. dem griechischen Steuerrecht keine Betriebsstätte begründet. Tätigkeiten wie IT, Buchhaltung, Qualitätssicherung oder Beratung begründen in der Regel keine Betriebsstätte, Vertriebstätigkeiten und der Abschluss von Verträgen im Namen des Unternehmens dagegen möglicherweise schon; wir prüfen das vor der Einstellung. Weitere Formen der Tätigkeit ohne griechische Gesellschaft: [In Griechenland tätig werden ohne eigene Niederlassung](/de/leistungen/ihr-start-in-griechenland/unternehmen/ohne-niederlassung/).
 
-- **Arbeitsvertrag** nach griechischem Arbeitsrecht, auf Griechisch oder zweisprachig – auf Basis Ihres Vertragsmusters oder unseres Musters
+Wir übernehmen alle Schritte:
+
+- **Arbeitsvertrag** nach griechischem Arbeitsrecht, auf Griechisch oder zweisprachig und im Original unterschrieben – auf Basis Ihres Vertragsmusters oder unseres Musters. Gegenüber einem deutschen Vertrag sind meist die 14 Gehaltszahlungen im Jahr (einschließlich Weihnachts-, Oster- und Urlaubsgeld), der Urlaub und die Kündigung nach griechischem Recht ausdrücklich zu regeln
 - **Anmeldungen:** Registrierung als Arbeitgeber bei e-EFKA (Sozialversicherung) und Meldung der Einstellung im System ERGANI II vor Beginn der Beschäftigung
 - **Griechische Steuernummer** für Ihr Unternehmen, damit die Lohnsteuer abgeführt werden kann – mit Bestellung eines **steuerlichen Vertreters** oder alternativ Registrierung Ihres Geschäftsführers im griechischen Steuerregister
 - **Monatliche Lohnabrechnung**, Sozialversicherungsmeldungen und eine zusammengefasste Lohnsteuererklärung für alle Mitarbeiter in Griechenland; die Zahlungen können über unser Treuhandkonto abgewickelt werden

@@ -6,18 +6,13 @@ description: "Monate in Griechenland im Eigenheim oder zur Miete verbringen: Anm
 url: /de/leistungen/ihr-start-in-griechenland/privatpersonen/laengerer-aufenthalt/
 icon: "globe"
 weight: 20
-review: "neue Seite 2026-10-06 auf Grundlage von Recherche (Art. 4 griech. Einkommensteuergesetz); 2026-10-10 um Aufenthalt im Eigenheim erweitert – bitte prüfen"
-faq:
-  - q: "Werde ich steuerpflichtig, wenn ich den Winter in Griechenland verbringe?"
-    a: "Ein Aufenthalt von mehr als 183 Tagen innerhalb von zwölf Monaten begründet in der Regel die griechische Steueransässigkeit. Das gilt nicht, wenn Sie sich ausschließlich zu touristischen, medizinischen oder ähnlichen privaten Zwecken aufhalten und der Aufenthalt 365 Tage nicht übersteigt. Wir prüfen Ihre Situation vorab."
-  - q: "Brauche ich für einen Mietvertrag eine griechische Steuernummer?"
-    a: "In der Praxis ja: Der Vermieter meldet den Mietvertrag elektronisch bei der Finanzverwaltung an, und der Mieter braucht eine griechische Steuernummer, um ihn zu bestätigen."
-  - q: "Darf ich während des Aufenthalts im Homeoffice arbeiten?"
-    a: "Arbeiten von Griechenland aus – auch für einen deutschen Arbeitgeber oder Kunden – kann die steuerliche Ansässigkeit verändern und Pflichten in Griechenland auslösen. Wir prüfen das, bevor Sie beginnen."
+review: "neue Seite 2026-10-06 auf Grundlage von Recherche (Art. 4 griech. Einkommensteuergesetz); 2026-10-10 um Aufenthalt im Eigenheim erweitert – bitte prüfen; 2026-10-16: Einleitung sachlich, FAQ in den Text übernommen"
+ctaText: "Anfrage zu Ihrem Aufenthalt senden"
+ctaTopic: "relocation"
 heroImage: "images/start-stay.jpg"
 heroAlt: "Terrasse mit Pool und Blick über eine griechische Bucht"
 ---
-Griechenland ist ein attraktiver Ort, um mehrere Monate im Jahr zu verbringen: milde Winter, lange Sommer und mit Athen eine Hauptstadt, die von Deutschland aus mit vielen Direktflügen schnell erreichbar ist und gute Verbindungen zur Küste und zu den Inseln bietet. Manche wohnen dabei in der eigenen Immobilie, andere mieten für einige Monate oder eine ganze Saison. Beides ist einfach – ein langer Aufenthalt kann aber steuerliche Folgen haben, die vorab geprüft werden sollten.
+Wer mehrere Monate im Jahr in Griechenland verbringt – in der eigenen Immobilie oder zur Miete –, kann dort steuerlich ansässig werden, mit Besteuerung des weltweiten Einkommens in Griechenland. Wir prüfen Ihre Situation, bevor Sie sich festlegen, und übernehmen die Formalitäten in Griechenland.
 
 ## Aufenthalt
 
@@ -36,7 +31,7 @@ Griechenland ist ein attraktiver Ort, um mehrere Monate im Jahr zu verbringen: m
 - Ein Aufenthalt von **mehr als 183 Tagen innerhalb von zwölf Monaten** begründet in der Regel die griechische Steueransässigkeit ab dem ersten Tag – mit Besteuerung des weltweiten Einkommens in Griechenland. Das ähnelt dem deutschen gewöhnlichen Aufenthalt nach § 9 AO.
 - **Ausnahme:** Das gilt nicht für Personen, die sich ausschließlich zu touristischen, medizinischen, therapeutischen oder ähnlichen privaten Zwecken in Griechenland aufhalten, solange der Aufenthalt 365 Tage nicht übersteigt.
 - Bleibt der Wohnsitz in Deutschland bestehen, entscheidet das Doppelbesteuerungsabkommen, wo Sie besteuert werden.
-- Arbeiten von Griechenland aus, auch im Homeoffice, kann die Beurteilung ändern.
+- Arbeiten von Griechenland aus – auch im Homeoffice für einen deutschen Arbeitgeber oder Kunden – kann die Beurteilung ändern und Pflichten in Griechenland auslösen; wir prüfen das, bevor Sie beginnen.
 - Wer dauerhaft umziehen möchte, kann von besonderen Regelungen profitieren – siehe [Steuervorteile beim Zuzug](/de/leistungen/umzug-nach-griechenland/).
 
 ## Krankenversicherung

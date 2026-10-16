@@ -273,8 +273,14 @@ func (s *server) handleContact(w http.ResponseWriter, r *http.Request) {
 	}
 	name := clean(r.FormValue("name"), 200)
 	email := clean(r.FormValue("email"), 200)
-	phone := clean(r.FormValue("phone"), 50)
-	subject := clean(r.FormValue("subject"), 200)
+	company := clean(r.FormValue("company"), 200)
+	phone := clean(r.FormValue("phone"), 50) // optional
+	// "topic" is the select "Ihr Anliegen"; "subject" is the free-text field of older pages.
+	topic := clean(r.FormValue("topic"), 200)
+	topicField := "topic"
+	if topic == "" && r.FormValue("subject") != "" {
+		topic, topicField = clean(r.FormValue("subject"), 200), "subject"
+	}
 	text := cleanText(r.FormValue("message"), 10000)
 
 	var bad []string
@@ -284,11 +290,8 @@ func (s *server) handleContact(w http.ResponseWriter, r *http.Request) {
 	if !validEmail(email) {
 		bad = append(bad, "email")
 	}
-	if phone == "" {
-		bad = append(bad, "phone")
-	}
-	if subject == "" {
-		bad = append(bad, "subject")
+	if topic == "" {
+		bad = append(bad, topicField)
 	}
 	if text == "" {
 		bad = append(bad, "message")
@@ -302,9 +305,9 @@ func (s *server) handleContact(w http.ResponseWriter, r *http.Request) {
 		From:    s.cfg.MailFrom,
 		To:      s.cfg.MailToContact,
 		ReplyTo: (&mail.Address{Name: name, Address: email}).String(),
-		Subject: "[" + s.cfg.SiteName + "] " + subject,
+		Subject: "[" + s.cfg.SiteName + "] " + topic,
 		Body: body(s.cfg.SiteName, "Contact form", r, s.now(), []field{
-			{"Name", name}, {"E-mail", email}, {"Phone", phone}, {"Subject", subject},
+			{"Name", name}, {"E-mail", email}, {"Company", company}, {"Phone", phone}, {"Topic", topic},
 		}, text),
 	}
 	s.send(w, r, msg)

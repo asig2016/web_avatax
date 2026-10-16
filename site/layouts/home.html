@@ -12,8 +12,8 @@
     <h1>{{ .Params.heroTitle }}</h1>
     <p class="hero-text">{{ .Params.heroText }}</p>
     <div class="hero-actions">
-      {{- with site.GetPage "/services" }}<a class="btn btn-light" href="{{ .RelPermalink }}">{{ T "ourServices" }}</a>{{ end }}
-      {{- with site.GetPage "/contact" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "contactUs" }}</a>{{ end }}
+      {{- with site.GetPage "/contact" }}<a class="btn btn-light" href="{{ .RelPermalink }}">{{ T "sendEnquiry" }}</a>{{ end }}
+      {{- with site.GetPage "/services" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "ourServices" }}</a>{{ end }}
     </div>
   </div>
 </section>
@@ -119,10 +119,11 @@
     <div>
       <h2>{{ T "getInTouch" }}</h2>
       <p>{{ site.Params.street }}, {{ site.Params.city }}</p>
+      <p>{{ T "phoneHours" }} · <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
     </div>
     <div class="contact-band-actions">
-      <a class="btn btn-light" href="{{ site.Params.phoneHref }}">{{ partial "icon.html" "phone" }} {{ site.Params.phone }}</a>
-      {{- with site.GetPage "/contact" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "contactUs" }}</a>{{ end }}
+      <a class="btn btn-light" href="{{ site.Params.phoneHref | safeURL }}">{{ partial "icon.html" "phone" }} {{ site.Params.phone }}</a>
+      {{- with site.GetPage "/contact" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "sendEnquiry" }}</a>{{ end }}
     </div>
   </div>
 </section>

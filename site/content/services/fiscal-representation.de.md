@@ -1,24 +1,19 @@
 ---
 title: "Steuerliche Vertretung und Fiskalvertretung in Griechenland"
 linkTitle: "Steuer- & Fiskalvertretung"
-seoTitle: "Steuerlicher Vertreter & Fiskalvertreter | AVATAX"
-description: "Fiskalvertreter für die Umsatzsteuer und steuerlicher Vertreter nach griechischem Steuerverfahrensrecht für Unternehmen und Privatpersonen aus dem Ausland."
+seoTitle: "Fiskalvertreter in Griechenland | AVATAX"
+description: "Fiskalvertreter für die Umsatzsteuer und steuerlicher Vertreter in Griechenland für Unternehmen und Privatpersonen aus dem Ausland – Pflichten, Ablauf."
 url: /de/leistungen/fiskalvertretung/
 icon: globe
 weight: 40
 teaser: "Steuerliche Vertretung und Fiskalvertretung für die Umsatzsteuer – für Unternehmen und Privatpersonen aus dem Ausland."
-review: "Text für ausländische Mandanten auf Basis von Quellen (Art. 8 Ges. 5104/2024, griechisches UStG Ges. 5144/2024) – bitte prüfen; Fiskalvertreter-FAQ und -Absatz am 2026-10-16 an Art. 40/41 Ges. 5144/2024 angepasst"
+review: "Text für ausländische Mandanten auf Basis von Quellen (Art. 8 Ges. 5104/2024, griechisches UStG Ges. 5144/2024) – bitte prüfen; Fiskalvertreter-FAQ und -Absatz am 2026-10-16 an Art. 40/41 Ges. 5144/2024 angepasst; 2026-10-16: FAQ entfernt (Unterlagen in den Ablauf übernommen)"
+ctaText: "Anfrage zur Steuer- und Fiskalvertretung senden"
+ctaTopic: "representation"
 menus:
   main:
     parent: services
     weight: 40
-faq:
-  - q: "Benötigt mein Unternehmen einen Fiskalvertreter für die Umsatzsteuer?"
-    a: "Unternehmen, die weder in Griechenland noch in einem anderen EU-Mitgliedstaat ansässig sind, müssen vor ihrem ersten steuerpflichtigen Umsatz in Griechenland einen Fiskalvertreter bestellen, wenn sie die griechische Umsatzsteuer für diesen Umsatz selbst schulden (Art. 41 Abs. 3 lit. d des griechischen Umsatzsteuergesetzes, Gesetz 5144/2024). Schuldet der Kunde in Griechenland die Steuer im Reverse-Charge-Verfahren – etwa bei den meisten Dienstleistungen an Unternehmen –, ist dafür kein Fiskalvertreter erforderlich. Unternehmen aus anderen EU-Mitgliedstaaten ohne Niederlassung in Griechenland können sich direkt registrieren; wir unterstützen Sie gerne hierbei und übernehmen die Einreichung der erforderlichen Steuererklärungen."
-  - q: "Haftet der Vertreter für meine Steuern?"
-    a: "Das hängt von der Art der Vertretung ab. Der Fiskalvertreter für die Umsatzsteuer haftet gesamtschuldnerisch für die umsatzsteuerlichen Pflichten des vertretenen Unternehmens. Der steuerliche Vertreter nach Art. 8 des Steuerverfahrensgesetzes haftet dagegen nicht für die Erfüllung der Steuerpflichten."
-  - q: "Welche Unterlagen werden benötigt?"
-    a: "In der Regel eine Vollmacht für den Vertreter – notariell beglaubigt und mit Apostille bzw. konsularischer Beglaubigung – sowie bei Unternehmen Handelsregisterauszug und Gesellschaftsvertrag mit beglaubigter griechischer Übersetzung. Die genaue Liste erhalten Sie von uns."
 ---
 Wer ohne Sitz oder Wohnsitz in Griechenland dort steuerliche Pflichten hat, benötigt in vielen Fällen einen Vertreter vor Ort. Das griechische Recht unterscheidet zwei Formen, die unterschiedliche Aufgaben und eine unterschiedliche Haftung haben.
 
@@ -41,8 +36,8 @@ Unternehmen, die **weder in Griechenland noch in einem anderen EU-Mitgliedstaat*
 ## Ablauf
 
 1. **Prüfung**, welche Form der Vertretung erforderlich oder sinnvoll ist
-2. **Unterlagen:** Liste der benötigten Dokumente, Vollmacht mit Apostille, Übersetzungen
+2. **Unterlagen:** in der Regel eine Vollmacht für den Vertreter – notariell beglaubigt und mit Apostille bzw. konsularischer Beglaubigung – sowie bei Unternehmen Handelsregisterauszug und Gesellschaftsvertrag mit beglaubigter griechischer Übersetzung; die genaue Liste erhalten Sie von uns
 3. **Registrierung:** griechische Steuernummer (AFM) und gegebenenfalls umsatzsteuerliche Registrierung
 4. **Laufende Betreuung:** Erklärungen, Korrespondenz mit der Finanzverwaltung, Fristenkontrolle – auf Deutsch
 
-Sie möchten Mitarbeiter in Griechenland ohne griechische Gesellschaft beschäftigen? Siehe [Lohnbuchhaltung für ausländische Arbeitgeber](/de/leistungen/lohnbuchhaltung/).
+Sie möchten Mitarbeiter in Griechenland ohne griechische Gesellschaft beschäftigen? Siehe [Mitarbeiter in Griechenland: Lohnbuchhaltung und Arbeitsrecht](/de/leistungen/lohnbuchhaltung/).

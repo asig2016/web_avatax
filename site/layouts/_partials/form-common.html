@@ -11,5 +11,5 @@
   <input type="checkbox" id="{{ .id }}-consent" name="consent" value="1" required>
   <label for="{{ .id }}-consent">{{ with site.GetPage "/privacy" }}{{ printf (T "formConsent") .RelPermalink | safeHTML }}{{ end }} *</label>
 </div>
-<noscript><p class="form-note warn">{{ T "formNoscript" }} <a href="{{ site.Params.phoneHref }}">{{ site.Params.phone }}</a></p></noscript>
+<noscript><p class="form-note warn">{{ T "formNoscript" }} <a href="{{ site.Params.phoneHref | safeURL }}">{{ site.Params.phone }}</a></p></noscript>
 <div class="form-status" role="status" aria-live="polite" hidden></div>

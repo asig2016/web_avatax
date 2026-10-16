@@ -51,7 +51,7 @@ func tokenAt(s *server, ago time.Duration) string {
 func contactForm(s *server) url.Values {
 	return url.Values{
 		"lang": {"el"}, "name": {"Γιώργος Π."}, "email": {"g@example.gr"}, "phone": {"2101234567"},
-		"subject": {"Ερώτηση"}, "message": {"Γεια σας,\nμια ερώτηση."}, "consent": {"1"},
+		"topic": {"Λογιστική"}, "message": {"Γεια σας,\nμια ερώτηση."}, "consent": {"1"},
 		"token": {tokenAt(s, 10*time.Second)}, "next": {"/el/efcharistoume/"}, "error_page": {"/el/sfalma/"},
 	}
 }
@@ -122,10 +122,62 @@ func TestContactValidation(t *testing.T) {
 	}
 }
 
+func TestContactPhoneOptional(t *testing.T) {
+	s, fm := testServer()
+	f := contactForm(s)
+	f.Del("phone")
+	if w := post(s, "/api/contact", f, true); w.Code != 200 || len(fm.sent) != 1 {
+		t.Fatalf("phone should be optional: %d %s", w.Code, w.Body)
+	}
+	if strings.Contains(fm.sent[0].Body, "Phone:") {
+		t.Errorf("empty phone should not appear in the mail: %q", fm.sent[0].Body)
+	}
+}
+
+func TestContactTopicRequired(t *testing.T) {
+	s, fm := testServer()
+	f := contactForm(s)
+	f.Del("topic")
+	w := post(s, "/api/contact", f, true)
+	var e formError
+	json.Unmarshal(w.Body.Bytes(), &e)
+	if w.Code != 422 || len(e.Fields) != 1 || e.Fields[0] != "topic" {
+		t.Fatalf("got %d %s", w.Code, w.Body)
+	}
+	if len(fm.sent) != 0 {
+		t.Fatal("mail should not be sent")
+	}
+}
+
+func TestContactTopicAndCompanyInMail(t *testing.T) {
+	s, fm := testServer()
+	f := contactForm(s)
+	f.Set("topic", "Zuzug, Wohnsitz und Pauschalbesteuerung")
+	f.Set("company", "Muster GmbH")
+	post(s, "/api/contact", f, true)
+	if len(fm.sent) != 1 {
+		t.Fatal("expected 1 mail")
+	}
+	m := fm.sent[0]
+	if m.Subject != "[avatax.eu] Zuzug, Wohnsitz und Pauschalbesteuerung" || !strings.Contains(m.Body, "Muster GmbH") {
+		t.Fatalf("unexpected mail: %q / %q", m.Subject, m.Body)
+	}
+}
+
+func TestContactLegacySubject(t *testing.T) {
+	s, fm := testServer()
+	f := contactForm(s)
+	f.Del("topic")
+	f.Set("subject", "Frage")
+	if w := post(s, "/api/contact", f, true); w.Code != 200 || len(fm.sent) != 1 || fm.sent[0].Subject != "[avatax.eu] Frage" {
+		t.Fatalf("legacy subject: %d %s", w.Code, w.Body)
+	}
+}
+
 func TestHeaderInjectionStripped(t *testing.T) {
 	s, fm := testServer()
 	f := contactForm(s)
-	f.Set("subject", "Hi\r\nBcc: victim@example.com")
+	f.Set("topic", "Hi\r\nBcc: victim@example.com")
 	post(s, "/api/contact", f, true)
 	if len(fm.sent) != 1 || strings.ContainsAny(fm.sent[0].Subject, "\r\n") {
 		t.Fatalf("subject not sanitized: %q", fm.sent[0].Subject)

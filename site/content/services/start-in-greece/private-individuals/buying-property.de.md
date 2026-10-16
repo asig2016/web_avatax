@@ -6,16 +6,9 @@ description: "Haus oder Wohnung in Griechenland kaufen: Steuernummer, Notar und 
 url: /de/leistungen/ihr-start-in-griechenland/privatpersonen/immobilienkauf/
 icon: "start"
 weight: 10
-review: "neue Seite 2026-10-05 auf Grundlage von Recherche – bitte prüfen"
-faq:
-  - q: "Können Deutsche in Griechenland Immobilien kaufen?"
-    a: "Ja. EU-Bürger können Immobilien in Griechenland wie Einheimische erwerben. In bestimmten Grenzgebieten brauchen nur Käufer von außerhalb der EU und der EFTA eine Genehmigung."
-  - q: "Kann ich die Immobilie nur als Ferienwohnung nutzen?"
-    a: "Ja. Bei reiner Eigennutzung entstehen keine Mieteinkünfte und keine Steuer darauf; die ENFIA ist in jedem Fall fällig. Ob der Besitz einer Wohnung in Griechenland zu unterstellten Lebenshaltungskosten führt und ob eine Steuererklärung nötig ist, prüfen wir für Sie."
-  - q: "Welche Nebenkosten fallen beim Kauf an?"
-    a: "Vor allem die Grunderwerbsteuer von 3,09 % (3 % zuzüglich eines Gemeindezuschlags darauf) auf den höheren Wert aus Kaufpreis und objektivem Wert, dazu Notar-, Anwalts- und Katasterkosten. Bei Neubauten kann statt der Grunderwerbsteuer Umsatzsteuer anfallen."
-  - q: "Muss ich in Griechenland eine Steuererklärung abgeben?"
-    a: "Wenn Sie Einkünfte aus Griechenland haben, etwa aus der Vermietung, wird jedes Jahr eine griechische Steuererklärung abgegeben. Wir erstellen sie für Sie."
+review: "neue Seite 2026-10-05 auf Grundlage von Recherche – bitte prüfen; 2026-10-16: FAQ entfernt (Inhalt steht im Text)"
+ctaText: "Anfrage zum Immobilienkauf senden"
+ctaTopic: "property"
 heroImage: "images/start-home.jpg"
 heroAlt: "Moderne Villa mit Pool in Griechenland in der Abenddämmerung"
 ---

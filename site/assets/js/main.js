@@ -70,6 +70,10 @@ function clientValidate(form) {
 
 document.querySelectorAll('form.js-form').forEach((form) => {
   fetchToken(form);
+  // pre-select "Ihr Anliegen" from ?topic=<key> (button links on the service pages)
+  const topic = new URLSearchParams(location.search).get('topic');
+  const topicOption = topic && form.querySelector(`select[name="topic"] option[data-topic="${CSS.escape(topic)}"]`);
+  if (topicOption) topicOption.selected = true;
   const button = form.querySelector('button[type=submit]');
   const label = button.textContent;
 

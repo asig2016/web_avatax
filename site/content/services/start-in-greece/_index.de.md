@@ -5,16 +5,16 @@ seoTitle: "Start in Griechenland für Firmen und Private | AVATAX"
 description: "Ihr Start in Griechenland: Markteintritt für Unternehmen; Immobilienkauf, längerer Aufenthalt und Selbständigkeit für Privatpersonen – unsere Begleitung."
 url: /de/leistungen/ihr-start-in-griechenland/
 icon: "start"
-weight: 60
+weight: 5
 teaser: "Markteintritt für ausländische Unternehmen; Immobilienkauf, längerer Aufenthalt und Selbständigkeit für Privatpersonen."
 heroImage: "images/athens-sea.jpg"
 heroAlt: "Blick über Athen mit der Akropolis und dem Saronischen Golf"
-review: "2026-10-05 in Unternehmen und Privatpersonen aufgeteilt; Einleitung 2026-10-10 neu formuliert – bitte prüfen"
+review: "2026-10-05 in Unternehmen und Privatpersonen aufgeteilt; Einleitung 2026-10-10 neu formuliert – bitte prüfen; 2026-10-16: Einleitung geschäftlich ausgerichtet, Investoren ergänzt, im Menü an erster Stelle"
 menus:
   main:
     parent: services
-    weight: 60
+    weight: 5
 ---
-Sie möchten in Griechenland geschäftlich tätig werden oder einfach einen Teil des Jahres hier verbringen? Oder Sie möchten eine Immobilie kaufen, als Ferienhaus oder zur [Vermietung](/de/leistungen/ihr-start-in-griechenland/privatpersonen/vermietung/), auch ohne selbst hier zu leben? Jedes dieser Vorhaben hat Folgen für Besteuerung, Buchführung und Sozialversicherung. Wir erläutern sie vor Ihrer Entscheidung im Vergleich zum deutschen Recht und übernehmen anschließend Buchhaltung, Lohnabrechnung und Steuererklärungen in Griechenland. Sie sprechen mit uns Deutsch.
+Ob Sie mit Ihrem Unternehmen in Griechenland tätig werden, eine Immobilie erwerben – auch zur [Vermietung](/de/leistungen/ihr-start-in-griechenland/privatpersonen/vermietung/) – oder Ihren Wohnsitz nach Griechenland verlegen: Jedes Vorhaben hat Folgen für Besteuerung, Buchführung und Sozialversicherung. Wir erläutern sie vor Ihrer Entscheidung im Vergleich zum deutschen Recht und übernehmen anschließend Buchhaltung, Lohnabrechnung und Steuererklärungen in Griechenland – auf Deutsch.
 
-Sie ziehen ganz nach Griechenland? Dann lohnt ein Blick auf die Sonderregelungen: 7 % Pauschalsteuer für Rentner, 50 % Steuerbefreiung für Arbeitnehmer und Freiberufler. Mehr unter [Steuervorteile beim Zuzug](/de/leistungen/umzug-nach-griechenland/).
+Für den Zuzug nach Griechenland gibt es besondere Besteuerungsregelungen: 100.000 € Pauschalsteuer für Investoren, 7 % Pauschalsteuer für Rentner und 50 % Steuerbefreiung für Arbeitnehmer und Freiberufler. Mehr unter [Steuervorteile beim Zuzug](/de/leistungen/umzug-nach-griechenland/).
