@@ -33,6 +33,7 @@
         </ul>
       </nav>
 
+      {{- if gt (len $page.Sites) 1 }}
       <nav class="lang-switch" aria-label="{{ T "language" }}">
         <ul>
           {{- range $page.Sites }}
@@ -49,6 +50,7 @@
           {{- end }}
         </ul>
       </nav>
+      {{- end }}
     </div>
   </div>
 </header>

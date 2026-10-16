@@ -1,7 +1,11 @@
 baseURL = "https://avatax.eu/"
 title = "AVATAX A.E."
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+# TEMPORARY (2026-10-16): only German is online. To bring English and Greek back, restore
+#   defaultContentLanguage = "en" / defaultContentLanguageInSubdir = false, delete disableLanguages,
+#   and remove the "German only" block in nginx/conf.d/default.conf.
+defaultContentLanguage = "de"
+defaultContentLanguageInSubdir = true
+disableLanguages = ["en", "el"]
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term", "rss"]
 timeZone = "Europe/Athens"

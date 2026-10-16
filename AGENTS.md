@@ -101,3 +101,7 @@ make deploy     # rsync to server + `make update` there (owner runs this)
 
 - Built from the structure of a sister project; content migrated from the old avatax.eu and rewritten in EN/DE/EL.
 - Not deployed, nothing committed. Open points: `docs/REVIEW.md`.
+- **Temporary since 2026-10-16: German only.** `disableLanguages = ["en", "el"]` in `site/hugo.toml` and a
+  "German only" block in `nginx/conf.d/default.conf` (all other URLs → 302 `/de/`). EN/EL content stays and is
+  still maintained; `make test-redirects` reports 4 expected failures until the languages are back. To revert,
+  follow the comments in both files.
