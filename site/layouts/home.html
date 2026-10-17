@@ -10,7 +10,7 @@
   <div class="wrap hero-content">
     <p class="eyebrow">{{ .Params.heroEyebrow | default site.Params.tagline }}</p>
     <h1>{{ .Params.heroTitle }}</h1>
-    <p class="hero-text">{{ .Params.heroText }}</p>
+    <p class="hero-text">{{ .Params.heroText | markdownify }}</p>
     <div class="hero-actions">
       {{- with site.GetPage "/contact" }}<a class="btn btn-light" href="{{ .RelPermalink }}">{{ T "enquireWithoutObligation" }}</a>{{ end }}
       {{- with site.GetPage "/services" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "ourServices" }}</a>{{ end }}
