@@ -7,7 +7,11 @@ url: /services/fiscal-representation/
 icon: globe
 weight: 40
 teaser: "Tax representation and VAT fiscal representation for foreign companies and individuals."
-review: "text for foreign clients based on sources (Art. 8 Law 5104/2024, Greek VAT Code Law 2859/2000) – please check"
+review: "text for foreign clients based on sources (Art. 8 Law 5104/2024, Greek VAT Code Law 2859/2000) – please check; 2026-10-17: contact wording, message guidance and confirmations updated in DE/EN/EL; human review pending"
+ctaText: "Enquire about representation"
+ctaTopic: "representation"
+nextStepsHeading: "Which representation do you need in Greece?"
+nextStepsIntro: "Tell us about your situation. We help you establish which form of representation is required or useful."
 menus:
   main:
     parent: services

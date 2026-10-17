@@ -3,7 +3,7 @@ title: "Fees & engagement"
 seoTitle: "Fees and How We Work Together | AVATAX Athens"
 description: "How we charge: monthly flat fees for accounting and payroll, time-based fees for advice, free first meeting for companies, consultation for individuals."
 url: /fees/
-review: "new page 2026-10-17 after the fee recommendation – please check, in particular which fee model applies to which service and what the first consultation for private individuals covers"
+review: "new page 2026-10-17 after the fee recommendation – please check, in particular which fee model applies to which service and what the first consultation for private individuals covers; 2026-10-17: schriftliches Angebot und schriftliche Bestätigung vor jedem Termin (auch Erstgespräche); Kontaktablauf angepasst – bitte prüfen"
 nextSteps: true
 menus:
   main:
@@ -12,7 +12,7 @@ menus:
 ---
 ## Clear. Based on the work. Transparent.
 
-Depending on the service, we agree time-based fees or monthly flat fees. What counts is the agreed scope of services, the volume of work and the advice actually needed. Before any chargeable work begins, we tell you the applicable terms.
+Depending on the service, we agree time-based fees or monthly flat fees. What counts is the agreed scope of services, the volume of work and the advice actually needed. Before every meeting, you receive a written offer setting out the scope of services and terms. The meeting takes place after you accept the offer in writing.
 
 ## Our fee models
 
@@ -25,7 +25,7 @@ We tell you about foreseeable additional costs before they arise.
 
 ## Companies: free first meeting
 
-In a free first meeting we clarify what you need and how a long-term cooperation could look – by video or in our office in Athens. You then receive a written offer with the agreed scope of services.
+In a free first meeting we clarify what you need and how a long-term cooperation could look – by video or in our office in Athens. For any ongoing support following this meeting, you receive a separate written offer.
 
 ## Private individuals: first consultation
 
@@ -36,4 +36,4 @@ Specific individual questions – for example on the taxation of a pension, a pr
 
 ## Start of the mandate
 
-Once you accept our offer, you receive a written engagement confirmation with the scope of services and terms, the list of documents and powers of attorney we need, and your dedicated contact person. How we then look after your mandate: [How we work](/how-we-work/).
+Once you accept our offer in writing, you receive a written engagement confirmation with the scope of services and terms, the list of documents and powers of attorney we need, and your dedicated contact person. How we then look after your mandate: [How we work](/how-we-work/).

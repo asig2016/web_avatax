@@ -11,6 +11,6 @@ officeAlt: "Το γραφείο μας στην Αθήνα: υποδοχή κα�
 menus:
   main:
     weight: 40
-review: "2026-10-14: προστέθηκε σύνδεσμος για online ραντεβού – 2026-10-16: ο σύνδεσμος αφαιρέθηκε προσωρινά (η κράτηση ραντεβού δεν είναι ακόμη έτοιμη)"
+review: "2026-10-14: προστέθηκε σύνδεσμος για online ραντεβού – 2026-10-16: ο σύνδεσμος αφαιρέθηκε προσωρινά (η κράτηση ραντεβού δεν είναι ακόμη έτοιμη); 2026-10-17: contact wording, message guidance and confirmations updated in DE/EN/EL; human review pending; 2026-10-17: schriftliches Angebot und schriftliche Bestätigung vor jedem Termin (auch Erstgespräche); Kontaktablauf angepasst – bitte prüfen"
 ---
 Χρειάζεστε περισσότερες πληροφορίες σχετικά με τις υπηρεσίες μας; Επικοινωνήστε μαζί μας για να συζητήσουμε τις ανάγκες σας και να ορίσουμε μια συνάντηση.

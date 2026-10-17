@@ -1,8 +1,8 @@
 {{- /* "Nächste Schritte" (texts in data/next_steps.toml). No price here (owner decision 2026-10-17):
-       the fees are explained on the page "Honorare & Zusammenarbeit" (content/fees.*.md), linked below.
+       the fees are explained on the page "Honorare & Zusammenarbeit" (content/fees.*.md), linked in the steps.
        Call with (dict "page" . "full" false): block at the end of service pages – eyebrow, heading, three
-       steps, fees link, button (form pre-selection from front matter ctaTopic → /kontakt/?topic=…), direct
-       contact. "full" true = contact page: heading, intro and a plain list next to the form. */}}
+       steps, button (form pre-selection from front matter ctaTopic → /kontakt/?topic=…), direct
+       contact. "full" true = contact page: heading and a plain list next to the form. */}}
 {{- $p := .page }}
 {{- $full := .full }}
 {{- $fees := site.GetPage "/fees" }}
@@ -11,39 +11,37 @@
 {{- if $full }}
 <section class="next-steps next-steps-full" id="next-steps">
   <h2>{{ .title }}</h2>
-  <p>{{ .full_intro }}</p>
   <ol>
     {{- range .full }}
     <li>{{ . | markdownify }}</li>
     {{- end }}
   </ol>
-  {{- with $fees }}
-  <p class="next-steps-note">{{ $d.fees_lead }} <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
-  {{- end }}
 </section>
 {{- else }}
 <section class="next-steps" id="next-steps">
   <p class="ns-eyebrow">{{ .eyebrow }}</p>
-  <h2>{{ .heading }}</h2>
-  <p class="ns-intro">{{ .intro }}</p>
+  <h2>{{ $p.Params.nextStepsHeading | default .heading }}</h2>
+  <p class="ns-intro">{{ $p.Params.nextStepsIntro | default .intro }}</p>
   <ol class="ns-steps">
     {{- range $i, $s := .steps }}
+    {{- $text := $s.text }}
+    {{- with $fees }}{{ if eq .RelPermalink $p.RelPermalink }}
+      {{- /* Keep the terms as plain text on the fees page itself. */}}
+      {{- $text = replaceRE (printf `\[([^]]+)\]\(%s\)` .RelPermalink) "$1" $text }}
+    {{- end }}{{ end }}
     <li>
       <span class="ns-icon">{{ partial "icon.html" $s.icon }}</span>
-      <div><p class="ns-step-title">{{ printf "%02d" (add $i 1) }} · {{ $s.title }}</p><p class="ns-step-text">{{ $s.text }}</p></div>
+      <div><p class="ns-step-title">{{ printf "%02d" (add $i 1) }} · {{ $s.title }}</p><p class="ns-step-text">{{ $text | markdownify }}</p></div>
     </li>
     {{- end }}
   </ol>
-  {{- with $fees }}{{ if ne .RelPermalink $p.RelPermalink }}
-  <p class="ns-fees">{{ partial "icon.html" "info" }}<span>{{ $d.fees_lead }} <a href="{{ .RelPermalink }}">{{ .Title }}</a></span></p>
-  {{- end }}{{ end }}
   {{- with site.GetPage "/contact" }}
-  <a class="btn ns-button" href="{{ .RelPermalink }}{{ with $p.Params.ctaTopic }}?topic={{ . }}{{ end }}">{{ $d.button }}{{ partial "icon.html" "arrow-ur" }}</a>
+  <a class="btn ns-button" href="{{ .RelPermalink }}{{ with $p.Params.ctaTopic }}?topic={{ . }}{{ end }}">{{ $p.Params.ctaText | default $d.button }}{{ partial "icon.html" "arrow-ur" }}</a>
   {{- end }}
   <div class="ns-direct">
     <p>{{ .direct }}</p>
     <p class="ns-phone"><a href="{{ site.Params.phoneHref | safeURL }}">{{ site.Params.phone }}</a></p>
-    <p class="ns-hours">{{ .hours }}</p>
+    <p class="ns-hours">{{ T "phoneHoursShort" }}</p>
     <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
   </div>
 </section>

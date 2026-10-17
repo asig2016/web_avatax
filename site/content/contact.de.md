@@ -11,5 +11,5 @@ officeAlt: "Unser Büro in Athen: Empfangstresen mit Arbeitsplätzen"
 menus:
   main:
     weight: 40
-review: "2026-10-14: Link zur Online-Terminbuchung ergänzt – 2026-10-16: Link vorerst entfernt (Terminbuchung noch nicht fertig); 2026-10-16: allgemeiner Einleitungstext durch „Nächste Schritte“ ersetzt"
+review: "2026-10-14: Link zur Online-Terminbuchung ergänzt – 2026-10-16: Link vorerst entfernt (Terminbuchung noch nicht fertig); 2026-10-16: allgemeiner Einleitungstext durch „Nächste Schritte“ ersetzt; 2026-10-17: contact wording, message guidance and confirmations updated in DE/EN/EL; human review pending; 2026-10-17: schriftliches Angebot und schriftliche Bestätigung vor jedem Termin (auch Erstgespräche); Kontaktablauf angepasst – bitte prüfen"
 ---

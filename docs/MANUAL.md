@@ -197,18 +197,23 @@ faq:
 
 ### Contact button and „Nächste Schritte" on a page
 
-Every service page ends with the block „Nächste Schritte" (enquiry → clarification → written offer) and a
-contact button. Two optional settings make the button fit the page:
+Every service page ends with the block „Nächste Schritte" (enquiry → clarify needs → agree next steps) and a
+contact button. Optional settings make the block fit the page:
 
 ```yaml
-ctaText: "Anfrage zur Lohnbuchhaltung senden"   # button label (default: "Anfrage senden")
-ctaTopic: "staff"                               # pre-selects "Ihr Anliegen" in the contact form
+ctaText: "Vertretung anfragen"                  # label for both sidebar and closing buttons
+ctaTopic: "representation"                     # pre-selects "Ihr Anliegen" in the contact form
+nextStepsHeading: "Welche Vertretung brauchen Sie in Griechenland?"
+nextStepsIntro: "Schildern Sie uns Ihre Situation. Wir klären mit Ihnen, welche Form der Vertretung erforderlich oder sinnvoll ist."
 ```
 
 - Topics and their keys (`company`, `accounting`, `staff`, `representation`, `tax`, `relocation`, `property`,
   `other`): `site/data/topics.toml`. The label chosen in the form becomes the subject of the notification mail.
 - Texts of „Nächste Schritte" (short version on the pages, full version on the contact page):
-  `site/data/next_steps.toml`.
+  `site/data/next_steps.toml`. Without overrides, the shared heading, introduction and closing button label
+  apply; the sidebar button defaults to the translated “Send enquiry” label.
+- Message guidance in the contact form: `formMessageHint` / `formRepresentationHint` in
+  `site/i18n/*.toml`. The representation guidance follows the selected topic, including changes in the form.
 - E-mail address, phone and VAT number: `[params]` in `site/hugo.toml`; phone hours: `phoneHours` /
   `phoneHoursShort` in `site/i18n/*.toml`.
 - Other pages (e.g. About) get the block with `nextSteps: true`.

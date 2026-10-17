@@ -3,7 +3,7 @@ title: "Honorare & Zusammenarbeit"
 seoTitle: "Honorare und Zusammenarbeit | AVATAX Athen"
 description: "So rechnen wir ab: Pauschalen für Buchhaltung und Lohn, Zeitvergütung für Beratung, kostenfreies Erstgespräch für Unternehmen, Erstberatung für Private."
 url: /de/honorare/
-review: "neue Seite 2026-10-17 nach der Honorar-Empfehlung (allgemeiner Kontakt ohne Preis, Unternehmen/Privatpersonen getrennt, Vergütungsmodelle) – bitte prüfen, insbesondere die Zuordnung der Vergütungsmodelle, was die Erstberatung für Privatpersonen umfasst und den Abschnitt „Beginn des Mandats“ (2026-10-17)"
+review: "neue Seite 2026-10-17 nach der Honorar-Empfehlung (allgemeiner Kontakt ohne Preis, Unternehmen/Privatpersonen getrennt, Vergütungsmodelle) – bitte prüfen, insbesondere die Zuordnung der Vergütungsmodelle, was die Erstberatung für Privatpersonen umfasst und den Abschnitt „Beginn des Mandats“ (2026-10-17); 2026-10-17: schriftliches Angebot und schriftliche Bestätigung vor jedem Termin (auch Erstgespräche); Kontaktablauf angepasst – bitte prüfen"
 nextSteps: true
 menus:
   main:
@@ -12,7 +12,7 @@ menus:
 ---
 ## Nachvollziehbar. Leistungsbezogen. Transparent.
 
-Je nach Leistungsart vereinbaren wir Zeitvergütungen oder monatliche Pauschalhonorare. Maßgeblich sind insbesondere der vereinbarte Leistungsumfang, das Bearbeitungsvolumen und der tatsächliche Beratungsbedarf. Vor Beginn der kostenpflichtigen Tätigkeit informieren wir Sie über die geltenden Konditionen.
+Je nach Leistungsart vereinbaren wir Zeitvergütungen oder monatliche Pauschalhonorare. Maßgeblich sind insbesondere der vereinbarte Leistungsumfang, das Bearbeitungsvolumen und der tatsächliche Beratungsbedarf. Vor jedem Termin erhalten Sie ein schriftliches Angebot mit Leistungsumfang und Konditionen. Der Termin findet nach Ihrer schriftlichen Bestätigung statt.
 
 ## Unsere Vergütungsmodelle
 
@@ -25,7 +25,7 @@ Je nach Leistungsart vereinbaren wir Zeitvergütungen oder monatliche Pauschalho
 
 ## Unternehmen: kostenfreies Erstgespräch
 
-Im kostenfreien Erstgespräch klären wir Ihren Beratungsbedarf und die Möglichkeiten einer langfristigen Zusammenarbeit – per Video oder in unserem Büro in Athen. Anschließend erhalten Sie ein schriftliches Angebot mit dem vereinbarten Leistungsumfang.
+Im kostenfreien Erstgespräch klären wir Ihren Beratungsbedarf und die Möglichkeiten einer langfristigen Zusammenarbeit – per Video oder in unserem Büro in Athen. Für eine anschließende laufende Betreuung erhalten Sie ein gesondertes schriftliches Angebot.
 
 ## Privatpersonen: fachliche Erstberatung
 
@@ -36,4 +36,4 @@ Konkrete Einzelfragen – etwa zur Besteuerung einer Rente, einer Immobilie oder
 
 ## Beginn des Mandats
 
-Nach Ihrer Zustimmung zu unserem Angebot erhalten Sie eine schriftliche Auftragsbestätigung mit Leistungsumfang und Konditionen, die Liste der benötigten Unterlagen und Vollmachten sowie Ihren festen Ansprechpartner. Wie wir Ihr Mandat anschließend betreuen, beschreibt [Unsere Arbeitsweise](/de/arbeitsweise/).
+Nach Ihrer schriftlichen Zustimmung zu unserem Angebot erhalten Sie eine schriftliche Auftragsbestätigung mit Leistungsumfang und Konditionen, die Liste der benötigten Unterlagen und Vollmachten sowie Ihren festen Ansprechpartner. Wie wir Ihr Mandat anschließend betreuen, beschreibt [Unsere Arbeitsweise](/de/arbeitsweise/).

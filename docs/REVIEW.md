@@ -212,3 +212,17 @@ Independent review of the German site (conversion, positioning, search); batches
 - `services/tax.de.md` — "Text für deutschsprachige Mandanten auf Basis von Quellen (DBA 1966, griechisches Steuerrecht) – bitte prüfen"
 - `services/tax.el.md` — "κείμενο για Έλληνες πελάτες βάσει πηγών – ελέγξτε"
 - `services/tax.en.md` — "text for foreign clients based on sources – please check"
+
+## Contact wording review — 2026-10-17
+
+Human review pending for the updated DE/EN/EL contact steps, phone-hour labels, message guidance and
+confirmations (`site/data/next_steps.toml`, `site/i18n/*.toml`), plus the fiscal-representation page's
+closing headline, introduction and button labels. Changed content pages have `review:` markers.
+Scope and fees are agreed before paid work; contact areas keep their fees links and make no response-time promise.
+
+Owner clarification 2026-10-17: a written offer and the client’s written acceptance precede every
+appointment, including first meetings. Contact steps and fees pages reflect this in DE/EN/EL;
+the free first meeting for companies and the stated private consultation fee remain unchanged.
+
+2026-10-17: fee links now appear on the terms within the contact steps throughout the site
+(DE/EN/EL); separate fee boxes removed. The fees pages omit the link to themselves.

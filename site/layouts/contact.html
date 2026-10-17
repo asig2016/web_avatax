@@ -39,10 +39,11 @@
       </div>
       <div class="field">
         <label for="c-message">{{ T "formMessage" }} *</label>
-        <textarea id="c-message" name="message" rows="7" required maxlength="10000"></textarea>
+        <p class="form-note" id="c-message-hint" data-general="{{ T "formMessageHint" }}" data-representation="{{ T "formRepresentationHint" }}">{{ T "formMessageHint" }}</p>
+        <textarea id="c-message" name="message" rows="7" required maxlength="10000" aria-describedby="c-message-hint"></textarea>
       </div>
       {{ partial "form-common.html" (dict "id" "c" "next" $thanks.RelPermalink "error" $error.RelPermalink) }}
-      <button class="btn" type="submit">{{ T "formSend" }}</button>
+      <button class="btn" type="submit">{{ T "sendEnquiry" }}</button>
     </form>
     {{ partial "form-messages.html" . }}
   </section>

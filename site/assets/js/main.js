@@ -74,6 +74,16 @@ document.querySelectorAll('form.js-form').forEach((form) => {
   const topic = new URLSearchParams(location.search).get('topic');
   const topicOption = topic && form.querySelector(`select[name="topic"] option[data-topic="${CSS.escape(topic)}"]`);
   if (topicOption) topicOption.selected = true;
+  const topicSelect = form.querySelector('select[name="topic"]');
+  const messageHint = form.querySelector('#c-message-hint');
+  if (topicSelect && messageHint) {
+    const updateMessageHint = () => {
+      const representation = topicSelect.selectedOptions[0]?.dataset.topic === 'representation';
+      messageHint.textContent = representation ? messageHint.dataset.representation : messageHint.dataset.general;
+    };
+    updateMessageHint();
+    topicSelect.addEventListener('change', updateMessageHint);
+  }
   const button = form.querySelector('button[type=submit]');
   const label = button.textContent;
 
