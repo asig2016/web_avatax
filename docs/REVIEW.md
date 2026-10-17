@@ -163,8 +163,8 @@ Independent review of the German site (conversion, positioning, search); batches
 - **FAQs** only on the three relocation pages; useful answers of the others moved into the text.
 - **Home, About, Ihr Start, Selbständig, Länger in Griechenland:** rewritten (German angle first, no self-praise,
   business-first openings). Please proofread.
-- **German only:** English/Greek URLs now go to their German counterpart (`nginx/conf.d/redirects-de-only.conf`,
-  `make de-only-map`); unknown URLs get the German 404 page.
+- **All languages active again (2026-10-17):** English at `/`, German at `/de/`, Greek at `/el/`.
+  Temporary redirects to German have been removed; language switches and localized 404 pages are active.
 - **EN/EL parity before switching the languages back on:** the EN/EL pages still have the old texts (FAQs on all
   pages, old titles, old home/About texts, „Unterstützung Ihrer Buchhaltung", self-employed and long-stay
   openings). They need the same changes, adapted to their audiences (rule 4), plus `nextSteps`/`ctaText`/

@@ -15,7 +15,7 @@ COMPOSE := docker compose
 UIDGID  := $(shell id -u):$(shell id -g)
 
 .DEFAULT_GOAL := help
-.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects de-only-map deploy deploy-test deploy-live _deploy stats update rollback status
+.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects deploy deploy-test deploy-live _deploy stats update rollback status
 
 help:
 	@echo "Laptop"
@@ -84,18 +84,14 @@ test-links:
 	docker run --rm -v "$(CURDIR)/public":/public:ro,z lycheeverse/lychee:latest \
 		--offline --no-progress --root-dir /public --exclude-path /public/en/index.html --exclude '/api/' '/public/**/*.html'
 
-# TEMPORARY (German only): English/Greek URL -> German page map for nginx; run after URLs change.
-de-only-map:
-	python3 -I tests/de-only-map.py > nginx/conf.d/redirects-de-only.conf
-
-# Every old Drupal URL must answer with a redirect (301; 302 while only German is online)
+# Every old Drupal URL must answer with a permanent redirect (301)
 # and lead to a page that exists.
 test-redirects:
 	@fail=0; while read -r path; do \
 		case "$$path" in ''|\#*) continue;; esac; \
 		code=$$(curl -s -o /dev/null -w '%{http_code}' "$(BASE)$$path"); \
 		final=$$(curl -s -L -o /dev/null -w '%{http_code} %{url_effective}' "$(BASE)$$path"); \
-		if { [ "$$code" = 301 ] || [ "$$code" = 302 ]; } && [ "$${final%% *}" = 200 ]; then echo "ok   $$path -> $${final#* }"; \
+		if [ "$$code" = 301 ] && [ "$${final%% *}" = 200 ]; then echo "ok   $$path -> $${final#* }"; \
 		else echo "FAIL $$path ($$code, final $$final)"; fail=1; fi; \
 	done < tests/old-urls.txt; exit $$fail
 
