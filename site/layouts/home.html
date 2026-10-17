@@ -44,6 +44,9 @@
       </li>
       {{- end }}
     </ul>
+    {{- with site.GetPage "/how-we-work" }}
+    <p class="pillars-more"><a class="more-link" href="{{ .RelPermalink }}">{{ .Title }} →</a></p>
+    {{- end }}
   </div>
 </section>
 {{- end }}
@@ -113,6 +116,19 @@
   </div>
 </section>
 {{- end }}
+
+{{- /* short section on fees (front matter feesTitle / feesText), links to "Honorare & Zusammenarbeit" */}}
+{{- with .Params.feesTitle }}{{ with site.GetPage "/fees" }}
+<section class="section section-tint">
+  <div class="wrap about-solo">
+    <div>
+      <h2>{{ $.Params.feesTitle }}</h2>
+      <p>{{ $.Params.feesText }}</p>
+      <a class="more-link" href="{{ .RelPermalink }}">{{ .Title }} →</a>
+    </div>
+  </div>
+</section>
+{{- end }}{{ end }}
 
 <section class="section contact-band">
   <div class="wrap contact-band-inner">

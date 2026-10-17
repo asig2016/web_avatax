@@ -103,6 +103,13 @@ h3 { font-size: 1.15rem; margin: 1.4em 0 .4em; }
 .main-nav .has-sub:hover > .sub, .main-nav .has-sub:focus-within > .sub { opacity: 1; visibility: visible; transform: none; }
 .main-nav .sub a { font-weight: 400; }
 .main-nav a[aria-current="page"] { color: var(--brand); font-weight: 600; }
+/* "Kontakt" is the only highlighted menu entry, as a button (wide screens; phones have .header-cta) */
+@media (min-width: 1021px) {
+  .main-nav li.nav-cta > a { margin-left: 6px; padding: .5em 1.1em; background: var(--brand); color: #fff; font-weight: 600; }
+  .main-nav li.nav-cta > a:hover, .main-nav li.nav-cta.active > a { background: var(--brand-dark); color: #fff; }
+  .main-nav .sub a { white-space: nowrap; }
+}
+.pillars-more { margin: 1.6em 0 0; }
 
 .lang-switch ul { display: flex; gap: 2px; list-style: none; margin: 0; padding: 3px; border: 1px solid var(--line); border-radius: 999px; }
 .lang-switch a, .lang-switch .current { display: block; padding: .2em .65em; border-radius: 999px; font-size: .82rem; font-weight: 600; text-decoration: none; letter-spacing: .03em; }
@@ -255,15 +262,31 @@ h3 { font-size: 1.15rem; margin: 1.4em 0 .4em; }
 .cta-card .phone { font-weight: 700; font-size: 1.1rem; text-decoration: none; }
 .cta-card .btn { margin-top: .6em; }
 .cta-hours { font-size: .88rem; color: var(--muted); }
-/* "Nächste Schritte" at the end of service pages (partial next-steps.html) */
-.next-steps { margin-top: 2.4em; padding: 22px 24px; border-radius: var(--radius); background: var(--accent-light); }
-.next-steps h2 { margin-top: 0; }
-.next-steps ol { margin: 0 0 1em; padding-left: 1.3em; }
-.next-steps li { margin: .25em 0; }
-.next-steps-note { font-size: .92rem; color: var(--muted); margin: -.3em 0 1em; }
-.next-steps-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
-.next-steps-contact { margin: 0; font-size: .92rem; }
+/* "Nächste Schritte" at the end of service pages (partial next-steps.html, texts in data/next_steps.toml) */
+.next-steps { margin-top: 2.6em; padding: 26px 28px 24px; border-radius: var(--radius); background: var(--accent-light); }
+.next-steps h2 { margin: 0 0 .4em; font-size: 1.45rem; line-height: 1.25; }
+.ns-eyebrow { margin: 0 0 .5em; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.ns-intro { margin: 0; padding-bottom: 1.1em; border-bottom: 1px solid var(--line); }
+.ns-steps { list-style: none; margin: 1.1em 0; padding: 0; display: grid; gap: .9em; }
+.ns-steps li { display: flex; gap: 14px; align-items: flex-start; margin: 0; }
+.ns-icon { flex: none; color: var(--brand-dark); margin-top: .1em; }
+.ns-icon svg { width: 22px; height: 22px; }
+.ns-step-title { margin: 0; font-weight: 600; color: var(--brand-dark); }
+.ns-step-text { margin: .1em 0 0; font-size: .92rem; color: var(--muted); }
+.ns-fees { display: flex; align-items: center; gap: 8px; margin: 0 0 1.1em; padding: 10px 14px; border-radius: 8px; background: #fff; font-size: .92rem; color: var(--muted); }
+.ns-fees svg { width: 18px; height: 18px; flex: none; color: var(--brand-dark); }
+.ns-button { width: 100%; justify-content: center; }
+.ns-button svg { width: 16px; height: 16px; }
+.ns-direct { margin-top: 1em; text-align: center; font-size: .92rem; color: var(--muted); }
+.ns-direct p { margin: .25em 0; }
+.ns-direct .ns-phone { font-size: 1.15rem; }
+.ns-direct .ns-phone a { color: var(--text, inherit); text-decoration: none; font-weight: 600; }
+.ns-hours { font-size: .88rem; }
+/* contact page: plain list next to the form */
 .next-steps-full { margin-top: 0; background: none; padding: 0; }
+.next-steps-full ol { margin: 0 0 1em; padding-left: 1.3em; }
+.next-steps-full li { margin: .25em 0; }
+.next-steps-note { font-size: .92rem; color: var(--muted); margin: -.3em 0 1em; }
 .contact-band p a { color: #fff; }
 
 .tag-list { list-style: none; padding: 0; margin: 1.2em 0 0; display: flex; flex-wrap: wrap; gap: 10px; }

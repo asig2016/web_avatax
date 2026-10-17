@@ -22,7 +22,8 @@
         <ul>
           {{- range site.Menus.main }}
           {{- $active := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }}
-          <li class="{{ if .HasChildren }}has-sub{{ end }}{{ if $active }} active{{ end }}">
+          {{- $cta := and .Page (eq .Page.RelPermalink (site.GetPage "/contact").RelPermalink) }}
+          <li class="{{ if .HasChildren }}has-sub{{ end }}{{ if $active }} active{{ end }}{{ if $cta }} nav-cta{{ end }}">
             <a href="{{ .URL }}"{{ if $page.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
             {{- if .HasChildren }}
             <ul class="sub">

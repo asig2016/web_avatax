@@ -1,53 +1,73 @@
-# "Nächste Schritte" block (partial next-steps.html).
-# short = end of every service page (and About); full = contact page. Markdown is allowed in the steps.
-# note_* = small note below the steps (first consultation).
-# Owner decisions 2026-10-16: no reply time stated; individual questions as a paid first consultation,
-# credited on engagement; written offer before mandates; friendly, personal wording (not form-like).
+# "Nächste Schritte" (partial next-steps.html).
+# Block at the end of every service page (and About, Fees): eyebrow, heading, intro, steps (icon names from
+# _partials/icon.html), link to the fees page, button, direct contact. Contact page: title, full_intro, full.
+# Owner decision 2026-10-17 (fee recommendation): NO price in the general contact area. Fees, the free first
+# meeting for companies and the paid first consultation for private individuals (200 € plus VAT) are explained
+# on the page "Honorare & Zusammenarbeit" (content/fees.*.md). No reply time is stated.
 
 [de]
-title = "Nächste Schritte"
-short = [
-  "Sie schildern uns Ihr Vorhaben – per Formular, E-Mail oder Telefon.",
-  "Wir besprechen mit Ihnen Ziele und Umfang.",
-  "Sie erhalten ein schriftliches Angebot.",
+eyebrow = "Persönliche Beratung auf Deutsch"
+heading = "Ihr Anliegen. Unsere Expertise. Ein klarer Weg."
+intro = "Schildern Sie uns Ihr Anliegen – wir prüfen Ihre Ausgangssituation, besprechen Ihre Ziele und zeigen Ihnen die nächsten Schritte auf. Persönlich, strukturiert und transparent."
+steps = [
+  { icon = "message", title = "Anliegen schildern", text = "Kontaktieren Sie uns über das Formular, per E-Mail oder telefonisch." },
+  { icon = "messages", title = "Persönlich beraten lassen", text = "Gemeinsam klären wir Ihre Ziele, Ihre Situation und den Beratungsbedarf." },
+  { icon = "filecheck", title = "Individuelles Angebot erhalten", text = "Sie erhalten ein schriftliches Angebot mit klar definiertem Leistungsumfang." },
 ]
-note_short = "Einzelfragen beantworten wir im Rahmen einer Erstberatung, deren Honorar bei Beauftragung angerechnet wird."
+fees_lead = "Wie wir abrechnen:"
+button = "Jetzt unverbindlich anfragen"
+direct = "Oder sprechen Sie direkt mit uns:"
+hours = "Mo–Fr · 9–17 Uhr (griechische Ortszeit) · Beratung auf Deutsch"
+# contact page
+title = "Lassen Sie uns über Ihr Anliegen sprechen."
+full_intro = "Beschreiben Sie kurz Ihre Situation. Wir klären den benötigten Leistungsumfang und informieren Sie über die nächsten Schritte."
 full = [
   "Sie schreiben uns kurz, worum es geht – per Formular, E-Mail oder Telefon.",
   "Wir melden uns zeitnah persönlich bei Ihnen, auf Deutsch.",
   "Wir besprechen Ihr Vorhaben per Video oder in unserem Büro in Athen.",
   "Für eine laufende Zusammenarbeit erhalten Sie ein schriftliches Angebot.",
 ]
-note_full = "Konkrete Einzelfragen beantworten wir im Rahmen einer Erstberatung; deren Honorar rechnen wir an, wenn Sie uns anschließend beauftragen."
 
 [en]
-title = "Next steps"
-short = [
-  "You describe your plans – by form, e-mail or phone.",
-  "We discuss your goals and the scope with you.",
-  "You receive a written offer.",
+eyebrow = "Personal advice in English and German"
+heading = "Your matter. Our expertise. A clear path."
+intro = "Tell us what you need – we review your starting position, discuss your goals and show you the next steps. Personal, structured and transparent."
+steps = [
+  { icon = "message", title = "Describe your matter", text = "Contact us via the form, by e-mail or by phone." },
+  { icon = "messages", title = "Get personal advice", text = "Together we clarify your goals, your situation and the advice you need." },
+  { icon = "filecheck", title = "Receive an individual offer", text = "You receive a written offer with a clearly defined scope of services." },
 ]
-note_short = "Individual questions are answered in a first consultation; its fee is credited if you engage us."
+fees_lead = "How we charge:"
+button = "Enquire now – without obligation"
+direct = "Or talk to us directly:"
+hours = "Mon–Fri · 9:00–17:00 (Greek time) · in English or German"
+title = "Let us talk about your matter."
+full_intro = "Describe your situation briefly. We clarify the scope of services needed and tell you about the next steps."
 full = [
   "You tell us briefly what it is about – by form, e-mail or phone.",
   "We get back to you personally and shortly, in English or German.",
   "We discuss your plans by video or in our office in Athens.",
   "For ongoing work you receive a written offer.",
 ]
-note_full = "Specific individual questions are answered in a first consultation; its fee is credited if you then engage us."
 
 [el]
-title = "Επόμενα βήματα"
-short = [
-  "Μας περιγράφετε το θέμα σας – με τη φόρμα, με e-mail ή τηλεφωνικά.",
-  "Συζητάμε μαζί σας τους στόχους και το εύρος.",
-  "Λαμβάνετε γραπτή προσφορά.",
+eyebrow = "Προσωπική συμβουλευτική"
+heading = "Το θέμα σας. Η εξειδίκευσή μας. Ένας σαφής δρόμος."
+intro = "Περιγράψτε μας το θέμα σας – εξετάζουμε την αφετηρία σας, συζητάμε τους στόχους σας και σας δείχνουμε τα επόμενα βήματα. Προσωπικά, οργανωμένα και με διαφάνεια."
+steps = [
+  { icon = "message", title = "Περιγράψτε το θέμα σας", text = "Επικοινωνήστε μαζί μας μέσω της φόρμας, με e-mail ή τηλεφωνικά." },
+  { icon = "messages", title = "Προσωπική συμβουλευτική", text = "Μαζί διευκρινίζουμε τους στόχους σας, την κατάστασή σας και τις ανάγκες σας." },
+  { icon = "filecheck", title = "Εξατομικευμένη προσφορά", text = "Λαμβάνετε γραπτή προσφορά με σαφώς καθορισμένο εύρος υπηρεσιών." },
 ]
-note_short = "Μεμονωμένα ερωτήματα απαντώνται σε πρώτη συμβουλευτική συνάντηση, η αμοιβή της οποίας συμψηφίζεται σε περίπτωση ανάθεσης."
+fees_lead = "Τρόπος αμοιβής:"
+button = "Επικοινωνήστε χωρίς δέσμευση"
+direct = "Ή μιλήστε απευθείας μαζί μας:"
+hours = "Δευτ.–Παρ. · 9:00–17:00"
+title = "Ας συζητήσουμε το θέμα σας."
+full_intro = "Περιγράψτε μας σύντομα την κατάστασή σας. Διευκρινίζουμε το απαιτούμενο εύρος υπηρεσιών και σας ενημερώνουμε για τα επόμενα βήματα."
 full = [
   "Μας γράφετε σύντομα το θέμα σας – με τη φόρμα, με e-mail ή τηλεφωνικά.",
   "Επικοινωνούμε σύντομα προσωπικά μαζί σας.",
   "Συζητάμε το θέμα σας μέσω βιντεοκλήσης ή στο γραφείο μας στην Αθήνα.",
   "Για μια συνεχή συνεργασία λαμβάνετε γραπτή προσφορά.",
 ]
-note_full = "Συγκεκριμένα μεμονωμένα ερωτήματα απαντώνται σε μια πρώτη συμβουλευτική συνάντηση· η αμοιβή της συμψηφίζεται, εάν στη συνέχεια μας αναθέσετε την υπόθεσή σας."

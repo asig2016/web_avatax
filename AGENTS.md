@@ -77,9 +77,19 @@ Read `README.md` (overview), `docs/DOCKER.md` (containers and commands), `docs/D
   in Deutschland"); titles and headings use „Steuerberatung". Never „Steuerberatungsgesellschaft".
 - **FAQs only on the relocation pages** (5A, 5B, 5C). Elsewhere, put useful answers into the text.
 - **Contact flow:** every service page ends with „Nächste Schritte" (`_partials/next-steps.html`,
-  `data/next_steps.toml`) and a page-specific button (`ctaText`, `ctaTopic` → `data/topics.toml`). Individual
-  questions are a **paid first consultation, credited on engagement**; mandates get a **written offer**. No reply
+  `data/next_steps.toml`) and a page-specific button (`ctaText`, `ctaTopic` → `data/topics.toml`). No reply
   time is promised; phone hours with "auf Deutsch" are shown.
+- **Fees (2026-10-17):** **no price in the general contact area** ("Nächste Schritte", contact page) – they link to
+  the page **„Honorare & Zusammenarbeit"** (`content/fees.*.md`). Navigation: „Leistungen ▾ | Über uns ▾ | Kontakt";
+  the „Über uns" submenu has three pages with clearly separated content: **„Über AVATAX"** (`about.*.md`: who we are,
+  philosophy, team, clients, network, office – entry in the language menus of `hugo.toml`), **„Unsere Arbeitsweise"**
+  (`how-we-work.*.md`: contact person, communication, digital processes, personal support) and **„Honorare &
+  Zusammenarbeit"** (`fees.*.md`: fee models, first meetings, additional costs, start of the mandate); „Kontakt" is the only highlighted menu entry. Subtle links to the fees page: the home
+  section „Transparente Vergütung" and „Wie wir abrechnen: …" in „Nächste Schritte". The page explains the fee models
+  (time-based fees or monthly flat fees; no hourly rates or amounts for mandates), the **free first meeting for
+  companies** and the **paid first consultation for private individuals: 200 € plus 24 % VAT = 248 €, not credited**,
+  with what it covers. Never justify the different treatment publicly (administrative effort, revenue potential);
+  present two distinct services instead.
 - **No staff names** on the site; describe how mandates are handled instead.
 - **Self-employed page** addresses freelancers and entrepreneurs who relocate (Art. 5C, DBA), no list of
   low-fee professions.

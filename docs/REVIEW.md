@@ -149,10 +149,16 @@ Independent review of the German site (conversion, positioning, search); batches
   the tax page explains descriptively that the Greek profession is Λογιστής-Φοροτεχνικός – **legal check of this
   sentence** recommended.
 - **Contact flow:** „Nächste Schritte" on every service page and on About; contact page with the full version.
-  Wording made more personal on 2026-10-16 (owner: the first version read like a form); the paid first
-  consultation is now a small note below the steps. Please confirm the note („Einzelfragen beantworten wir im
-  Rahmen einer Erstberatung, deren Honorar bei Beauftragung angerechnet wird") and that the phone hours
-  „Mo–Fr 9–17 Uhr … auf Deutsch" are always covered.
+  Redesigned 2026-10-17 after the owner's mock-up; no price in this block or on the contact page any more.
+  Please confirm that the phone hours „Mo–Fr 9–17 Uhr … auf Deutsch" are always covered.
+- **„Über uns" split into three pages (2026-10-17):** „Über AVATAX" (rewritten: who we are, philosophy, team, clients),
+  new page **„Unsere Arbeitsweise"** (`how-we-work.*.md`, /de/arbeitsweise/) and the fees page (with „Beginn des
+  Mandats" and the note on additional costs). Please proofread; EN/EL About pages still have the old structure.
+- **New page „Honorare & Zusammenarbeit"** (`fees.*.md`, /de/honorare/, in the main menu, 2026-10-17): fee models,
+  free first meeting for companies, first consultation for private individuals 200 € zzgl. 24 % USt. = 248 €
+  (not credited). **Please check** which fee model is named for which service (Buchhaltung/Lohn monthly flat fee,
+  Steuerberatung usually time-based) and what the consultation covers („Enthalten" / „Nicht enthalten"). Note: the disabled online booking still labels
+  appointments „kostenfrei" (`bookFree`) – adjust before switching it on again.
 - **Contact form:** phone optional, new field „Unternehmen", subject replaced by the choice „Ihr Anliegen".
 - **FAQs** only on the three relocation pages; useful answers of the others moved into the text.
 - **Home, About, Ihr Start, Selbständig, Länger in Griechenland:** rewritten (German angle first, no self-praise,

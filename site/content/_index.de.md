@@ -37,6 +37,8 @@ pillars:
 #   - icon: book
 #     title: "Rechtskonformität"
 #     text: "Unsere Beratung folgt dem geltenden Recht und den Vorgaben der Finanzverwaltung. Wo die Rechtslage unklar ist, sagen wir das."
+feesTitle: "Transparente Vergütung"
+feesText: "Je nach Leistung vereinbaren wir monatliche Pauschalhonorare oder eine Zeitvergütung; die Konditionen kennen Sie vor Beginn jeder kostenpflichtigen Tätigkeit. Das Erstgespräch für Unternehmen ist kostenfrei."
 audiencesTitle: "Unsere Mandanten"
 audiences:
   - icon: building

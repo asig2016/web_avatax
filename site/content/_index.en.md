@@ -37,6 +37,8 @@ pillars:
 #   - icon: book
 #     title: "Legal conformity"
 #     text: "Our advice follows the current law and the guidance of the tax administration. Where the law is unclear, we say so."
+feesTitle: "Transparent fees"
+feesText: "Depending on the service we agree monthly flat fees or time-based fees; you know the terms before any chargeable work begins. The first meeting for companies is free of charge."
 audiencesTitle: "Our clients"
 audiences:
   - icon: globe

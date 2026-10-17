@@ -1,27 +1,51 @@
-{{- /* "Nächste Schritte" (texts in data/next_steps.toml).
-       Call with (dict "page" . "full" false): short version + page-specific button (front matter ctaText,
-       ctaTopic → /kontakt/?topic=…), phone, hours and e-mail. "full" true = contact page, steps only. */}}
+{{- /* "Nächste Schritte" (texts in data/next_steps.toml). No price here (owner decision 2026-10-17):
+       the fees are explained on the page "Honorare & Zusammenarbeit" (content/fees.*.md), linked below.
+       Call with (dict "page" . "full" false): block at the end of service pages – eyebrow, heading, three
+       steps, fees link, button (form pre-selection from front matter ctaTopic → /kontakt/?topic=…), direct
+       contact. "full" true = contact page: heading, intro and a plain list next to the form. */}}
 {{- $p := .page }}
 {{- $full := .full }}
+{{- $fees := site.GetPage "/fees" }}
 {{- with index site.Data.next_steps site.Language.Lang }}
-<section class="next-steps{{ if $full }} next-steps-full{{ end }}" id="next-steps">
+{{- $d := . }}
+{{- if $full }}
+<section class="next-steps next-steps-full" id="next-steps">
   <h2>{{ .title }}</h2>
+  <p>{{ .full_intro }}</p>
   <ol>
-    {{- range (cond $full .full .short) }}
+    {{- range .full }}
     <li>{{ . | markdownify }}</li>
     {{- end }}
   </ol>
-  {{- with (cond $full .note_full .note_short) }}
-  <p class="next-steps-note">{{ . }}</p>
+  {{- with $fees }}
+  <p class="next-steps-note">{{ $d.fees_lead }} <a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
   {{- end }}
-  {{- if not $full }}{{ with site.GetPage "/contact" }}
-  <div class="next-steps-actions">
-    <a class="btn" href="{{ .RelPermalink }}{{ with $p.Params.ctaTopic }}?topic={{ . }}{{ end }}">{{ $p.Params.ctaText | default (T "sendEnquiry") }}</a>
-    <p class="next-steps-contact">
-      <a href="{{ site.Params.phoneHref | safeURL }}">{{ site.Params.phone }}</a> · {{ T "phoneHoursShort" }}<br>
-      <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
-    </p>
-  </div>
-  {{- end }}{{ end }}
 </section>
+{{- else }}
+<section class="next-steps" id="next-steps">
+  <p class="ns-eyebrow">{{ .eyebrow }}</p>
+  <h2>{{ .heading }}</h2>
+  <p class="ns-intro">{{ .intro }}</p>
+  <ol class="ns-steps">
+    {{- range $i, $s := .steps }}
+    <li>
+      <span class="ns-icon">{{ partial "icon.html" $s.icon }}</span>
+      <div><p class="ns-step-title">{{ printf "%02d" (add $i 1) }} · {{ $s.title }}</p><p class="ns-step-text">{{ $s.text }}</p></div>
+    </li>
+    {{- end }}
+  </ol>
+  {{- with $fees }}{{ if ne .RelPermalink $p.RelPermalink }}
+  <p class="ns-fees">{{ partial "icon.html" "info" }}<span>{{ $d.fees_lead }} <a href="{{ .RelPermalink }}">{{ .Title }}</a></span></p>
+  {{- end }}{{ end }}
+  {{- with site.GetPage "/contact" }}
+  <a class="btn ns-button" href="{{ .RelPermalink }}{{ with $p.Params.ctaTopic }}?topic={{ . }}{{ end }}">{{ $d.button }}{{ partial "icon.html" "arrow-ur" }}</a>
+  {{- end }}
+  <div class="ns-direct">
+    <p>{{ .direct }}</p>
+    <p class="ns-phone"><a href="{{ site.Params.phoneHref | safeURL }}">{{ site.Params.phone }}</a></p>
+    <p class="ns-hours">{{ .hours }}</p>
+    <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+  </div>
+</section>
+{{- end }}
 {{- end }}

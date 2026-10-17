@@ -53,6 +53,12 @@ timeZone = "Europe/Athens"
       street = "76 Syngrou Ave."
       city = "GR-117 42 Athens"
       description = "Accounting, payroll, tax consultancy and fiscal representation in Athens – in Greek, German and English."
+    # "Über uns" submenu: this entry (About page); how-we-work.en.md and fees.en.md add themselves via front matter
+    [[languages.en.menus.main]]
+      name = "About AVATAX"
+      pageRef = "/about"
+      parent = "about"
+      weight = 10
   [languages.de]
     languageName = "Deutsch"
     languageCode = "de"
@@ -67,6 +73,12 @@ timeZone = "Europe/Athens"
       street = "Syngrou Ave. 76"
       city = "GR-117 42 Athen"
       description = "Buchhaltung, Lohnbuchhaltung, Steuerberatung und steuerliche Vertretung in Athen – auf Deutsch, Griechisch und Englisch."
+    # "Über uns" submenu: this entry (About page); how-we-work.de.md and fees.de.md add themselves via front matter
+    [[languages.de.menus.main]]
+      name = "Über AVATAX"
+      pageRef = "/about"
+      parent = "about"
+      weight = 10
   [languages.el]
     languageName = "Ελληνικά"
     languageCode = "el"
@@ -81,6 +93,13 @@ timeZone = "Europe/Athens"
       street = "Λ. Συγγρού 76"
       city = "117 42 Αθήνα"
       description = "Λογιστικές υπηρεσίες, μισθοδοσία, φοροτεχνικές υπηρεσίες και φορολογική εκπροσώπηση στην Αθήνα – στα ελληνικά, γερμανικά και αγγλικά."
+
+    # "Über uns" submenu: this entry (About page); how-we-work.el.md and fees.el.md add themselves via front matter
+    [[languages.el.menus.main]]
+      name = "Η AVATAX"
+      pageRef = "/about"
+      parent = "about"
+      weight = 10
 
 [markup.goldmark.renderer]
   unsafe = false
