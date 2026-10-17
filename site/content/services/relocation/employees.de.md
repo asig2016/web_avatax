@@ -7,7 +7,6 @@ url: /de/leistungen/umzug-nach-griechenland/arbeitnehmer-und-freiberufler/
 icon: building
 weight: 30
 review: "aus der Seite „Steuervorteile beim Zuzug“ ausgegliedert am 2026-10-05 – bitte prüfen – neue FAQ 2026-10-05: bitte „Homeoffice“ prüfen; FAQ „Sozialversicherung“ am 2026-10-16 entfernt; 2026-10-16: Frage zur Antragsfrist präzisiert"
-ctaText: "Anfrage zum Zuzug senden"
 ctaTopic: "relocation"
 faq:
   - q: "Bis wann muss der Antrag auf die 50-%-Steuerbefreiung gestellt werden?"

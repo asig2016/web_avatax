@@ -201,7 +201,6 @@ Every service page ends with the block „Nächste Schritte" (enquiry → clarif
 contact button. Optional settings make the block fit the page:
 
 ```yaml
-ctaText: "Vertretung anfragen"                  # label for both sidebar and closing buttons
 ctaTopic: "representation"                     # pre-selects "Ihr Anliegen" in the contact form
 nextStepsHeading: "Welche Vertretung brauchen Sie in Griechenland?"
 nextStepsIntro: "Schildern Sie uns Ihre Situation. Wir klären mit Ihnen, welche Form der Vertretung erforderlich oder sinnvoll ist."
@@ -210,8 +209,11 @@ nextStepsIntro: "Schildern Sie uns Ihre Situation. Wir klären mit Ihnen, welche
 - Topics and their keys (`company`, `accounting`, `staff`, `representation`, `tax`, `relocation`, `property`,
   `other`): `site/data/topics.toml`. The label chosen in the form becomes the subject of the notification mail.
 - Texts of „Nächste Schritte" (short version on the pages, full version on the contact page):
-  `site/data/next_steps.toml`. Without overrides, the shared heading, introduction and closing button label
-  apply; the sidebar button defaults to the translated “Send enquiry” label.
+  `site/data/next_steps.toml`. Without overrides, the shared heading and introduction apply.
+- Contact-entry buttons on the home page, sidebars and closing blocks share the translated
+  `enquireWithoutObligation` label in `site/i18n/*.toml` (DE: “Unverbindlich anfragen”).
+  The form submit button keeps `sendEnquiry` (DE: “Anfrage senden”). The topic comes from `ctaTopic`;
+  page-specific `ctaText` overrides are no longer used.
 - Message guidance in the contact form: `formMessageHint` / `formRepresentationHint` in
   `site/i18n/*.toml`. The representation guidance follows the selected topic, including changes in the form.
 - E-mail address, phone and VAT number: `[params]` in `site/hugo.toml`; phone hours: `phoneHours` /

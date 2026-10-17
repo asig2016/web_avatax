@@ -8,7 +8,6 @@ icon: move
 weight: 35
 teaser: "Pauschalsteuer für Investoren und Rentner, 50 % Steuerbefreiung für Arbeitnehmer und Freiberufler, die nach Griechenland ziehen."
 review: "neue Seite auf Basis der Informationsblätter zu Art. 5B/5C (Stand 01.2024 bzw. 05.2021) und aktueller Recherche – bitte fachlich prüfen – 2026-10-05 in zwei Unterseiten aufgeteilt; 2026-10-16: H1 gekürzt, „Auswandern“ für die Suche, Reihenfolge 5A/5B/5C, Ton"
-ctaText: "Anfrage zum Zuzug senden"
 ctaTopic: "relocation"
 menus:
   main:

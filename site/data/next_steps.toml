@@ -16,7 +16,6 @@ steps = [
   { icon = "messages", title = "Beratungsbedarf klären", text = "Gemeinsam klären wir Ihre Ausgangssituation, Ihre Ziele und den benötigten Leistungsumfang." },
   { icon = "filecheck", title = "Angebot erhalten und bestätigen", text = "Sie erhalten ein schriftliches Angebot mit Leistungsumfang und [Konditionen](/de/honorare/). Ihr Termin findet nach Ihrer schriftlichen Bestätigung statt." },
 ]
-button = "Jetzt unverbindlich anfragen"
 direct = "Oder sprechen Sie direkt mit uns:"
 # contact page
 title = "Lassen Sie uns über Ihr Anliegen sprechen."
@@ -36,7 +35,6 @@ steps = [
   { icon = "messages", title = "Clarify your needs", text = "Together we clarify your starting position, your goals and the scope of support you need." },
   { icon = "filecheck", title = "Review and accept our offer", text = "You receive a written offer setting out the scope and [terms](/fees/). Your meeting takes place after you accept the offer in writing." },
 ]
-button = "Enquire now – without obligation"
 direct = "Or talk to us directly:"
 title = "Let us talk about your matter."
 full = [
@@ -55,7 +53,6 @@ steps = [
   { icon = "messages", title = "Διευκρίνιση αναγκών", text = "Διευκρινίζουμε τις ανάγκες σας και το απαιτούμενο εύρος υπηρεσιών." },
   { icon = "filecheck", title = "Προσφορά και γραπτή αποδοχή", text = "Λαμβάνετε γραπτή προσφορά με το αντικείμενο και τους [όρους](/el/amoives/). Η συνάντηση πραγματοποιείται μετά τη γραπτή αποδοχή σας." },
 ]
-button = "Επικοινωνήστε χωρίς δέσμευση"
 direct = "Ή μιλήστε απευθείας μαζί μας:"
 title = "Ας συζητήσουμε το θέμα σας."
 full = [

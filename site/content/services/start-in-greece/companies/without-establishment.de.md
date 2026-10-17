@@ -7,7 +7,6 @@ url: /de/leistungen/ihr-start-in-griechenland/unternehmen/ohne-niederlassung/
 icon: "globe"
 weight: 10
 review: "neue Seite 2026-10-05 auf Grundlage von Recherche – bitte prüfen; 2026-10-16: FAQ entfernt (Beispiel zur USt-Registrierung in den Text übernommen)"
-ctaText: "Anfrage zu Ihrem Vorhaben senden"
 ctaTopic: "company"
 heroImage: "images/start-logistics.jpg"
 heroAlt: "Kräne eines griechischen Frachthafens in der Abenddämmerung"

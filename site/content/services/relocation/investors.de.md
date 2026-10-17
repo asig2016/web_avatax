@@ -7,7 +7,6 @@ url: /de/leistungen/umzug-nach-griechenland/pauschalsteuer-fuer-investoren/
 icon: finance
 weight: 10
 review: "neue Seite 2026-10-05 auf Grundlage von Art. 5A griech. Einkommensteuergesetz i. d. F. des Gesetzes 5313/2026 und der AADE-Entscheidung A.1147/2026 – bitte fachlich prüfen – neue FAQ 2026-10-05; 2026-10-16: seoTitle „Non-Dom“, Frage zur Antragsfrist präzisiert"
-ctaText: "Anfrage zum Zuzug senden"
 ctaTopic: "relocation"
 faq:
   - q: "Wer kann die Pauschalsteuer von 100.000 € beantragen?"

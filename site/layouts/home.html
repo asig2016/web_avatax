@@ -12,7 +12,7 @@
     <h1>{{ .Params.heroTitle }}</h1>
     <p class="hero-text">{{ .Params.heroText }}</p>
     <div class="hero-actions">
-      {{- with site.GetPage "/contact" }}<a class="btn btn-light" href="{{ .RelPermalink }}">{{ T "sendEnquiry" }}</a>{{ end }}
+      {{- with site.GetPage "/contact" }}<a class="btn btn-light" href="{{ .RelPermalink }}">{{ T "enquireWithoutObligation" }}</a>{{ end }}
       {{- with site.GetPage "/services" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "ourServices" }}</a>{{ end }}
     </div>
   </div>
@@ -139,7 +139,7 @@
     </div>
     <div class="contact-band-actions">
       <a class="btn btn-light" href="{{ site.Params.phoneHref | safeURL }}">{{ partial "icon.html" "phone" }} {{ site.Params.phone }}</a>
-      {{- with site.GetPage "/contact" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "sendEnquiry" }}</a>{{ end }}
+      {{- with site.GetPage "/contact" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "enquireWithoutObligation" }}</a>{{ end }}
     </div>
   </div>
 </section>

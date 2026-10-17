@@ -7,7 +7,6 @@ url: /de/leistungen/ihr-start-in-griechenland/unternehmen/immobilienerwerb/
 icon: "building"
 weight: 50
 review: "2026-10-16 neu ausgerichtet (Erwerb ohne Niederlassung; vorher „Immobiliengesellschaft“) auf Grundlage von Art. 8 Ges. 5104/2024, Art. 47 und 58 Ges. 4172/2013, Art. 15–17 Ges. 3091/2002 und AADE-Entscheidung A.1014/2026 – bitte fachlich prüfen; 2026-10-16: FAQ entfernt (Inhalt steht im Text)"
-ctaText: "Anfrage zum Immobilienerwerb senden"
 ctaTopic: "property"
 ---
 Eine ausländische Gesellschaft kann Immobilien in Griechenland erwerben, **ohne eine Zweigniederlassung oder Tochtergesellschaft zu gründen**. Erforderlich ist lediglich die Registrierung beim griechischen Finanzamt. So erwerben Unternehmen etwa Büroräume, Wohnungen für Mitarbeiter oder eine Ferienimmobilie unmittelbar auf die eigene Gesellschaft. Wir übernehmen die steuerliche Seite – vor, während und nach dem Erwerb.

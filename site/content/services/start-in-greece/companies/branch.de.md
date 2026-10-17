@@ -7,7 +7,6 @@ url: /de/leistungen/ihr-start-in-griechenland/unternehmen/zweigniederlassung/
 icon: "building"
 weight: 30
 review: "aus der Startseite ausgegliedert am 2026-10-05 – bitte prüfen; 2026-10-16: FAQ entfernt, Einleitung eigenständig"
-ctaText: "Anfrage zur Zweigniederlassung senden"
 ctaTopic: "company"
 ---
 Eine Zweigniederlassung (υποκατάστημα) ist rechtlich nicht selbständig, sondern Teil des ausländischen Unternehmens, übt jedoch eine eigene Geschäftstätigkeit aus. Sie wird im griechischen Handelsregister (GEMI) eingetragen, begründet eine Betriebsstätte und ist in Griechenland ertragsteuerpflichtig. Zu klären ist insbesondere die Gewinnabgrenzung zwischen Zweigniederlassung und Stammhaus. Die Mitarbeiter sind rechtlich beim Stammhaus angestellt, wirtschaftlich aber der Zweigniederlassung zuzuordnen. Für ein bestimmtes Vorhaben kann eine Projektniederlassung in einem vereinfachten Verfahren angemeldet werden.

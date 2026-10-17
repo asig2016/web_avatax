@@ -8,7 +8,6 @@ icon: person
 weight: 20
 teaser: "Mitarbeiter in Griechenland beschäftigen – auch ohne griechische Gesellschaft. Lohnabrechnung und Arbeitsrecht auf Deutsch."
 review: "Text für deutschsprachige Unternehmen, die erstmals in Griechenland Mitarbeiter beschäftigen – bitte Umfang und Formulierung prüfen; 2026-10-16: FAQ in den Text übernommen, Vergleich mit Deutschland neu formuliert"
-ctaText: "Anfrage zur Lohnbuchhaltung senden"
 ctaTopic: "staff"
 menus:
   main:

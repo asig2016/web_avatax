@@ -7,7 +7,6 @@ url: /de/leistungen/ihr-start-in-griechenland/unternehmen/repraesentanz/
 icon: "person"
 weight: 20
 review: "aus der Startseite ausgegliedert am 2026-10-05 – bitte prüfen; 2026-10-16: FAQ entfernt"
-ctaText: "Anfrage zur Repräsentanz senden"
 ctaTopic: "company"
 ---
 Eine Repräsentanz hat keine eigene Rechtspersönlichkeit und vertritt lediglich die Interessen des ausländischen Unternehmens. Sie schließt keine eigenen Geschäfte ab, sondern beschränkt sich auf Kontakt- und Koordinationsaufgaben. Solange sie ausschließlich solche vorbereitenden oder unterstützenden Tätigkeiten ausübt, begründet sie in der Regel keine Betriebsstätte und ist damit nicht ertragsteuerpflichtig. Ihre Mitarbeiter sind rechtlich und wirtschaftlich dem Stammhaus zuzuordnen.

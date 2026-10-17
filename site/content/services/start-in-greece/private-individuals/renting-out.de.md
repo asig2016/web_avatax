@@ -7,7 +7,6 @@ url: /de/leistungen/ihr-start-in-griechenland/privatpersonen/vermietung/
 icon: "building"
 weight: 15
 review: "neue Seite 2026-10-10 auf Basis von Recherche (Art. 39, 40 gr. EStG, Ges. 5246/2025, Ges. 5222/2025, § 32b EStG) – bitte fachlich prüfen; 2026-10-16: FAQ entfernt (Inhalt steht im Text)"
-ctaText: "Anfrage zur Vermietung senden"
 ctaTopic: "property"
 heroImage: "images/start-rent-wide.jpg"
 cardImage: "images/start-rent.jpg"

@@ -8,7 +8,6 @@ icon: globe
 weight: 40
 teaser: "Steuerliche Vertretung und Fiskalvertretung für die Umsatzsteuer – für Unternehmen und Privatpersonen aus dem Ausland."
 review: "Text für ausländische Mandanten auf Basis von Quellen (Art. 8 Ges. 5104/2024, griechisches UStG Ges. 5144/2024) – bitte prüfen; Fiskalvertreter-FAQ und -Absatz am 2026-10-16 an Art. 40/41 Ges. 5144/2024 angepasst; 2026-10-16: FAQ entfernt (Unterlagen in den Ablauf übernommen); 2026-10-17: contact wording, message guidance and confirmations updated in DE/EN/EL; human review pending"
-ctaText: "Vertretung anfragen"
 nextStepsHeading: "Welche Vertretung brauchen Sie in Griechenland?"
 nextStepsIntro: "Schildern Sie uns Ihre Situation. Wir klären mit Ihnen, welche Form der Vertretung erforderlich oder sinnvoll ist."
 ctaTopic: "representation"

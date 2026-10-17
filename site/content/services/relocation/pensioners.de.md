@@ -7,7 +7,6 @@ url: /de/leistungen/umzug-nach-griechenland/rentner/
 icon: person
 weight: 20
 review: "aus der Seite „Steuervorteile beim Zuzug“ ausgegliedert am 2026-10-05 – bitte prüfen – neue FAQ 2026-10-05: bitte „Steuererklärung“ und „Wegzug vor Ablauf“ prüfen; 2026-10-16: Ton, Frage zur Antragsfrist präzisiert"
-ctaText: "Anfrage zum Zuzug senden"
 ctaTopic: "relocation"
 faq:
   - q: "Wer kann die 7-%-Pauschalsteuer für Rentner beantragen?"

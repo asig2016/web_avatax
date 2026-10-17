@@ -36,7 +36,7 @@
     {{- end }}
   </ol>
   {{- with site.GetPage "/contact" }}
-  <a class="btn ns-button" href="{{ .RelPermalink }}{{ with $p.Params.ctaTopic }}?topic={{ . }}{{ end }}">{{ $p.Params.ctaText | default $d.button }}{{ partial "icon.html" "arrow-ur" }}</a>
+  <a class="btn ns-button" href="{{ .RelPermalink }}{{ with $p.Params.ctaTopic }}?topic={{ . }}{{ end }}">{{ T "enquireWithoutObligation" }}{{ partial "icon.html" "arrow-ur" }}</a>
   {{- end }}
   <div class="ns-direct">
     <p>{{ .direct }}</p>

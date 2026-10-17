@@ -226,3 +226,8 @@ the free first meeting for companies and the stated private consultation fee rem
 
 2026-10-17: fee links now appear on the terms within the contact steps throughout the site
 (DE/EN/EL); separate fee boxes removed. The fees pages omit the link to themselves.
+
+2026-10-17: contact-entry buttons now consistently use “Unverbindlich anfragen” (EN/EL adapted),
+including home-page buttons, sidebars and closing blocks. Long page-specific labels removed;
+existing topic preselection retained. Form submit, navigation and chat labels keep their respective actions.
+Human review pending for the new shared DE/EN/EL label.

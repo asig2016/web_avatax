@@ -16,6 +16,7 @@ cookieSettings = "Cookie settings"
 ourServices = "Our services"
 
 # forms
+# Review pending: 2026-10-17 consistent contact-entry button wording across all pages.
 # Review pending: 2026-10-17 contact wording, message guidance and confirmations updated in DE/EN/EL.
 formName = "Your name"
 formEmail = "Your e-mail address"
@@ -31,6 +32,7 @@ formRequired = "Fields marked * are required."
 formNoscript = "Please enable JavaScript to use this form (it protects us against spam), or call us."
 formOk = "Thank you for your message. We will get back to you personally."
 sendEnquiry = "Send an enquiry"
+enquireWithoutObligation = "Enquire without obligation"
 phoneHours = "Mon–Fri 9:00–17:00 (Greek time) · in English or German"
 phoneHoursShort = "Mon–Fri 9:00–17:00 (Greek time) · in English or German"
 emailLabel = "E-mail"

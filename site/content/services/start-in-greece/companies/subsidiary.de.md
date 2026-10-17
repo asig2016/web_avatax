@@ -7,7 +7,6 @@ url: /de/leistungen/ihr-start-in-griechenland/unternehmen/tochtergesellschaft/
 icon: "group"
 weight: 40
 review: "aus der Startseite ausgegliedert am 2026-10-05 – bitte prüfen; 2026-10-16: FAQ entfernt, Titel für die Suche"
-ctaText: "Anfrage zur Tochtergesellschaft senden"
 ctaTopic: "company"
 ---
 Eine Tochtergesellschaft ist eine rechtlich selbständige griechische Gesellschaft, in der Praxis meist eine I.K.E. oder eine A.E. Bei der Wahl der Rechtsform sind Haftung, Kapitalausstattung, Organisation der Geschäftsführung sowie die Geschäftsführervergütung einschließlich der sozialversicherungsrechtlichen Folgen zu berücksichtigen. Wegen der engen Verflechtung mit der Muttergesellschaft sollten bereits bei der Gründung die Verrechnungspreise und die Verträge über die Leistungsbeziehungen zwischen beiden Gesellschaften festgelegt werden.

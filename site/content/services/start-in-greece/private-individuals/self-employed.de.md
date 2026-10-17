@@ -7,7 +7,6 @@ url: /de/leistungen/ihr-start-in-griechenland/privatpersonen/selbstaendig/
 icon: "person"
 weight: 30
 review: "neue Seite 2026-10-06 auf Grundlage von Recherche – bitte prüfen; 2026-10-16: Einleitung für Freiberufler und Unternehmer mit Art. 5C und DBA neu, FAQ in den Text übernommen"
-ctaText: "Anfrage zur Selbständigkeit in Griechenland senden"
 ctaTopic: "relocation"
 cardImage: "images/start-remote.jpg"
 heroAlt: "Heller Schreibtisch mit Laptop und Kaffeetasse"

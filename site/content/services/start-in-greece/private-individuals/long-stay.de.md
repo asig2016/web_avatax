@@ -7,7 +7,6 @@ url: /de/leistungen/ihr-start-in-griechenland/privatpersonen/laengerer-aufenthal
 icon: "globe"
 weight: 20
 review: "neue Seite 2026-10-06 auf Grundlage von Recherche (Art. 4 griech. Einkommensteuergesetz); 2026-10-10 um Aufenthalt im Eigenheim erweitert – bitte prüfen; 2026-10-16: Einleitung sachlich, FAQ in den Text übernommen"
-ctaText: "Anfrage zu Ihrem Aufenthalt senden"
 ctaTopic: "relocation"
 heroImage: "images/start-stay.jpg"
 heroAlt: "Terrasse mit Pool und Blick über eine griechische Bucht"

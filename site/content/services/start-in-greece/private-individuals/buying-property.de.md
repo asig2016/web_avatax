@@ -7,7 +7,6 @@ url: /de/leistungen/ihr-start-in-griechenland/privatpersonen/immobilienkauf/
 icon: "start"
 weight: 10
 review: "neue Seite 2026-10-05 auf Grundlage von Recherche – bitte prüfen; 2026-10-16: FAQ entfernt (Inhalt steht im Text)"
-ctaText: "Anfrage zum Immobilienkauf senden"
 ctaTopic: "property"
 heroImage: "images/start-home.jpg"
 heroAlt: "Moderne Villa mit Pool in Griechenland in der Abenddämmerung"

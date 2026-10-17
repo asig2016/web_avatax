@@ -8,7 +8,6 @@ icon: building
 weight: 10
 teaser: "Ohne Niederlassung, Repräsentanz, Zweigniederlassung, Tochtergesellschaft oder Immobilienerwerb – Begleitung ausländischer Unternehmen."
 review: "2026-10-05 in Überblick und vier Unterseiten aufgeteilt; neue Seite „ohne Niederlassung“ – bitte prüfen; 2026-10-16: Punkt „Immobilienerwerb“ (vorher „Immobiliengesellschaft“) neu: Kauf ohne Niederlassung, nur steuerliche Registrierung; 2026-10-16: Punkte der Liste verlinkt"
-ctaText: "Anfrage zu Ihrem Vorhaben senden"
 ctaTopic: "company"
 heroImage: "images/start-companies.jpg"
 heroAlt: "Beleuchtete Büros hinter der Glasfassade eines modernen Bürogebäudes"
