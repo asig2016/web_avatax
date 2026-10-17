@@ -43,7 +43,7 @@ services:
   # Receives the contact and CV forms and sends them by e-mail.
   formsvc:
     build: ./formsvc
-    image: avatax-formsvc:latest
+    image: ${STACK:-avatax}-formsvc:latest   # per stack, so test and live never share the image
     container_name: ${STACK:-avatax}-formsvc
     restart: unless-stopped
     env_file: .env
