@@ -322,10 +322,12 @@ ssh sysop@sigalas.eu 'cd /home/sysop/docker_data/go_avatax && sudo chown -R syso
 - **Logs (server):** `/home/sysop/docker_data/go_avatax/logs/nginx/{access,error}.log`, plus
   `docker compose logs formsvc` (records every sent mail and every rejected spam attempt).
 - **Status:** `docker compose ps` (`web` must be `healthy`), `curl -s http://127.0.0.1:8090/healthz`.
-- **Log rotation:** the privacy policy promises to keep logs for at most 30 days. Create
-  `/etc/logrotate.d/avatax`:
+- **Log rotation:** the privacy policy promises to keep logs for at most 30 days. Without this file the
+  logs of both stacks grow forever (not yet set up on 2026-10-19). Create it as root
+  (`sudo nano /etc/logrotate.d/avatax`); it covers the live and the test stack:
   ```
-  /home/sysop/docker_data/go_avatax/logs/nginx/*.log {
+  /home/sysop/docker_data/go_avatax/logs/nginx/*.log
+  /home/sysop/docker_data/go_avatax_test/logs/nginx/*.log {
       daily
       rotate 30
       compress
@@ -334,6 +336,11 @@ ssh sysop@sigalas.eu 'cd /home/sysop/docker_data/go_avatax && sudo chown -R syso
       copytruncate
   }
   ```
+  Check it with `sudo logrotate -d /etc/logrotate.d/avatax` (dry run); `sudo logrotate -f …` rotates once
+  right away. The system's `logrotate.timer` then runs it every night. `copytruncate` copies the log and
+  empties it, so nginx keeps writing without a reload. No `su` line: the files belong to root (nginx in
+  the container) and the folder is writable only by `sysop`. `make stats` / `make stats-ips` read the
+  rotated `.gz` files too; `make stats-reset` deletes them.
 - **Updates of the base images** (nginx, Go, distroless), about monthly:
   `docker compose pull && make update` (`pull` refreshes nginx; `update` rebuilds formsvc with the
   newest Go image). The Hugo version is pinned in `docker-compose.yml` (`HUGO_IMAGE_TAG`). Change it
