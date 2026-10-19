@@ -128,6 +128,8 @@ _deploy:
 GEOIP_DB := stats/dbip-country-lite.mmdb
 # All access logs of the live site, current and rotated (override to test with a local log).
 ACCESS_LOGS ?= ssh $(DEPLOY_HOST) 'cd $(LIVE_PATH)/logs/nginx && zcat -f access.log*'
+# Own visits, left out of `make stats` and `make stats-ips` (space-separated; GoAccess also takes ranges a-b).
+STATS_EXCLUDE_IPS ?= 194.219.21.115
 
 _geoip:
 	@mkdir -p stats
@@ -142,21 +144,21 @@ _geoip:
 stats: _geoip
 	$(ACCESS_LOGS) \
 		| docker run --rm -i -u $(UIDGID) -v "$(CURDIR)/stats":/out:z allinurl/goaccess - \
-			--log-format=COMBINED --ignore-crawlers --geoip-database=/out/$(notdir $(GEOIP_DB)) -o /out/report.html
+			--log-format=COMBINED --ignore-crawlers $(addprefix --exclude-ip=,$(STATS_EXCLUDE_IPS)) --geoip-database=/out/$(notdir $(GEOIP_DB)) -o /out/report.html
 	@echo "Report: $(CURDIR)/stats/report.html"
 
 # IP addresses per page, with the number of requests and the country:  make stats-ips  or  make stats-ips URL=/de/
 # Counts only browsers (user agent "Mozilla/…" without bot/crawler words) and GET requests with
-# status 200/304; leaves out images, CSS, JS, fonts and /api/. Query strings are dropped.
+# status 200/304; leaves out images, CSS, JS, fonts, /api/ and STATS_EXCLUDE_IPS. Query strings are dropped.
 # Countries: mmdblookup (in the GoAccess image) on the same database as `make stats`, one container for all IPs.
 STATS_BOTS   := bot|crawl|spider|slurp|preview|headless|lighthouse|monitor|scan|archiv|facebookexternalhit
 STATS_ASSETS := \.(css|js|map|png|jpe?g|gif|svg|webp|avif|ico|woff2?|ttf|xml|txt|json|webmanifest)$$
 
 stats-ips: _geoip
 	@$(ACCESS_LOGS) \
-		| awk -F'"' -v u='$(URL)' '{ \
+		| awk -F'"' -v u='$(URL)' -v x='$(STATS_EXCLUDE_IPS)' 'BEGIN { n = split(x, xs, " "); for (i = 1; i <= n; i++) own[xs[i]] } { \
 			split($$1, a, " "); split($$2, r, " "); split($$3, s, " "); p = r[2]; sub(/\?.*/, "", p); \
-			if (r[1] != "GET" || (s[1] != 200 && s[1] != 304)) next; \
+			if (a[1] in own || r[1] != "GET" || (s[1] != 200 && s[1] != 304)) next; \
 			if ($$6 !~ /^Mozilla\// || tolower($$6) ~ /$(STATS_BOTS)/) next; \
 			if (p ~ /$(STATS_ASSETS)/ || p ~ /^\/api\// || (u != "" && p != u)) next; \
 			print p, a[1] }' \
