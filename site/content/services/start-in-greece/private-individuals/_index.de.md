@@ -1,12 +1,12 @@
 ---
-title: "Ihr Start in Griechenland als Privatperson"
+title: "Privat in Griechenland"
 linkTitle: "Privatpersonen"
 seoTitle: "Privatpersonen in Griechenland: Immobilie, Wohnsitz, Arbeit"
 description: "Immobilie kaufen oder vermieten, länger in Griechenland leben oder selbständig arbeiten: Steuernummer, Steuerwohnsitz und Pflichten – auf Deutsch."
 url: /de/leistungen/ihr-start-in-griechenland/privatpersonen/
 icon: "person"
 weight: 20
-review: "neue Seite 2026-10-05 – bitte prüfen; 2026-10-16: seoTitle/description auf alle Themen der Seite erweitert; 2026-10-19: Mandantenseite im redaktionellen Layout (Menü „Mandanten“) – Einleitung, Ausgangslage, Leistungen und Liste für das Erstgespräch ergänzt, bitte prüfen"
+review: "neue Seite 2026-10-05 – bitte prüfen; 2026-10-16: seoTitle/description auf alle Themen der Seite erweitert; 2026-10-19: Mandantenseite im redaktionellen Layout (Menü „Mandanten“) – Einleitung, Ausgangslage, Leistungen und Liste für das Erstgespräch ergänzt, bitte prüfen; 2026-10-19: Überschrift „Privat in Griechenland“ (Inhaber)"
 heroImage: "images/start-private-wide.jpg"
 cardImage: "images/start-private.jpg"
 heroAlt: "Paar auf einer Bank am Meer, im Hintergrund ein Leuchtturm"

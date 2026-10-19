@@ -1,10 +1,10 @@
 ---
-title: "Ihr Unternehmen in Griechenland: Buchhaltung, Lohn und Steuern"
+title: "Standort Griechenland"
 linkTitle: "Unternehmen mit Gesellschaft oder Mitarbeitern in Griechenland"
 seoTitle: "Griechische Tochtergesellschaft: Buchhaltung & Lohn | AVATAX"
 description: "Für griechische Tochtergesellschaften, Zweigniederlassungen und Mitarbeiter ausländischer Unternehmen: Buchhaltung, Lohn und Steuern – auf Deutsch."
 url: /de/unternehmen-in-griechenland/
-review: "neue Mandantenseite 2026-10-19 (redaktionelles Layout), aufgebaut aus den Leistungsseiten Buchhaltung, Lohn, Steuerberatung und Fiskalvertretung – bitte prüfen"
+review: "neue Mandantenseite 2026-10-19 (redaktionelles Layout), aufgebaut aus den Leistungsseiten Buchhaltung, Lohn, Steuerberatung und Fiskalvertretung – bitte prüfen; 2026-10-19: Überschrift „Standort Griechenland“ (Inhaber)"
 eyebrow: "Unsere Mandanten"
 lead: "Für Ihre griechische Tochtergesellschaft, Zweigniederlassung oder Ihre Mitarbeiter in Griechenland führen wir die Bücher nach griechischem Recht, rechnen die Löhne ab und erledigen die Steuern – und berichten an Sie und Ihre Muttergesellschaft, auf Deutsch."
 nextSteps: true
