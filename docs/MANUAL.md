@@ -220,6 +220,72 @@ nextStepsIntro: "Schildern Sie uns Ihre Situation. Wir klären mit Ihnen, welche
   `phoneHoursShort` in `site/i18n/*.toml`.
 - Other pages (e.g. About) get the block with `nextSteps: true`.
 
+### Page blocks: situation, outcome, example, first discussion (since 2026-10-19)
+
+The market-entry pages (`services/start-in-greece/companies/…`) and the client pages use a fixed order of
+blocks around the Markdown text. All blocks are optional front matter; a page without them looks as before.
+Order on the page: **lead** (under the title) → text up to the first `##` → **situation** → **services** → the
+rest of the text (e.g. "How we support you") → **outcome** → **example** → photo → **preparation** →
+**callout** → **related** → „Nächste Schritte". "On this page" in the sidebar lists them automatically.
+
+```yaml
+eyebrow: "Our clients"                       # small label above the title (default: the parent section)
+lead: "One or two sentences under the title: the situation and what we do."
+situation:                                   # "Your situation" – three sentences from the client's view
+  - "Your company plans to sell, provide services or employ staff in Greece."
+services:                                    # "Relevant services" – linked rows (client pages)
+  - { title: "Accounting", text: "One line on what the page covers.", url: "/services/accounting/" }
+outcome:                                     # "What you receive"
+  intro: "Optional sentence."
+  items:
+    - term: "Registrations"
+      text: "Greek tax number, VAT registration and employer registration where required."
+  boundary: "What we do not do, e.g. legal documents by your lawyers."
+example:                                     # "Example scenario" – anonymous, never a real client
+  situation: "A manufacturer from Germany …"
+  approach: "We check …"
+  benefit: "The company knows …"
+articleImage: "images/athens-columns.webp"   # photo after the example (file in site/assets/images/)
+articleAlt: "Illustration: …"
+preparation:                                 # "Useful for our first discussion" – fragments, lower case
+  - "legal form and seat of your company"
+callout: { title: "Changing your accountant", text: "One short note." }
+related:                                     # "Related pages" – buttons
+  - { label: "Payroll & labour law", url: "/services/payroll/" }
+```
+
+The fixed headings of the blocks are in `site/i18n/*.toml` (keys `edSituation` … `edRelated`).
+
+### Client pages and the menu „Mandanten" / "Clients" / «Πελάτες»
+
+The menu entry "Clients" leads to the client groups on the home page (`#clients`). Its sub-entries are the three
+client pages; a page joins the menu with this front matter (the `name` is the client-group title on the home page,
+so menu and home page use the same words):
+
+```yaml
+menus:
+  main:
+    parent: clients
+    weight: 20                     # order in the menu; EL may use a different order than EN/DE
+    name: "Market entry and representation"
+```
+
+| | EN / DE | EL |
+|---|---|---|
+| 1 | Companies with an entity or staff in Greece → `content/companies-in-greece.*.md` | Ελληνικές επιχειρήσεις → same file, written for Greek companies |
+| 2 | Market entry and representation → `services/start-in-greece/companies/_index` | Αλλοδαπές επιχειρήσεις στην Ελλάδα → same |
+| 3 | Private individuals → `services/start-in-greece/private-individuals/_index` | Ιδιώτες → same |
+
+On the home page each client group (`audiences` in `_index.*.md`) links its title to the client page with `url:`.
+
+### Photos
+
+Photos live in `site/assets/images/` (Hugo makes the sizes). `heroImage` + `heroAlt` put a photo next to the title,
+`articleImage` + `articleAlt` after the example, `aboutImage` + `aboutImageAlt` (home page only) next to "About AVATAX".
+Six illustrations come from the design draft of 2026-10 (`accounting-ledger`, `tax-report-desk`, `athens-columns`,
+`athens-street-acropolis`, `start-office-building`, `reports-desk`); they are illustrations, so their alt texts start
+with "Illustration:" / "Symbolbild:" / "Ενδεικτική εικόνα:".
+
 ---
 
 ## 7. Job ads

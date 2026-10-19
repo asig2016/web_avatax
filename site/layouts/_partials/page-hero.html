@@ -1,12 +1,10 @@
-{{- /* optional photo behind the title: front matter heroImage (file in assets/) + heroAlt */}}
+{{- /* Title area of inner pages: breadcrumb, eyebrow, H1, optional lead (front matter "lead").
+       With a photo (front matter heroImage = file in assets/, alt text heroAlt) the photo stands next to the text.
+       Eyebrow: front matter "eyebrow", else the title of the parent section (none on top-level pages). */}}
 {{- $img := "" }}{{ with .Params.heroImage }}{{ $img = resources.Get . }}{{ end }}
+{{- $eyebrow := .Params.eyebrow }}
+{{- if not $eyebrow }}{{ with .Parent }}{{ if not .IsHome }}{{ $eyebrow = .LinkTitle }}{{ end }}{{ end }}{{ end }}
 <div class="page-hero{{ if $img }} page-hero-photo{{ end }}">
-  {{- with $img }}
-  <picture>
-    <source type="image/webp" srcset="{{ (.Fill "900x400 Center webp").RelPermalink }} 900w, {{ (.Fill "1800x600 Center webp").RelPermalink }} 1800w" sizes="100vw">
-    <img class="page-hero-img" src="{{ (.Fill "1800x600 Center jpg").RelPermalink }}" alt="{{ $.Params.heroAlt }}" width="1800" height="600">
-  </picture>
-  {{- end }}
   <div class="wrap">
     {{- if not .IsHome }}
     <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -18,7 +16,20 @@
       </ol>
     </nav>
     {{- end }}
-    <h1>{{ .Title }}</h1>
-    {{- with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+    <div class="page-hero-grid">
+      <div>
+        {{- with $eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+        <h1>{{ .Title }}</h1>
+        {{- with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+      </div>
+      {{- with $img }}
+      <figure class="page-hero-figure">
+        <picture>
+          <source type="image/webp" srcset="{{ (.Fill "640x480 Center webp").RelPermalink }} 640w, {{ (.Fill "1120x840 Center webp").RelPermalink }} 1120w" sizes="(min-width: 900px) 45vw, 100vw">
+          <img src="{{ (.Fill "1120x840 Center jpg").RelPermalink }}" alt="{{ $.Params.heroAlt }}" width="1120" height="840">
+        </picture>
+      </figure>
+      {{- end }}
+    </div>
   </div>
 </div>

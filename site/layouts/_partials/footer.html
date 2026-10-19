@@ -1,7 +1,7 @@
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <p class="footer-title">{{ site.Params.company }}</p>
+      <p class="footer-brand">{{ site.Params.company }}</p>
       <p>{{ site.Params.legalForm }}</p>
     </div>
     <div>
@@ -10,6 +10,14 @@
         <a href="{{ site.Params.phoneHref | safeURL }}">{{ T "phone" }}: {{ site.Params.phone }}</a><br>
         <a href="mailto:{{ site.Params.email }}">{{ T "emailLabel" }}: {{ site.Params.email }}</a></p>
     </div>
+    <nav aria-labelledby="footer-explore">
+      <p class="footer-title" id="footer-explore">{{ T "explore" }}</p>
+      <ul class="footer-nav">
+        {{- range slice "/services" "/about" "/how-we-work" "/fees" "/contact" }}
+        {{- with site.GetPage . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
+        {{- end }}
+      </ul>
+    </nav>
     <div>
       <p class="footer-title">{{ T "memberOf" }}</p>
       <ul class="members">
@@ -28,6 +36,7 @@
         {{- with site.GetPage "/legal" }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
         {{- with site.GetPage "/privacy" }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
         {{- with site.Params.ga4ID }}<button type="button" class="linklike" data-cookie-settings>{{ T "cookieSettings" }}</button>{{ end }}
+        <a href="#top">{{ T "backToTop" }} ↑</a>
       </span>
     </div>
   </div>

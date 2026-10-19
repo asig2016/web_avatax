@@ -5,6 +5,8 @@ seoTitle: "Accounting & Bookkeeping in Greece | AVATAX Athens"
 description: "Accounting for subsidiaries, branches and entrepreneurs in Greece: Greek GAAP, myDATA, e-invoicing, financial statements and GEMI publication."
 url: /services/accounting/
 icon: book
+heroImage: "images/accounting-ledger.webp"
+heroAlt: "Illustration: open ledger on a desk, the Acropolis in the background"
 weight: 10
 teaser: "Accounting and financial statements for your Greek company or branch – under Greek law, with reports in English or German."
 review: "text for foreign companies based on sources (Law 4308/2014, AADE, IFRS profile Greece) – please check; 2026-10-18: aligned with the German review (FAQ merged into the text, links to the subsidiary and branch pages)"

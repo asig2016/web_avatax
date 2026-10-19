@@ -5,6 +5,8 @@ seoTitle: "Buchhaltung in Griechenland – auf Deutsch | AVATAX"
 description: "Buchhaltung für Tochtergesellschaften, Niederlassungen und Unternehmer in Griechenland: griechisches GAAP, myDATA, E-Rechnung und Jahresabschluss."
 url: /de/leistungen/buchhaltung-und-jahresabschluss/
 icon: book
+heroImage: "images/accounting-ledger.webp"
+heroAlt: "Symbolbild: aufgeschlagenes Kassenbuch auf einem Schreibtisch, im Hintergrund die Akropolis"
 weight: 10
 teaser: "Buchhaltung und Jahresabschluss für Ihre griechische Gesellschaft oder Niederlassung – nach griechischem Recht, mit Berichten auf Deutsch."
 review: "Text für deutschsprachige Unternehmen auf Basis von Quellen (Ges. 4308/2014, AADE, IFRS-Profil Griechenland) – bitte prüfen; 2026-10-16: FAQ in den Text übernommen"

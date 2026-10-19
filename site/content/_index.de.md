@@ -2,11 +2,13 @@
 title: "AVATAX A.E."
 seoTitle: "Buchhaltung & Steuern in Griechenland auf Deutsch | AVATAX"
 description: "Buchhaltung, Lohnbuchhaltung, Steuerberatung und steuerliche Vertretung in Griechenland für Unternehmen und Privatpersonen aus dem deutschsprachigen Raum."
-review: "Startseite am 2026-10-02 sachlicher formuliert (ohne Kennzahlen-Leiste); 2026-10-16 nach Review: deutschsprachige Mandanten im Vordergrund, Zielgruppen und Links zu den Leistungsseiten neu – bitte prüfen; 2026-10-17: Hero-Text nach Bildvorlage des Eigentümers übernommen, Deutsch hervorgehoben – bitte prüfen; 2026-10-17: Einleitung und Vier-Augen-Prinzip nach rot markierter Bildvorlage des Eigentümers übernommen – bitte prüfen"
+review: "Startseite am 2026-10-02 sachlicher formuliert (ohne Kennzahlen-Leiste); 2026-10-16 nach Review: deutschsprachige Mandanten im Vordergrund, Zielgruppen und Links zu den Leistungsseiten neu – bitte prüfen; 2026-10-17: Hero-Text nach Bildvorlage des Eigentümers übernommen, Deutsch hervorgehoben – bitte prüfen; 2026-10-17: Einleitung und Vier-Augen-Prinzip nach rot markierter Bildvorlage des Eigentümers übernommen – bitte prüfen; 2026-10-19: Mandantengruppen verlinken auf die neuen Mandantenseiten (Menü „Mandanten“); 2026-10-19: „Steuerberatungsgesellschaft“ (nach Owner-Regel nie verwenden) durch die Formulierung der Seite „Über AVATAX“ ersetzt"
 heroEyebrow: "Buchhaltung · Lohn · Steuern"
-heroTitle: "Buchhaltung und Steuerberatung in Griechenland"
+heroTitle: "Buchhaltung und Steuerberatung *in Griechenland*"
 heroText: "Buchführung, Jahresabschlüsse, Lohnbuchhaltung, Steuerberatung und steuerliche Vertretung für Unternehmen und Privatpersonen in Griechenland – auf **Deutsch**, Griechisch und Englisch."
 heroAlt: "Die Akropolis, von unserem Büro aus gesehen"
+aboutImage: "images/athens-columns.webp"
+aboutImageAlt: "Symbolbild: dorische Säulen auf der Akropolis"
 pillarsTitle: "Unsere Arbeitsweise"
 pillars:
   - icon: flags
@@ -43,6 +45,7 @@ audiencesTitle: "Unsere Mandanten"
 audiences:
   - icon: building
     title: "Unternehmen mit Gesellschaft oder Mitarbeitern in Griechenland"
+    url: "/de/unternehmen-in-griechenland/"
     text: "Buchführung, Jahresabschluss und Berichte an das Stammhaus, Lohnabrechnung und laufende Steuerberatung für Ihre griechische Tochtergesellschaft, Zweigniederlassung oder Ihre Mitarbeiter in Griechenland."
     links:
       - { label: "Buchhaltung", url: "/de/leistungen/buchhaltung-und-jahresabschluss/" }
@@ -51,13 +54,14 @@ audiences:
       - { label: "Zweigniederlassung", url: "/de/leistungen/ihr-start-in-griechenland/unternehmen/zweigniederlassung/" }
   - icon: globe
     title: "Markteintritt und Vertretung"
+    url: "/de/leistungen/ihr-start-in-griechenland/unternehmen/"
     text: "Tätigkeit in Griechenland ohne Niederlassung, mit Repräsentanz, Zweigniederlassung oder Tochtergesellschaft; steuerliche Vertretung, Fiskalvertretung für die Umsatzsteuer und umsatzsteuerliche Registrierung ausländischer Unternehmen."
     links:
-      - { label: "Ihr Start in Griechenland", url: "/de/leistungen/ihr-start-in-griechenland/unternehmen/" }
       - { label: "Ohne Niederlassung", url: "/de/leistungen/ihr-start-in-griechenland/unternehmen/ohne-niederlassung/" }
       - { label: "Steuer- & Fiskalvertretung", url: "/de/leistungen/fiskalvertretung/" }
   - icon: person
     title: "Privatpersonen"
+    url: "/de/leistungen/ihr-start-in-griechenland/privatpersonen/"
     text: "Zuzug mit Pauschalbesteuerung für Investoren (Art. 5A) und Rentner (Art. 5B) oder mit 50 % Steuerbefreiung für Arbeitnehmer und Freiberufler (Art. 5C); Einkommensteuer, Immobilien, Erbschaften und Schenkungen in Griechenland."
     links:
       - { label: "100.000 € Pauschalsteuer für Investoren", url: "/de/leistungen/umzug-nach-griechenland/pauschalsteuer-fuer-investoren/" }
@@ -67,6 +71,6 @@ audiences:
 ---
 ## Buchhaltung und Steuerberatung in Athen
 
-AVATAX A.E. ist eine griechische Buchhaltungs- und Steuerberatungsgesellschaft mit Sitz in Athen. Wir betreuen griechische Unternehmen, ausländische Gesellschaften mit Geschäftstätigkeit in Griechenland sowie Privatpersonen mit steuerlichen Angelegenheiten in Griechenland.
+AVATAX A.E. ist eine griechische Kanzlei für Buchhaltung, Lohn und Steuern mit Sitz in Athen. Wir betreuen griechische Unternehmen, ausländische Gesellschaften mit Geschäftstätigkeit in Griechenland sowie Privatpersonen mit steuerlichen Angelegenheiten in Griechenland.
 
 Unser Leistungsspektrum umfasst die laufende Buchhaltung, Jahresabschlüsse, Lohnabrechnungen, Steuererklärungen und individuelle Steuerberatung. Deutschsprachige Mandanten unterstützen wir insbesondere bei der Einordnung griechischer Vorschriften im Vergleich zu den deutschen Regelungen und bei der Berücksichtigung der Anforderungen ihrer Muttergesellschaften.

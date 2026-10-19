@@ -6,8 +6,34 @@ description: "Foreign companies can buy property in Greece without a branch or s
 url: /services/start-in-greece/companies/property-acquisition/
 icon: "building"
 weight: 50
-review: "refocused 2026-10-16 (acquisition without an establishment; formerly “property company”) based on Art. 8 Law 5104/2024, Art. 47 and 58 Law 4172/2013, Art. 15–17 Law 3091/2002 and AADE decision A.1014/2026 – please check; 2026-10-18: FAQ removed (content is in the text)"
+review: "refocused 2026-10-16 (acquisition without an establishment; formerly “property company”) based on Art. 8 Law 5104/2024, Art. 47 and 58 Law 4172/2013, Art. 15–17 Law 3091/2002 and AADE decision A.1014/2026 – please check; 2026-10-18: FAQ removed (content is in the text); 2026-10-19: editorial layout – lead, situation, outcome, example and first-discussion list added, please check"
 ctaTopic: "property"
+lead: "A foreign company can buy property in Greece with only a Greek tax number. We take care of the tax side – including the 15% special real estate tax and the annual application for exemption."
+situation:
+  - "Your company wants to buy office space, flats for staff or a holiday property in Greece."
+  - "It has no branch or subsidiary in Greece."
+  - "You want to know whether company or personal ownership makes more sense."
+outcome:
+  items:
+    - term: "Structure compared before the purchase"
+      text: "Personal ownership, a transparent company or a Greek company – including the special real estate tax."
+    - term: "Registration and purchase"
+      text: "Greek tax number, tax representative where required, transfer tax and coordination with notary, lawyer and engineer."
+    - term: "Annual compliance"
+      text: "ENFIA, the special real estate tax declaration with the application for exemption and, for rented property, books and tax returns."
+  boundary: "Title and building are checked by a lawyer and an engineer; we coordinate with them."
+example:
+  situation: "A company from the Netherlands wants to buy two flats in Athens for staff on assignment."
+  approach: "We obtain the company's Greek tax number, check the exemption from the special real estate tax and coordinate the purchase with notary, lawyer and engineer."
+  benefit: "The flats are bought in the company's name, and every year the declaration and the application for exemption are filed with the required documents."
+preparation:
+  - "the property or the type of property you are looking for"
+  - "articles of association, extract from the commercial register and shareholder structure of your company"
+  - "whether the property will be rented out"
+  - "your timetable for the purchase"
+related:
+  - { label: "Buying property as a private individual", url: "/services/start-in-greece/private-individuals/buying-property/" }
+  - { label: "Tax & fiscal representation", url: "/services/fiscal-representation/" }
 ---
 A foreign company can acquire property in Greece **without setting up a branch or a subsidiary**. All it needs is a registration with the Greek tax authority. Companies use this, for example, to buy office space, flats for staff or a holiday property directly in the company's name. We take care of the tax side – before, during and after the purchase.
 

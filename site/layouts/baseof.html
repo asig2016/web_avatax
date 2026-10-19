@@ -3,7 +3,7 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body class="kind-{{ .Kind }}{{ with .Params.bodyClass }} {{ . }}{{ end }}">
+<body id="top" class="kind-{{ .Kind }}{{ with .Params.bodyClass }} {{ . }}{{ end }}">
   <a class="skip" href="#main">{{ T "skipToContent" }}</a>
   {{ partial "header.html" . }}
   <main id="main">

@@ -1,0 +1,97 @@
+{{- /* Page text with the editorial blocks (presentation logic of the market-entry and client pages, 2026-10-19).
+       All blocks are optional front matter; they are placed around the Markdown text in this order:
+         text before the first "##" heading (introduction)
+         situation    – list: "Your situation"
+         services     – list of { title, text, url }: "Relevant services"
+         the rest of the text (its "##" sections, e.g. "How we support you")
+         outcome      – { intro, items: [{ term, text }], boundary }: "What you receive"
+         example      – { situation, approach, benefit }: "Example scenario"
+         articleImage – photo (file in assets/) with articleAlt
+         preparation  – list: "Useful for our first discussion"
+         callout      – { title, text }: highlighted note
+         related      – list of { label, url }: "Related pages"
+       Without blocks the text is shown unchanged. The ids are listed in "On this page" (toc.html). */}}
+{{- $p := . }}
+{{- $c := string $p.Content }}
+{{- $intro := $c }}{{ $rest := "" }}
+{{- if strings.Contains $c "<h2" }}
+  {{- $intro = replaceRE `(?s)<h2.*$` "" $c }}
+  {{- $rest = replaceRE `(?s)^.*?(<h2)` "$1" $c 1 }}
+{{- end }}
+{{ $intro | safeHTML }}
+{{- with $p.Params.situation }}
+<section class="ed-block" id="ed-situation">
+  <h2>{{ T "edSituation" }}</h2>
+  <ul>
+    {{- range . }}
+    <li>{{ . | markdownify }}</li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+{{- with $p.Params.services }}
+<section class="ed-block" id="ed-services">
+  <h2>{{ T "edServices" }}</h2>
+  <div class="ed-links">
+    {{- range . }}
+    <a href="{{ .url }}"><strong>{{ .title }}</strong><span>{{ .text | markdownify }}</span>{{ partial "icon.html" "arrow-ur" }}</a>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+{{ $rest | safeHTML }}
+{{- with $p.Params.outcome }}
+<section class="ed-block" id="ed-outcome">
+  <h2>{{ T "edOutcome" }}</h2>
+  <div class="ed-outcome">
+    {{- with .intro }}<p>{{ . | markdownify }}</p>{{ end }}
+    <dl>
+      {{- range .items }}
+      <div><dt>{{ .term }}</dt><dd>{{ .text | markdownify }}</dd></div>
+      {{- end }}
+    </dl>
+  </div>
+  {{- with .boundary }}<p class="ed-boundary">{{ . | markdownify }}</p>{{ end }}
+</section>
+{{- end }}
+{{- with $p.Params.example }}
+<section class="ed-block" id="ed-example">
+  <h2>{{ T "edExample" }}</h2>
+  <dl class="ed-scenario">
+    <dt>{{ T "edExSituation" }}</dt><dd>{{ .situation | markdownify }}</dd>
+    <dt>{{ T "edExApproach" }}</dt><dd>{{ .approach | markdownify }}</dd>
+    <dt>{{ T "edExBenefit" }}</dt><dd>{{ .benefit | markdownify }}</dd>
+  </dl>
+</section>
+{{- end }}
+{{- with $p.Params.articleImage }}{{ with resources.Get . }}
+<figure class="ed-photo">
+  <img src="{{ (.Fill "1120x630 Center webp").RelPermalink }}" alt="{{ $p.Params.articleAlt }}" width="1120" height="630" loading="lazy">
+</figure>
+{{- end }}{{ end }}
+{{- with $p.Params.preparation }}
+<section class="ed-block" id="ed-preparation">
+  <h2>{{ T "edPreparation" }}</h2>
+  <ul>
+    {{- range . }}
+    <li>{{ . | markdownify }}</li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+{{- with $p.Params.callout }}
+<aside class="ed-callout">
+  <p class="ed-callout-title">{{ .title }}</p>
+  <p>{{ .text | markdownify }}</p>
+</aside>
+{{- end }}
+{{- with $p.Params.related }}
+<section class="ed-block ed-related" id="ed-related">
+  <h2>{{ T "edRelated" }}</h2>
+  <ul>
+    {{- range . }}
+    <li><a href="{{ .url }}">{{ .label }}{{ partial "icon.html" "arrow-ur" }}</a></li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}

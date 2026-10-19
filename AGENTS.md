@@ -81,7 +81,8 @@ Read `README.md` (overview), `docs/DOCKER.md` (containers and commands), `docs/D
   `data/next_steps.toml`) and a page-specific button (`ctaText`, `ctaTopic` → `data/topics.toml`). No reply
   time is promised; phone hours with "auf Deutsch" are shown.
 - **Fees (2026-10-17):** **no price in the general contact area** ("Nächste Schritte", contact page) – they link to
-  the page **„Honorare & Zusammenarbeit"** (`content/fees.*.md`). Navigation: „Leistungen ▾ | Über uns ▾ | Kontakt";
+  the page **„Honorare & Zusammenarbeit"** (`content/fees.*.md`). Navigation: „Leistungen ▾ | Mandanten ▾ | Über uns ▾ | Kontakt"
+  („Mandanten" added 2026-10-19, see below);
   the „Über uns" submenu has three pages with clearly separated content: **„Über AVATAX"** (`about.*.md`: who we are,
   philosophy, team, clients, network, office – entry in the language menus of `hugo.toml`), **„Unsere Arbeitsweise"**
   (`how-we-work.*.md`: contact person, communication, digital processes, personal support) and **„Honorare &
@@ -95,6 +96,25 @@ Read `README.md` (overview), `docs/DOCKER.md` (containers and commands), `docs/D
 - **Self-employed page** addresses freelancers and entrepreneurs who relocate (Art. 5C, DBA), no list of
   low-fee professions.
 
+## Owner decisions 2026-10-19 (design and structure taken from the 8091 draft)
+
+- **Editorial design, same colours:** serif display headings (system fonts only, no web font), numbered lists on
+  top rules instead of boxed cards, square corners, split heroes (text left, photo right). Body text stays 17 px;
+  the gold `--accent` is never used for text or focus rings on white (contrast 2:1).
+- **Split by audience:** menu „Mandanten" / "Clients" / «Πελάτες» (`hugo.toml`, `identifier = "clients"`, target
+  `/#clients` on the home page) with three client pages, named like the client groups on the home page:
+  `content/companies-in-greece.*.md` (EN/DE: foreign groups with an entity or staff in Greece; **EL: Greek
+  companies**, rule 4), `services/start-in-greece/companies/_index` (market entry) and
+  `services/start-in-greece/private-individuals/_index`. The client-group titles on the home page link to them (`url:`).
+- **Presentation logic of the market-entry and client pages:** optional front-matter blocks rendered by
+  `_partials/editorial.html` around the Markdown text – `lead`, `situation`, `services`, `outcome`, `example`,
+  `articleImage`, `preparation`, `callout`, `related` (format: `docs/MANUAL.md` §6). "How we support you" stays in
+  the text. Still no FAQs outside the relocation pages and no staff names (the contact box names nobody).
+  Example scenarios are anonymous illustrations, never real clients.
+- **Photos from the draft:** six illustrations copied under neutral names (`accounting-ledger`, `tax-report-desk`,
+  `athens-columns`, `athens-street-acropolis`, `start-office-building`, `reports-desk`); alt texts mark them as
+  illustrations. Not used: images with audit or transaction connotations, garbled details or placeholders.
+
 ## Architecture
 
 The same stack as described in `docs/DOCKER.md`:
@@ -102,7 +122,8 @@ The same stack as described in `docs/DOCKER.md`:
 - **Hugo 0.154.5** (`hugomods/hugo:exts-non-root-0.154.5`), new template layout (`layouts/home.html`, `page.html`,
   `section.html`, `_partials/`; special pages via `layout:` → `contact`, `careers`, `apply`). Use `.Sites`, not
   `hugo.Sites`.
-- **CSS** `site/assets/css/main.css`: brand tokens `--brand` (#6c5020 brown) and `--accent` (#c1b585 gold).
+- **CSS** `site/assets/css/main.css`: brand tokens `--brand` (#6c5020 brown) and `--accent` (#c1b585 gold);
+  editorial layout since 2026-10-19 (`--serif` system fonts, `--rule` for list rules, `--radius` 2px).
 - **formsvc** (Go, stdlib only): `/api/token`, `/api/contact`, `/api/cv`; `SITE_NAME` (in `.env`) appears in mail
   subjects and bodies. The contact handler must accept multipart (FormData) and urlencoded bodies.
 - **nginx** container: `default.conf` (CSP is set by Hugo as a meta tag), `redirects.conf` (map;

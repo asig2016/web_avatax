@@ -76,6 +76,21 @@ notFoundText = "Die gesuchte Seite existiert nicht oder wurde verschoben."
 backHome = "Zur Startseite"
 faq = "Häufige Fragen"
 
+# editorial layout (2026-10-19)
+onThisPage = "Auf dieser Seite"
+backToTop = "Nach oben"
+explore = "Entdecken"
+heroPlace = "Athen · Griechenland"
+edSituation = "Ihre Ausgangslage"
+edServices = "Passende Leistungen"
+edOutcome = "Das erhalten Sie"
+edExample = "Beispielszenario"
+edExSituation = "Ausgangslage"
+edExApproach = "Unser Vorgehen"
+edExBenefit = "Ihr Nutzen"
+edPreparation = "Hilfreich für das erste Gespräch"
+edRelated = "Weitere passende Seiten"
+
 # live chat
 chatOpen = "Jetzt fragen"
 chatAsk = "Fragen? Chatten Sie mit uns"

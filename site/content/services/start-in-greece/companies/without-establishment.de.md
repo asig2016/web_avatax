@@ -6,10 +6,36 @@ description: "Liefern, leisten oder Mitarbeiter beschäftigen in Griechenland oh
 url: /de/leistungen/ihr-start-in-griechenland/unternehmen/ohne-niederlassung/
 icon: "globe"
 weight: 10
-review: "neue Seite 2026-10-05 auf Grundlage von Recherche – bitte prüfen; 2026-10-16: FAQ entfernt (Beispiel zur USt-Registrierung in den Text übernommen)"
+review: "neue Seite 2026-10-05 auf Grundlage von Recherche – bitte prüfen; 2026-10-16: FAQ entfernt (Beispiel zur USt-Registrierung in den Text übernommen); 2026-10-19: redaktionelles Layout – Einleitung, Ausgangslage, Ergebnis, Beispiel und Liste für das Erstgespräch ergänzt, bitte prüfen"
 ctaTopic: "company"
 heroImage: "images/start-logistics.jpg"
 heroAlt: "Kräne eines griechischen Frachthafens in der Abenddämmerung"
+lead: "Liefern, Leistungen erbringen oder Mitarbeiter beschäftigen geht in Griechenland auch ohne griechische Gesellschaft. Wir prüfen, welche steuerlichen und arbeitsrechtlichen Pflichten gelten und ob eine Betriebsstätte entstehen kann."
+situation:
+  - "Sie liefern Waren oder erbringen Leistungen aus dem Ausland an griechische Kunden."
+  - "Sie entsenden Mitarbeiter nach Griechenland oder wollen dort einzelne Mitarbeiter beschäftigen."
+  - "Sie wollen wissen, ob Ihre Tätigkeit eine Betriebsstätte begründet."
+outcome:
+  items:
+    - term: "Klarheit über die Betriebsstätte"
+      text: "Ob Ihre geplante Tätigkeit in Griechenland eine Betriebsstätte begründet – geprüft, bevor sie beginnt."
+    - term: "Richtige umsatzsteuerliche Behandlung"
+      text: "Ob Reverse Charge oder der One-Stop-Shop greift oder eine griechische Umsatzsteuer-Registrierung nötig ist."
+    - term: "Mitarbeiter korrekt eingesetzt"
+      text: "Entsendung gemeldet oder Anmeldung als Arbeitgeber und Lohnabrechnung eingerichtet, bevor die Arbeit beginnt."
+  boundary: "Handelsvertreter- und Vertriebsverträge entwerfen Ihre Rechtsanwälte; wir übernehmen die steuerliche, umsatzsteuerliche und lohnrechtliche Seite."
+example:
+  situation: "Ein Softwarehaus aus Österreich verkauft Lizenzen an griechische Unternehmen und will einen in Athen wohnenden Entwickler einstellen."
+  approach: "Wir bestätigen, dass die griechischen Kunden die Umsatzsteuer im Reverse-Charge-Verfahren schulden, prüfen, dass die Tätigkeit des Entwicklers keine Betriebsstätte begründet, und melden das Unternehmen als Arbeitgeber an."
+  benefit: "Das Unternehmen beschäftigt den Entwickler ohne griechische Gesellschaft, und seine Gewinne bleiben im Heimatstaat steuerpflichtig."
+preparation:
+  - "Ihre Waren oder Leistungen und Ihre griechischen Kunden – Unternehmen oder Verbraucher"
+  - "geplante Mitarbeiter in Griechenland: Entsendung oder Einstellung vor Ort, und ab wann"
+  - "Verträge mit Handelsvertretern oder Vertriebshändlern in Griechenland, falls vorhanden"
+  - "Ihre Umsatzsteuer-Registrierungen und OSS-Meldungen in anderen EU-Staaten"
+related:
+  - { label: "Lohn & Arbeitsrecht", url: "/de/leistungen/lohnbuchhaltung/" }
+  - { label: "Steuer- & Fiskalvertretung", url: "/de/leistungen/fiskalvertretung/" }
 ---
 Viele ausländische Unternehmen starten in Griechenland ohne eigene Niederlassung: Sie liefern Waren oder erbringen Leistungen aus dem Ausland, entsenden eigene Mitarbeiter für Einsätze oder beschäftigen einzelne Mitarbeiter vor Ort. Das ist möglich – einige steuerliche und arbeitsrechtliche Pflichten bestehen aber auch dann, und eine Betriebsstätte kann unbemerkt entstehen.
 

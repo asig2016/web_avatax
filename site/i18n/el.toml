@@ -76,6 +76,21 @@ notFoundText = "Η σελίδα που αναζητάτε δεν υπάρχει 
 backHome = "Επιστροφή στην αρχική σελίδα"
 faq = "Συχνές ερωτήσεις"
 
+# editorial layout (2026-10-19)
+onThisPage = "Σε αυτή τη σελίδα"
+backToTop = "Επιστροφή στην αρχή"
+explore = "Περιήγηση"
+heroPlace = "Αθήνα · Ελλάδα"
+edSituation = "Η αφετηρία σας"
+edServices = "Σχετικές υπηρεσίες"
+edOutcome = "Τι λαμβάνετε"
+edExample = "Ενδεικτικό σενάριο"
+edExSituation = "Η αφετηρία"
+edExApproach = "Η προσέγγισή μας"
+edExBenefit = "Το όφελός σας"
+edPreparation = "Χρήσιμα για την πρώτη συζήτηση"
+edRelated = "Σχετικές σελίδες"
+
 # live chat
 chatOpen = "Ρωτήστε μας τώρα"
 chatAsk = "Ερωτήσεις; Συνομιλήστε μαζί μας"

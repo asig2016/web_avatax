@@ -49,6 +49,12 @@ timeZone = "Europe/Athens"
       street = "76 Syngrou Ave."
       city = "GR-117 42 Athens"
       description = "Accounting, payroll, tax consultancy and fiscal representation in Athens – in Greek, German and English."
+    # "Clients": client groups (home page section "#clients"); the client pages add themselves via front matter (parent "clients")
+    [[languages.en.menus.main]]
+      identifier = "clients"
+      name = "Clients"
+      url = "/#clients"
+      weight = 15
     # "Über uns" submenu: this entry (About page); how-we-work.en.md and fees.en.md add themselves via front matter
     [[languages.en.menus.main]]
       name = "About AVATAX"
@@ -69,6 +75,12 @@ timeZone = "Europe/Athens"
       street = "Syngrou Ave. 76"
       city = "GR-117 42 Athen"
       description = "Buchhaltung, Lohnbuchhaltung, Steuerberatung und steuerliche Vertretung in Athen – auf Deutsch, Griechisch und Englisch."
+    # "Mandanten": client groups (home page section "#clients"); the client pages add themselves via front matter (parent "clients")
+    [[languages.de.menus.main]]
+      identifier = "clients"
+      name = "Mandanten"
+      url = "/de/#clients"
+      weight = 15
     # "Über uns" submenu: this entry (About page); how-we-work.de.md and fees.de.md add themselves via front matter
     [[languages.de.menus.main]]
       name = "Über AVATAX"
@@ -90,6 +102,12 @@ timeZone = "Europe/Athens"
       city = "117 42 Αθήνα"
       description = "Λογιστικές υπηρεσίες, μισθοδοσία, φοροτεχνικές υπηρεσίες και φορολογική εκπροσώπηση στην Αθήνα – στα ελληνικά, γερμανικά και αγγλικά."
 
+    # "Πελάτες": client groups (home page section "#clients"); the client pages add themselves via front matter (parent "clients")
+    [[languages.el.menus.main]]
+      identifier = "clients"
+      name = "Πελάτες"
+      url = "/el/#clients"
+      weight = 15
     # "Über uns" submenu: this entry (About page); how-we-work.el.md and fees.el.md add themselves via front matter
     [[languages.el.menus.main]]
       name = "Η AVATAX"

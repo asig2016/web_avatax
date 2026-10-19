@@ -6,10 +6,36 @@ description: "Selling, providing services or employing staff in Greece without a
 url: /services/start-in-greece/companies/without-an-establishment/
 icon: "globe"
 weight: 10
-review: "new page 2026-10-05 based on research – please check; 2026-10-18: aligned with the German review (FAQ removed, VAT registration example moved into the text)"
+review: "new page 2026-10-05 based on research – please check; 2026-10-18: aligned with the German review (FAQ removed, VAT registration example moved into the text); 2026-10-19: editorial layout – lead, situation, outcome, example and first-discussion list added, please check"
 ctaTopic: "company"
 heroImage: "images/start-logistics.jpg"
 heroAlt: "Cranes of a Greek cargo port at dusk"
+lead: "Selling, providing services or employing staff in Greece is possible without a Greek company. We check which tax and labour-law obligations apply and whether a permanent establishment could arise."
+situation:
+  - "You sell goods or provide services to Greek customers from abroad."
+  - "You send staff on assignments to Greece or want to employ individual staff there."
+  - "You want to know whether your activity creates a permanent establishment."
+outcome:
+  items:
+    - term: "Clarity on the permanent establishment"
+      text: "Whether your planned activity creates one in Greece – checked before it starts."
+    - term: "Correct VAT treatment"
+      text: "Whether reverse charge or the One-Stop-Shop applies, or a Greek VAT registration is needed."
+    - term: "Staff deployed correctly"
+      text: "Posting notified, or employer registration and payroll in place, before work starts."
+  boundary: "Agency and distribution contracts are drafted by your lawyers; we cover the tax, VAT and payroll side."
+example:
+  situation: "A software company from Austria sells licences to Greek businesses and plans to hire a developer who lives in Athens."
+  approach: "We confirm that the Greek customers account for the VAT under reverse charge, check that the developer's work does not create a permanent establishment and register the company as an employer."
+  benefit: "The company employs the developer without a Greek company, and its profits remain taxable at home."
+preparation:
+  - "your products or services and your Greek customers – businesses or consumers"
+  - "planned staff in Greece: assignments from abroad or local hires, and from when"
+  - "contracts with agents or distributors in Greece, if any"
+  - "your VAT registrations and OSS declarations in other EU countries"
+related:
+  - { label: "Payroll & labour law", url: "/services/payroll/" }
+  - { label: "Tax & fiscal representation", url: "/services/fiscal-representation/" }
 ---
 Many foreign companies start in Greece without any establishment: they sell goods or provide services from abroad, send their own staff on assignments or employ individual staff locally. This is possible – but some tax and labour-law obligations still apply, and a permanent establishment can arise without being noticed.
 

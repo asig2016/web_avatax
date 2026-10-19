@@ -1,20 +1,26 @@
 {{ define "main" }}
 {{- $hero := resources.Get "images/acropolis.jpg" }}
-<section class="hero">
-  <picture>
-    <source type="image/webp"
-      srcset="{{ ($hero.Fill "800x600 Center webp").RelPermalink }} 800w, {{ ($hero.Fill "1600x800 Center webp").RelPermalink }} 1600w, {{ ($hero.Fill "2400x1000 Center webp").RelPermalink }} 2400w"
-      sizes="100vw">
-    <img src="{{ ($hero.Fill "1600x800 Center jpg").RelPermalink }}" alt="{{ .Params.heroAlt }}" class="hero-img" fetchpriority="high">
-  </picture>
-  <div class="wrap hero-content">
-    <p class="eyebrow">{{ .Params.heroEyebrow | default site.Params.tagline }}</p>
-    <h1>{{ .Params.heroTitle }}</h1>
-    <p class="hero-text">{{ .Params.heroText | markdownify }}</p>
-    <div class="hero-actions">
-      {{- with site.GetPage "/contact" }}<a class="btn btn-light" href="{{ .RelPermalink }}">{{ T "enquireWithoutObligation" }}</a>{{ end }}
-      {{- with site.GetPage "/services" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "ourServices" }}</a>{{ end }}
+<section class="home-hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ .Params.heroEyebrow | default site.Params.tagline }}</p>
+      {{- /* heroTitle may mark its second line with *…* (italic, own line) */}}
+      <h1>{{ .Params.heroTitle | .RenderString }}</h1>
+      <p class="hero-text">{{ .Params.heroText | markdownify }}</p>
+      <div class="hero-actions">
+        {{- with site.GetPage "/contact" }}<a class="btn" href="{{ .RelPermalink }}">{{ T "enquireWithoutObligation" }}</a>{{ end }}
+        {{- with site.GetPage "/services" }}<a class="text-link" href="{{ .RelPermalink }}">{{ T "ourServices" }}{{ partial "icon.html" "arrow-ur" }}</a>{{ end }}
+      </div>
     </div>
+    <figure class="hero-photo">
+      <picture>
+        <source type="image/webp"
+          srcset="{{ ($hero.Fill "640x640 Center webp").RelPermalink }} 640w, {{ ($hero.Fill "960x960 Center webp").RelPermalink }} 960w, {{ ($hero.Fill "1280x1280 Center webp").RelPermalink }} 1280w"
+          sizes="(min-width: 900px) 45vw, 100vw">
+        <img src="{{ ($hero.Fill "960x960 Center jpg").RelPermalink }}" alt="" width="960" height="960" fetchpriority="high">
+      </picture>
+      <figcaption><span>{{ T "heroPlace" }}</span>{{ .Params.heroAlt }}</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -34,41 +40,45 @@
 {{- with .Params.pillars }}
 <section class="section section-tint">
   <div class="wrap">
-    <h2 class="section-title">{{ $.Params.pillarsTitle }}</h2>
-    <ul class="pillars">
-      {{- range . }}
+    <div class="section-head"><h2>{{ $.Params.pillarsTitle }}</h2></div>
+    <ol class="pillars">
+      {{- range $i, $p := . }}
       <li>
-        <span class="card-icon">{{ partial "icon.html" .icon }}</span>
+        <span class="num" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
         <h3>{{ .title }}</h3>
         <p>{{ .text | markdownify }}</p>
       </li>
       {{- end }}
-    </ul>
+    </ol>
     {{- with site.GetPage "/how-we-work" }}
-    <p class="pillars-more"><a class="more-link" href="{{ .RelPermalink }}">{{ .Title }} →</a></p>
+    <p class="pillars-more"><a class="more-link" href="{{ .RelPermalink }}">{{ .Title }}{{ partial "icon.html" "arrow-ur" }}</a></p>
     {{- end }}
   </div>
 </section>
 {{- end }}
 
 {{- with .Params.audiences }}
-<section class="section">
+{{- /* id "clients": target of the menu entry "Clients" (hugo.toml) */}}
+<section class="section" id="clients">
   <div class="wrap">
-    <h2 class="section-title">{{ $.Params.audiencesTitle }}</h2>
-    <div class="audiences">
-      {{- range . }}
-      <div class="audience">
-        <span class="card-icon">{{ partial "icon.html" .icon }}</span>
-        <h3>{{ .title }}</h3>
-        <p>{{ .text }}</p>
-        <ul>
+    <div class="section-head"><h2>{{ $.Params.audiencesTitle }}</h2></div>
+    <ol class="audiences">
+      {{- range $i, $a := . }}
+      <li class="audience">
+        <span class="num" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
+        <div>
+          {{- /* url: the client page of this group (same page as in the menu "Clients") */}}
+          <h3>{{ with .url }}<a href="{{ . }}">{{ $a.title }}</a>{{ else }}{{ .title }}{{ end }}</h3>
+          <p>{{ .text }}</p>
+        </div>
+        <ul class="audience-links">
           {{- range .links }}
-          <li><a href="{{ .url }}">{{ .label }} →</a></li>
+          <li><a href="{{ .url }}">{{ .label }}{{ partial "icon.html" "arrow-ur" }}</a></li>
           {{- end }}
         </ul>
-      </div>
+      </li>
       {{- end }}
-    </div>
+    </ol>
   </div>
 </section>
 {{- end }}
@@ -76,14 +86,14 @@
 {{- with site.GetPage "/services" }}
 <section class="section section-tint">
   <div class="wrap">
-    <h2 class="section-title">{{ .Title }}</h2>
+    <div class="section-head"><h2>{{ .Title }}</h2></div>
     <div class="cards cards-4">
-      {{- range .Pages }}
+      {{- range $i, $p := .Pages }}
       <a class="card" href="{{ .RelPermalink }}">
-        {{- with .Params.icon }}<span class="card-icon">{{ partial "icon.html" . }}</span>{{ end }}
+        <span class="num" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
         <h3>{{ .LinkTitle }}</h3>
         <p>{{ .Params.teaser | default (.Summary | plainify | truncate 160) }}</p>
-        <span class="more">{{ T "readMore" }} →</span>
+        <span class="more">{{ T "readMore" }}{{ partial "icon.html" "arrow-ur" }}</span>
       </a>
       {{- end }}
     </div>
@@ -93,8 +103,9 @@
 
 {{- with site.GetPage "/about" }}
 <section class="section">
-  {{- /* principles panel (front matter "principles") next to the text; without it the text stands alone */}}
-  <div class="wrap {{ if $.Params.principles }}split{{ else }}about-solo{{ end }}">
+  {{- /* next to the text: principles panel (front matter "principles"), else a photo (aboutImage), else the text alone */}}
+  {{- $photo := "" }}{{ with $.Params.aboutImage }}{{ $photo = resources.Get . }}{{ end }}
+  <div class="wrap {{ if or $.Params.principles $photo }}split{{ else }}about-solo{{ end }}">
     {{- with $.Params.principles }}
     <div class="principles">
       <p class="principles-title">{{ $.Params.principlesTitle }}</p>
@@ -107,11 +118,15 @@
         {{- end }}
       </ul>
     </div>
-    {{- end }}
+    {{- else }}{{ with $photo }}
+    <figure class="split-photo">
+      <img src="{{ (.Fill "960x720 Center webp").RelPermalink }}" alt="{{ $.Params.aboutImageAlt }}" width="960" height="720" loading="lazy">
+    </figure>
+    {{- end }}{{ end }}
     <div>
       <h2>{{ .Title }}</h2>
       <p>{{ .Summary | plainify | truncate 420 }}</p>
-      <a class="more-link" href="{{ .RelPermalink }}">{{ T "readMore" }} →</a>
+      <a class="more-link" href="{{ .RelPermalink }}">{{ T "readMore" }}{{ partial "icon.html" "arrow-ur" }}</a>
     </div>
   </div>
 </section>
@@ -124,13 +139,13 @@
     <div>
       <h2>{{ $.Params.feesTitle }}</h2>
       <p>{{ $.Params.feesText }}</p>
-      <a class="more-link" href="{{ .RelPermalink }}">{{ .Title }} →</a>
+      <a class="more-link" href="{{ .RelPermalink }}">{{ .Title }}{{ partial "icon.html" "arrow-ur" }}</a>
     </div>
   </div>
 </section>
 {{- end }}{{ end }}
 
-<section class="section contact-band">
+<section class="contact-band">
   <div class="wrap contact-band-inner">
     <div>
       <h2>{{ T "getInTouch" }}</h2>

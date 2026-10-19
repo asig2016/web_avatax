@@ -5,6 +5,8 @@ seoTitle: "Steuerberatung in Griechenland – auf Deutsch | AVATAX"
 description: "Steuerberatung in Griechenland für Unternehmen und Privatpersonen aus Deutschland: DBA, Renten, Immobilien, Erbschaften, Steuernummer – auf Deutsch."
 url: /de/leistungen/steuerberatung/
 icon: tax
+heroImage: "images/tax-report-desk.webp"
+heroAlt: "Symbolbild: Finanzbericht und Laptop auf einem Schreibtisch"
 weight: 30
 teaser: "Steuern in Griechenland für Unternehmen und Privatpersonen aus Deutschland – erklärt im Vergleich zum deutschen Recht."
 review: "Text für deutschsprachige Mandanten auf Basis von Quellen (DBA 1966, griechisches Steuerrecht) – bitte prüfen; 2026-10-16: seoTitle ohne geschützte Berufsbezeichnung, Satz zum Begriff „Steuerberater“ (bitte rechtlich prüfen), FAQ in den Text übernommen"

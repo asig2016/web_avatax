@@ -1,0 +1,36 @@
+{{- /* Text column and sidebar of inner pages (page.html, and section.html for client pages with editorial blocks) */}}
+<div class="wrap page-body{{ if not .Params.noAside }} with-aside{{ end }}">
+  <article class="prose">
+    {{ partial "editorial.html" . }}
+    {{- with .Params.faq }}
+    <section class="faq" id="faq">
+      <h2>{{ T "faq" }}</h2>
+      {{- range . }}
+      <details>
+        <summary>{{ .q }}</summary>
+        <p>{{ .a }}</p>
+      </details>
+      {{- end }}
+    </section>
+    {{- end }}
+    {{- if or (eq .Section "services") .Params.nextSteps }}
+    {{ partial "next-steps.html" (dict "page" . "full" false) }}
+    {{- end }}
+  </article>
+  {{- if not .Params.noAside }}
+  <div class="aside">
+    {{ partial "cta.html" . }}
+    {{ partial "toc.html" . }}
+    {{- with .Parent }}{{ if and (not .IsHome) (gt (len .Pages) 1) }}
+    <nav class="side-nav" aria-label="{{ .Title }}">
+      <p class="side-nav-title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
+      <ul>
+        {{- range .Pages }}
+        <li><a href="{{ .RelPermalink }}"{{ if eq . $ }} aria-current="page"{{ end }}>{{ .LinkTitle }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
+    {{- end }}{{ end }}
+  </div>
+  {{- end }}
+</div>

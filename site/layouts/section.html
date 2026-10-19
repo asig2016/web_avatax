@@ -1,20 +1,24 @@
 {{ define "main" }}
 {{ partial "page-hero.html" . }}
+{{- /* client pages (front matter "situation"): text and sidebar like an inner page; the sub pages are linked in the text */}}
+{{- if .Params.situation }}
+{{ partial "page-body.html" . }}
+{{- else }}
 <div class="wrap page-body">
   {{- with .Content }}<div class="prose intro">{{ . }}</div>{{ end }}
-  {{- /* cards show the photo of the linked page (cardImage, else heroImage) when every sub page has one */}}
+  {{- /* numbered list of the sub pages; with the photo of each page (cardImage, else heroImage) when every sub page has one */}}
   {{- $photos := gt (len .Pages) 0 }}
   {{- range .Pages }}{{ if not (or .Params.cardImage .Params.heroImage) }}{{ $photos = false }}{{ end }}{{ end }}
   <div class="cards{{ if $photos }} cards-photo{{ end }}">
-    {{- range .Pages }}
+    {{- range $i, $p := .Pages }}
     <a class="card" href="{{ .RelPermalink }}">
       {{- if $photos }}{{ with resources.Get (.Params.cardImage | default .Params.heroImage) }}
       <img class="card-photo" src="{{ (.Fill "640x360 Center webp").RelPermalink }}" alt="" width="640" height="360" loading="lazy">
       {{- end }}{{ end }}
-      {{- if not $photos }}{{ with .Params.icon }}<span class="card-icon" aria-hidden="true">{{ partial "icon.html" . }}</span>{{ end }}{{ end }}
+      <span class="num" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
       <h2>{{ .LinkTitle }}</h2>
-      <p>{{ .Summary | plainify | truncate 260 }}</p>
-      <span class="more">{{ T "readMore" }} →</span>
+      <p>{{ .Params.teaser | default (.Summary | plainify | truncate 260) }}</p>
+      <span class="more">{{ T "readMore" }}{{ partial "icon.html" "arrow-ur" }}</span>
     </a>
     {{- end }}
   </div>
@@ -24,4 +28,5 @@
   {{ partial "cta.html" . }}
   {{- end }}
 </div>
+{{- end }}
 {{ end }}

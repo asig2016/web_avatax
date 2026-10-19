@@ -5,6 +5,8 @@ seoTitle: "Tax Consultant in Greece – Companies & Individuals | AVATAX"
 description: "Tax advice in Greece for foreign companies and individuals: double tax treaties, pensions, real estate, inheritance and the Greek tax number (AFM)."
 url: /services/tax-consultancy/
 icon: tax
+heroImage: "images/tax-report-desk.webp"
+heroAlt: "Illustration: financial report and laptop on a desk"
 weight: 30
 teaser: "Greek taxes for foreign companies and individuals – with property, income or a new residence in Greece."
 review: "text for foreign clients based on sources – please check; 2026-10-18: aligned with the German review (FAQ merged into the text, paragraph on the term „tax adviser“ – please check legally, links to the subsidiary, branch, pensioners, buying and renting-out pages)"

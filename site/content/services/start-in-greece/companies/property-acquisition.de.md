@@ -6,8 +6,34 @@ description: "Ausländische Gesellschaften erwerben Immobilien in Griechenland o
 url: /de/leistungen/ihr-start-in-griechenland/unternehmen/immobilienerwerb/
 icon: "building"
 weight: 50
-review: "2026-10-16 neu ausgerichtet (Erwerb ohne Niederlassung; vorher „Immobiliengesellschaft“) auf Grundlage von Art. 8 Ges. 5104/2024, Art. 47 und 58 Ges. 4172/2013, Art. 15–17 Ges. 3091/2002 und AADE-Entscheidung A.1014/2026 – bitte fachlich prüfen; 2026-10-16: FAQ entfernt (Inhalt steht im Text)"
+review: "2026-10-16 neu ausgerichtet (Erwerb ohne Niederlassung; vorher „Immobiliengesellschaft“) auf Grundlage von Art. 8 Ges. 5104/2024, Art. 47 und 58 Ges. 4172/2013, Art. 15–17 Ges. 3091/2002 und AADE-Entscheidung A.1014/2026 – bitte fachlich prüfen; 2026-10-16: FAQ entfernt (Inhalt steht im Text); 2026-10-19: redaktionelles Layout – Einleitung, Ausgangslage, Ergebnis, Beispiel und Liste für das Erstgespräch ergänzt, bitte prüfen"
 ctaTopic: "property"
+lead: "Eine ausländische Gesellschaft kann Immobilien in Griechenland allein mit einer griechischen Steuernummer erwerben. Wir übernehmen die steuerliche Seite – einschließlich der Sondersteuer von 15 % und des jährlichen Befreiungsantrags."
+situation:
+  - "Ihre Gesellschaft will in Griechenland Büroräume, Wohnungen für Mitarbeiter oder eine Ferienimmobilie erwerben."
+  - "Sie hat in Griechenland keine Zweigniederlassung und keine Tochtergesellschaft."
+  - "Sie wollen wissen, ob Gesellschafts- oder Privateigentum sinnvoller ist."
+outcome:
+  items:
+    - term: "Struktur vor dem Erwerb verglichen"
+      text: "Privateigentum, transparente Gesellschaft oder griechische Gesellschaft – einschließlich der Sondersteuer und der deutschen Besteuerung."
+    - term: "Registrierung und Erwerb"
+      text: "Griechische Steuernummer, bei Bedarf steuerliche Vertretung, Grunderwerbsteuer und Abstimmung mit Notar, Rechtsanwalt und Ingenieur."
+    - term: "Jährliche Pflichten"
+      text: "ENFIA, Erklärung zur Sondersteuer mit Befreiungsantrag und bei Vermietung Buchhaltung und Steuererklärungen."
+  boundary: "Eigentum und Gebäude prüfen Rechtsanwalt und Ingenieur; wir stimmen uns mit ihnen ab."
+example:
+  situation: "Eine Gesellschaft aus den Niederlanden will in Athen zwei Wohnungen für entsandte Mitarbeiter kaufen."
+  approach: "Wir beantragen die griechische Steuernummer der Gesellschaft, prüfen die Befreiung von der Sondersteuer und stimmen den Erwerb mit Notar, Rechtsanwalt und Ingenieur ab."
+  benefit: "Die Wohnungen werden auf die Gesellschaft erworben, und Erklärung und Befreiungsantrag werden jedes Jahr mit den erforderlichen Unterlagen eingereicht."
+preparation:
+  - "die Immobilie oder die Art der gesuchten Immobilie"
+  - "Gesellschaftsvertrag, Handelsregisterauszug und Gesellschafterstruktur Ihrer Gesellschaft"
+  - "ob die Immobilie vermietet werden soll"
+  - "Ihr Zeitplan für den Erwerb"
+related:
+  - { label: "Immobilienkauf als Privatperson", url: "/de/leistungen/ihr-start-in-griechenland/privatpersonen/immobilienkauf/" }
+  - { label: "Steuer- & Fiskalvertretung", url: "/de/leistungen/fiskalvertretung/" }
 ---
 Eine ausländische Gesellschaft kann Immobilien in Griechenland erwerben, **ohne eine Zweigniederlassung oder Tochtergesellschaft zu gründen**. Erforderlich ist lediglich die Registrierung beim griechischen Finanzamt. So erwerben Unternehmen etwa Büroräume, Wohnungen für Mitarbeiter oder eine Ferienimmobilie unmittelbar auf die eigene Gesellschaft. Wir übernehmen die steuerliche Seite – vor, während und nach dem Erwerb.
 

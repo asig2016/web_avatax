@@ -2,11 +2,13 @@
 title: "AVATAX A.E."
 seoTitle: "Accountants & Tax Consultants in Athens, Greece | AVATAX"
 description: "Accounting, payroll, tax advice and tax representation in Greece for companies and private individuals from abroad – in English, German and Greek."
-review: "home page texts rewritten 2026-10-02 (more factual register, no facts strip); 2026-10-18: aligned with the German review (pillars as on the German page, client groups with links to the service pages, introduction) – please check"
+review: "home page texts rewritten 2026-10-02 (more factual register, no facts strip); 2026-10-18: aligned with the German review (pillars as on the German page, client groups with links to the service pages, introduction) – please check; 2026-10-19: client groups link to the new client pages (menu “Clients”)"
 heroEyebrow: "Accounting · Payroll · Tax"
-heroTitle: "Accountants and tax consultants in Athens"
+heroTitle: "Accountants and tax consultants *in Athens*"
 heroText: "Bookkeeping, financial statements, payroll, tax advice and tax representation for companies and private individuals in Greece – in English, German and Greek."
 heroAlt: "The Acropolis, seen from our office"
+aboutImage: "images/athens-columns.webp"
+aboutImageAlt: "Illustration: Doric columns on the Acropolis"
 pillarsTitle: "How we work"
 pillars:
   - icon: flags
@@ -43,6 +45,7 @@ audiencesTitle: "Our clients"
 audiences:
   - icon: building
     title: "Companies with an entity or staff in Greece"
+    url: "/companies-in-greece/"
     text: "Bookkeeping, financial statements and reports to the parent company, payroll and ongoing tax advice for your Greek subsidiary, branch or your staff in Greece."
     links:
       - { label: "Accounting", url: "/services/accounting/" }
@@ -51,13 +54,14 @@ audiences:
       - { label: "Branch", url: "/services/start-in-greece/companies/branch/" }
   - icon: globe
     title: "Market entry and representation"
+    url: "/services/start-in-greece/companies/"
     text: "Doing business in Greece without an establishment, with a representative office, branch or subsidiary; tax representation, VAT fiscal representation and VAT registration of foreign companies."
     links:
-      - { label: "Your start in Greece", url: "/services/start-in-greece/companies/" }
       - { label: "Without an establishment", url: "/services/start-in-greece/companies/without-an-establishment/" }
       - { label: "Tax & fiscal representation", url: "/services/fiscal-representation/" }
   - icon: person
     title: "Private individuals"
+    url: "/services/start-in-greece/private-individuals/"
     text: "Moving to Greece with a flat tax for investors (Art. 5A) or pensioners (Art. 5B) or with a 50% tax exemption for employees and freelancers (Art. 5C); income tax, property, inheritance and gifts in Greece."
     links:
       - { label: "€100,000 flat tax for investors", url: "/services/relocating-to-greece/flat-tax-for-investors/" }

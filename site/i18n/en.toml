@@ -76,6 +76,21 @@ notFoundText = "The page you are looking for does not exist or has moved."
 backHome = "Back to the home page"
 faq = "Frequently asked questions"
 
+# editorial layout (2026-10-19)
+onThisPage = "On this page"
+backToTop = "Back to top"
+explore = "Explore"
+heroPlace = "Athens · Greece"
+edSituation = "Your situation"
+edServices = "Relevant services"
+edOutcome = "What you receive"
+edExample = "Example scenario"
+edExSituation = "The situation"
+edExApproach = "Our approach"
+edExBenefit = "Your benefit"
+edPreparation = "Useful for our first discussion"
+edRelated = "Related pages"
+
 # live chat
 chatOpen = "Ask us now"
 chatAsk = "Questions? Chat with us"

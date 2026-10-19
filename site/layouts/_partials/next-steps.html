@@ -30,8 +30,8 @@
       {{- $text = replaceRE (printf `\[([^]]+)\]\(%s\)` .RelPermalink) "$1" $text }}
     {{- end }}{{ end }}
     <li>
-      <span class="ns-icon">{{ partial "icon.html" $s.icon }}</span>
-      <div><p class="ns-step-title">{{ printf "%02d" (add $i 1) }} · {{ $s.title }}</p><p class="ns-step-text">{{ $text | markdownify }}</p></div>
+      <span class="ns-num" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
+      <div><p class="ns-step-title">{{ $s.title }}</p><p class="ns-step-text">{{ $text | markdownify }}</p></div>
     </li>
     {{- end }}
   </ol>

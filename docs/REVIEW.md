@@ -247,3 +247,27 @@ the free first meeting for companies and the stated private consultation fee rem
 including home-page buttons, sidebars and closing blocks. Long page-specific labels removed;
 existing topic preselection retained. Form submit, navigation and chat labels keep their respective actions.
 Human review pending for the new shared DE/EN/EL label.
+
+## Editorial layout, client pages and market-entry pages — 2026-10-19
+
+Design and structure taken from the 8091 draft (owner decisions in `AGENTS.md`). Please check:
+
+1. **New client page** `content/companies-in-greece.*.md` (`/companies-in-greece/`, `/de/unternehmen-in-griechenland/`,
+   `/el/ellinikes-epicheiriseis/`). EN/DE address foreign groups with a Greek subsidiary, branch or staff; **EL addresses
+   Greek companies** (rule 4). All facts come from the service pages; the callout "Changing your accountant" uses the
+   EL accounting page (takeover during the financial year), which EN/DE did not state before.
+2. **New blocks on the market-entry pages** (`services/start-in-greece/companies/_index` and the five sub pages) and on
+   the private-individuals page: lead, "Your situation", "What you receive", "Example scenario", "Useful for our first
+   discussion", related pages. The **example scenarios are invented illustrations** (e.g. a German machine maker with a
+   service technician, an Austrian software company hiring a developer in Athens, a Dutch company buying staff flats) –
+   please confirm that they are realistic and that none resembles a real client too closely.
+3. **Boundaries stated in "What you receive":** legal documents (articles of association, agency contracts) are drafted
+   by the client's lawyers; title and building are checked by lawyer and engineer; a branch has no legal personality.
+4. **Menu „Mandanten" / "Clients" / «Πελάτες»** with the client-group names of the home page as entries. The German
+   names are long ("Unternehmen mit Gesellschaft oder Mitarbeitern in Griechenland"); a shorter wording would have to
+   be changed on the home page too.
+5. **Photos:** six illustrations from the draft (they look AI-generated). Please confirm their use and the rights.
+6. **Home DE:** „Buchhaltungs- und Steuerberatungsgesellschaft" (forbidden term, owner rule 2026-10-16) replaced by
+   „Kanzlei für Buchhaltung, Lohn und Steuern", as on the page „Über AVATAX".
+7. **Chat server address:** the CSP and the chat button name `https://egroupware.sigalas.eu` (`rocketchatURL` in
+   `hugo.toml`). It is not visible text, but it names another company's domain in the page source (rule 1).

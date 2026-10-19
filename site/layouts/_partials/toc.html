@@ -1,0 +1,29 @@
+{{- /* "On this page" in the sidebar, in the order of the page: editorial blocks (editorial.html), the h2 headings
+       of the text, FAQ and "Nächste Schritte". Shown only from three entries. */}}
+{{- $p := . }}
+{{- $items := slice }}
+{{- with $p.Params.situation }}{{ $items = $items | append (dict "id" "ed-situation" "title" (T "edSituation")) }}{{ end }}
+{{- with $p.Params.services }}{{ $items = $items | append (dict "id" "ed-services" "title" (T "edServices")) }}{{ end }}
+{{- range $p.Fragments.Headings }}
+  {{- if eq .Level 2 }}{{ $items = $items | append (dict "id" .ID "title" .Title) }}{{ end }}
+  {{- range .Headings }}{{ if eq .Level 2 }}{{ $items = $items | append (dict "id" .ID "title" .Title) }}{{ end }}{{ end }}
+{{- end }}
+{{- with $p.Params.outcome }}{{ $items = $items | append (dict "id" "ed-outcome" "title" (T "edOutcome")) }}{{ end }}
+{{- with $p.Params.example }}{{ $items = $items | append (dict "id" "ed-example" "title" (T "edExample")) }}{{ end }}
+{{- with $p.Params.preparation }}{{ $items = $items | append (dict "id" "ed-preparation" "title" (T "edPreparation")) }}{{ end }}
+{{- with $p.Params.faq }}{{ $items = $items | append (dict "id" "faq" "title" (T "faq")) }}{{ end }}
+{{- if or (eq $p.Section "services") $p.Params.nextSteps }}
+  {{- with index site.Data.next_steps site.Language.Lang }}
+  {{- $items = $items | append (dict "id" "next-steps" "title" ($p.Params.nextStepsHeading | default .heading)) }}
+  {{- end }}
+{{- end }}
+{{- if ge (len $items) 3 }}
+<nav class="toc" aria-labelledby="toc-title">
+  <p class="toc-title" id="toc-title">{{ T "onThisPage" }}</p>
+  <ul>
+    {{- range $items }}
+    <li><a href="#{{ .id }}">{{ .title | htmlUnescape }}</a></li>
+    {{- end }}
+  </ul>
+</nav>
+{{- end }}
