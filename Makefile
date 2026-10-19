@@ -27,7 +27,7 @@ help:
 	@echo "  make deploy-live    branch $(LIVE_BRANCH) -> live site avatax.eu ($(LIVE_PATH))"
 	@echo "                      both deploy the pushed state of the branch, not the working folder"
 	@echo "  make stats          visitor report from the server's access log -> stats/report.html"
-	@echo "  make stats-ips      IP addresses per page with device and country, no crawlers (one page: URL=/de/)"
+	@echo "  make stats-ips      IP addresses per page with device, country and referrer, no crawlers (URL=/de/)"
 	@echo "  make stats-reset    delete the server's access logs (incl. rotated ones), stats start from zero"
 	@echo "  make down / logs / status"
 	@echo "Server"
@@ -162,18 +162,26 @@ stats: _geoip
 # images, CSS, JS, fonts, /api/ and STATS_EXCLUDE_IPS. Query strings are dropped.
 # Device from the user agent: "Mobi" = mobile, iPad/tablet/Android without "Mobi" = tablet, else desktop
 # (iPads since iPadOS 13 send a Mac user agent and show as desktop).
+# Referrer (last column): the page the visitor came from – a path on STATS_HOST, domain + path of another
+# site (Google sends only its domain, never the search terms), or "-" (typed, bookmark, app). No query strings.
 # Countries: mmdblookup (in the GoAccess image) on the same database as `make stats`, one container for all IPs.
 STATS_ASSETS := \.(css|js|map|png|jpe?g|gif|svg|webp|avif|ico|woff2?|ttf|xml|txt|json|webmanifest)$$
+STATS_HOST   := avatax.eu
 
 stats-ips: _geoip
 	@$(ACCESS_LOGS) | $(STATS_BROWSERS) \
-		| awk -F'"' -v u='$(URL)' -v x='$(STATS_EXCLUDE_IPS)' 'BEGIN { n = split(x, xs, " "); for (i = 1; i <= n; i++) own[xs[i]] } { \
+		| awk -F'"' -v u='$(URL)' -v x='$(STATS_EXCLUDE_IPS)' -v h='$(STATS_HOST)' 'BEGIN { \
+			n = split(x, xs, " "); for (i = 1; i <= n; i++) own[xs[i]]; gsub(/\./, "\\.", h) } { \
 			split($$1, a, " "); split($$2, r, " "); split($$3, s, " "); p = r[2]; sub(/\?.*/, "", p); \
 			if (a[1] in own || r[1] != "GET" || (s[1] != 200 && s[1] != 304)) next; \
 			if ($$6 !~ /^Mozilla\// || tolower($$6) ~ /$(STATS_BOTS)/) next; \
 			if (p ~ /$(STATS_ASSETS)/ || p ~ /^\/api\// || (u != "" && p != u)) next; \
 			ua = tolower($$6); d = (ua ~ /ipad|tablet/ || (ua ~ /android/ && ua !~ /mobi/)) ? "tablet" : (ua ~ /mobi/ ? "mobile" : "desktop"); \
-			print p, a[1], d }' \
+			f = $$4; sub(/\?.*/, "", f); gsub(/ /, "%20", f); \
+			if (f == "-" || f == "") f = "-"; \
+			else if (sub("^https?://(www\\.)?" h "(:[0-9]+)?(/|$$)", "", f)) f = "/" f; \
+			else { sub(/^https?:\/\/(www\.)?/, "", f); sub(/\/$$/, "", f); if (f == "") f = "-" } \
+			print p, a[1], d, f }' \
 		| LC_ALL=C sort | uniq -c | LC_ALL=C sort -k2,2 -k1,1nr > stats/ips.tmp
 	@test -s stats/ips.tmp || echo "No page views found."
 	@awk '{ print $$3 }' stats/ips.tmp | sort -u \
@@ -183,7 +191,7 @@ stats-ips: _geoip
 	@awk 'FILENAME == "stats/geo.tmp" { if ($$1 == "@") ip = $$2; \
 			else if (match($$0, /"[^"]*"/)) g[ip] = g[ip] (g[ip] == "" ? "" : " ") substr($$0, RSTART + 1, RLENGTH - 2); next } \
 		$$2 != last { printf "%s%s\n", (FNR > 1 ? "\n" : ""), $$2; last = $$2 } \
-		{ printf "  %6d  %-15s  %-7s  %s\n", $$1, $$3, $$4, (g[$$3] == "" ? "-" : g[$$3]) }' stats/geo.tmp stats/ips.tmp
+		{ printf "  %6d  %-15s  %-7s  %-20s  %s\n", $$1, $$3, $$4, (g[$$3] == "" ? "-" : g[$$3]), $$5 }' stats/geo.tmp stats/ips.tmp
 	@rm -f stats/ips.tmp stats/geo.tmp
 
 # Deletes the live site's access logs on the server (current + rotated); error.log is kept.
