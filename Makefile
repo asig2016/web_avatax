@@ -122,11 +122,22 @@ _deploy:
 
 # Visitor report (GoAccess) from the server's nginx access log, built on the laptop.
 # Includes rotated logs. Contains IP addresses: stats/ is neither committed nor deployed.
+# Countries come from the free DB-IP "IP to Country Lite" database (CC BY 4.0, "IP Geolocation by DB-IP"),
+# downloaded to stats/ and refreshed when it is older than a month (current month, else the previous one).
+GEOIP_DB := stats/dbip-country-lite.mmdb
+
 stats:
 	@mkdir -p stats
+	@if [ -z "$$(find $(GEOIP_DB) -mtime -31 2>/dev/null)" ]; then \
+		for m in $$(date +%Y-%m) $$(date -d "$$(date +%Y-%m-01) -1 month" +%Y-%m); do \
+			curl -fsSL "https://download.db-ip.com/free/dbip-country-lite-$$m.mmdb.gz" | gunzip > $(GEOIP_DB).tmp \
+				&& mv $(GEOIP_DB).tmp $(GEOIP_DB) && echo "Country database: DB-IP Lite $$m" && break; \
+		done; rm -f $(GEOIP_DB).tmp; \
+	fi
+	@test -f $(GEOIP_DB) || (echo "No country database in $(GEOIP_DB) – download failed"; exit 1)
 	ssh $(DEPLOY_HOST) 'cd $(LIVE_PATH)/logs/nginx && zcat -f access.log*' \
 		| docker run --rm -i -u $(UIDGID) -v "$(CURDIR)/stats":/out:z allinurl/goaccess - \
-			--log-format=COMBINED --ignore-crawlers -o /out/report.html
+			--log-format=COMBINED --ignore-crawlers --geoip-database=/out/$(notdir $(GEOIP_DB)) -o /out/report.html
 	@echo "Report: $(CURDIR)/stats/report.html"
 
 # Deletes the live site's access logs on the server (current + rotated); error.log is kept.
