@@ -15,7 +15,7 @@ COMPOSE := docker compose
 UIDGID  := $(shell id -u):$(shell id -g)
 
 .DEFAULT_GOAL := help
-.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects deploy deploy-test deploy-live _deploy stats stats-reset update rollback status
+.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects deploy deploy-test deploy-live _deploy stats stats-ips stats-reset update rollback status
 
 help:
 	@echo "Laptop"
@@ -27,6 +27,7 @@ help:
 	@echo "  make deploy-live    branch $(LIVE_BRANCH) -> live site avatax.eu ($(LIVE_PATH))"
 	@echo "                      both deploy the pushed state of the branch, not the working folder"
 	@echo "  make stats          visitor report from the server's access log -> stats/report.html"
+	@echo "  make stats-ips      IP addresses per page, without crawlers (one page: URL=/de/)"
 	@echo "  make stats-reset    delete the server's access logs (incl. rotated ones), stats start from zero"
 	@echo "  make down / logs / status"
 	@echo "Server"
@@ -125,6 +126,8 @@ _deploy:
 # Countries come from the free DB-IP "IP to Country Lite" database (CC BY 4.0, "IP Geolocation by DB-IP"),
 # downloaded to stats/ and refreshed when it is older than a month (current month, else the previous one).
 GEOIP_DB := stats/dbip-country-lite.mmdb
+# All access logs of the live site, current and rotated (override to test with a local log).
+ACCESS_LOGS ?= ssh $(DEPLOY_HOST) 'cd $(LIVE_PATH)/logs/nginx && zcat -f access.log*'
 
 stats:
 	@mkdir -p stats
@@ -135,10 +138,27 @@ stats:
 		done; rm -f $(GEOIP_DB).tmp; \
 	fi
 	@test -f $(GEOIP_DB) || (echo "No country database in $(GEOIP_DB) – download failed"; exit 1)
-	ssh $(DEPLOY_HOST) 'cd $(LIVE_PATH)/logs/nginx && zcat -f access.log*' \
+	$(ACCESS_LOGS) \
 		| docker run --rm -i -u $(UIDGID) -v "$(CURDIR)/stats":/out:z allinurl/goaccess - \
 			--log-format=COMBINED --ignore-crawlers --geoip-database=/out/$(notdir $(GEOIP_DB)) -o /out/report.html
 	@echo "Report: $(CURDIR)/stats/report.html"
+
+# IP addresses per page, with the number of requests:  make stats-ips  or  make stats-ips URL=/de/
+# Counts only browsers (user agent "Mozilla/…" without bot/crawler words) and GET requests with
+# status 200/304; leaves out images, CSS, JS, fonts and /api/. Query strings are dropped.
+STATS_BOTS   := bot|crawl|spider|slurp|preview|headless|lighthouse|monitor|scan|archiv|facebookexternalhit
+STATS_ASSETS := \.(css|js|map|png|jpe?g|gif|svg|webp|avif|ico|woff2?|ttf|xml|txt|json|webmanifest)$$
+
+stats-ips:
+	@$(ACCESS_LOGS) \
+		| awk -F'"' -v u='$(URL)' '{ \
+			split($$1, a, " "); split($$2, r, " "); split($$3, s, " "); p = r[2]; sub(/\?.*/, "", p); \
+			if (r[1] != "GET" || (s[1] != 200 && s[1] != 304)) next; \
+			if ($$6 !~ /^Mozilla\// || tolower($$6) ~ /$(STATS_BOTS)/) next; \
+			if (p ~ /$(STATS_ASSETS)/ || p ~ /^\/api\// || (u != "" && p != u)) next; \
+			print p, a[1] }' \
+		| LC_ALL=C sort | uniq -c | LC_ALL=C sort -k2,2 -k1,1nr \
+		| awk '$$2 != last { printf "%s%s\n", (NR > 1 ? "\n" : ""), $$2; last = $$2 } { printf "  %6d  %s\n", $$1, $$3 }'
 
 # Deletes the live site's access logs on the server (current + rotated); error.log is kept.
 # Runs inside the web container, because nginx and logrotate write the files as root.
