@@ -27,7 +27,7 @@ help:
 	@echo "  make deploy-live    branch $(LIVE_BRANCH) -> live site avatax.eu ($(LIVE_PATH))"
 	@echo "                      both deploy the pushed state of the branch, not the working folder"
 	@echo "  make stats          visitor report from the server's access log -> stats/report.html"
-	@echo "  make stats-ips      IP addresses per page, without crawlers (one page: URL=/de/)"
+	@echo "  make stats-ips      IP addresses per page with device and country, no crawlers (one page: URL=/de/)"
 	@echo "  make stats-reset    delete the server's access logs (incl. rotated ones), stats start from zero"
 	@echo "  make down / logs / status"
 	@echo "Server"
@@ -130,6 +130,16 @@ GEOIP_DB := stats/dbip-country-lite.mmdb
 ACCESS_LOGS ?= ssh $(DEPLOY_HOST) 'cd $(LIVE_PATH)/logs/nginx && zcat -f access.log*'
 # Own visits, left out of `make stats` and `make stats-ips` (space-separated; GoAccess also takes ranges a-b).
 STATS_EXCLUDE_IPS ?= 194.219.21.115
+# Real browsers only (both targets): keeps all lines of the IPs that, with a browser user agent ("Mozilla/…"
+# without bot/crawler words), loaded the site's CSS or JS or ran main.js, which asks /api/chat-status uncached
+# on every page. Scripts posing as browsers (e.g. contact-form spam bots) fetch only the HTML; CSS/JS still
+# count if the chat is switched off. Holds the logs in memory (at most 30 days, see log rotation).
+STATS_BOTS     := bot|crawl|spider|slurp|preview|headless|lighthouse|monitor|scan|archiv|facebookexternalhit
+STATS_BROWSERS := awk -F'"' '{ split($$1, a, " "); split($$2, r, " "); split($$3, s, " "); p = r[2]; sub(/\?.*/, "", p); \
+	ip[NR] = a[1]; line[NR] = $$0; \
+	if (r[1] == "GET" && (s[1] == 200 || s[1] == 304) && $$6 ~ /^Mozilla\// && tolower($$6) !~ /$(STATS_BOTS)/ \
+		&& p ~ /^\/((css|js)\/|api\/chat-status$$)/) browser[a[1]] = 1 } \
+	END { for (i = 1; i <= NR; i++) if (ip[i] in browser) print line[i] }'
 
 _geoip:
 	@mkdir -p stats
@@ -142,31 +152,29 @@ _geoip:
 	@test -f $(GEOIP_DB) || (echo "No country database in $(GEOIP_DB) – download failed"; exit 1)
 
 stats: _geoip
-	$(ACCESS_LOGS) \
+	@$(ACCESS_LOGS) | $(STATS_BROWSERS) \
 		| docker run --rm -i -u $(UIDGID) -v "$(CURDIR)/stats":/out:z allinurl/goaccess - \
 			--log-format=COMBINED --ignore-crawlers $(addprefix --exclude-ip=,$(STATS_EXCLUDE_IPS)) --geoip-database=/out/$(notdir $(GEOIP_DB)) -o /out/report.html
 	@echo "Report: $(CURDIR)/stats/report.html"
 
 # IP addresses per page, with the number of requests and the country:  make stats-ips  or  make stats-ips URL=/de/
-# Counts only browsers (user agent "Mozilla/…" without bot/crawler words) that also loaded the site's
-# CSS or JS or ran main.js, which asks /api/chat-status uncached on every page (scripts posing as browsers
-# fetch only the HTML; CSS/JS still count if the chat is switched off), and GET requests with status 200/304;
-# leaves out images, CSS, JS, fonts, /api/ and STATS_EXCLUDE_IPS. Query strings are dropped.
+# Counts only real browsers (STATS_BROWSERS, above) and GET requests with status 200/304; leaves out
+# images, CSS, JS, fonts, /api/ and STATS_EXCLUDE_IPS. Query strings are dropped.
+# Device from the user agent: "Mobi" = mobile, iPad/tablet/Android without "Mobi" = tablet, else desktop
+# (iPads since iPadOS 13 send a Mac user agent and show as desktop).
 # Countries: mmdblookup (in the GoAccess image) on the same database as `make stats`, one container for all IPs.
-STATS_BOTS   := bot|crawl|spider|slurp|preview|headless|lighthouse|monitor|scan|archiv|facebookexternalhit
 STATS_ASSETS := \.(css|js|map|png|jpe?g|gif|svg|webp|avif|ico|woff2?|ttf|xml|txt|json|webmanifest)$$
 
 stats-ips: _geoip
-	@$(ACCESS_LOGS) \
+	@$(ACCESS_LOGS) | $(STATS_BROWSERS) \
 		| awk -F'"' -v u='$(URL)' -v x='$(STATS_EXCLUDE_IPS)' 'BEGIN { n = split(x, xs, " "); for (i = 1; i <= n; i++) own[xs[i]] } { \
 			split($$1, a, " "); split($$2, r, " "); split($$3, s, " "); p = r[2]; sub(/\?.*/, "", p); \
 			if (a[1] in own || r[1] != "GET" || (s[1] != 200 && s[1] != 304)) next; \
 			if ($$6 !~ /^Mozilla\// || tolower($$6) ~ /$(STATS_BOTS)/) next; \
-			if (p ~ /^\/((css|js)\/|api\/chat-status$$)/) { browser[a[1]] = 1; next } \
 			if (p ~ /$(STATS_ASSETS)/ || p ~ /^\/api\// || (u != "" && p != u)) next; \
-			hits[p " " a[1]]++ } \
-		END { for (k in hits) { split(k, q, " "); if (q[2] in browser) print hits[k], k } }' \
-		| LC_ALL=C sort -k2,2 -k1,1nr > stats/ips.tmp
+			ua = tolower($$6); d = (ua ~ /ipad|tablet/ || (ua ~ /android/ && ua !~ /mobi/)) ? "tablet" : (ua ~ /mobi/ ? "mobile" : "desktop"); \
+			print p, a[1], d }' \
+		| LC_ALL=C sort | uniq -c | LC_ALL=C sort -k2,2 -k1,1nr > stats/ips.tmp
 	@test -s stats/ips.tmp || echo "No page views found."
 	@awk '{ print $$3 }' stats/ips.tmp | sort -u \
 		| docker run --rm -i -v "$(CURDIR)/stats":/geo:ro,z --entrypoint sh allinurl/goaccess -c \
@@ -175,7 +183,7 @@ stats-ips: _geoip
 	@awk 'FILENAME == "stats/geo.tmp" { if ($$1 == "@") ip = $$2; \
 			else if (match($$0, /"[^"]*"/)) g[ip] = g[ip] (g[ip] == "" ? "" : " ") substr($$0, RSTART + 1, RLENGTH - 2); next } \
 		$$2 != last { printf "%s%s\n", (FNR > 1 ? "\n" : ""), $$2; last = $$2 } \
-		{ printf "  %6d  %-15s  %s\n", $$1, $$3, (g[$$3] == "" ? "-" : g[$$3]) }' stats/geo.tmp stats/ips.tmp
+		{ printf "  %6d  %-15s  %-7s  %s\n", $$1, $$3, $$4, (g[$$3] == "" ? "-" : g[$$3]) }' stats/geo.tmp stats/ips.tmp
 	@rm -f stats/ips.tmp stats/geo.tmp
 
 # Deletes the live site's access logs on the server (current + rotated); error.log is kept.
