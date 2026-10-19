@@ -3,7 +3,7 @@ title: "Honorare & Zusammenarbeit"
 seoTitle: "Honorare und Zusammenarbeit | AVATAX Athen"
 description: "So rechnen wir ab: Pauschalen für Buchhaltung und Lohn, Zeitvergütung für Beratung, kostenfreies Erstgespräch für Unternehmen, Erstberatung für Private."
 url: /de/honorare/
-review: "neue Seite 2026-10-17 nach der Honorar-Empfehlung (allgemeiner Kontakt ohne Preis, Unternehmen/Privatpersonen getrennt, Vergütungsmodelle) – bitte prüfen, insbesondere die Zuordnung der Vergütungsmodelle, was die Erstberatung für Privatpersonen umfasst und den Abschnitt „Beginn des Mandats“ (2026-10-17); 2026-10-17: schriftliches Angebot und schriftliche Bestätigung vor jedem Termin (auch Erstgespräche); Kontaktablauf angepasst – bitte prüfen"
+review: "neue Seite 2026-10-17 nach der Honorar-Empfehlung (allgemeiner Kontakt ohne Preis, Unternehmen/Privatpersonen getrennt, Vergütungsmodelle) – bitte prüfen, insbesondere die Zuordnung der Vergütungsmodelle, was die Erstberatung für Privatpersonen umfasst und den Abschnitt „Beginn des Mandats“ (2026-10-17); 2026-10-17: schriftliches Angebot und schriftliche Bestätigung vor jedem Termin (auch Erstgespräche); Kontaktablauf angepasst – bitte prüfen; 2026-10-19: Betrag der Erstberatung für Privatpersonen entfernt, nur „festes Pauschalhonorar“ – bitte prüfen"
 nextSteps: true
 menus:
   main:
@@ -29,7 +29,7 @@ Im kostenfreien Erstgespräch klären wir Ihren Beratungsbedarf und die Möglich
 
 ## Privatpersonen: fachliche Erstberatung
 
-Konkrete Einzelfragen – etwa zur Besteuerung einer Rente, einer Immobilie oder eines Zuzugs nach Griechenland – beantworten wir in einer fachlichen Erstberatung zum Pauschalhonorar von **200 € zzgl. 24 % Umsatzsteuer, also 248 €**.
+Konkrete Einzelfragen – etwa zur Besteuerung einer Rente, einer Immobilie oder eines Zuzugs nach Griechenland – beantworten wir in einer fachlichen Erstberatung zu einem **festen Pauschalhonorar**.
 
 - **Enthalten:** ein Gespräch per Video oder in unserem Büro in Athen, in dem wir Ihre Frage auf Grundlage Ihrer Angaben erörtern und Ihnen eine erste fachliche Einschätzung geben.
 - **Nicht enthalten:** die Prüfung umfangreicher Unterlagen, schriftliche Stellungnahmen, Steuererklärungen und Anträge sowie die laufende Betreuung; dafür erhalten Sie ein gesondertes Angebot.

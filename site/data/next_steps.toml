@@ -2,7 +2,7 @@
 # Block at the end of every service page (and About, Fees): eyebrow, heading, intro, steps (icon names from
 # _partials/icon.html), link to the fees page, button, direct contact. Contact page: title, full.
 # Owner decision 2026-10-17 (fee recommendation): NO price in the general contact area. Fees, the free first
-# meeting for companies and the paid first consultation for private individuals (200 € plus VAT) are explained
+# meeting for companies and the paid first consultation for private individuals (fixed flat fee, amount not published) are explained
 # on the page "Honorare & Zusammenarbeit" (content/fees.*.md). No reply time is stated.
 # Review pending: 2026-10-17 revised enquiry steps in DE/EN/EL; phone hours use i18n.phoneHoursShort.
 # Owner clarification 2026-10-17: every appointment follows a written offer and written acceptance.

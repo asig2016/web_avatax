@@ -3,7 +3,7 @@ title: "Fees & engagement"
 seoTitle: "Fees and How We Work Together | AVATAX Athens"
 description: "How we charge: monthly flat fees for accounting and payroll, time-based fees for advice, free first meeting for companies, consultation for individuals."
 url: /fees/
-review: "new page 2026-10-17 after the fee recommendation – please check, in particular which fee model applies to which service and what the first consultation for private individuals covers; 2026-10-17: schriftliches Angebot und schriftliche Bestätigung vor jedem Termin (auch Erstgespräche); Kontaktablauf angepasst – bitte prüfen"
+review: "new page 2026-10-17 after the fee recommendation – please check, in particular which fee model applies to which service and what the first consultation for private individuals covers; 2026-10-17: schriftliches Angebot und schriftliche Bestätigung vor jedem Termin (auch Erstgespräche); Kontaktablauf angepasst – bitte prüfen; 2026-10-19: amount of the first consultation for private individuals removed, only “fixed flat fee” – please check"
 nextSteps: true
 menus:
   main:
@@ -29,7 +29,7 @@ In a free first meeting we clarify what you need and how a long-term cooperation
 
 ## Private individuals: first consultation
 
-Specific individual questions – for example on the taxation of a pension, a property or a move to Greece – are answered in a first consultation at a flat fee of **€200 plus 24% VAT, i.e. €248**.
+Specific individual questions – for example on the taxation of a pension, a property or a move to Greece – are answered in a first consultation at a **fixed flat fee**.
 
 - **Included:** a meeting by video or in our office in Athens, in which we discuss your question on the basis of your information and give you a first professional assessment.
 - **Not included:** reviewing extensive documents, written opinions, tax returns and applications, and ongoing support; for these you receive a separate offer.

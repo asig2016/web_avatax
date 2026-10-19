@@ -1,26 +1,22 @@
 {{ define "main" }}
 {{- $hero := resources.Get "images/acropolis.jpg" }}
+{{- /* full-width photo with dark overlay (as on the previous design), text in the editorial style */}}
 <section class="home-hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow">{{ .Params.heroEyebrow | default site.Params.tagline }}</p>
-      {{- /* heroTitle may mark its second line with *…* (italic, own line) */}}
-      <h1>{{ .Params.heroTitle | .RenderString }}</h1>
-      <p class="hero-text">{{ .Params.heroText | markdownify }}</p>
-      <div class="hero-actions">
-        {{- with site.GetPage "/contact" }}<a class="btn" href="{{ .RelPermalink }}">{{ T "enquireWithoutObligation" }}</a>{{ end }}
-        {{- with site.GetPage "/services" }}<a class="text-link" href="{{ .RelPermalink }}">{{ T "ourServices" }}{{ partial "icon.html" "arrow-ur" }}</a>{{ end }}
-      </div>
+  <picture>
+    <source type="image/webp"
+      srcset="{{ ($hero.Fill "800x600 Center webp").RelPermalink }} 800w, {{ ($hero.Fill "1600x800 Center webp").RelPermalink }} 1600w, {{ ($hero.Fill "2400x1000 Center webp").RelPermalink }} 2400w"
+      sizes="100vw">
+    <img class="hero-img" src="{{ ($hero.Fill "1600x800 Center jpg").RelPermalink }}" alt="{{ .Params.heroAlt }}" width="1600" height="800" fetchpriority="high">
+  </picture>
+  <div class="wrap hero-content">
+    <p class="eyebrow">{{ .Params.heroEyebrow | default site.Params.tagline }}</p>
+    {{- /* heroTitle may mark its second line with *…* (italic, own line) */}}
+    <h1>{{ .Params.heroTitle | .RenderString }}</h1>
+    <p class="hero-text">{{ .Params.heroText | markdownify }}</p>
+    <div class="hero-actions">
+      {{- with site.GetPage "/services" }}<a class="btn btn-light" href="{{ .RelPermalink }}">{{ T "ourServices" }}</a>{{ end }}
+      {{- with site.GetPage "/contact" }}<a class="btn btn-outline-light" href="{{ .RelPermalink }}">{{ T "enquireWithoutObligation" }}</a>{{ end }}
     </div>
-    <figure class="hero-photo">
-      <picture>
-        <source type="image/webp"
-          srcset="{{ ($hero.Fill "640x640 Center webp").RelPermalink }} 640w, {{ ($hero.Fill "960x960 Center webp").RelPermalink }} 960w, {{ ($hero.Fill "1280x1280 Center webp").RelPermalink }} 1280w"
-          sizes="(min-width: 900px) 45vw, 100vw">
-        <img src="{{ ($hero.Fill "960x960 Center jpg").RelPermalink }}" alt="" width="960" height="960" fetchpriority="high">
-      </picture>
-      <figcaption><span>{{ T "heroPlace" }}</span>{{ .Params.heroAlt }}</figcaption>
-    </figure>
   </div>
 </section>
 

@@ -155,8 +155,8 @@ Independent review of the German site (conversion, positioning, search); batches
   new page **„Unsere Arbeitsweise"** (`how-we-work.*.md`, /de/arbeitsweise/) and the fees page (with „Beginn des
   Mandats" and the note on additional costs). Please proofread; EN/EL About pages restructured the same way on 2026-10-18.
 - **New page „Honorare & Zusammenarbeit"** (`fees.*.md`, /de/honorare/, in the main menu, 2026-10-17): fee models,
-  free first meeting for companies, first consultation for private individuals 200 € zzgl. 24 % USt. = 248 €
-  (not credited). **Please check** which fee model is named for which service (Buchhaltung/Lohn monthly flat fee,
+  free first meeting for companies, first consultation for private individuals at a fixed flat fee
+  (not credited; amount removed from the site 2026-10-19). **Please check** which fee model is named for which service (Buchhaltung/Lohn monthly flat fee,
   Steuerberatung usually time-based) and what the consultation covers („Enthalten" / „Nicht enthalten"). Note: the disabled online booking still labels
   appointments „kostenfrei" (`bookFree`) – adjust before switching it on again.
 - **Contact form:** phone optional, new field „Unternehmen", subject replaced by the choice „Ihr Anliegen".

@@ -89,7 +89,8 @@ Read `README.md` (overview), `docs/DOCKER.md` (containers and commands), `docs/D
   Zusammenarbeit"** (`fees.*.md`: fee models, first meetings, additional costs, start of the mandate); „Kontakt" is the only highlighted menu entry. Subtle links to the fees page: the home
   section „Transparente Vergütung" and „Wie wir abrechnen: …" in „Nächste Schritte". The page explains the fee models
   (time-based fees or monthly flat fees; no hourly rates or amounts for mandates), the **free first meeting for
-  companies** and the **paid first consultation for private individuals: 200 € plus 24 % VAT = 248 €, not credited**,
+  companies** and the **paid first consultation for private individuals at a fixed flat fee, not credited** (the amount is not
+  published on the site, owner 2026-10-19),
   with what it covers. Never justify the different treatment publicly (administrative effort, revenue potential);
   present two distinct services instead.
 - **No staff names** on the site; describe how mandates are handled instead.
@@ -99,8 +100,10 @@ Read `README.md` (overview), `docs/DOCKER.md` (containers and commands), `docs/D
 ## Owner decisions 2026-10-19 (design and structure taken from the 8091 draft)
 
 - **Editorial design, same colours:** serif display headings (system fonts only, no web font), numbered lists on
-  top rules instead of boxed cards, square corners, split heroes (text left, photo right). Body text stays 17 px;
-  the gold `--accent` is never used for text or focus rings on white (contrast 2:1).
+  top rules instead of boxed cards, square corners, split heroes on subpages (text left, photo right). The home page
+  keeps the full-width Acropolis photo with the dark overlay and white text, as in the previous design (owner
+  2026-10-19). Body text stays 17 px; the gold `--accent` is never used for text or focus rings on white (contrast
+  2:1), only on the dark hero and footer.
 - **Split by audience:** menu „Mandanten" / "Clients" / «Πελάτες» (`hugo.toml`, `identifier = "clients"`, target
   `/#clients` on the home page) with three client pages, named like the client groups on the home page:
   `content/companies-in-greece.*.md` (EN/DE: foreign groups with an entity or staff in Greece; **EL: Greek
