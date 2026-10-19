@@ -4,7 +4,7 @@ linkTitle: "Companies with an entity or staff in Greece"
 seoTitle: "Accounting & Payroll for Companies in Greece | AVATAX"
 description: "For Greek subsidiaries, branches and staff of foreign companies: accounting, financial statements, payroll and tax – reports in English or German."
 url: /companies-in-greece/
-review: "new client page 2026-10-19 (editorial layout), built from the service pages accounting, payroll, tax and fiscal representation – please check"
+review: "new client page 2026-10-19 (editorial layout), built from the service pages accounting, payroll, tax and fiscal representation – please check; 2026-10-19: link “Market entry and representation” under “Related pages” (owner); 2026-10-19: introduction extended with a note for companies still planning (owner)"
 eyebrow: "Our clients"
 lead: "For your Greek subsidiary, branch or staff in Greece we keep the books under Greek law, run the payroll and handle the taxes – and report to you and your parent company in English or German."
 nextSteps: true
@@ -32,8 +32,10 @@ callout:
   text: "A change is also possible during the financial year: we take over the balances and records from the previous accountant, reconcile them with myDATA and continue the books without interruption."
 articleImage: "images/reports-desk.webp"
 articleAlt: "Illustration: three open reports with charts on a desk"
+related:
+  - { label: "Market entry and representation", url: "/services/start-in-greece/companies/" }
 ---
-Greek companies and branches transmit their accounting data continuously to the tax administration (myDATA); staff are registered before work starts and receive 14 salaries a year. We take over these obligations and give your parent company the figures it needs – in its own format.
+Greek companies and branches transmit their accounting data continuously to the tax administration (myDATA); staff are registered before work starts and receive 14 salaries a year. We take over these obligations and give your parent company the figures it needs – in its own format. Are you still at the planning stage, without a location in Greece yet? Under [Market entry and representation](/services/start-in-greece/companies/) we show the possible ways.
 
 ## Working with your parent company
 

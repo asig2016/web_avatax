@@ -4,7 +4,7 @@ linkTitle: "Unternehmen mit Gesellschaft oder Mitarbeitern in Griechenland"
 seoTitle: "Griechische Tochtergesellschaft: Buchhaltung & Lohn | AVATAX"
 description: "Für griechische Tochtergesellschaften, Zweigniederlassungen und Mitarbeiter ausländischer Unternehmen: Buchhaltung, Lohn und Steuern – auf Deutsch."
 url: /de/unternehmen-in-griechenland/
-review: "neue Mandantenseite 2026-10-19 (redaktionelles Layout), aufgebaut aus den Leistungsseiten Buchhaltung, Lohn, Steuerberatung und Fiskalvertretung – bitte prüfen; 2026-10-19: Überschrift „Standort Griechenland“ (Inhaber)"
+review: "neue Mandantenseite 2026-10-19 (redaktionelles Layout), aufgebaut aus den Leistungsseiten Buchhaltung, Lohn, Steuerberatung und Fiskalvertretung – bitte prüfen; 2026-10-19: Überschrift „Standort Griechenland“ (Inhaber); 2026-10-19: Link „Markteintritt und Vertretung“ unter „Weitere passende Seiten“ (Inhaber); 2026-10-19: Einleitung um den Hinweis für Unternehmen in der Planung ergänzt (Inhaber)"
 eyebrow: "Unsere Mandanten"
 lead: "Für Ihre griechische Tochtergesellschaft, Zweigniederlassung oder Ihre Mitarbeiter in Griechenland führen wir die Bücher nach griechischem Recht, rechnen die Löhne ab und erledigen die Steuern – und berichten an Sie und Ihre Muttergesellschaft, auf Deutsch."
 nextSteps: true
@@ -32,8 +32,10 @@ callout:
   text: "Ein Wechsel ist auch während des Geschäftsjahres möglich: Wir übernehmen Salden und Unterlagen vom bisherigen Buchhalter, gleichen sie mit myDATA ab und führen die Bücher ohne Unterbrechung fort."
 articleImage: "images/reports-desk.webp"
 articleAlt: "Symbolbild: drei aufgeschlagene Berichte mit Diagrammen auf einem Schreibtisch"
+related:
+  - { label: "Markteintritt und Vertretung", url: "/de/leistungen/ihr-start-in-griechenland/unternehmen/" }
 ---
-Griechische Gesellschaften und Zweigniederlassungen übermitteln ihre Buchhaltungsdaten laufend elektronisch an die Finanzverwaltung (myDATA); Mitarbeiter werden vor Arbeitsbeginn angemeldet und erhalten 14 Gehälter im Jahr. Wir übernehmen diese Pflichten und liefern Ihrer Muttergesellschaft die Zahlen, die sie braucht – in ihrem Format.
+Griechische Gesellschaften und Zweigniederlassungen übermitteln ihre Buchhaltungsdaten laufend elektronisch an die Finanzverwaltung (myDATA); Mitarbeiter werden vor Arbeitsbeginn angemeldet und erhalten 14 Gehälter im Jahr. Wir übernehmen diese Pflichten und liefern Ihrer Muttergesellschaft die Zahlen, die sie braucht – in ihrem Format. Sie sind noch in der Planung und haben noch keinen Standort in Griechenland? Unter [Markteintritt und Vertretung](/de/leistungen/ihr-start-in-griechenland/unternehmen/) zeigen wir die möglichen Wege.
 
 ## Zusammenarbeit mit Ihrer Muttergesellschaft
 
