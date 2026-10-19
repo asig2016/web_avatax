@@ -15,7 +15,7 @@ COMPOSE := docker compose
 UIDGID  := $(shell id -u):$(shell id -g)
 
 .DEFAULT_GOAL := help
-.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects deploy deploy-test deploy-live _deploy stats stats-ips stats-reset update rollback status
+.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects deploy deploy-test deploy-live _deploy _geoip stats stats-ips stats-reset update rollback status
 
 help:
 	@echo "Laptop"
@@ -129,7 +129,7 @@ GEOIP_DB := stats/dbip-country-lite.mmdb
 # All access logs of the live site, current and rotated (override to test with a local log).
 ACCESS_LOGS ?= ssh $(DEPLOY_HOST) 'cd $(LIVE_PATH)/logs/nginx && zcat -f access.log*'
 
-stats:
+_geoip:
 	@mkdir -p stats
 	@if [ -z "$$(find $(GEOIP_DB) -mtime -31 2>/dev/null)" ]; then \
 		for m in $$(date +%Y-%m) $$(date -d "$$(date +%Y-%m-01) -1 month" +%Y-%m); do \
@@ -138,18 +138,21 @@ stats:
 		done; rm -f $(GEOIP_DB).tmp; \
 	fi
 	@test -f $(GEOIP_DB) || (echo "No country database in $(GEOIP_DB) – download failed"; exit 1)
+
+stats: _geoip
 	$(ACCESS_LOGS) \
 		| docker run --rm -i -u $(UIDGID) -v "$(CURDIR)/stats":/out:z allinurl/goaccess - \
 			--log-format=COMBINED --ignore-crawlers --geoip-database=/out/$(notdir $(GEOIP_DB)) -o /out/report.html
 	@echo "Report: $(CURDIR)/stats/report.html"
 
-# IP addresses per page, with the number of requests:  make stats-ips  or  make stats-ips URL=/de/
+# IP addresses per page, with the number of requests and the country:  make stats-ips  or  make stats-ips URL=/de/
 # Counts only browsers (user agent "Mozilla/…" without bot/crawler words) and GET requests with
 # status 200/304; leaves out images, CSS, JS, fonts and /api/. Query strings are dropped.
+# Countries: mmdblookup (in the GoAccess image) on the same database as `make stats`, one container for all IPs.
 STATS_BOTS   := bot|crawl|spider|slurp|preview|headless|lighthouse|monitor|scan|archiv|facebookexternalhit
 STATS_ASSETS := \.(css|js|map|png|jpe?g|gif|svg|webp|avif|ico|woff2?|ttf|xml|txt|json|webmanifest)$$
 
-stats-ips:
+stats-ips: _geoip
 	@$(ACCESS_LOGS) \
 		| awk -F'"' -v u='$(URL)' '{ \
 			split($$1, a, " "); split($$2, r, " "); split($$3, s, " "); p = r[2]; sub(/\?.*/, "", p); \
@@ -157,8 +160,17 @@ stats-ips:
 			if ($$6 !~ /^Mozilla\// || tolower($$6) ~ /$(STATS_BOTS)/) next; \
 			if (p ~ /$(STATS_ASSETS)/ || p ~ /^\/api\// || (u != "" && p != u)) next; \
 			print p, a[1] }' \
-		| LC_ALL=C sort | uniq -c | LC_ALL=C sort -k2,2 -k1,1nr \
-		| awk '$$2 != last { printf "%s%s\n", (NR > 1 ? "\n" : ""), $$2; last = $$2 } { printf "  %6d  %s\n", $$1, $$3 }'
+		| LC_ALL=C sort | uniq -c | LC_ALL=C sort -k2,2 -k1,1nr > stats/ips.tmp
+	@test -s stats/ips.tmp || echo "No page views found."
+	@awk '{ print $$3 }' stats/ips.tmp | sort -u \
+		| docker run --rm -i -v "$(CURDIR)/stats":/geo:ro,z --entrypoint sh allinurl/goaccess -c \
+			'while read ip; do echo "@ $$ip"; for k in iso_code "names en"; do \
+				mmdblookup -f /geo/$(notdir $(GEOIP_DB)) -i "$$ip" country $$k 2>/dev/null; done; done' > stats/geo.tmp
+	@awk 'FILENAME == "stats/geo.tmp" { if ($$1 == "@") ip = $$2; \
+			else if (match($$0, /"[^"]*"/)) g[ip] = g[ip] (g[ip] == "" ? "" : " ") substr($$0, RSTART + 1, RLENGTH - 2); next } \
+		$$2 != last { printf "%s%s\n", (FNR > 1 ? "\n" : ""), $$2; last = $$2 } \
+		{ printf "  %6d  %-15s  %s\n", $$1, $$3, (g[$$3] == "" ? "-" : g[$$3]) }' stats/geo.tmp stats/ips.tmp
+	@rm -f stats/ips.tmp stats/geo.tmp
 
 # Deletes the live site's access logs on the server (current + rotated); error.log is kept.
 # Runs inside the web container, because nginx and logrotate write the files as root.
