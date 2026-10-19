@@ -15,7 +15,7 @@ COMPOSE := docker compose
 UIDGID  := $(shell id -u):$(shell id -g)
 
 .DEFAULT_GOAL := help
-.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects deploy deploy-test deploy-live _deploy stats update rollback status
+.PHONY: help dev up down logs build publish preview test test-go test-links test-redirects deploy deploy-test deploy-live _deploy stats stats-reset update rollback status
 
 help:
 	@echo "Laptop"
@@ -27,6 +27,7 @@ help:
 	@echo "  make deploy-live    branch $(LIVE_BRANCH) -> live site avatax.eu ($(LIVE_PATH))"
 	@echo "                      both deploy the pushed state of the branch, not the working folder"
 	@echo "  make stats          visitor report from the server's access log -> stats/report.html"
+	@echo "  make stats-reset    delete the server's access logs (incl. rotated ones), stats start from zero"
 	@echo "  make down / logs / status"
 	@echo "Server"
 	@echo "  make update         build site, publish it (previous version -> public.prev), restart containers"
@@ -127,6 +128,14 @@ stats:
 		| docker run --rm -i -u $(UIDGID) -v "$(CURDIR)/stats":/out:z allinurl/goaccess - \
 			--log-format=COMBINED --ignore-crawlers -o /out/report.html
 	@echo "Report: $(CURDIR)/stats/report.html"
+
+# Deletes the live site's access logs on the server (current + rotated); error.log is kept.
+# Runs inside the web container, because nginx and logrotate write the files as root.
+stats-reset:
+	@printf 'Delete all access logs in $(LIVE_PATH) on $(DEPLOY_HOST)? [y/N] '; read ans; [ "$$ans" = y ] || (echo "Aborted."; exit 1)
+	ssh $(DEPLOY_HOST) 'cd $(LIVE_PATH) && $(COMPOSE) exec -T web sh -c "rm -f /var/log/nginx/access.log.* && : > /var/log/nginx/access.log"'
+	@rm -f stats/report.html
+	@echo "Access logs reset. Run 'make stats' later for a fresh report."
 
 # ---------------------------------------------------------------- server ----
 
