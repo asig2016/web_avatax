@@ -148,8 +148,10 @@ stats: _geoip
 	@echo "Report: $(CURDIR)/stats/report.html"
 
 # IP addresses per page, with the number of requests and the country:  make stats-ips  or  make stats-ips URL=/de/
-# Counts only browsers (user agent "Mozilla/…" without bot/crawler words) and GET requests with
-# status 200/304; leaves out images, CSS, JS, fonts, /api/ and STATS_EXCLUDE_IPS. Query strings are dropped.
+# Counts only browsers (user agent "Mozilla/…" without bot/crawler words) that also loaded the site's
+# CSS or JS or ran main.js, which asks /api/chat-status uncached on every page (scripts posing as browsers
+# fetch only the HTML; CSS/JS still count if the chat is switched off), and GET requests with status 200/304;
+# leaves out images, CSS, JS, fonts, /api/ and STATS_EXCLUDE_IPS. Query strings are dropped.
 # Countries: mmdblookup (in the GoAccess image) on the same database as `make stats`, one container for all IPs.
 STATS_BOTS   := bot|crawl|spider|slurp|preview|headless|lighthouse|monitor|scan|archiv|facebookexternalhit
 STATS_ASSETS := \.(css|js|map|png|jpe?g|gif|svg|webp|avif|ico|woff2?|ttf|xml|txt|json|webmanifest)$$
@@ -160,9 +162,11 @@ stats-ips: _geoip
 			split($$1, a, " "); split($$2, r, " "); split($$3, s, " "); p = r[2]; sub(/\?.*/, "", p); \
 			if (a[1] in own || r[1] != "GET" || (s[1] != 200 && s[1] != 304)) next; \
 			if ($$6 !~ /^Mozilla\// || tolower($$6) ~ /$(STATS_BOTS)/) next; \
+			if (p ~ /^\/((css|js)\/|api\/chat-status$$)/) { browser[a[1]] = 1; next } \
 			if (p ~ /$(STATS_ASSETS)/ || p ~ /^\/api\// || (u != "" && p != u)) next; \
-			print p, a[1] }' \
-		| LC_ALL=C sort | uniq -c | LC_ALL=C sort -k2,2 -k1,1nr > stats/ips.tmp
+			hits[p " " a[1]]++ } \
+		END { for (k in hits) { split(k, q, " "); if (q[2] in browser) print hits[k], k } }' \
+		| LC_ALL=C sort -k2,2 -k1,1nr > stats/ips.tmp
 	@test -s stats/ips.tmp || echo "No page views found."
 	@awk '{ print $$3 }' stats/ips.tmp | sort -u \
 		| docker run --rm -i -v "$(CURDIR)/stats":/geo:ro,z --entrypoint sh allinurl/goaccess -c \
