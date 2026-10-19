@@ -5,10 +5,11 @@ seoTitle: "50% Tax Exemption for Employees in Greece (Art. 5C) | AVATAX"
 description: "Moving to Greece to work: 50% of employment or freelance income exempt from income tax for seven years (Art. 5C) – conditions and documents."
 url: /services/relocating-to-greece/employees-and-freelancers/
 icon: building
-weight: 20
-review: "split from the relocation page 2026-10-05 – please check – new FAQ 2026-10-05: please check \"remote work\"; FAQ \"social security\" removed 2026-10-16"
+weight: 30
+review: "split from the relocation page 2026-10-05 – please check – new FAQ 2026-10-05: please check \"remote work\"; FAQ \"social security\" removed 2026-10-16; 2026-10-18: question on the application deadline made specific, order 5A/5B/5C"
+ctaTopic: "relocation"
 faq:
-  - q: "What is the application deadline?"
+  - q: "By when must the application for the 50% tax exemption be filed?"
     a: "The application is filed in the year in which the tax residence is transferred to Greece. The deadlines have changed several times in recent years, so we check the deadline that currently applies for you."
   - q: "Does the exemption also cover income from abroad?"
     a: "No. Only income from employment or self-employment in Greece is 50% exempt."

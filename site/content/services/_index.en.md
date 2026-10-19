@@ -1,7 +1,7 @@
 ---
 title: "Services"
 seoTitle: "Accounting, Payroll & Tax Services in Greece | AVATAX"
-description: "Bookkeeping, financial statements, payroll, tax consultancy, fiscal representation and support for accounting departments in Greece – AVATAX A.E., Athens."
+description: "Bookkeeping, financial statements, payroll, tax consultancy, tax representation and accounting department support in Greece for companies and individuals."
 url: /services/
 menus:
   main:

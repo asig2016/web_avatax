@@ -153,7 +153,7 @@ Independent review of the German site (conversion, positioning, search); batches
   Please confirm that the phone hours „Mo–Fr 9–17 Uhr … auf Deutsch" are always covered.
 - **„Über uns" split into three pages (2026-10-17):** „Über AVATAX" (rewritten: who we are, philosophy, team, clients),
   new page **„Unsere Arbeitsweise"** (`how-we-work.*.md`, /de/arbeitsweise/) and the fees page (with „Beginn des
-  Mandats" and the note on additional costs). Please proofread; EN/EL About pages still have the old structure.
+  Mandats" and the note on additional costs). Please proofread; EN/EL About pages restructured the same way on 2026-10-18.
 - **New page „Honorare & Zusammenarbeit"** (`fees.*.md`, /de/honorare/, in the main menu, 2026-10-17): fee models,
   free first meeting for companies, first consultation for private individuals 200 € zzgl. 24 % USt. = 248 €
   (not credited). **Please check** which fee model is named for which service (Buchhaltung/Lohn monthly flat fee,
@@ -165,10 +165,26 @@ Independent review of the German site (conversion, positioning, search); batches
   business-first openings). Please proofread.
 - **All languages active again (2026-10-17):** English at `/`, German at `/de/`, Greek at `/el/`.
   Temporary redirects to German have been removed; language switches and localized 404 pages are active.
-- **EN/EL parity before switching the languages back on:** the EN/EL pages still have the old texts (FAQs on all
-  pages, old titles, old home/About texts, „Unterstützung Ihrer Buchhaltung", self-employed and long-stay
-  openings). They need the same changes, adapted to their audiences (rule 4), plus `nextSteps`/`ctaText`/
-  `ctaTopic` front matter.
+- **EN/EL parity (2026-10-18):** the German review changes were carried over to the English and Greek pages,
+  adapted to their audiences (rule 4): FAQs only on the three relocation sub pages (answers moved into the text),
+  `ctaTopic` on every service page, About in the new structure with „Nächste Schritte", home pillars and client
+  cards as in DE (four-eyes review by *a second professional*; financial statements **and** tax returns signed by
+  licensed accountants), order 5A/5B/5C, „Your start in Greece" first in the services menu, linked company list,
+  factual long-stay and self-employed openings, new titles/seoTitles for search (e.g. „Greek Non-Dom Regime").
+  Every changed page has a `review:` note dated 2026-10-18. **Please check in particular:**
+  - **EN/EL VAT fiscal representative:** both pages still described the old rule (Law 2859/2000: every non-EU
+    company). They now follow the German page: Art. 41(3)(d) Law 5144/2024, only for companies established
+    neither in Greece nor in another EU state that owe the VAT themselves; not needed under reverse charge.
+  - **EN tax page:** new paragraph for searchers („Looking for a tax adviser in Greece? …") like the German one –
+    legal check of the sentence on the profession.
+  - **„Accounting department support" (EN/EL):** still active in EN and EL (German page deactivated); FAQ merged
+    into the text. The EN home card no longer links to it (as in DE), the EL home card still does (Greek companies).
+    Decide whether the EN page should be deactivated like the German one.
+  - **EL legal details taken over from the old FAQs:** single-entry threshold €1.5m (accounting), working-time
+    and probation rules (payroll), e-payment rule 30 %/22 % (tax); the article number of the VAT small-business
+    scheme was removed from the self-employed page because Law 5144/2024 renumbered the VAT Code.
+  - **EL wording:** home pillar „Σταθερός συνεργάτης" (was „υπεύθυνος επικοινωνίας"), subsidiary title
+    „Σύσταση θυγατρικής", „θεώρηση γνησίου υπογραφής" for the power of attorney.
 - **Server (owner):** https redirects of avatax.gr / avatax.net / www.avatax.eu to avatax.eu, `client_max_body_size
   6m` and resolver in the reverse proxy; logrotate for `logs/nginx` (privacy policy: 30 days).
 - **Later (batch 3):** deeper B2B pages (subsidiary, branch, representative office, without establishment),

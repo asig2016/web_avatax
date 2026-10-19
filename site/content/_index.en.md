@@ -1,26 +1,26 @@
 ---
 title: "AVATAX A.E."
 seoTitle: "Accountants & Tax Consultants in Athens, Greece | AVATAX"
-description: "Accounting, payroll, tax advice and tax representation in Athens for companies and private individuals – in Greek, German and English."
-review: "home page texts rewritten 2026-10-02 (more factual register, no facts strip)"
+description: "Accounting, payroll, tax advice and tax representation in Greece for companies and private individuals from abroad – in English, German and Greek."
+review: "home page texts rewritten 2026-10-02 (more factual register, no facts strip); 2026-10-18: aligned with the German review (pillars as on the German page, client groups with links to the service pages, introduction) – please check"
 heroEyebrow: "Accounting · Payroll · Tax"
 heroTitle: "Accountants and tax consultants in Athens"
-heroText: "Bookkeeping, financial statements, payroll, tax advice and tax representation for companies and private individuals in Greece – in Greek, German and English."
+heroText: "Bookkeeping, financial statements, payroll, tax advice and tax representation for companies and private individuals in Greece – in English, German and Greek."
 heroAlt: "The Acropolis, seen from our office"
 pillarsTitle: "How we work"
 pillars:
-  - icon: shield
-    title: "Four-eyes review"
-    text: "Every piece of work and every answer is reviewed by at least two senior members of staff before it reaches you."
+  - icon: flags
+    title: "Advice in English and German"
+    text: "We advise in English and German and explain the Greek rules – for clients from Germany in comparison with German rules – as a basis for decisions and for reporting to the parent company."
   - icon: person
     title: "A dedicated contact person"
-    text: "One contact person knows your business and coordinates your matters with our senior staff."
+    text: "A dedicated contact person knows your business and coordinates your matters with our senior professionals."
+  - icon: shield
+    title: "Four-eyes review"
+    text: "A second professional reviews our work before it is passed on."
   - icon: check
     title: "Licensed accountants"
-    text: "Financial statements are prepared and signed by accountants holding a Class A licence."
-  - icon: flags
-    title: "Greek, German and English"
-    text: "We advise in German and English and can compare Greek rules with German practice, which helps when you report to a parent company abroad."
+    text: "Financial statements and tax returns are prepared and signed by accountants licensed by the Economic Chamber of Greece (Λογιστής-Φοροτεχνικός, Class A)."
   - icon: globe
     title: "Online access to your books"
     text: "We keep your books in accounting software with online access, so your current figures are available at any time."
@@ -41,28 +41,32 @@ feesTitle: "Transparent fees"
 feesText: "Depending on the service we agree monthly flat fees or time-based fees; you know the terms before any chargeable work begins. The first meeting for companies is free of charge."
 audiencesTitle: "Our clients"
 audiences:
-  - icon: globe
-    title: "Companies from abroad"
-    text: "Tax representation, VAT fiscal representation and VAT registration, bookkeeping and tax compliance for foreign companies operating in Greece."
-    links:
-      - { label: "Tax & fiscal representation", url: "/services/fiscal-representation/" }
-      - { label: "Your start in Greece", url: "/services/start-in-greece/" }
   - icon: building
-    title: "Greek companies"
-    text: "Bookkeeping, financial statements, payroll and ongoing tax advice – as a complete outsourced service or in support of your own accounting department."
+    title: "Companies with an entity or staff in Greece"
+    text: "Bookkeeping, financial statements and reports to the parent company, payroll and ongoing tax advice for your Greek subsidiary, branch or your staff in Greece."
     links:
       - { label: "Accounting", url: "/services/accounting/" }
       - { label: "Payroll & labour law", url: "/services/payroll/" }
-      - { label: "Accounting department support", url: "/services/accounting-department-support/" }
+      - { label: "Subsidiary", url: "/services/start-in-greece/companies/subsidiary/" }
+      - { label: "Branch", url: "/services/start-in-greece/companies/branch/" }
+  - icon: globe
+    title: "Market entry and representation"
+    text: "Doing business in Greece without an establishment, with a representative office, branch or subsidiary; tax representation, VAT fiscal representation and VAT registration of foreign companies."
+    links:
+      - { label: "Your start in Greece", url: "/services/start-in-greece/companies/" }
+      - { label: "Without an establishment", url: "/services/start-in-greece/companies/without-an-establishment/" }
+      - { label: "Tax & fiscal representation", url: "/services/fiscal-representation/" }
   - icon: person
     title: "Private individuals"
-    text: "Income tax, pensions from abroad, real estate, inheritance and gifts in Greece, including the 7% flat tax for pensioners who move their tax residence to Greece (Art. 5B Income Tax Code)."
+    text: "Moving to Greece with a flat tax for investors (Art. 5A) or pensioners (Art. 5B) or with a 50% tax exemption for employees and freelancers (Art. 5C); income tax, property, inheritance and gifts in Greece."
     links:
+      - { label: "€100,000 flat tax for investors", url: "/services/relocating-to-greece/flat-tax-for-investors/" }
+      - { label: "7% flat tax for pensioners", url: "/services/relocating-to-greece/pensioners/" }
+      - { label: "Buying property in Greece", url: "/services/start-in-greece/private-individuals/buying-property/" }
       - { label: "Tax incentives for moving to Greece", url: "/services/relocating-to-greece/" }
-      - { label: "Tax consultancy", url: "/services/tax-consultancy/" }
 ---
 ## Accounting and tax services in Athens
 
-AVATAX A.E. is an accounting and tax firm in Athens. We keep the books of Greek companies and of foreign companies operating in Greece, prepare financial statements and tax returns, run payroll and advise on tax matters. We also advise private individuals with income or property in Greece.
+AVATAX A.E. is a Greek accounting and tax firm based in Athens. We serve Greek companies, foreign companies operating in Greece and private individuals with tax matters in Greece.
 
-Each client has a dedicated contact person, and senior staff review all work before it leaves our office. Our offices are at Syngrou Avenue 76, near the Syngrou-Fix metro station.
+Our services cover ongoing bookkeeping, financial statements, payroll, tax returns and individual tax advice. We support foreign clients in particular in understanding how Greek rules differ from those they know and in meeting the requirements of their parent companies.

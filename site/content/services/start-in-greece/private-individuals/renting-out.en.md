@@ -6,14 +6,8 @@ description: "Renting out property in Greece: tax rates on rental income, short-
 url: /services/start-in-greece/private-individuals/renting-out-property/
 icon: "building"
 weight: 15
-review: "new page 2026-10-10 based on research (Art. 39, 40 Income Tax Code, Law 5246/2025, Law 5222/2025) – please check"
-faq:
-  - q: "Do I have to file a Greek tax return if I live abroad and rent out a property in Greece?"
-    a: "Yes. Rental income from a Greek property is taxable in Greece wherever the owner lives. The return is filed every year; we prepare it for you."
-  - q: "Is the rental income taxed again in my home country?"
-    a: "Under most double taxation treaties the country where the property is located taxes the income first; your home country then either exempts it or credits the Greek tax. Which applies depends on the treaty with your country."
-  - q: "When does a company make sense for renting out?"
-    a: "That depends on the amount of income, the number of properties, the costs and your plans. A single tax rate stands against bookkeeping duties, running costs and tax on distributions. We calculate both options before you decide."
+review: "new page 2026-10-10 based on research (Art. 39, 40 Income Tax Code, Law 5246/2025, Law 5222/2025) – please check; 2026-10-18: FAQ removed (content is in the text)"
+ctaTopic: "property"
 heroImage: "images/start-rent-wide.jpg"
 cardImage: "images/start-rent.jpg"
 heroAlt: "Colourful houses on the waterfront of a Greek island"

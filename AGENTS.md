@@ -62,7 +62,8 @@ Read `README.md` (overview), `docs/DOCKER.md` (containers and commands), `docs/D
 - **Verify facts against the law text, not against old documents or offers.** Example: Art. 8 Law 5104/2024 +
   AADE A.1069/2024: the tax representative is optional, can be a natural or legal person and is not liable;
   without one, the legal representative of a foreign company registers in the tax register. The VAT fiscal
-  representative (Law 2859/2000) is a different role. Never state "must" where the law says "may".
+  representative (Art. 41(3)(d) of the Greek VAT Code, Law 5144/2024, which replaced Law 2859/2000) is a different
+  role: required only for companies established neither in Greece nor in another EU state that owe the VAT themselves. Never state "must" where the law says "may".
 - **No fixed deadlines or dates that change often** (application deadlines, extensions) – say that we check the
   current deadline. Only state dates that are settled in law.
 - **Labels lead with the benefit, not the paragraph.** Menu entries, link labels and card titles name what the

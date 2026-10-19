@@ -2,17 +2,18 @@
 title: "7% flat tax for foreign pensioners in Greece (Art. 5B)"
 linkTitle: "7% flat tax for pensioners"
 seoTitle: "7% Flat Tax for Pensioners in Greece (Art. 5B) | AVATAX"
-description: "Moving to Greece as a pensioner: all foreign income taxed at a flat 7% for 15 years (Art. 5B) – conditions, taxation, documents and our support."
+description: "Moving to Greece as a pensioner: foreign income taxed at a flat 7% for 15 years (Art. 5B) – conditions, application, documents and our support."
 url: /services/relocating-to-greece/pensioners/
 icon: person
-weight: 10
-review: "split from the relocation page 2026-10-05 – please check – new FAQ 2026-10-05: please check \"tax return\" and \"leaving before 15 years\""
+weight: 20
+review: "split from the relocation page 2026-10-05 – please check – new FAQ 2026-10-05: please check \"tax return\" and \"leaving before 15 years\"; 2026-10-18: question on the application deadline made specific, order 5A/5B/5C"
+ctaTopic: "relocation"
 faq:
   - q: "Who can apply for the 7% flat tax for pensioners?"
     a: "Individuals who transfer their tax residence to Greece as pensioners, were not Greek tax residents in five of the last six years and move from an EU member state or a country with which Greece has an agreement on administrative cooperation in tax matters. Whether a particular pension qualifies should be checked in advance."
   - q: "Can spouses apply together?"
     a: "No. Spouses and other family members are not included in the application; each person applies separately where required."
-  - q: "What is the application deadline?"
+  - q: "By when must the application for the 7% flat tax be filed?"
     a: "The application is filed in the year in which the tax residence is transferred to Greece. The deadlines have changed several times in recent years, so we check the deadline that currently applies for you."
   - q: "Is my Greek income also taxed at 7%?"
     a: "No. The 7% flat tax only covers foreign-source income. Income from Greece, such as rent from a Greek apartment, is taxed under the general rules."

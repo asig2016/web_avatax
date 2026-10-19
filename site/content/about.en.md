@@ -1,33 +1,42 @@
 ---
-title: "About us"
-seoTitle: "About Us – Accountants & Tax Consultants in Athens | AVATAX"
-description: "AVATAX A.E.: reliable accounting and tax advice in Athens, a qualified team working in Greek, German and English, offices on Syngrou Avenue."
+title: "About AVATAX"
+linkTitle: "About us"
+seoTitle: "About AVATAX – Accountants & Tax Consultants in Athens"
+description: "AVATAX A.E.: Greek firm for accounting, payroll and tax in Athens – licensed accountants, advice in English and German, member of ETL GLOBAL."
 url: /about-us/
-summary: "Reliability is our guiding principle. Our team combines graduates with experienced professionals in accounting and taxation; all staff are trained when they join and attend seminars to stay up to date."
+summary: "AVATAX A.E. is a Greek firm for accounting, payroll and tax in Athens. We serve companies and private individuals from Greece and abroad, in particular from German-speaking countries – in English, German and Greek."
+review: "2026-10-18 restructured like the German page: who we are, philosophy, team, clients (how we work is now a separate page, additional costs are on the fees page); no names, no years – please check"
+nextSteps: true
 menus:
   main:
     identifier: about
     weight: 20
 ---
-## Our guiding principle
+## Who we are
 
-Reliability is our guiding principle. Out of respect for our clients, we inform them in good time about any difficulties that may arise during our work or about additional fees. We build relationships of trust and are there for our clients whenever they need us.
+AVATAX A.E. is a Greek firm for accounting, payroll and tax (a société anonyme under Greek law) based in Athens. Our financial statements and tax returns are prepared and signed by accountants licensed by the Economic Chamber of Greece (Λογιστής-Φοροτεχνικός, Class A).
 
-## Our people
+## Our philosophy
 
-Our team combines university graduates with experienced professionals in accounting and taxation. All staff are trained when they join and regularly attend seminars, so that they are always up to date with current developments in accounting and tax.
+Reliability is our guiding principle. Our advice follows the current law and the guidance of the tax administration; where the law is unclear, we say so. We build long-term relationships of trust and are there for our clients when they need us.
 
-Our staff's very good knowledge of English and German is a great advantage: it makes communication with authorities and companies abroad – especially in German-speaking countries – straightforward. This is why many of our clients are [companies from abroad](/services/fiscal-representation/) and [private individuals who move to Greece](/services/relocating-to-greece/).
+## Our team
 
-An overview of everything we do: [our services](/services/).
+Our team consists of specialists in accounting, payroll and tax. All of them attend regular training to follow the frequent changes in Greek tax and labour law. We work with clients and their advisers abroad in English or German; for clients from Germany we set out the Greek rules against the German ones. How we handle mandates is described under [How we work](/how-we-work/).
+
+## Our clients
+
+We serve foreign companies operating in Greece – with a [subsidiary](/services/start-in-greece/companies/subsidiary/), a [branch](/services/start-in-greece/companies/branch/) or [without an establishment](/services/start-in-greece/companies/without-an-establishment/) – as well as [private individuals who move to Greece](/services/relocating-to-greece/) or own property there.
+
+An overview of all our services: [Services](/services/).
 
 ## International network
 
 AVATAX A.E. is a member of [ETL GLOBAL](https://www.etl-global.com/), an international network of independent advisory firms. For questions that concern another country, we put you in touch with contacts in the network. Each member firm is legally independent and provides its services on its own responsibility.
 
-## Our offices
+## Our office
 
-Our offices are on Syngrou Avenue, close to the metro station Syngrou-Fix: fully renovated premises with dedicated meeting rooms, easily accessible by public transport.
+Our office, with its own meeting rooms, is at 76 Syngrou Ave. in Athens, near the Syngrou-Fix metro station. Meetings are also possible by video.
 
 ## Languages
 

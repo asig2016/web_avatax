@@ -6,14 +6,8 @@ description: "Selling, providing services or employing staff in Greece without a
 url: /services/start-in-greece/companies/without-an-establishment/
 icon: "globe"
 weight: 10
-review: "new page 2026-10-05 based on research – please check"
-faq:
-  - q: "Do I need a Greek company to do business in Greece?"
-    a: "No. You can sell goods, provide services, send your own staff or employ individual staff in Greece without a Greek company. Depending on the activity, you may need a Greek VAT registration, a posting notification or an employer registration."
-  - q: "When do I need a Greek VAT number?"
-    a: "When your company owes Greek VAT that is not accounted for by the customer (reverse charge) or settled through the One-Stop-Shop – for example for certain supplies of goods within Greece. We check this for your business model."
-  - q: "When does my activity become a permanent establishment?"
-    a: "In particular when you have a fixed place of business in Greece or a person in Greece habitually concludes contracts on your behalf. Profits attributable to it are then taxable in Greece."
+review: "new page 2026-10-05 based on research – please check; 2026-10-18: aligned with the German review (FAQ removed, VAT registration example moved into the text)"
+ctaTopic: "company"
 heroImage: "images/start-logistics.jpg"
 heroAlt: "Cranes of a Greek cargo port at dusk"
 ---
@@ -23,7 +17,7 @@ Many foreign companies start in Greece without any establishment: they sell good
 
 - As long as there is no permanent establishment in Greece, profits remain taxable in your home country.
 - **VAT:** for services to Greek businesses, the Greek customer usually accounts for the VAT (reverse charge). Sales to consumers in other EU countries can be declared through the One-Stop-Shop (OSS).
-- Where your company owes Greek VAT that is not covered by these rules, it needs a **Greek VAT registration**. Companies from EU member states can register without a representative; companies from non-EU countries need a [VAT fiscal representative](/services/fiscal-representation/).
+- Where your company owes Greek VAT that is not covered by these rules – for example for certain supplies of goods within Greece – it needs a **Greek VAT registration**. Companies from EU member states can register without a representative; companies from non-EU countries need a [VAT fiscal representative](/services/fiscal-representation/).
 
 ## When a permanent establishment arises
 

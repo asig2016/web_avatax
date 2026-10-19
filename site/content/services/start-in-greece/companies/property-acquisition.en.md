@@ -6,20 +6,14 @@ description: "Foreign companies can buy property in Greece without a branch or s
 url: /services/start-in-greece/companies/property-acquisition/
 icon: "building"
 weight: 50
-review: "refocused 2026-10-16 (acquisition without an establishment; formerly “property company”) based on Art. 8 Law 5104/2024, Art. 47 and 58 Law 4172/2013, Art. 15–17 Law 3091/2002 and AADE decision A.1014/2026 – please check"
-faq:
-  - q: "Does my company need a branch in Greece to buy property?"
-    a: "No. A foreign company can acquire property in Greece without setting up a branch or a subsidiary. All it needs is a registration with the Greek tax authority, which gives the company a Greek tax number."
-  - q: "Which documents does the company need?"
-    a: "As a rule, the articles of association, a recent extract from the commercial register and proof of who may represent the company – with apostille and an official Greek translation. We agree the exact list with you and the notary."
-  - q: "Which taxes apply to the property?"
-    a: "On purchase, the transfer tax, or VAT for some new buildings; every year, the property tax ENFIA. The company pays tax on rental income in Greece. Particularly important is the special real estate tax: every year 15% of the objective value as of 1 January – not of the purchase price. The exemption is not automatic – the company has to file the declaration with the application for exemption and all supporting documents correctly every year. We take care of this for you."
+review: "refocused 2026-10-16 (acquisition without an establishment; formerly “property company”) based on Art. 8 Law 5104/2024, Art. 47 and 58 Law 4172/2013, Art. 15–17 Law 3091/2002 and AADE decision A.1014/2026 – please check; 2026-10-18: FAQ removed (content is in the text)"
+ctaTopic: "property"
 ---
 A foreign company can acquire property in Greece **without setting up a branch or a subsidiary**. All it needs is a registration with the Greek tax authority. Companies use this, for example, to buy office space, flats for staff or a holiday property directly in the company's name. We take care of the tax side – before, during and after the purchase.
 
 ## Acquisition without an establishment
 
-- **Tax registration:** The company receives a Greek tax number (ΑΦΜ), which is required for the notarial deed of purchase.
+- **Tax registration:** The company receives a Greek tax number (AFM), which is required for the notarial deed of purchase.
 - **Tax representative:** The company may appoint a [tax representative](/services/fiscal-representation/) under Art. 8 of the Tax Procedure Code (Law 5104/2024). Otherwise, its legal representative registers in the Greek tax register.
 - **Documents:** The articles of association, a recent extract from the commercial register and proof of who may represent the company are submitted with apostille and an official Greek translation.
 - **Purchase contract:** The contract is signed before a Greek notary and registered in the cadastre (Κτηματολόγιο); a lawyer and an engineer check title and building, as when [buying property as a private individual](/services/start-in-greece/private-individuals/buying-property/).

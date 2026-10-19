@@ -6,16 +6,8 @@ description: "Buying a house or apartment in Greece: tax number, notary and cada
 url: /services/start-in-greece/private-individuals/buying-property/
 icon: "start"
 weight: 10
-review: "new page 2026-10-05 based on research – please check"
-faq:
-  - q: "Can foreigners buy property in Greece?"
-    a: "Yes. Citizens of the EU and of other countries can buy property in Greece. In certain border areas, buyers from outside the EU and EFTA need a permit."
-  - q: "Can I use the property only as my holiday home?"
-    a: "Yes. If you use it only yourself, there is no rental income and no tax on rental income; ENFIA is due in any case. Whether owning a residence leads to presumed living expenses in Greece and whether a tax return is needed, we check for you."
-  - q: "What does buying a property cost on top of the price?"
-    a: "Mainly the transfer tax of 3.09% (3% plus a municipal surcharge on it), based on the higher of the price and the objective value, plus notary, lawyer and cadastre costs. For new buildings, VAT may apply instead of the transfer tax."
-  - q: "Do I have to file a Greek tax return?"
-    a: "If you have income from Greece, for example from renting out the property, a Greek tax return is filed every year. We prepare it for you."
+review: "new page 2026-10-05 based on research – please check; 2026-10-18: FAQ removed (content is in the text)"
+ctaTopic: "property"
 heroImage: "images/start-home.jpg"
 heroAlt: "Modern villa with pool in Greece at dusk"
 ---

@@ -6,18 +6,12 @@ description: "Moving to Greece as a freelancer: registration with the tax office
 url: /services/start-in-greece/private-individuals/self-employed/
 icon: "person"
 weight: 30
-review: "new page 2026-10-06 based on research – please check"
-faq:
-  - q: "How do I register as self-employed in Greece?"
-    a: "You register the start of your activity with the tax administration, with the code of your activity. Registration with the social insurance fund e-EFKA follows from the first day of the month in which you start. Some professions also have to join a professional chamber or the business register."
-  - q: "Do I pay income tax on my worldwide income?"
-    a: "If you move your residence to Greece, you normally become a Greek tax resident and are taxed in Greece on your worldwide income; double tax treaties remain applicable. Under certain conditions, 50% of the income from work in Greece is exempt for seven years."
-  - q: "Can I keep working for clients in my home country?"
-    a: "Yes. Self-employed people in Greece can work for clients anywhere. Invoicing, VAT and the place of taxation depend on where the clients are; we check this for your business."
+review: "new page 2026-10-06 based on research – please check; 2026-10-18: aligned with the German review (introduction for freelancers and entrepreneurs who relocate, with Art. 5C and the double tax treaty; FAQ merged into the text)"
+ctaTopic: "relocation"
 cardImage: "images/start-remote.jpg"
 heroAlt: "Bright desk with a laptop and a cup of coffee"
 ---
-Many people move to Greece and work there self-employed – as consultants, translators, designers, developers or craftsmen, often for clients in their home country. Self-employment in Greece is registered quickly, but social insurance, invoicing and taxes follow Greek rules that differ from what most people know from home. We take care of registration, bookkeeping and tax returns – in English or German.
+Freelancers and entrepreneurs who move their residence to Greece and continue their work there, often still for clients in their home country, may under certain conditions have 50% of their income from the activity in Greece exempted from income tax for seven years ([Art. 5C](/services/relocating-to-greece/employees-and-freelancers/)). The double tax treaty between Greece and your home country determines which country taxes which income. Social insurance, invoicing and taxes follow Greek rules that differ considerably from those you know. We review the consequences before the move and take care of registration, bookkeeping and tax returns – in English or German.
 
 ## Residence
 
@@ -27,13 +21,14 @@ Many people move to Greece and work there self-employed – as consultants, tran
 ## Registration
 
 - **Greek tax number (AFM)** and social security number (AMKA).
-- **Start of activity** with the tax administration, with the code of your activity.
+- **Start of activity** with the tax administration, with the code of your activity – the Greek equivalent of registering a business or self-employment with the tax office.
 - **Social insurance:** registration with e-EFKA from the first day of the month in which you start; you then pay monthly contributions according to the insurance category you choose.
 - Some professions must also join a professional chamber or the business register (GEMI).
 
 ## Invoicing and bookkeeping
 
 - Invoices and bookkeeping data are transmitted electronically to the tax administration (myDATA).
+- You can keep working for clients in your home country and elsewhere; invoicing, VAT and the place of taxation depend on where your clients are.
 - **VAT:** the standard rate is 24%; a special scheme applies to small businesses below a turnover threshold. Services to businesses in other EU countries are usually invoiced without Greek VAT (reverse charge).
 
 ## Income tax
