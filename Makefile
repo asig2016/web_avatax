@@ -27,7 +27,7 @@ help:
 	@echo "  make deploy-live    branch $(LIVE_BRANCH) -> live site avatax.eu ($(LIVE_PATH))"
 	@echo "                      both deploy the pushed state of the branch, not the working folder"
 	@echo "  make stats          visitor report from the server's access log -> stats/report.html"
-	@echo "  make stats-ips      IP addresses per page with device, country and referrer, no crawlers (URL=/de/)"
+	@echo "  make stats-ips      IP addresses per page with device, country and referrer, no crawlers or scanners (URL=/de/)"
 	@echo "  make stats-reset    delete the server's access logs (incl. rotated ones), stats start from zero"
 	@echo "  make down / logs / status"
 	@echo "Server"
@@ -158,18 +158,26 @@ stats: _geoip
 	@echo "Report: $(CURDIR)/stats/report.html"
 
 # IP addresses per page, with the number of requests and the country:  make stats-ips  or  make stats-ips URL=/de/
+# Within a page sorted by country code (unknown last), then IP address, then number of requests.
 # Counts only real browsers (STATS_BROWSERS, above) and GET requests with status 200/304; leaves out
-# images, CSS, JS, fonts, /api/ and STATS_EXCLUDE_IPS. Query strings are dropped.
+# scanners (STATS_SCANNERS, below), images, CSS, JS, fonts, /api/ and STATS_EXCLUDE_IPS. Query strings are dropped.
 # Device from the user agent: "Mobi" = mobile, iPad/tablet/Android without "Mobi" = tablet, else desktop
 # (iPads since iPadOS 13 send a Mac user agent and show as desktop).
 # Referrer (last column): the page the visitor came from – a path on STATS_HOST, domain + path of another
 # site (Google sends only its domain, never the search terms), or "-" (typed, bookmark, app). No query strings.
 # Countries: mmdblookup (in the GoAccess image) on the same database as `make stats`, one container for all IPs.
+# Scanners: all lines of an IP are dropped once it asks for a path that no visitor of this site requests
+# (STATS_PROBES: dotfiles such as /.env or /.git/HEAD, but not /.well-known/; *.env, WordPress, PHP, config and
+# backup files), whatever the answer was (404 now, 302 to /de/ while the site was German only).
 STATS_ASSETS := \.(css|js|map|png|jpe?g|gif|svg|webp|avif|ico|woff2?|ttf|xml|txt|json|webmanifest)$$
 STATS_HOST   := avatax.eu
+STATS_PROBES := \/\.(env|git|svn|hg|aws|ssh|docker|vscode|idea|htaccess|htpasswd|ds_store)|\.env$$|\/wp-|\.php|phpmyadmin|xmlrpc|cgi-bin|appsettings|\/config\.json$$|\/server-status|\/actuator|\.(sql|bak|old|orig|swp|ini|ya?ml|log)$$
+STATS_SCANNERS := awk -F'"' '{ split($$1, a, " "); split($$2, r, " "); p = tolower(r[2]); sub(/\?.*/, "", p); \
+	ip[NR] = a[1]; line[NR] = $$0; if (p ~ /$(STATS_PROBES)/) scanner[a[1]] = 1 } \
+	END { for (i = 1; i <= NR; i++) if (!(ip[i] in scanner)) print line[i] }'
 
 stats-ips: _geoip
-	@$(ACCESS_LOGS) | $(STATS_BROWSERS) \
+	@$(ACCESS_LOGS) | $(STATS_BROWSERS) | $(STATS_SCANNERS) \
 		| awk -F'"' -v u='$(URL)' -v x='$(STATS_EXCLUDE_IPS)' -v h='$(STATS_HOST)' 'BEGIN { \
 			n = split(x, xs, " "); for (i = 1; i <= n; i++) own[xs[i]]; gsub(/\./, "\\.", h) } { \
 			split($$1, a, " "); split($$2, r, " "); split($$3, s, " "); p = r[2]; sub(/\?.*/, "", p); \
@@ -182,7 +190,7 @@ stats-ips: _geoip
 			else if (sub("^https?://(www\\.)?" h "(:[0-9]+)?(/|$$)", "", f)) f = "/" f; \
 			else { sub(/^https?:\/\/(www\.)?/, "", f); sub(/\/$$/, "", f); if (f == "") f = "-" } \
 			print p, a[1], d, f }' \
-		| LC_ALL=C sort | uniq -c | LC_ALL=C sort -k2,2 -k1,1nr > stats/ips.tmp
+		| LC_ALL=C sort | uniq -c > stats/ips.tmp
 	@test -s stats/ips.tmp || echo "No page views found."
 	@awk '{ print $$3 }' stats/ips.tmp | sort -u \
 		| docker run --rm -i -v "$(CURDIR)/stats":/geo:ro,z --entrypoint sh allinurl/goaccess -c \
@@ -190,8 +198,12 @@ stats-ips: _geoip
 				mmdblookup -f /geo/$(notdir $(GEOIP_DB)) -i "$$ip" country $$k 2>/dev/null; done; done' > stats/geo.tmp
 	@awk 'FILENAME == "stats/geo.tmp" { if ($$1 == "@") ip = $$2; \
 			else if (match($$0, /"[^"]*"/)) g[ip] = g[ip] (g[ip] == "" ? "" : " ") substr($$0, RSTART + 1, RLENGTH - 2); next } \
-		$$2 != last { printf "%s%s\n", (FNR > 1 ? "\n" : ""), $$2; last = $$2 } \
-		{ printf "  %6d  %-15s  %-7s  %-20s  %s\n", $$1, $$3, $$4, (g[$$3] == "" ? "-" : g[$$3]), $$5 }' stats/geo.tmp stats/ips.tmp
+		{ c = g[$$3]; k = c; sub(/ .*/, "", k); if (k == "") { k = "~"; c = "-" } \
+			print $$2, k, $$3, $$1, $$4, $$5, c }' stats/geo.tmp stats/ips.tmp \
+		| LC_ALL=C sort -k1,1 -k2,2 -k3,3V -k4,4nr \
+		| awk '$$1 != last { printf "%s%s\n", (NR > 1 ? "\n" : ""), $$1; last = $$1 } \
+			{ c = $$7; for (i = 8; i <= NF; i++) c = c " " $$i; \
+			printf "  %6d  %-15s  %-7s  %-20s  %s\n", $$4, $$3, $$5, c, $$6 }'
 	@rm -f stats/ips.tmp stats/geo.tmp
 
 # Deletes the live site's access logs on the server (current + rotated); error.log is kept.
